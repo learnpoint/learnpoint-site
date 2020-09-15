@@ -1,0 +1,32 @@
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    padding: 16px 20px;
+    font-size: 24px;
+    color: #393939;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+}
+
+.header__logo-dot {
+    padding-left: 3px;
+    font-size: 32px;
+    color: #0099ff;
+    color: #0094EF;
+}
+
+.header__links {
+    display: flex;
+    padding: 0 24px;
+    align-items: center;
+}
+
+.header__link {
+    padding: 8px;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
