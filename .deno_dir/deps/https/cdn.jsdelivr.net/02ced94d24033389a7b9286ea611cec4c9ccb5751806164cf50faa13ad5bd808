@@ -1,0 +1,96 @@
+import * as path from "https://deno.land/std@0.69.0/path/mod.ts";
+
+const buildArgs = {};
+
+export async function sideBuild(sourcePath, targetPath, componentsPath, forceRebuild = false) {
+    buildArgs.componentsPath = componentsPath;
+    buildArgs.forceRebuild = forceRebuild;
+    buildArgs.componentsMTime = await getComponentsMTime();
+
+    recursiveBuild(sourcePath, targetPath);
+}
+
+async function recursiveBuild(sourcePath, targetPath) {
+    await Deno.mkdir(targetPath, { recursive: true });
+
+    for await (const dirEntry of Deno.readDir(sourcePath)) {
+        const sPath = path.join(sourcePath, dirEntry.name);
+        const tPath = path.join(targetPath, dirEntry.name);
+
+        if (sPath === buildArgs.componentsPath) {
+            continue;
+        }
+
+        if (dirEntry.isDirectory) {
+            recursiveBuild(sPath, tPath);
+            continue;
+        }
+
+        const [buildNeeded, buildReason] = await isBuildNeeded(sPath, tPath)
+        if (buildNeeded) {
+            console.log('Building', path.relative(Deno.cwd(), tPath), '-', buildReason);
+            buildFile(sPath, tPath);
+        }
+    }
+}
+
+async function getComponentsMTime() {
+    let componentsMTime = new Date(0);
+
+    for await (const item of Deno.readDir(buildArgs.componentsPath)) {
+        const itemPath = path.join(buildArgs.componentsPath, item.name);
+        const itemInfo = await Deno.lstat(itemPath);
+
+        if (itemInfo.mtime > componentsMTime) {
+            componentsMTime = itemInfo.mtime;
+        }
+    }
+    return componentsMTime;
+}
+
+async function isBuildNeeded(sourceFilePath, targetFilePath) {
+    if (buildArgs.forceRebuild) {
+        return [true, 'Build forced'];
+    }
+
+    try {
+        const [sourceFileInfo, targetFileInfo] = await Promise.all([
+            Deno.stat(sourceFilePath),
+            Deno.stat(targetFilePath),
+        ]);
+
+        if (sourceFileInfo.mtime > targetFileInfo.mtime) {
+            return [true, 'File modified'];
+        }
+
+        if (isHtmlFile(sourceFilePath) && buildArgs.componentsMTime > targetFileInfo.mtime) {
+            return [true, 'Components modified'];
+        }
+    } catch (error) {
+        if (error instanceof Deno.errors.NotFound) {
+            return [true, 'New file'];
+        } else {
+            throw error;
+        }
+    }
+
+    return [false, ''];
+}
+
+const render = data => data.toString().replace(/\[\[.*\]\]/g, componentReplacer);
+const componentReplacer = match => componentContent(match.replace('[[', '').replace(']]', ''));
+const componentContent = componentName => Deno.readTextFileSync(path.join(buildArgs.componentsPath, componentName));
+
+async function buildFile(sourceFilePath, targetFilePath) {
+    if(!isHtmlFile(sourceFilePath)) {
+        Deno.copyFile(sourceFilePath, targetFilePath);
+        return;
+    }
+
+    const sourceContent = await Deno.readTextFile(sourceFilePath);
+    Deno.writeTextFile(targetFilePath, render(sourceContent));
+}
+
+function isHtmlFile(sourceFilePath) {
+    return path.extname(sourceFilePath) === '.html';
+}
