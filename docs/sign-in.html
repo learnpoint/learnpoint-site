@@ -15,39 +15,52 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/sign-in.css">
+    <link rel="stylesheet" href="/css/select-language.css">
     <script defer src="/js/main.js"></script>
 </head>
 
 <body>
+    <style id="language-style"></style>
+    <div class="select-language">
+        <div>
+            <a class="select-language__link" data-select-language="sv">Svenska</a>
+        </div>
+        <div>
+            <a class="select-language__link" data-select-language="eng">English</a>
+        </div>
+    </div>
     <header class="header">
         <nav class="header__nav">
             <a href="/" class="header__logo"><span>Learnpoint</span><span class="header__logo-dot">.</span></a>
             <div class="header__links">
-                <a class="header__link" href="/sign-in.html">Sign in</a>
+                <a class="header__link" href="/sign-in.html">
+                    <span class="eng">Sign in</span>
+                    <span class="sv">Logga in</span>
+                </a>
             </div>
         </nav>
     </header>
     <main>
 
 <h1 class="sign-in__title">
-    Sign in
+    <span class="eng">Sign in</span>
+    <span class="sv">Logga in</span>
 </h1>
 
-<!-- <p class="sign-in__paragraph">
-    To sign in to Learnpoint, browse to the address for your school. 
-</p> -->
-
 <p class="sign-in__paragraph">
-    Browse to your school to sign in. For example, if your school is named <span class="sign-in__monospaced">alpha-school</span>, browse to <span class="sign-in__monospaced">alpha-school.learnpoint.se</span>.
+    <span class="eng">Browse to your school to sign in. For example, if your school is named <span class="sign-in__monospaced">alpha-school</span>, browse to <span class="sign-in__monospaced">alpha-school.learnpoint.se</span>.</span>
+    <span class="sv">Surfa till din skola för att logga in. Om din skola heter <span class="sign-in__monospaced">alpha-school</span>, surfa till <span class="sign-in__monospaced">alpha-school.learnpoint.se</span>.</span>
 </p>
 
 <p class="sign-in__paragraph">
-    If you need help, <a href="http://support.learnpoint.se/" class="sign-in__link">contact support</a>.
+    <span class="eng">If you need help, <a href="http://support.learnpoint.se/" class="sign-in__link">contact support</a>.</span>
+    <span class="sv">Om du vill ha hjälp, <a href="http://support.learnpoint.se/" class="sign-in__link">kontaka vår support</a>.</span>
 </p>
 
 </main>
 <footer class="footer">
-    Learnpoint is developed by <a href="http://www.viaecole.se/" class="footer__link" target="_blank">ViaEcole</a>
+    <span class="eng">Learnpoint is developed by <a href="http://www.viaecole.se/" class="footer__link" target="_blank">ViaEcole</a></span>
+    <span class="sv">Learnpoint är utvecklat av <a href="http://www.viaecole.se/" class="footer__link" target="_blank">ViaEcole</a></span>
 </footer>
 </body>
 
