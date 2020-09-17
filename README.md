@@ -86,6 +86,8 @@ To add, remove, or change dependencies:
 
 - No buildsteps or dependencies needed. The ```docs``` directory is always ready to be served as it is.
 
+- Configure the ```404.html``` file to be served for non resovable requests. If a request is made to ```/hey.html``` and that files does not exist, the server should respond with ```404 Not Found``` and with the content in the file ```404.html``` (without any redirects). Note: if a request is made to ```/404.html```, the server should respond with ```200 OK```.
+
 - Configure ```index.html``` as default document. If a request is made to ```/blog```, the server should serve ```/blog/index.html``` (if that file exists), or respond with ```404 Not Found``` (if that file does not exists).
 
 - The server should not list directory content.
