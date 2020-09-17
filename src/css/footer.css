@@ -1,0 +1,12 @@
+.footer {
+    max-width: 900px;
+    margin: 128px auto;
+    text-align: center;
+    color: #333;
+    border-top: 1px solid #bbb;
+    padding: 24px 0;
+}
+
+.footer__link {
+    color: #000;
+}
