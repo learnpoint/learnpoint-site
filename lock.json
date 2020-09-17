@@ -1,8 +1,8 @@
 {
-  "https://cdn.jsdelivr.net/gh/ekmwest/serv@2.0.9/serv.js": "fa00c4bbfded1bc7b346310ae9d3f0a012c80d96814e005369ac91ba86ecd639",
-  "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/mod.js": "b28a15117832df21695875f29b2718acd0aa88ee652ee53d7f8a7f2fb03666a9",
-  "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/side_build.js": "7070948081aa68e8c1aa06f0f2f5855f4dd4cebfcf4e7def41edd2eb74ae1761",
-  "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/side_serve.js": "dfa386b1650c962504311cae9e1bd1c0001e40051d393f688cf19a1b0a3dcc3e",
+  "https://cdn.jsdelivr.net/gh/ekmwest/serv@2.1.0/serv.js": "1fbb333030cfeb2a32d7e877469b999f9368d14a7e36f4bb81e72b1df68b89b9",
+  "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/mod.js": "b28a15117832df21695875f29b2718acd0aa88ee652ee53d7f8a7f2fb03666a9",
+  "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/side_build.js": "7070948081aa68e8c1aa06f0f2f5855f4dd4cebfcf4e7def41edd2eb74ae1761",
+  "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/side_serve.js": "b8bab0ea467c4e3b53db785d877a3c2cb718bd062f2ea845ddffed58bf49ca38",
   "https://deno.land/std@0.69.0/_util/assert.ts": "e1f76e77c5ccb5a8e0dbbbe6cce3a56d2556c8cb5a9a8802fc9565af72462149",
   "https://deno.land/std@0.69.0/_util/has_own_property.ts": "91a2ef2fae5d941643a6472b97cac7ed8060a96deb66f4fafb4a2750c8af18e5",
   "https://deno.land/std@0.69.0/async/deferred.ts": "ac95025f46580cf5197928ba90995d87f26e202c19ad961bc4e3177310894cdc",

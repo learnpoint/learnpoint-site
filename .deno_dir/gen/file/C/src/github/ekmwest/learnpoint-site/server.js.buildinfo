@@ -268,10 +268,10 @@
       },
       "https://deno.land/std@0.69.0/path/mod.ts": {
         "version": "8e015f2ac0b8e57905c8c3b7a4e4d3353d11aca5787e3f95ff90d03df6b49d97",
-        "signature": "2854925489",
+        "signature": "39128229041",
         "affectsGlobalScope": false
       },
-      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/side_build.js": {
+      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/side_build.js": {
         "version": "a592a155b1dbcbeef306342aa2b40be0edbf96d5b398ebba2d202e4a75747f18",
         "signature": "-3233279621",
         "affectsGlobalScope": false
@@ -386,24 +386,24 @@
         "signature": "-23161842459",
         "affectsGlobalScope": false
       },
-      "https://cdn.jsdelivr.net/gh/ekmwest/serv@2.0.9/serv.js": {
-        "version": "dee700ce36f8658e9d48bc469eefae0119c458f230583fbcc432a6484c5e9cbb",
+      "https://cdn.jsdelivr.net/gh/ekmwest/serv@2.1.0/serv.js": {
+        "version": "8f35e685000e27e3a6ab407da9ec4ee1b193cfff0c57b4537649787955aa32c6",
         "signature": "-5325987442",
         "affectsGlobalScope": false
       },
-      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/side_serve.js": {
-        "version": "4429448eac01ac0f13cc24bddd0289caf014cff717125faa3a87434a712ffd57",
+      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/side_serve.js": {
+        "version": "c9c0c61120076264b4665d9cf050ef8f3ec2230c35a742038963021f1d36208b",
         "signature": "-11823985355",
         "affectsGlobalScope": false
       },
-      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/mod.js": {
+      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/mod.js": {
         "version": "1e7a3f60de2502b7e4e2d5606809b7b4da3d6204ebb87c4986c4cc6ac11c8ffa",
         "signature": "-4162611617",
         "affectsGlobalScope": false
       },
       "file:///C:/src/github/ekmwest/learnpoint-site/deps.js": {
-        "version": "185302976bb45f00add6326507c4f2c4d4d8406219ee798c45edd08aa973e06b",
-        "signature": "281351125",
+        "version": "28e325b3579376f77703b671ee66b3a20f63cc9711e143e257fd6374889f3da8",
+        "signature": "-6071138026",
         "affectsGlobalScope": false
       },
       "file:///C:/src/github/ekmwest/learnpoint-site/server.js": {
@@ -437,28 +437,28 @@
     },
     "referencedMap": {
       "file:///C:/src/github/ekmwest/learnpoint-site/deps.js": [
-        "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/mod.js",
+        "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/mod.js",
         "https://deno.land/std@0.69.0/path/mod.ts"
       ],
       "file:///C:/src/github/ekmwest/learnpoint-site/server.js": [
         "file:///C:/src/github/ekmwest/learnpoint-site/deps.js"
       ],
-      "https://cdn.jsdelivr.net/gh/ekmwest/serv@2.0.9/serv.js": [
+      "https://cdn.jsdelivr.net/gh/ekmwest/serv@2.1.0/serv.js": [
         "https://deno.land/std@0.69.0/fmt/colors.ts",
         "https://deno.land/std@0.69.0/http/mod.ts",
         "https://deno.land/std@0.69.0/path/mod.ts",
         "https://deno.land/std@0.69.0/ws/mod.ts"
       ],
-      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/mod.js": [
-        "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/side_build.js",
-        "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/side_serve.js"
+      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/mod.js": [
+        "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/side_build.js",
+        "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/side_serve.js"
       ],
-      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/side_build.js": [
+      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/side_build.js": [
         "https://deno.land/std@0.69.0/path/mod.ts"
       ],
-      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/side_serve.js": [
-        "https://cdn.jsdelivr.net/gh/ekmwest/serv@2.0.9/serv.js",
-        "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/side_build.js"
+      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/side_serve.js": [
+        "https://cdn.jsdelivr.net/gh/ekmwest/serv@2.1.0/serv.js",
+        "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/side_build.js"
       ],
       "https://deno.land/std@0.69.0/async/mod.ts": [
         "https://deno.land/std@0.69.0/async/deferred.ts",
@@ -657,10 +657,10 @@
       "asset:///lib.esnext.string.d.ts",
       "file:///C:/src/github/ekmwest/learnpoint-site/deps.js",
       "file:///C:/src/github/ekmwest/learnpoint-site/server.js",
-      "https://cdn.jsdelivr.net/gh/ekmwest/serv@2.0.9/serv.js",
-      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/mod.js",
-      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/side_build.js",
-      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.8/side_serve.js",
+      "https://cdn.jsdelivr.net/gh/ekmwest/serv@2.1.0/serv.js",
+      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/mod.js",
+      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/side_build.js",
+      "https://cdn.jsdelivr.net/gh/ekmwest/side@1.0.9/side_serve.js",
       "https://deno.land/std@0.69.0/_util/assert.ts",
       "https://deno.land/std@0.69.0/_util/has_own_property.ts",
       "https://deno.land/std@0.69.0/async/deferred.ts",

@@ -43,7 +43,7 @@ Detailed instructions [here](https://gist.github.com/Chaser324/ce0505fbed06b947d
 
 - Dependencies are integrity checked by ```lock.json```.
 
-- Dependencies are stored ```deno_dir```.
+- Dependencies are stored ```.deno_dir```.
 
 
 # Dependency Management
