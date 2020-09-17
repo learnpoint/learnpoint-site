@@ -1,25 +1,25 @@
 {
   "headers": {
-    "set-cookie": "__cfduid=d74d2ba6c65e15e10b57f1ab199d008011600196696; expires=Thu, 15-Oct-20 19:04:56 GMT; path=/; domain=.deno.land; HttpOnly; SameSite=Lax; Secure",
-    "cf-ray": "5d349dc6fbe0b633-TLL",
-    "content-length": "657",
-    "accept-ranges": "bytes",
-    "age": "1891",
     "etag": "\"e15a64ec7350711e63822b70c3e76e5a\"",
-    "vary": "Accept-Encoding",
-    "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400",
+    "cf-request-id": "053f3817960000b63315170200000001",
     "server": "cloudflare",
-    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400",
+    "accept-ranges": "bytes",
+    "cf-ray": "5d455c6c2d69b633-TLL",
     "x-amz-version-id": "a386JOZHKtKvmfW.jUEfygqKWSJX8ORM",
-    "content-type": "application/typescript; charset=utf-8",
     "access-control-allow-origin": "*",
-    "cache-control": "public, max-age=31536000, immutable",
-    "date": "Tue, 15 Sep 2020 19:04:56 GMT",
-    "cf-request-id": "0534c0f05d0000b63318b1c200000001",
     "cf-cache-status": "HIT",
     "x-amz-id-2": "E/oY9uoCwyL2KrXfXRQpTS8GcY/dd2mOkUsBqe7f8apG6x+u/Sj8JWN54cpVQrD7/ZghQafm5Mo=",
+    "x-amz-request-id": "0FAC864E61EB0AC8",
+    "set-cookie": "__cfduid=ddc418fab58bffa2343203bc28f65099e1600372277; expires=Sat, 17-Oct-20 19:51:17 GMT; path=/; domain=.deno.land; HttpOnly; SameSite=Lax; Secure",
     "last-modified": "Sun, 13 Sep 2020 14:36:36 GMT",
-    "x-amz-request-id": "0FAC864E61EB0AC8"
+    "vary": "Accept-Encoding",
+    "content-length": "657",
+    "date": "Thu, 17 Sep 2020 19:51:17 GMT",
+    "age": "177472",
+    "cache-control": "public, max-age=31536000, immutable",
+    "content-type": "application/typescript; charset=utf-8",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
   },
   "url": "https://deno.land/std@0.69.0/path/_interface.ts"
 }
