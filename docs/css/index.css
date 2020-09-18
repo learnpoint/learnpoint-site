@@ -1,36 +1,20 @@
-body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    color: #1d2d35;
-    line-height: 1.6;
-    overflow-y: scroll;
-    background-color: #FDEEE3;
-}
-
-main {
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 20px;
-    padding: 0 16px;
-}
-
-.title {
+.index__title {
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 64px;
-    margin: 128px auto 24px;
+    margin: 64px auto 24px;
     font-weight: 600;
     color: #333;
     line-height: 1.1;
 }
 
 @media (max-width: 560px) {
-    .title {
+    .index__title {
         margin: 64px auto 24px;
     }
 }
 
-.tagline {
+.index__tagline {
     margin: 0 auto;
     text-align: center;
     font-size: 28px;
@@ -38,7 +22,7 @@ main {
     max-width: 640px;
 }
 
-.contact {
+.index__contact {
     text-align: center;
     padding: 56px 64px 32px;
     color: #fff;
@@ -49,32 +33,32 @@ main {
 }
 
 @media (max-width: 560px) {
-    .contact {
+    .index__contact {
         padding: 42px 32px 12px;
         margin: 64px auto;
     }   
 }
 
-.contact__title {
+.index__contact-title {
     font-size: 30px;
     line-height: 1.1;
     font-weight: bold;
     margin: 0 0 28px;
 }
 
-.contact__paragraph {
+.index__contact-paragraph {
     font-size: 22px;
     line-height: 1.3;
     margin: 0 0 28px;
 }
 
-.contact__link {
+.index__contact-link {
     color: #fff;
     font-weight: 600;
     padding: 0 2px;
 }
 
-.heart-emoji {
+.index__heart-emoji {
     display: inline-block;
     vertical-align: middle;
     font-size: 0.8em;

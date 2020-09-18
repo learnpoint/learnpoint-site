@@ -1,0 +1,9 @@
+.not-found__title {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 64px;
+    margin: 64px auto 256px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.1;
+}

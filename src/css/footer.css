@@ -1,12 +1,31 @@
 .footer {
+    border-top: 1px solid #ccc;
     max-width: 900px;
-    margin: 128px auto;
-    text-align: center;
-    color: #333;
-    border-top: 1px solid #bbb;
-    padding: 24px 0;
+    margin: 128px auto 64px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.footer__select-language-panel {
+    display: flex;
+}
+
+.footer__select-language-link {
+    cursor: pointer;
+    color: #777;
+    padding: 0 4px;
+}
+
+html[lang="en"] .footer__select-language-link[data-select-language="en"],
+html[lang="sv"] .footer__select-language-link[data-select-language="sv"] {
+    color: #000;
+    font-weight: 600;
+    cursor: text;
 }
 
 .footer__link {
+    cursor: pointer;
     color: #000;
 }

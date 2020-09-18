@@ -1,0 +1,7 @@
+html[lang="en"] [lang="sv"] {
+    display: none;
+}
+
+html[lang="sv"] [lang="en"] {
+    display: none;
+}

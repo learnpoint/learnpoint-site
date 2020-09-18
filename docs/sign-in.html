@@ -6,59 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learnpoint</title>
     <link rel="shortcut icon" type="image/png" href="/img/favicons/favicon.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/language.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/sign-in.css">
-    <link rel="stylesheet" href="/css/select-language.css">
-    <script defer src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/404.css">
+    <script src="/js/language.js"></script>
+    <script defer src="/js/main.js"></script>
 </head>
 
 <body>
-    <style id="language-style"></style>
-    <div class="select-language">
-        <div>
-            <a class="select-language__link" data-select-language="sv">Svenska</a>
-        </div>
-        <div>
-            <a class="select-language__link" data-select-language="eng">English</a>
-        </div>
-    </div>
     <header class="header">
         <nav class="header__nav">
             <a href="/" class="header__logo"><span>Learnpoint</span><span class="header__logo-dot">.</span></a>
             <div class="header__links">
                 <a class="header__link" href="/sign-in.html">
-                    <span class="eng">Sign in</span>
-                    <span class="sv">Logga in</span>
+                    <span lang="en">Sign in</span>
+                    <span lang="sv">Logga in</span>
                 </a>
             </div>
         </nav>
     </header>
     <main>
+        
 
 <h1 class="sign-in__title">
-    <span class="eng">Sign in</span>
-    <span class="sv">Logga in</span>
+    <span lang="en">Sign in</span>
+    <span lang="sv">Logga in</span>
 </h1>
 
 <p class="sign-in__paragraph">
-    <span class="eng">To sign in to Learnpoint, you need the address for your school. If your school is named <span class="sign-in__monospaced">my-school</span>, browse to <span class="sign-in__monospaced">my-school.learnpoint.se</span> to sign in.</span>
-    <span class="sv">För att logga in på Learnpoint behöver du adressen för din skola. Om din skola heter <span class="sign-in__monospaced">min-skola</span>, surfa till <span class="sign-in__monospaced">min-skola.learnpoint.se</span> för att logga in.</span>
+    <span lang="en">To sign in to Learnpoint, you need the address for your school. If your school is named <span class="sign-in__monospaced">my-school</span>, browse to <span class="sign-in__monospaced">my-school.learnpoint.se</span> to sign in.</span>
+    <span lang="sv">För att logga in på Learnpoint behöver du adressen för din skola. Om din skola heter <span class="sign-in__monospaced">min-skola</span>, surfa till <span class="sign-in__monospaced">min-skola.learnpoint.se</span> för att logga in.</span>
 </p>
 
 <p class="sign-in__paragraph">
-    <span class="eng">Trouble signing in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">We'd be happy to help</a>.</span>
-    <span class="sv">Problem att logga in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">Vi hjälper gärna till</a>.</span>
+    <span lang="en">Trouble signing in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">We'd be happy to help</a>.</span>
+    <span lang="sv">Problem att logga in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">Vi hjälper gärna till</a>.</span>
 </p>
 
 </main>
 <footer class="footer">
-    <span class="eng">Learnpoint is developed by the company <a href="http://www.viaecole.se/" class="footer__link" target="_blank">ViaEcole</a></span>
-    <span class="sv">Learnpoint är utvecklat av företaget <a href="http://www.viaecole.se/" class="footer__link" target="_blank">ViaEcole</a></span>
+    <div>
+        <span lang="en">Learnpoint is developed by <a href="http://www.viaecole.se/" class="footer__link" target="_blank">ViaEcole</a></span>
+        <span lang="sv">Learnpoint är utvecklat av <a href="http://www.viaecole.se/" class="footer__link" target="_blank">ViaEcole</a></span>
+    </div>
+    <div class="footer__select-language-panel">
+        <div>
+            <a class="footer__select-language-link" data-select-language="en">English</a>
+        </div>
+        <div>|</div>
+        <div>
+            <a class="footer__select-language-link" data-select-language="sv">Svenska</a>
+        </div>
+    </div>
 </footer>
 </body>
 
