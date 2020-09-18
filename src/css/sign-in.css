@@ -15,9 +15,7 @@
 }
 
 .sign-in__monospaced {
-    /* font-family: 'Courier New', Courier, monospace; */
     font-weight: bold;
-    /* font-style: italic; */
     padding: 0 1px;
 }
 
