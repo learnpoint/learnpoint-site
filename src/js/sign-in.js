@@ -94,7 +94,6 @@
 
         inputElement.disabled = false;
         inputElement.removeAttribute('disabled');
-        inputElement.focus();
 
         saveSchool(url);
 
