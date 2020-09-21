@@ -7,13 +7,13 @@
 
 <p class="sign-in__paragraph">
     <span lang="en">Enter the Learnpoint address for your school.</span>
-    <span lang="sv">Skriv in Learnpoint-adressen till din skola.</span>
+    <span lang="sv">Skriv in Learnpoint-adressen till din skola.</span> 
 </p>
 
 <form autocomplete="off" class="sign-in__form EMPTY" data-element="sign-in__form" action="#">
     <div class="sign-in__error-message">
-        <span lang="en">* Couldn't find that address</span>
-        <span lang="sv">* Hittade inte adressen</span>
+        <span lang="en">Couldn't log in. Check the address.</span>
+        <span lang="sv">Kunde inte logga in. Kontrollera adressen.</span>
     </div>
     <div class="sign-in__input-wrap">
         <div class="sign-in__input-overlay" data-element="sign-in__input-overlay">school-name</div>
@@ -31,12 +31,12 @@
     <span lang="sv">Problem att logga in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">Vi hjälper gärna till</a>.</span>
 </p>
 
-<!-- <div class="sign-in__previous-schools" data-element="sign-in__previous-schools">
-    <ul>
-        <li>Hey</li>
-    </ul>
-</div> -->
-
-
+<div class="sign-in__saved-schools EMPTY" data-element="sign-in__saved-schools">
+    <p>
+        <span lang="en">Your previous sign ins</span>
+        <span lang="sv">Dina tidigare inloggningar</span>
+    </p>
+    <ul data-element="sign-in__saved-schools-list"></ul>
+</div>
 
 [[footer.html]]

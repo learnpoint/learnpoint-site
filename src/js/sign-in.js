@@ -4,13 +4,57 @@
     let inputElement;
     let inputOverlayElement;
     let submitElement;
+    let savedSchoolsElement;
+    let savedSchoolsListElement;
 
     document.addEventListener('DOMContentLoaded', event => {
         formElement = document.querySelector('[data-element="sign-in__form"]');
         inputElement = document.querySelector('[data-element="sign-in__input"]');
         inputOverlayElement = document.querySelector('[data-element="sign-in__input-overlay"]');
         submitElement = document.querySelector('[data-element="sign-in__submit"]');
+        savedSchoolsElement = document.querySelector('[data-element="sign-in__saved-schools"]');
+        savedSchoolsListElement = document.querySelector('[data-element="sign-in__saved-schools-list"]');
+        populateSavedSchoolsList();
     });
+
+    function populateSavedSchoolsList() {
+        const savedSchools = getSavedSchools();
+        if (savedSchools.length < 1) {
+            return;
+        }
+
+        savedSchoolsElement.classList.remove('EMPTY');
+
+        savedSchools.forEach(url => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = url;
+            a.textContent = url.replace('https://', '');
+            li.append(a);
+            savedSchoolsListElement.append(li);
+        });
+    }
+
+    function saveSchool(url) {
+        let schools = [];
+
+        if (localStorage.getItem('saved-schools')) {
+            schools = JSON.parse(localStorage.getItem('saved-schools'));
+        }
+
+        if (!schools.includes(url)) {
+            schools.push(url);
+        }
+
+        localStorage.setItem('saved-schools', JSON.stringify(schools));
+    }
+
+    function getSavedSchools() {
+        if (!localStorage.getItem('saved-schools')) {
+            return [];
+        }
+        return JSON.parse(localStorage.getItem('saved-schools'));
+    }
 
     document.addEventListener('submit', event => {
         if (event.target !== formElement) {
@@ -52,17 +96,7 @@
         inputElement.removeAttribute('disabled');
         inputElement.focus();
 
-        let schools = [];
-
-        if (localStorage.getItem('schools')) {
-            schools = JSON.parse(localStorage.getItem('schools'));
-        }
-
-        if (!schools.includes(url)) {
-            schools.push(url);
-        }
-
-        localStorage.setItem('schools', JSON.stringify(schools));
+        saveSchool(url);
 
         location.href = url;
     }
