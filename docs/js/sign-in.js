@@ -27,12 +27,14 @@
 
         const submitStartTime = Date.now();
 
-        isSchoolNameValid(inputElement.value, () => {
-            formElement.classList.remove('SUBMITTING');
-            formElement.classList.add('ERROR');
-            // let wait = Math.max(1000 - (Date.now() - submitStartTime), 4);
-            // setTimeout(error, wait);
-        }, success);
+        isSchoolNameValid(inputElement.value, error, success);
+
+        // isSchoolNameValid(inputElement.value, () => {
+        //     formElement.classList.remove('SUBMITTING');
+        //     formElement.classList.add('ERROR');
+        //     // let wait = Math.max(1000 - (Date.now() - submitStartTime), 4);
+        //     // setTimeout(error, wait);
+        // }, success);
     });
 
     function error() {
