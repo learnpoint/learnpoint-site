@@ -58,6 +58,7 @@
     display: block;
     width: 100%;
     box-sizing: border-box;
+    background-color: #fff;
     border: 1px solid #aaa;
     border-radius: 5px;
     padding: 12px;
@@ -77,6 +78,10 @@
     outline: 0;
     box-shadow: 0 0 3px rgba(60, 154, 244, .6);
     box-shadow: 0 0 4px rgba(7, 128, 255, .6);
+}
+
+.sign-in__input:disabled {
+    background-color: rgba(255, 255, 255, .5);
 }
 
 .sign-in__form.ERROR .sign-in__input {
@@ -135,10 +140,15 @@
     opacity: 1;
 }
 
-.sign-in__form.EMPTY .sign-in__submit, .sign-in__form.ERROR .sign-in__submit {
+.sign-in__form.EMPTY .sign-in__submit,
+.sign-in__form.ERROR .sign-in__submit {
     pointer-events: none;
     cursor: default;
     opacity: .6;
+}
+
+.sign-in__form.LOADING .sign-in__submit {
+    pointer-events: none;
 }
 
 .sign-in__submit-spinner {
@@ -162,7 +172,7 @@
 
 @keyframes sign-in-submit-spinner {
     100% {
-        transform:rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 

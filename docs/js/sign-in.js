@@ -4,15 +4,12 @@
     let inputElement;
     let inputOverlayElement;
     let submitElement;
-    // let schoolUrl;
 
     document.addEventListener('DOMContentLoaded', event => {
         formElement = document.querySelector('[data-element="sign-in__form"]');
         inputElement = document.querySelector('[data-element="sign-in__input"]');
         inputOverlayElement = document.querySelector('[data-element="sign-in__input-overlay"]');
         submitElement = document.querySelector('[data-element="sign-in__submit"]');
-        // schoolUrl = document.querySelector('[data-element="sign-in__school-url"]');
-        // updateInput();
     });
 
     document.addEventListener('submit', event => {
@@ -24,23 +21,36 @@
 
         formElement.classList.add('SUBMITTING');
         formElement.classList.remove('ERROR');
+        inputElement.disabled = true;
+        inputElement.setAttribute('disabled', '');
 
         const submitStartTime = Date.now();
 
-        isSchoolNameValid(inputElement.value, () => {
+        isSchoolNameValid(inputElement.value, function () {
             let wait = Math.max(1000 - (Date.now() - submitStartTime), 0);
             setTimeout(error, wait);
-        }, success);
+        }, function (url) {
+            let wait = Math.max(800 - (Date.now() - submitStartTime), 0);
+            setTimeout(() => success(url), wait);
+        });
     });
 
     function error() {
         formElement.classList.remove('SUBMITTING');
         formElement.classList.add('ERROR');
+
+        inputElement.disabled = false;
+        inputElement.removeAttribute('disabled');
+        inputElement.focus();
     }
 
     function success(url) {
         formElement.classList.remove('SUBMITTING');
         formElement.classList.remove('ERROR');
+
+        inputElement.disabled = false;
+        inputElement.removeAttribute('disabled');
+        inputElement.focus();
 
         let schools = [];
 
