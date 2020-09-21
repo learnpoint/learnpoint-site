@@ -60,7 +60,7 @@
 
         // inputElement.value = '';
 
-        location.href = url;
+        // location.href = url;
     }
 
     document.addEventListener('input', event => {
