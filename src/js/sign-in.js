@@ -12,7 +12,7 @@
         inputOverlayElement = document.querySelector('[data-element="sign-in__input-overlay"]');
         submitElement = document.querySelector('[data-element="sign-in__submit"]');
         // schoolUrl = document.querySelector('[data-element="sign-in__school-url"]');
-        updateInput();
+        // updateInput();
     });
 
     document.addEventListener('submit', event => {
@@ -25,40 +25,39 @@
         formElement.classList.add('SUBMITTING');
         formElement.classList.remove('ERROR');
 
-        isSchoolNameValid(inputElement.value, error, success);
+        const submitStartTime = Date.now();
+
+        isSchoolNameValid(inputElement.value, () => {
+            let wait = Math.max(1000 - (Date.now() - submitStartTime), 0);
+            console.log(wait);
+            setTimeout(error, wait);
+        }, success);
     });
 
     function error() {
         formElement.classList.remove('SUBMITTING');
         formElement.classList.add('ERROR');
-        // inputElement.classList.add('ERROR');
-        // schoolUrl.textContent = url;
-        // setTimeout(() => {
-        //     inputElement.value = '';
-        //     updateInput();
-        // }, 1000);
-
     }
 
     function success(url) {
-        // formElement.classList.remove('SUBMITTING');
-        // formElement.classList.remove('ERROR');
+        formElement.classList.remove('SUBMITTING');
+        formElement.classList.remove('ERROR');
 
-        // let schools = [];
+        let schools = [];
 
-        // if (localStorage.getItem('schools')) {
-        //     schools = JSON.parse(localStorage.getItem('schools'));
-        // }
+        if (localStorage.getItem('schools')) {
+            schools = JSON.parse(localStorage.getItem('schools'));
+        }
 
-        // if (!schools.includes(url)) {
-        //     schools.push(url);
-        // }
+        if (!schools.includes(url)) {
+            schools.push(url);
+        }
 
-        // localStorage.setItem('schools', JSON.stringify(schools));
+        localStorage.setItem('schools', JSON.stringify(schools));
 
         // inputElement.value = '';
 
-        // location.href = url;
+        location.href = url;
     }
 
     document.addEventListener('input', event => {

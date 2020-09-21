@@ -80,6 +80,7 @@
 }
 
 .sign-in__form.ERROR .sign-in__input {
+    transition: all .2s .3s;
     border: 1px solid #e00;
     box-shadow: none;
 }
@@ -91,6 +92,7 @@
 
 .sign-in__error-message {
     font-size: 14px;
+    font-weight: 600;
     color: red;
     padding: 2px 4px;
     margin-bottom: 4px;
@@ -99,6 +101,7 @@
 }
 
 .sign-in__form.ERROR .sign-in__error-message {
+    transition: all .2s .3s;
     opacity: 1;
 }
 
@@ -107,7 +110,9 @@
 }
 
 .sign-in__submit {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     color: #fff;
     font-weight: 600;
@@ -128,14 +133,37 @@
     cursor: pointer;
     pointer-events: unset;
     opacity: 1;
-
 }
 
-.sign-in__form.EMPTY .sign-in__submit,
-.sign-in__form.ERROR .sign-in__submit {
+.sign-in__form.EMPTY .sign-in__submit, .sign-in__form.ERROR .sign-in__submit {
     pointer-events: none;
     cursor: default;
     opacity: .6;
+}
+
+.sign-in__submit-spinner {
+    border: 3px solid #fff;
+    border-left-color: transparent;
+    border-radius: 50%;
+    height: 12px;
+    width: 0;
+    margin: 0;
+    opacity: 0;
+    transition: width .2s .2s, margin .2s .2s, opacity .2s;
+    animation: sign-in-submit-spinner .8s linear infinite;
+}
+
+.sign-in__form.SUBMITTING .sign-in__submit-spinner {
+    transition: width .2s, margin .2s, opacity .2s .2s;
+    width: 12px;
+    margin: 0 8px 0 0;
+    opacity: 1;
+}
+
+@keyframes sign-in-submit-spinner {
+    100% {
+        transform:rotate(360deg);
+    }
 }
 
 .sign-in__help-message {

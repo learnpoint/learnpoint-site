@@ -6,11 +6,11 @@
 </h1>
 
 <p class="sign-in__paragraph">
-    <span lang="en">Enter your school's Learnpoint address.</span>
-    <span lang="sv">Skriv in din skolas Learnpoint-adress.</span>
+    <span lang="en">Enter the Learnpoint address for your school.</span>
+    <span lang="sv">Skriv in Learnpoint-adressen till din skola.</span>
 </p>
 
-<form class="sign-in__form EMPTY" data-element="sign-in__form">
+<form autocomplete="off" class="sign-in__form EMPTY" data-element="sign-in__form">
     <div class="sign-in__error-message">
         <span lang="en">* Couldn't find that address</span>
         <span lang="sv">* Hittade inte adressen</span>
@@ -20,6 +20,7 @@
         <input class="sign-in__input" data-element="sign-in__input" placeholder="school-name" autofocus />
     </div>
     <button class="sign-in__submit" data-element="sign-in__submit" type="submit">
+        <span class="sign-in__submit-spinner"></span>
         <span lang="en">Continue</span>
         <span lang="sv">Fortsätt</span>
     </button>
