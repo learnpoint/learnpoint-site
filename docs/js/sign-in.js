@@ -4,12 +4,14 @@
     let inputElement;
     let inputOverlayElement;
     let submitElement;
+    let schoolUrl;
 
     document.addEventListener('DOMContentLoaded', event => {
         formElement = document.querySelector('[data-element="sign-in__form"]');
         inputElement = document.querySelector('[data-element="sign-in__input"]');
         inputOverlayElement = document.querySelector('[data-element="sign-in__input-overlay"]');
         submitElement = document.querySelector('[data-element="sign-in__submit"]');
+        schoolUrl = document.querySelector('[data-element="sign-in__school-url"]');
         updateInput();
     });
 
@@ -21,14 +23,21 @@
         event.preventDefault();
 
         formElement.classList.add('SUBMITTING');
+        formElement.classList.remove('ERROR');
 
         isSchoolNameValid(inputElement.value, error, success);
     });
 
-    function error() {
+    function error(url) {
         formElement.classList.remove('SUBMITTING');
         formElement.classList.add('ERROR');
-        inputElement.classList.add('ERROR');
+        // inputElement.classList.add('ERROR');
+        schoolUrl.textContent = url;
+        setTimeout(() => {
+            inputElement.value = '';
+            updateInput();
+        }, 1000);
+
     }
 
     function success(url) {
@@ -46,6 +55,8 @@
         }
 
         localStorage.setItem('schools', JSON.stringify(schools));
+
+        inputElement.value = '';
 
         location.href = url;
     }
@@ -80,7 +91,7 @@
         const schoolUrl = `https://${name}.learnpoint.se/Images/learnpoint.ico`;
         const img = new Image();
         img.onload = () => success(`https://${name}.learnpoint.se`);
-        img.onerror = () => error();
+        img.onerror = () => error(`${name}.learnpoint.se`);
         img.src = schoolUrl;
     }
 

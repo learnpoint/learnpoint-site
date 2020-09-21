@@ -82,17 +82,36 @@
     color: #777;
 }
 
-.sign-in__error-message {
-    color: red;
-    display: none;
-    font-style: italic;
-    padding: 12px 2px;
-    font-weight: 600;
+.sign-in__help-message {
+    margin: 48px 0;
     font-size: 16px;
+    text-align: center;
+}
+
+.sign-in__error-message {
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(255,255,255,.5);
+    padding: 16px;
+    border: 2px solid rgb(252 139 139);
+    border-radius: 8px;
+    opacity: 0;
+    transform: scale(.9);
+    transform-origin: center 40%;
+    transition: all .2s 1s;
 }
 
 .sign-in__form.ERROR .sign-in__error-message {
-    display: block;
+    opacity: 1;
+    transform: none;
+}
+
+.sign-in__error-message p {
+    margin: 3px 0 0;
+}
+
+.sign-in__school-url {
+    font-weight: bold;
 }
 
 .sign-in__submit {
