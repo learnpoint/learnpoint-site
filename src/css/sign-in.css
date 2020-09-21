@@ -26,7 +26,7 @@
 
 .sign-in__form {
     max-width: 400px;
-    margin: 16px auto 24px;
+    margin: 16px auto 42px;
 }
 
 .sign-in__input-wrap {
@@ -81,9 +81,9 @@
     box-shadow: 0 0 4px rgba(7, 128, 255, .6);
 }
 
-.sign-in__input:disabled {
+/* .sign-in__input:disabled {
     background-color: rgba(255, 255, 255, .5);
-}
+} */
 
 .sign-in__form.ERROR .sign-in__input {
     transition: all .2s .3s;
@@ -179,13 +179,13 @@
 
 .sign-in__help-message {
     margin: 0 0 64px;
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
 }
 
 .sign-in__saved-schools {
     max-width: 400px;
-    margin: 16px auto 48px;
+    margin: 16px auto 32px;
 }
 
 .sign-in__saved-schools.EMPTY {
@@ -195,7 +195,7 @@
 .sign-in__saved-schools p {
     margin: 0 0 12px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -216,7 +216,7 @@
 .sign-in__saved-schools a {
     display: block;
     margin: 0;
-    padding: 12px;
+    padding: 12px 16px;
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;

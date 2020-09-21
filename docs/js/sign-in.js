@@ -65,8 +65,8 @@
 
         formElement.classList.add('SUBMITTING');
         formElement.classList.remove('ERROR');
-        inputElement.disabled = true;
-        inputElement.setAttribute('disabled', '');
+        // inputElement.disabled = true;
+        // inputElement.setAttribute('disabled', '');
 
         const submitStartTime = Date.now();
 
@@ -83,9 +83,9 @@
         formElement.classList.remove('SUBMITTING');
         formElement.classList.add('ERROR');
 
-        inputElement.disabled = false;
-        inputElement.removeAttribute('disabled');
-        inputElement.focus();
+        // inputElement.disabled = false;
+        // inputElement.removeAttribute('disabled');
+        // inputElement.focus();
     }
 
     function success(url) {
@@ -94,8 +94,8 @@
         formElement.classList.remove('SUBMITTING');
         formElement.classList.remove('ERROR');
 
-        inputElement.disabled = false;
-        inputElement.removeAttribute('disabled');
+        // inputElement.disabled = false;
+        // inputElement.removeAttribute('disabled');
 
         location.href = url;
     }
