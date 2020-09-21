@@ -27,14 +27,10 @@
 
         const submitStartTime = Date.now();
 
-        isSchoolNameValid(inputElement.value, error, success);
-
-        // isSchoolNameValid(inputElement.value, () => {
-        //     formElement.classList.remove('SUBMITTING');
-        //     formElement.classList.add('ERROR');
-        //     // let wait = Math.max(1000 - (Date.now() - submitStartTime), 4);
-        //     // setTimeout(error, wait);
-        // }, success);
+        isSchoolNameValid(inputElement.value, () => {
+            let wait = Math.max(1000 - (Date.now() - submitStartTime), 0);
+            setTimeout(error, wait);
+        }, success);
     });
 
     function error() {
@@ -58,9 +54,7 @@
 
         localStorage.setItem('schools', JSON.stringify(schools));
 
-        // inputElement.value = '';
-
-        // location.href = url;
+        location.href = url;
     }
 
     document.addEventListener('input', event => {
