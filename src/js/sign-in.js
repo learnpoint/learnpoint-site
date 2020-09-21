@@ -88,10 +88,30 @@
     }
 
     function isSchoolNameValid(name, error, success) {
-        const schoolUrl = `https://${name}.learnpoint.se/Images/learnpoint.ico`;
+        let done = false;
+
         const img = new Image();
-        img.onload = () => success(`https://${name}.learnpoint.se`);
-        img.onerror = () => error();
-        img.src = schoolUrl;
+
+        const timeoutError = setTimeout(() => {
+            if (done) return;
+            done = true;
+            error();
+        }, 4000);
+
+        img.onload = () => {
+            if (done) return;
+            done = true;
+            clearTimeout(timeoutError);
+            success(`https://${name}.learnpoint.se`);
+        };
+
+        img.onerror = () => {
+            if (done) return;
+            done = true;
+            clearTimeout(timeoutError);
+            error();
+        };
+
+        img.src = `https://${name}.learnpoint.se/Images/learnpoint.ico`;
     }
 })();
