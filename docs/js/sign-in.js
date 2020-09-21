@@ -28,8 +28,10 @@
         const submitStartTime = Date.now();
 
         isSchoolNameValid(inputElement.value, () => {
-            let wait = Math.max(1000 - (Date.now() - submitStartTime), 4);
-            setTimeout(error, wait);
+            formElement.classList.remove('SUBMITTING');
+            formElement.classList.add('ERROR');
+            // let wait = Math.max(1000 - (Date.now() - submitStartTime), 4);
+            // setTimeout(error, wait);
         }, success);
     });
 
