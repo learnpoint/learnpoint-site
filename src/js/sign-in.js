@@ -89,13 +89,13 @@
     }
 
     function success(url) {
+        saveSchool(url);
+
         formElement.classList.remove('SUBMITTING');
         formElement.classList.remove('ERROR');
 
         inputElement.disabled = false;
         inputElement.removeAttribute('disabled');
-
-        saveSchool(url);
 
         location.href = url;
     }
