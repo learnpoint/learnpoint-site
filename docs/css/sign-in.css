@@ -2,7 +2,7 @@
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 64px;
-    margin: 32px auto 24px;
+    margin: 32px auto 0px;
     font-weight: 600;
     color: #333;
     line-height: 1.1;
@@ -11,7 +11,8 @@
 .sign-in__paragraph {
     text-align: center;
     max-width: 520px;
-    margin: 24px auto;
+    margin: 16px auto;
+    line-height: 1.3;
 }
 
 .sign-in__monospaced {
@@ -21,4 +22,199 @@
 
 .sign-in__link {
     color: #000;
+}
+
+.sign-in__form {
+    max-width: 400px;
+    margin: 16px auto 42px;
+}
+
+.sign-in__input-wrap {
+    position: relative;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.sign-in__input-overlay {
+    position: absolute;
+    pointer-events: none;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: transparent;
+    overflow: hidden;
+}
+
+.sign-in__input-overlay:after {
+    content: ".learnpoint.se";
+    font-weight: 600;
+    color: #000;
+    margin-left: 1px;
+}
+
+.sign-in__input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 12px;
+    font: inherit;
+    transition: all .2s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.sign-in__input::placeholder {
+    color: #777;
+}
+
+.sign-in__input:focus {
+    border-color: #3C9AF4;
+    border-color: #0780ff;
+    outline: 0;
+    box-shadow: 0 0 3px rgba(60, 154, 244, .6);
+    box-shadow: 0 0 4px rgba(7, 128, 255, .6);
+}
+
+.sign-in__form.ERROR .sign-in__input {
+    transition: all .2s .3s;
+    border: 1px solid #e00;
+    box-shadow: none;
+}
+
+.sign-in__form.ERROR .sign-in__input:focus {
+    border: 1px solid #e00;
+    box-shadow: 0 0 3px rgba(224, 0, 0, .9);
+}
+
+.sign-in__error-message {
+    font-size: 14px;
+    font-weight: 600;
+    color: red;
+    padding: 2px 4px;
+    margin-bottom: 4px;
+    opacity: 0;
+    transition: all .2s;
+}
+
+.sign-in__form.ERROR .sign-in__error-message {
+    transition: all .2s .3s;
+    opacity: 1;
+}
+
+.sign-in__error-message p {
+    margin: 3px 0 0;
+}
+
+.sign-in__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+    font-weight: 600;
+    padding: 16px;
+    background-color: #0780ff;
+    border: 0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 16px;
+    outline: 0;
+    margin: 0;
+    text-align: center;
+    transition: opacity .2s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    pointer-events: unset;
+    opacity: 1;
+}
+
+.sign-in__form.EMPTY .sign-in__submit,
+.sign-in__form.ERROR .sign-in__submit {
+    pointer-events: none;
+    cursor: default;
+    opacity: .6;
+}
+
+.sign-in__form.LOADING .sign-in__submit {
+    pointer-events: none;
+}
+
+.sign-in__submit-spinner {
+    border: 3px solid #fff;
+    border-left-color: transparent;
+    border-radius: 50%;
+    height: 12px;
+    width: 0;
+    margin: 0;
+    opacity: 0;
+    transition: width .2s .2s, margin .2s .2s, opacity .2s;
+    animation: sign-in-submit-spinner .8s linear infinite;
+}
+
+.sign-in__form.SUBMITTING .sign-in__submit-spinner {
+    transition: width .2s, margin .2s, opacity .2s .2s;
+    width: 12px;
+    margin: 0 8px 0 0;
+    opacity: 1;
+}
+
+@keyframes sign-in-submit-spinner {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sign-in__help-message {
+    margin: 0 0 64px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.sign-in__saved-schools {
+    max-width: 400px;
+    margin: 16px auto 32px;
+}
+
+.sign-in__saved-schools.EMPTY {
+    display: none;
+}
+
+.sign-in__saved-schools p {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sign-in__saved-schools ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sign-in__saved-schools li {
+    margin: 0 0 8px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    list-style: none;
+    border: 1px solid #bbb;
+}
+
+.sign-in__saved-schools a {
+    display: block;
+    margin: 0;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
 }

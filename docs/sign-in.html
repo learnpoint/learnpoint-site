@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/css/404.css">
     <script src="/js/language.js"></script>
     <script defer src="/js/main.js"></script>
+    <script defer src="/js/sign-in.js"></script>
 </head>
 
 <body>
@@ -41,11 +42,35 @@
 </h1>
 
 <p class="sign-in__paragraph">
-    <span lang="en">To sign in to Learnpoint, you need the address for your school. If your school is named <span class="sign-in__monospaced">my-school</span>, browse to <span class="sign-in__monospaced">my-school.learnpoint.se</span> to sign in.</span>
-    <span lang="sv">För att logga in på Learnpoint behöver du adressen för din skola. Om din skola heter <span class="sign-in__monospaced">min-skola</span>, surfa till <span class="sign-in__monospaced">min-skola.learnpoint.se</span> för att logga in.</span>
+    <span lang="en">Enter the Learnpoint address for your school.</span>
+    <span lang="sv">Skriv in Learnpoint-adressen till din skola.</span> 
 </p>
 
-<p class="sign-in__paragraph">
+<form autocomplete="off" class="sign-in__form EMPTY" data-element="sign-in__form" action="#">
+    <div class="sign-in__error-message">
+        <span lang="en">Couldn't log in. Check the address.</span>
+        <span lang="sv">Kunde inte logga in. Kontrollera adressen.</span>
+    </div>
+    <div class="sign-in__input-wrap">
+        <div class="sign-in__input-overlay" data-element="sign-in__input-overlay">school-name</div>
+        <input autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off" class="sign-in__input" data-element="sign-in__input" placeholder="school-name" autofocus />
+    </div>
+    <button class="sign-in__submit" data-element="sign-in__submit" type="submit">
+        <span class="sign-in__submit-spinner"></span>
+        <span lang="en">Continue</span>
+        <span lang="sv">Fortsätt</span>
+    </button>
+</form>
+
+<div class="sign-in__saved-schools EMPTY" data-element="sign-in__saved-schools">
+    <p>
+        <span lang="en">Your previous sign ins</span>
+        <span lang="sv">Dina tidigare inloggningar</span>
+    </p>
+    <ul data-element="sign-in__saved-schools-list"></ul>
+</div>
+
+<p class="sign-in__help-message">
     <span lang="en">Trouble signing in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">We'd be happy to help</a>.</span>
     <span lang="sv">Problem att logga in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">Vi hjälper gärna till</a>.</span>
 </p>
