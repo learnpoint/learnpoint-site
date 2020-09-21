@@ -2,7 +2,7 @@
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 64px;
-    margin: 32px auto 24px;
+    margin: 32px auto 0px;
     font-weight: 600;
     color: #333;
     line-height: 1.1;
@@ -11,7 +11,7 @@
 .sign-in__paragraph {
     text-align: center;
     max-width: 520px;
-    margin: 24px auto;
+    margin: 16px auto;
 }
 
 .sign-in__monospaced {
@@ -21,4 +21,107 @@
 
 .sign-in__link {
     color: #000;
+}
+
+.sign-in__form {
+    max-width: 400px;
+    margin: 32px auto;
+}
+
+.sign-in__input-wrap {
+    position: relative;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.sign-in__input-overlay {
+    position: absolute;
+    pointer-events: none;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: transparent;
+    overflow: hidden;
+}
+
+.sign-in__input-overlay:after {
+    content: ".learnpoint.se";
+    font-weight: 600;
+    color: #000;
+    margin-left: 1px;
+}
+
+.sign-in__input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    font: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.sign-in__input.ERROR {
+    text-decoration: wavy underline red;
+}
+
+.sign-in__input:focus {
+    border-color: #3C9AF4;
+    border-color: #0780ff;
+    outline: 0;
+    box-shadow: 0 0 3px rgba(60, 154, 244, .6);
+    box-shadow: 0 0 4px rgba(7, 128, 255, .6);
+}
+
+.sign-in__input::placeholder {
+    color: #777;
+}
+
+.sign-in__error-message {
+    color: red;
+    display: none;
+    font-style: italic;
+    padding: 12px 2px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.sign-in__form.ERROR .sign-in__error-message {
+    display: block;
+}
+
+.sign-in__submit {
+    display: block;
+    width: 100%;
+    color: #eee;
+    font-weight: 600;
+    padding: 14px;
+    background-color: #0780ff;
+    border: 0;
+    border-radius: 5px;
+    cursor: default;
+    pointer-events: none;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 16px;
+    outline: 0;
+    margin: 0;
+    text-align: center;
+    opacity: .6;
+    transition: opacity .2s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.sign-in__form.HAS-VALUE .sign-in__submit {
+    color: #fff;
+    cursor: pointer;
+    pointer-events: unset;
+    opacity: 1;
 }
