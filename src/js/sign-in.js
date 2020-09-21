@@ -4,14 +4,14 @@
     let inputElement;
     let inputOverlayElement;
     let submitElement;
-    let schoolUrl;
+    // let schoolUrl;
 
     document.addEventListener('DOMContentLoaded', event => {
         formElement = document.querySelector('[data-element="sign-in__form"]');
         inputElement = document.querySelector('[data-element="sign-in__input"]');
         inputOverlayElement = document.querySelector('[data-element="sign-in__input-overlay"]');
         submitElement = document.querySelector('[data-element="sign-in__submit"]');
-        schoolUrl = document.querySelector('[data-element="sign-in__school-url"]');
+        // schoolUrl = document.querySelector('[data-element="sign-in__school-url"]');
         updateInput();
     });
 
@@ -28,37 +28,37 @@
         isSchoolNameValid(inputElement.value, error, success);
     });
 
-    function error(url) {
+    function error() {
         formElement.classList.remove('SUBMITTING');
         formElement.classList.add('ERROR');
         // inputElement.classList.add('ERROR');
-        schoolUrl.textContent = url;
-        setTimeout(() => {
-            inputElement.value = '';
-            updateInput();
-        }, 1000);
+        // schoolUrl.textContent = url;
+        // setTimeout(() => {
+        //     inputElement.value = '';
+        //     updateInput();
+        // }, 1000);
 
     }
 
     function success(url) {
-        formElement.classList.remove('SUBMITTING');
-        formElement.classList.remove('ERROR');
+        // formElement.classList.remove('SUBMITTING');
+        // formElement.classList.remove('ERROR');
 
-        let schools = [];
+        // let schools = [];
 
-        if (localStorage.getItem('schools')) {
-            schools = JSON.parse(localStorage.getItem('schools'));
-        }
+        // if (localStorage.getItem('schools')) {
+        //     schools = JSON.parse(localStorage.getItem('schools'));
+        // }
 
-        if (!schools.includes(url)) {
-            schools.push(url);
-        }
+        // if (!schools.includes(url)) {
+        //     schools.push(url);
+        // }
 
-        localStorage.setItem('schools', JSON.stringify(schools));
+        // localStorage.setItem('schools', JSON.stringify(schools));
 
-        inputElement.value = '';
+        // inputElement.value = '';
 
-        location.href = url;
+        // location.href = url;
     }
 
     document.addEventListener('input', event => {
@@ -70,13 +70,17 @@
     });
 
     function updateInput() {
-        inputElement.classList.remove('ERROR');
-
         if (inputElement.value) {
-            formElement.classList.add('HAS-VALUE');
+            formElement.classList.remove('EMPTY');
+            submitElement.disabled = false;
+            submitElement.removeAttribute('disabled');
         } else {
-            formElement.classList.remove('HAS-VALUE');
+            formElement.classList.add('EMPTY');
+            submitElement.disabled = true;
+            submitElement.setAttribute('disabled', '');
         }
+
+        formElement.classList.remove('ERROR');
 
         let hostName = inputElement.value;
 
@@ -91,16 +95,7 @@
         const schoolUrl = `https://${name}.learnpoint.se/Images/learnpoint.ico`;
         const img = new Image();
         img.onload = () => success(`https://${name}.learnpoint.se`);
-        img.onerror = () => error(`${name}.learnpoint.se`);
+        img.onerror = () => error();
         img.src = schoolUrl;
     }
-
-    window.addEventListener('popstate', event => {
-        console.log('popstate');
-    });
-
-    window.addEventListener('hashchange', event => {
-        console.log('haschange');
-    });
-
 })();

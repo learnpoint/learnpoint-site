@@ -10,27 +10,25 @@
     <span lang="sv">Skriv in din skolas Learnpoint-adress.</span>
 </p>
 
-<form class="sign-in__form" data-element="sign-in__form">
+<form class="sign-in__form EMPTY" data-element="sign-in__form">
+    <div class="sign-in__error-message">
+        <span lang="en">* Couldn't find that address</span>
+        <span lang="sv">* Hittade inte adressen</span>
+    </div>
     <div class="sign-in__input-wrap">
         <div class="sign-in__input-overlay" data-element="sign-in__input-overlay">school-name</div>
         <input class="sign-in__input" data-element="sign-in__input" placeholder="school-name" autofocus />
     </div>
-    <button class="sign-in__submit" type="submit">
+    <button class="sign-in__submit" data-element="sign-in__submit" type="submit">
         <span lang="en">Continue</span>
         <span lang="sv">Fortsätt</span>
     </button>
-    <p class="sign-in__help-message">
-        <span lang="en">Trouble signing in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">We'd be happy to help</a>.</span>
-        <span lang="sv">Problem att logga in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">Vi hjälper gärna till</a>.</span>
-    </p>
-    <div class="sign-in__error-message">
-        <span lang="en">Couldn't find</span>
-        <span lang="sv">Hittade inte</span>
-        <span class="sign-in__school-url" data-element="sign-in__school-url">my-school.learnpoint.se</span>.
-        <p lang="en">Please check the address.</p>
-        <p lang="sv">Kontrollera adressen.</p>
-    </div>
 </form>
+
+<p class="sign-in__help-message">
+    <span lang="en">Trouble signing in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">We'd be happy to help</a>.</span>
+    <span lang="sv">Problem att logga in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">Vi hjälper gärna till</a>.</span>
+</p>
 
 <!-- <div class="sign-in__previous-schools" data-element="sign-in__previous-schools">
     <ul>
