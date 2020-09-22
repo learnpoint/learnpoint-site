@@ -23,18 +23,52 @@
 
         const ul = document.createElement('ul');
 
-        savedSchools.forEach(url => {
+        savedSchools.forEach((url, i) => {
             const li = document.createElement('li');
             const a = document.createElement('a');
+            const removeIcon = document.createElement("img");
+            removeIcon.src = "/img/icons/remove.png";
+            removeIcon.id = i;
+            removeIcon.setAttribute('title', 'Remove this sign in');
+            removeIcon.addEventListener('click', e => {
+                let linkToBeRemoved = e.target.id;
+                li.classList.add('REMOVED');
+                deleteLink(parseInt(linkToBeRemoved));
+            })
+
             a.href = url;
             a.textContent = url.replace('https://', '');
             li.append(a);
+            li.append(removeIcon);
             ul.append(li);
         });
+
 
         savedSchoolsElement.append(ul);
 
         savedSchoolsElement.classList.remove('EMPTY');
+    }
+
+
+    function deleteLink(linkToBeDeleted) {
+
+        const savedSchools = getSavedSchools();
+        if (!savedSchools.length) {
+            return;
+        }
+
+        savedSchools.forEach((url, id) => {
+            if (linkToBeDeleted === id) {
+                savedSchools.splice(linkToBeDeleted, 1);
+            }
+        })
+
+        localStorage.setItem('saved-schools', JSON.stringify(savedSchools));
+
+        if (!savedSchools.length) {
+            savedSchoolsElement.classList.add('EMPTY');
+        }
+
     }
 
     function saveSchool(url) {
