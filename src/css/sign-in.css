@@ -170,7 +170,7 @@
 }
 
 .sign-in__help-message {
-    margin: 0 0 42px;
+    margin: 0 0 64px;
     font-size: 15px;
     font-size: 14px;
     text-align: center;
@@ -202,8 +202,8 @@
     padding: 0;
     background-color: #fff;
     border-radius: 5px;
-    list-style: none;
     border: 1px solid #bbb;
+    list-style: none;
 }
 
 .sign-in__saved-schools a {
