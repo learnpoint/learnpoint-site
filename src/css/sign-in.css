@@ -27,6 +27,7 @@
 .sign-in__form {
     max-width: 400px;
     margin: 16px auto 42px;
+    margin: 16px auto 16px;
 }
 
 .sign-in__input-wrap {
@@ -169,8 +170,9 @@
 }
 
 .sign-in__help-message {
-    margin: 0 0 64px;
+    margin: 0 0 42px;
     font-size: 15px;
+    font-size: 14px;
     text-align: center;
 }
 

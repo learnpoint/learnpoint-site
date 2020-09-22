@@ -38,15 +38,13 @@
     }
 
     function saveSchool(url) {
-        let schools = [];
-
-        if (localStorage.getItem('saved-schools')) {
-            schools = JSON.parse(localStorage.getItem('saved-schools'));
-        }
+        let schools = getSavedSchools();
 
         if (!schools.includes(url)) {
             schools.push(url);
         }
+
+        schools.sort();
 
         localStorage.setItem('saved-schools', JSON.stringify(schools));
     }
@@ -71,9 +69,11 @@
         const submitStartTime = Date.now();
 
         isSchoolNameValid(inputElement.value, function () {
+            // Ensure a minimum delay of 1000ms
             let wait = Math.max(1000 - (Date.now() - submitStartTime), 0);
             setTimeout(error, wait);
         }, function (url) {
+            // Ensure a minimum delay of 800ms
             let wait = Math.max(800 - (Date.now() - submitStartTime), 0);
             setTimeout(() => success(url), wait);
         });
