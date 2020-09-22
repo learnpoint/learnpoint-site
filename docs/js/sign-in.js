@@ -5,7 +5,6 @@
     let inputOverlayElement;
     let submitElement;
     let savedSchoolsElement;
-    let savedSchoolsListElement;
 
     document.addEventListener('DOMContentLoaded', event => {
         formElement = document.querySelector('[data-element="sign-in__form"]');
@@ -13,17 +12,16 @@
         inputOverlayElement = document.querySelector('[data-element="sign-in__input-overlay"]');
         submitElement = document.querySelector('[data-element="sign-in__submit"]');
         savedSchoolsElement = document.querySelector('[data-element="sign-in__saved-schools"]');
-        savedSchoolsListElement = document.querySelector('[data-element="sign-in__saved-schools-list"]');
         populateSavedSchoolsList();
     });
 
     function populateSavedSchoolsList() {
         const savedSchools = getSavedSchools();
-        if (savedSchools.length < 1) {
+        if (!savedSchools.length) {
             return;
         }
 
-        savedSchoolsElement.classList.remove('EMPTY');
+        const ul = document.createElement('ul');
 
         savedSchools.forEach(url => {
             const li = document.createElement('li');
@@ -31,8 +29,12 @@
             a.href = url;
             a.textContent = url.replace('https://', '');
             li.append(a);
-            savedSchoolsListElement.append(li);
+            ul.append(li);
         });
+
+        savedSchoolsElement.append(ul);
+
+        savedSchoolsElement.classList.remove('EMPTY');
     }
 
     function saveSchool(url) {

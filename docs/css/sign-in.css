@@ -64,7 +64,7 @@
     border-radius: 5px;
     padding: 12px;
     font: inherit;
-    transition: all .2s;
+    transition: all .1s;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
@@ -74,22 +74,17 @@
 }
 
 .sign-in__input:focus {
-    border-color: #3C9AF4;
     border-color: #0780ff;
     outline: 0;
-    box-shadow: 0 0 3px rgba(60, 154, 244, .6);
-    box-shadow: 0 0 4px rgba(7, 128, 255, .6);
+    box-shadow: 0 0 3px rgba(7, 128, 255, .6);
 }
 
 .sign-in__form.ERROR .sign-in__input {
-    transition: all .2s .3s;
     border: 1px solid #e00;
-    box-shadow: none;
 }
 
 .sign-in__form.ERROR .sign-in__input:focus {
-    border: 1px solid #e00;
-    box-shadow: 0 0 3px rgba(224, 0, 0, .9);
+    box-shadow: 0 0 5px rgba(224, 0, 0, .9);
 }
 
 .sign-in__error-message {
@@ -99,11 +94,11 @@
     padding: 2px 4px;
     margin-bottom: 4px;
     opacity: 0;
-    transition: all .2s;
+    transition: all .3s;
 }
 
 .sign-in__form.ERROR .sign-in__error-message {
-    transition: all .2s .3s;
+    transition: all .1s;
     opacity: 1;
 }
 
@@ -156,12 +151,12 @@
     width: 0;
     margin: 0;
     opacity: 0;
-    transition: width .2s .2s, margin .2s .2s, opacity .2s;
+    transition: width .1s, margin .1s, opacity .06s;
     animation: sign-in-submit-spinner .8s linear infinite;
 }
 
 .sign-in__form.SUBMITTING .sign-in__submit-spinner {
-    transition: width .2s, margin .2s, opacity .2s .2s;
+    transition: width .1s, margin .1s, opacity .2s .1s;
     width: 12px;
     margin: 0 8px 0 0;
     opacity: 1;
