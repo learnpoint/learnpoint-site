@@ -88,7 +88,9 @@
     box-shadow: 0 0 5px rgba(224, 0, 0, .9);
 }
 
-.sign-in__error-message {
+.sign-in__error-message,
+.sign-in__empty-error-message,
+.sign-in__form.ERROR.EMPTY .sign-in__error-message {
     font-size: 14px;
     font-weight: 600;
     color: red;
@@ -103,8 +105,13 @@
     opacity: 1;
 }
 
-.sign-in__error-message p {
-    margin: 3px 0 0;
+.sign-in__empty-error-message {
+    margin: -26px 0 0 0; 
+}
+
+.sign-in__form.ERROR.EMPTY .sign-in__empty-error-message {
+    transition: all .1s;
+    opacity: 1;
 }
 
 .sign-in__submit {
@@ -133,12 +140,12 @@
     opacity: 1;
 }
 
-.sign-in__form.EMPTY .sign-in__submit,
+/* .sign-in__form.EMPTY .sign-in__submit,
 .sign-in__form.ERROR .sign-in__submit {
     pointer-events: none;
     cursor: default;
     opacity: .6;
-}
+} */
 
 .sign-in__form.LOADING .sign-in__submit {
     pointer-events: none;
@@ -206,6 +213,7 @@
     list-style: none;
     display: flex;
     align-items:center;
+    position: relative;
 }
 
 .sign-in__saved-schools li.REMOVED {
@@ -225,8 +233,52 @@
 }
 
 .sign-in__saved-schools img {
-    width:11px;
-    height:11px;
-    padding:0 12px;
+    width:15px;
+    height:15px;
+    padding:0 12px 0 20px;
     cursor: pointer;
+    opacity: 0.2;
+}
+
+.sign-in__saved-schools img:hover {
+    opacity: 1;
+}
+
+.sign-in__confirm-popover {
+    position:absolute;
+    display: none;
+    align-items: center;
+    right: 0;
+    background-color: #fff;
+}
+
+.sign-in__confirm-popover.OPEN {
+    display: flex;
+}
+
+.sign-in__url-delete-button,
+.sign-in__url-cancel-button {
+    margin-right: 6px;
+    display: block;
+    font-weight: 600;
+    padding:8px 10px;
+    background-color: #fff;
+    color: #000;
+    border: 0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 10px;
+    line-height: 10px;
+    outline: 0;
+    text-align: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #aaa;
+}
+
+.sign-in__url-delete-button {
+    color: #fff;
+    background-color: #ed4337;
+    border-color: transparent;
 }

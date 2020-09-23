@@ -16,30 +16,55 @@
     });
 
     function populateSavedSchoolsList() {
+
+        const ulOnPage = savedSchoolsElement.querySelector('ul')
+        if(ulOnPage) {
+            ulOnPage.remove();
+        }
+
         const savedSchools = getSavedSchools();
         if (!savedSchools.length) {
+            savedSchoolsElement.classList.add('EMPTY');
             return;
-        }
+        };
 
         const ul = document.createElement('ul');
 
-        savedSchools.forEach((url, i) => {
+        savedSchools.forEach(url => {
             const li = document.createElement('li');
             const a = document.createElement('a');
+
             const removeIcon = document.createElement("img");
-            removeIcon.src = "/img/icons/remove.png";
-            removeIcon.id = i;
-            removeIcon.setAttribute('title', 'Remove this sign in');
+            const confirmPopover = document.createElement('div');
+            confirmPopover.classList.add('sign-in__confirm-popover');
+            const deleteButton = document.createElement('button');
+            deleteButton.innerHTML = "Delete";
+            deleteButton.classList.add('sign-in__url-delete-button');
+            const cancelButton = document.createElement('button');
+            cancelButton.innerHTML = "Cancel";
+            cancelButton.classList.add('sign-in__url-cancel-button');
+            confirmPopover.append(deleteButton);
+            confirmPopover.append(cancelButton);
+            removeIcon.src = "/img/icons/trash-can.png";
+
             removeIcon.addEventListener('click', e => {
-                let linkToBeRemoved = e.target.id;
-                li.classList.add('REMOVED');
-                deleteLink(parseInt(linkToBeRemoved));
+                confirmPopover.classList.add('OPEN');
             })
 
+            deleteButton.addEventListener('click', e => {
+                removeSavedSchool(url);
+                populateSavedSchoolsList();
+            })
+
+            cancelButton.addEventListener('click', e => {
+                confirmPopover.classList.remove('OPEN');
+            })
+ 
             a.href = url;
             a.textContent = url.replace('https://', '');
             li.append(a);
             li.append(removeIcon);
+            li.append(confirmPopover);
             ul.append(li);
         });
 
@@ -50,24 +75,9 @@
     }
 
 
-    function deleteLink(linkToBeDeleted) {
+    function removeSavedSchool(schoolUrl) {
 
-        const savedSchools = getSavedSchools();
-        if (!savedSchools.length) {
-            return;
-        }
-
-        savedSchools.forEach((url, id) => {
-            if (linkToBeDeleted === id) {
-                savedSchools.splice(linkToBeDeleted, 1);
-            }
-        })
-
-        localStorage.setItem('saved-schools', JSON.stringify(savedSchools));
-
-        if (!savedSchools.length) {
-            savedSchoolsElement.classList.add('EMPTY');
-        }
+        localStorage.setItem('saved-schools', JSON.stringify(getSavedSchools().filter(s => s !== schoolUrl)));
 
     }
 
@@ -96,6 +106,12 @@
         }
 
         event.preventDefault();
+
+        if(formElement.classList.contains('EMPTY')) {
+            inputElement.focus();
+            formElement.classList.add('ERROR');
+            return;
+        }
 
         formElement.classList.add('SUBMITTING');
         formElement.classList.remove('ERROR');

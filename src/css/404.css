@@ -2,8 +2,25 @@
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 64px;
-    margin: 64px auto 256px;
+    margin: 64px auto;
     font-weight: 600;
     color: #333;
     line-height: 1.1;
+}
+
+.not-found__home-link {
+    margin:0 auto;
+    text-decoration: none;
+    font-weight: 600;
+    padding:16px 20px;
+    width: 200px;
+    display: block;;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    border: 1px solid #aaa;
 }
