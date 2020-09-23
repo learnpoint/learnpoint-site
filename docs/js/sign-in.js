@@ -154,12 +154,8 @@
     function updateInput() {
         if (inputElement.value) {
             formElement.classList.remove('EMPTY');
-            submitElement.disabled = false;
-            submitElement.removeAttribute('disabled');
         } else {
             formElement.classList.add('EMPTY');
-            submitElement.disabled = true;
-            submitElement.setAttribute('disabled', '');
         }
 
         formElement.classList.remove('ERROR');
