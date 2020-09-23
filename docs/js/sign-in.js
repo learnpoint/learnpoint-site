@@ -3,22 +3,19 @@
     let formElement;
     let inputElement;
     let inputOverlayElement;
-    let submitElement;
     let savedSchoolsElement;
 
     document.addEventListener('DOMContentLoaded', event => {
         formElement = document.querySelector('[data-element="sign-in__form"]');
         inputElement = document.querySelector('[data-element="sign-in__input"]');
         inputOverlayElement = document.querySelector('[data-element="sign-in__input-overlay"]');
-        submitElement = document.querySelector('[data-element="sign-in__submit"]');
         savedSchoolsElement = document.querySelector('[data-element="sign-in__saved-schools"]');
         populateSavedSchoolsList();
     });
 
     function populateSavedSchoolsList() {
-
         const ulOnPage = savedSchoolsElement.querySelector('ul')
-        if(ulOnPage) {
+        if (ulOnPage) {
             ulOnPage.remove();
         }
 
@@ -59,7 +56,7 @@
             cancelButton.addEventListener('click', e => {
                 confirmPopover.classList.remove('OPEN');
             })
- 
+
             a.href = url;
             a.textContent = url.replace('https://', '');
             li.append(a);
@@ -74,11 +71,8 @@
         savedSchoolsElement.classList.remove('EMPTY');
     }
 
-
     function removeSavedSchool(schoolUrl) {
-
         localStorage.setItem('saved-schools', JSON.stringify(getSavedSchools().filter(s => s !== schoolUrl)));
-
     }
 
     function saveSchool(url) {
@@ -107,7 +101,7 @@
 
         event.preventDefault();
 
-        if(formElement.classList.contains('EMPTY')) {
+        if (formElement.classList.contains('EMPTY')) {
             inputElement.focus();
             formElement.classList.add('ERROR');
             return;
