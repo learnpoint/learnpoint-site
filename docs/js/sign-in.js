@@ -131,17 +131,12 @@
     function submitSuccess(url) {
         saveSchool(url);
 
-        // Perhaps not needed? Test back-navigation in browsers.
-        // formElement.classList.remove('SUBMITTING');
-        // formElement.classList.remove('ERROR');
-
         location.href = url;
     }
 
     window.addEventListener('pageshow', e => {
         if (e.persisted) {
             formElement.classList.remove('SUBMITTING');
-            inputOverlayElement.textContent = ' ';
             inputElement.value = '';
             updateInput();
         }
