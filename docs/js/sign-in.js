@@ -142,6 +142,7 @@
         if (e.persisted) {
             formElement.classList.remove('SUBMITTING');
             updateInput();
+            inputOverlayElement.textContent = 'hey';
         }
     });
 
@@ -151,8 +152,6 @@
         }
 
         updateInput();
-
-        inputOverlayElement.textContent = 'hey';
     });
 
     function updateInput() {
