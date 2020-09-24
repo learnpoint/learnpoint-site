@@ -142,6 +142,7 @@
         if (e.persisted) {
             formElement.classList.remove('SUBMITTING');
             inputOverlayElement.textContent = ' ';
+            inputElement.value = '';
             updateInput();
         }
     });
