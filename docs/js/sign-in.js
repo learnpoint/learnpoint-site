@@ -45,7 +45,7 @@
             removeIcon.src = "/img/icons/trash-can.png";
 
             removeIcon.addEventListener('click', e => {
-                confirmPopover.classList.add('OPEN');
+                li.classList.add('POPOVER-OPEN');
             })
 
             deleteButton.addEventListener('click', e => {
@@ -54,7 +54,7 @@
             })
 
             cancelButton.addEventListener('click', e => {
-                confirmPopover.classList.remove('OPEN');
+                li.classList.remove('POPOVER-OPEN');
             })
 
             a.href = url;
