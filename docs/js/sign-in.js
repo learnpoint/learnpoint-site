@@ -141,6 +141,7 @@
     window.addEventListener('pageshow', e => {
         if (e.persisted) {
             formElement.classList.remove('SUBMITTING');
+            updateInput();
         }
     });
 
@@ -149,6 +150,10 @@
             return;
         }
 
+        updateInput();
+    });
+
+    function updateInput() {
         if (inputElement.value) {
             formElement.classList.remove('EMPTY');
         } else {
@@ -164,7 +169,7 @@
         }
 
         inputOverlayElement.textContent = hostName;
-    });
+    }
 
     function isSchoolNameValid(name, error, success) {
         let done = false;
