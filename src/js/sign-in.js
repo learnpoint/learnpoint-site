@@ -141,8 +141,8 @@
     window.addEventListener('pageshow', e => {
         if (e.persisted) {
             formElement.classList.remove('SUBMITTING');
+            inputOverlayElement.textContent = ' ';
             updateInput();
-            inputOverlayElement.textContent = 'hey';
         }
     });
 
