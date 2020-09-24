@@ -1,10 +1,10 @@
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', 'Segoe UI', sans-serif;
     color: #1d2d35;
     line-height: 1.6;
     overflow-y: scroll;
-    background-color: #FDEEE3;
+    background-color: #fdeee3;
 }
 
 main {
@@ -12,4 +12,20 @@ main {
     margin: 0 auto;
     font-size: 20px;
     padding: 0 16px;
+}
+
+h1 {
+    font-family: 'Raleway', 'Segoe UI', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    font-size: 64px;
+    margin: 64px auto 24px;
+    line-height: 1.1;
+}
+
+@media (max-width: 560px) {
+    h1 {
+        font-size: 48px;
+        margin: 32px auto 24px;
+    }
 }
