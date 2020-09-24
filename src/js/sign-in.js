@@ -65,7 +65,6 @@
             ul.append(li);
         });
 
-
         savedSchoolsElement.append(ul);
 
         savedSchoolsElement.classList.remove('EMPTY');
@@ -113,26 +112,28 @@
         const submitStartTime = Date.now();
 
         isSchoolNameValid(inputElement.value, function () {
-            // Ensure a minimum delay of 1000ms
+            // 1000ms min delay
             let wait = Math.max(1000 - (Date.now() - submitStartTime), 0);
-            setTimeout(error, wait);
+            setTimeout(submitError, wait);
         }, function (url) {
-            // Ensure a minimum delay of 800ms
+            // 800ms min delay
             let wait = Math.max(800 - (Date.now() - submitStartTime), 0);
-            setTimeout(() => success(url), wait);
+            setTimeout(() => submitSuccess(url), wait);
         });
     });
 
-    function error() {
+    function submitError() {
         formElement.classList.remove('SUBMITTING');
         formElement.classList.add('ERROR');
+        inputElement.focus();
     }
 
-    function success(url) {
+    function submitSuccess(url) {
         saveSchool(url);
 
-        formElement.classList.remove('SUBMITTING');
-        formElement.classList.remove('ERROR');
+        // Perhaps not needed? Test back-navigation in browsers.
+        // formElement.classList.remove('SUBMITTING');
+        // formElement.classList.remove('ERROR');
 
         location.href = url;
     }
@@ -142,10 +143,6 @@
             return;
         }
 
-        updateInput();
-    });
-
-    function updateInput() {
         if (inputElement.value) {
             formElement.classList.remove('EMPTY');
         } else {
@@ -161,7 +158,7 @@
         }
 
         inputOverlayElement.textContent = hostName;
-    }
+    });
 
     function isSchoolNameValid(name, error, success) {
         let done = false;
