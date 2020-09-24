@@ -138,6 +138,12 @@
         location.href = url;
     }
 
+    window.addEventListener('pageshow', e => {
+        if (e.persisted) {
+            formElement.classList.remove('SUBMITTING');
+        }
+    });
+
     document.addEventListener('input', event => {
         if (event.target !== inputElement) {
             return;
