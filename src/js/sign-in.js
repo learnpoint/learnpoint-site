@@ -151,6 +151,8 @@
         }
 
         updateInput();
+
+        inputOverlayElement.textContent = 'hey';
     });
 
     function updateInput() {
