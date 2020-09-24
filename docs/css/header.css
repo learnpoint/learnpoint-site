@@ -4,23 +4,8 @@
 }
 
 .header__logo {
-    padding:18px 24px;
-    font-size: 24px;
-    color: #393939;
-    font-family: 'Nunito', sans-serif;
-    text-decoration: none;
+    padding: 18px 24px;
 }
-
-.header__logo svg {
-    padding:8px 0 0 0;
-}
-
-/* .header__logo-dot {
-    padding-left: 3px;
-    font-size: 32px;
-    color: #0099ff;
-    color: #0094EF;
-} */
 
 .header__links {
     display: flex;
