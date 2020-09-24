@@ -1,6 +1,7 @@
 .index__tagline {
     margin: 0 auto;
     text-align: center;
+    line-height: 1.5;
     font-size: 28px;
     font-weight: 600;
     max-width: 640px;
