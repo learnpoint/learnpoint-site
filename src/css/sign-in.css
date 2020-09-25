@@ -45,8 +45,6 @@
 }
 
 .sign-in__input-overlay:after {
-    font-size: 16px;
-    line-height: 1.3;
     content: ".learnpoint.se";
     font-weight: 600;
     color: #000;
