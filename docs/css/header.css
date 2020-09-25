@@ -1,10 +1,15 @@
 .header__nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .header__logo {
     padding: 18px 24px;
+}
+
+.header__logo img {
+    padding-top: 8px;
 }
 
 .header__links {
@@ -18,4 +23,5 @@
     color: #000;
     font-weight: 600;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
