@@ -99,7 +99,7 @@
             const listItem = confirmPopover.closest('li');
             const remove = listItem.querySelector('.sign-in__remove-url-icon');
             const cancel = confirmPopover.querySelector('.sign-in__url-cancel-button');
-            if(event.target == remove || event.target == cancel) {
+            if (event.target == remove || event.target == cancel) {
                 return;
             }
             listItem.classList.remove('POPOVER-OPEN');
@@ -147,6 +147,9 @@
         }
 
         event.preventDefault();
+
+        inputElement.value = inputElement.value.replace(/[^a-zA-Z0-9-_.]/g, '').toLowerCase();
+        updateInput();
 
         if (formElement.classList.contains('EMPTY')) {
             inputElement.focus();
