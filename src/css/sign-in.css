@@ -208,10 +208,6 @@
     position: relative;
 }
 
-.sign-in__previous-logins li.REMOVED {
-    display: none;
-}
-
 .sign-in__previous-logins a {
     margin: 0;
     padding: 12px 16px;
@@ -223,13 +219,14 @@
 }
 
 .sign-in__previous-logins img {
-    width: 15px;
-    height: 15px;
-    padding: 0 12px 0 20px;
+    width: 16px;
+    height: 16px;
+    padding: 0 12px;
     cursor: pointer;
     opacity: 0.2;
     position: relative;
     z-index: 10;
+    transition: opacity .12s;
 }
 
 .sign-in__previous-logins li.POPOVER-OPEN img {
@@ -237,14 +234,14 @@
 }
 
 .sign-in__previous-logins img:hover {
-    opacity: 1;
+    opacity: .6;
 }
 
 .sign-in__confirm-popover {
     position: absolute;
     opacity: 0;
     align-items: center;
-    right: 12px;
+    right: 9px;
     background-color: #fff;
     display: flex;
     transition: all .2s;
@@ -258,14 +255,14 @@
 .sign-in__url-cancel-button {
     display: block;
     font-weight: 600;
-    padding: 8px 10px;
+    padding: 6px 10px;
     background-color: #fff;
     color: #000;
     border: 0;
     border-radius: 5px;
     font-family: inherit;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     outline: 0;
     text-align: center;
     -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
@@ -278,5 +275,5 @@
     color: #fff;
     background-color: #ed4337;
     border-color: transparent;
-    margin-right: 6px;
+    margin-right: 7px;
 }
