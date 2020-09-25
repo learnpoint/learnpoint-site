@@ -28,6 +28,7 @@
 .sign-in__input-overlay {
     font-size: 16px;
     line-height: 20px;
+    white-space: pre;
     position: absolute;
     pointer-events: none;
     padding: 12px;
