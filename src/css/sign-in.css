@@ -86,8 +86,8 @@
 .sign-in__error-message,
 .sign-in__empty-error-message,
 .sign-in__form.ERROR.EMPTY .sign-in__error-message {
-    position: absolute;   
-    top:0;
+    position: absolute;
+    top: 0;
     font-size: 14px;
     font-weight: 600;
     color: red;
@@ -205,12 +205,12 @@
     border: 1px solid #bbb;
     list-style: none;
     display: flex;
-    align-items:center;
+    align-items: center;
     position: relative;
 }
 
 .sign-in__saved-schools li.REMOVED {
-  display: none;
+    display: none;
 }
 
 .sign-in__saved-schools a {
@@ -224,13 +224,13 @@
 }
 
 .sign-in__saved-schools img {
-    width:15px;
-    height:15px;
-    padding:0 12px 0 20px;
+    width: 15px;
+    height: 15px;
+    padding: 0 12px 0 20px;
     cursor: pointer;
     opacity: 0.2;
     position: relative;
-    z-index:10;
+    z-index: 10;
 }
 
 .sign-in__saved-schools li.POPOVER-OPEN img {
@@ -242,7 +242,7 @@
 }
 
 .sign-in__confirm-popover {
-    position:absolute;
+    position: absolute;
     opacity: 0;
     align-items: center;
     right: 12px;
@@ -259,7 +259,7 @@
 .sign-in__url-cancel-button {
     display: block;
     font-weight: 600;
-    padding:8px 10px;
+    padding: 8px 10px;
     background-color: #fff;
     color: #000;
     border: 0;
