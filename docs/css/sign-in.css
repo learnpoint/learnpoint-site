@@ -22,13 +22,10 @@
 
 .sign-in__input-wrap {
     position: relative;
-    font-size: 16px;
-    line-height: 20px;
     margin-bottom: 12px;
 }
 
 .sign-in__input-overlay {
-    font-family: inherit;
     font-size: 16px;
     line-height: 20px;
     position: absolute;
