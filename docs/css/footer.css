@@ -8,6 +8,12 @@
     font-size: 14px;
 }
 
+@media (max-width: 560px) {
+    .footer {
+        margin: 64px auto;
+    }
+}
+
 .footer__select-language-panel {
     display: flex;
 }
