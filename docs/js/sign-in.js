@@ -1,33 +1,46 @@
 (function () {
 
-    let formElement;
-    let inputElement;
-    let inputOverlayElement;
-    let savedSchoolsElement;
+    const SUBMIT_TIMEOUT = 4000;
+    const MIN_SUBMIT_ERROR_WAIT = 1000;
+    const MIN_SUBMIT_SUCCESS_WAIT = 800;
+    const PREVIOUS_LOGINS_STORAGE_KEY = 'previous-logins';
 
-    document.addEventListener('DOMContentLoaded', event => {
-        formElement = document.querySelector('[data-element="sign-in__form"]');
-        inputElement = document.querySelector('[data-element="sign-in__input"]');
-        inputOverlayElement = document.querySelector('[data-element="sign-in__input-overlay"]');
-        savedSchoolsElement = document.querySelector('[data-element="sign-in__saved-schools"]');
-        populateSavedSchoolsList();
-    });
+    const schoolUrl = schoolName => `https://${schoolName}.learnpoint.se`;
+    const schoolPingUrl = schoolName => `https://${schoolName}.learnpoint.se/Images/learnpoint.ico`;
 
-    function populateSavedSchoolsList() {
-        const ulOnPage = savedSchoolsElement.querySelector('ul')
-        if (ulOnPage) {
-            ulOnPage.remove();
+    const el = {};
+
+    document.addEventListener('DOMContentLoaded', () => {
+        el.form = document.querySelector('[data-element="sign-in__form"]');
+        el.input = document.querySelector('[data-element="sign-in__input"]');
+        el.inputOverlay = document.querySelector('[data-element="sign-in__input-overlay"]');
+        el.previousLogins = document.querySelector('[data-element="sign-in__previous-logins"]');
+
+        for (let prop in el) {
+            if (!el[prop]) {
+                console.error('Element ' + prop + ' was not found');
+                return;
+            }
         }
 
-        const savedSchools = getSavedSchools();
-        if (!savedSchools.length) {
-            savedSchoolsElement.classList.add('EMPTY');
+        renderPreviousLogins();
+    });
+
+    function renderPreviousLogins() {
+        const existingUL = el.previousLogins.querySelector('ul');
+        if (existingUL) {
+            existingUL.remove();
+        }
+
+        const previousLogins = getPreviousLogins();
+        if (!previousLogins.length) {
+            el.previousLogins.classList.add('EMPTY');
             return;
         };
 
         const ul = document.createElement('ul');
 
-        savedSchools.forEach(url => {
+        previousLogins.forEach(url => {
             const li = document.createElement('li');
             const a = document.createElement('a');
 
@@ -64,8 +77,8 @@
             })
 
             deleteButton.addEventListener('click', e => {
-                removeSavedSchool(url);
-                populateSavedSchoolsList();
+                removePreviousLogin(url);
+                renderPreviousLogins();
             })
 
             cancelButton.addEventListener('click', e => {
@@ -80,13 +93,32 @@
             ul.append(li);
         });
 
-        savedSchoolsElement.append(ul);
+        el.previousLogins.append(ul);
 
-        savedSchoolsElement.classList.remove('EMPTY');
+        el.previousLogins.classList.remove('EMPTY');
     }
 
-    function removeSavedSchool(schoolUrl) {
-        localStorage.setItem('saved-schools', JSON.stringify(getSavedSchools().filter(s => s !== schoolUrl)));
+    function getPreviousLogins() {
+        if (!localStorage.getItem(PREVIOUS_LOGINS_STORAGE_KEY)) {
+            return [];
+        }
+        return JSON.parse(localStorage.getItem(PREVIOUS_LOGINS_STORAGE_KEY));
+    }
+
+    function addPreviousLogin(schoolUrl) {
+        let logins = getPreviousLogins();
+
+        if (!logins.includes(schoolUrl)) {
+            logins.push(schoolUrl);
+        }
+
+        logins.sort();
+
+        localStorage.setItem(PREVIOUS_LOGINS_STORAGE_KEY, JSON.stringify(logins));
+    }
+
+    function removePreviousLogin(schoolUrl) {
+        localStorage.setItem(PREVIOUS_LOGINS_STORAGE_KEY, JSON.stringify(getPreviousLogins().filter(s => s !== schoolUrl)));
     }
 
     document.addEventListener('click', event => {
@@ -120,107 +152,82 @@
             const listItem = confirmPopover.closest('li');
             listItem.classList.remove('POPOVER-OPEN');
         })
-    })
+    });
 
-    function saveSchool(url) {
-        let schools = getSavedSchools();
+    document.addEventListener('input', event => {
+        if (event.target !== el.input) {
+            return;
+        }
+        updateInput();
+    });
 
-        if (!schools.includes(url)) {
-            schools.push(url);
+    function updateInput() {
+        if (el.input.value) {
+            el.form.classList.remove('EMPTY');
+        } else {
+            el.form.classList.add('EMPTY');
         }
 
-        schools.sort();
+        el.form.classList.remove('ERROR');
 
-        localStorage.setItem('saved-schools', JSON.stringify(schools));
-    }
+        let hostName = el.input.value;
 
-    function getSavedSchools() {
-        if (!localStorage.getItem('saved-schools')) {
-            return [];
+        if (!hostName) {
+            hostName = el.input.placeholder;
         }
-        return JSON.parse(localStorage.getItem('saved-schools'));
+
+        el.inputOverlay.textContent = hostName;
     }
 
     document.addEventListener('submit', event => {
-        if (event.target !== formElement) {
+        if (event.target !== el.form) {
             return;
         }
 
         event.preventDefault();
 
-        inputElement.value = inputElement.value.replace(/[^a-zA-Z0-9-_.]/g, '').toLowerCase();
+        /* Clean input */
+        el.input.value = el.input.value.replace(/[^a-zA-Z0-9-_.]/g, '').toLowerCase();
         updateInput();
 
-        if (formElement.classList.contains('EMPTY')) {
-            inputElement.focus();
-            formElement.classList.add('ERROR');
+        if (el.form.classList.contains('EMPTY')) {
+            el.form.classList.add('ERROR');
+            el.input.focus();
             return;
         }
 
-        formElement.classList.add('SUBMITTING');
-        formElement.classList.remove('ERROR');
+        const schoolName = el.input.value;
+
+        el.form.classList.remove('ERROR');
+        el.form.classList.add('SUBMITTING');
 
         const submitStartTime = Date.now();
 
-        isSchoolNameValid(inputElement.value, function () {
-            // 1000ms min delay
-            let wait = Math.max(1000 - (Date.now() - submitStartTime), 0);
-            setTimeout(submitError, wait);
-        }, function (url) {
-            // 800ms min delay
-            let wait = Math.max(800 - (Date.now() - submitStartTime), 0);
-            setTimeout(() => submitSuccess(url), wait);
-        });
+        validateSchoolName(
+            schoolName,
+            () => {
+                let wait = Math.max(MIN_SUBMIT_SUCCESS_WAIT - (Date.now() - submitStartTime), 0);
+                setTimeout(() => submitSuccess(schoolUrl(schoolName)), wait);
+            },
+            () => {
+                let wait = Math.max(MIN_SUBMIT_ERROR_WAIT - (Date.now() - submitStartTime), 0);
+                setTimeout(submitError, wait);
+            }
+        );
     });
+
+    function submitSuccess(schoolUrl) {
+        addPreviousLogin(schoolUrl);
+        location.href = schoolUrl;
+    }
 
     function submitError() {
-        formElement.classList.remove('SUBMITTING');
-        formElement.classList.add('ERROR');
-        inputElement.focus();
+        el.form.classList.remove('SUBMITTING');
+        el.form.classList.add('ERROR');
+        el.input.focus();
     }
 
-    function submitSuccess(url) {
-        saveSchool(url);
-
-        location.href = url;
-    }
-
-    window.addEventListener('pageshow', e => {
-        if (e.persisted) {
-            formElement.classList.remove('SUBMITTING');
-            inputElement.value = '';
-            updateInput();
-            populateSavedSchoolsList();
-        }
-    });
-
-    document.addEventListener('input', event => {
-        if (event.target !== inputElement) {
-            return;
-        }
-
-        updateInput();
-    });
-
-    function updateInput() {
-        if (inputElement.value) {
-            formElement.classList.remove('EMPTY');
-        } else {
-            formElement.classList.add('EMPTY');
-        }
-
-        formElement.classList.remove('ERROR');
-
-        let hostName = inputElement.value;
-
-        if (!hostName) {
-            hostName = inputElement.placeholder;
-        }
-
-        inputOverlayElement.textContent = hostName;
-    }
-
-    function isSchoolNameValid(name, error, success) {
+    function validateSchoolName(name, success, error) {
         let done = false;
 
         const img = new Image();
@@ -229,13 +236,13 @@
             if (done) return;
             done = true;
             error();
-        }, 4000);
+        }, SUBMIT_TIMEOUT);
 
         img.onload = () => {
             if (done) return;
             done = true;
             clearTimeout(timeoutError);
-            success(`https://${name}.learnpoint.se`);
+            success();
         };
 
         img.onerror = () => {
@@ -245,6 +252,17 @@
             error();
         };
 
-        img.src = `https://${name}.learnpoint.se/Images/learnpoint.ico`;
+        img.src = schoolPingUrl(name);
     }
+
+    window.addEventListener('pageshow', e => {
+        // Handle bfcache
+        if (e.persisted) {
+            el.form.classList.remove('SUBMITTING');
+            el.input.value = '';
+            updateInput();
+            renderPreviousLogins();
+        }
+    });
+
 })();
