@@ -42,8 +42,9 @@
 .sign-in__input-overlay:after {
     content: ".learnpoint.se";
     font-weight: 600;
+    line-height: 1.4;
     color: #000;
-    margin-left: 1px;
+    /* margin-left: 1px; */
 }
 
 .sign-in__input {
@@ -55,6 +56,7 @@
     border-radius: 5px;
     padding: 12px;
     font: inherit;
+    line-height: 1.4;
     transition: all .1s;
     -webkit-appearance: none;
     -moz-appearance: none;
