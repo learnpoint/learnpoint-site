@@ -1,21 +1,16 @@
 .header__nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    font-size: 16px;
 }
 
 .header__logo {
-    padding: 16px 20px;
-    font-size: 24px;
-    color: #393939;
-    font-family: 'Nunito', sans-serif;
-    text-decoration: none;
+    padding: 24px 24px 18px;
 }
 
-.header__logo-dot {
-    padding-left: 3px;
-    font-size: 32px;
-    color: #0099ff;
-    color: #0094EF;
+.header__logo img {
+    display: block;
 }
 
 .header__links {
@@ -29,4 +24,5 @@
     color: #000;
     font-weight: 600;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }

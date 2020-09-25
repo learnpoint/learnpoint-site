@@ -3,28 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learnpoint</title>
-    <link rel="shortcut icon" type="image/png" href="/img/favicons/favicon.png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap">
+    <meta name="description" content="Skapa utbildningar, registrera studenter, dela ut uppgifter, skriv nyheter, och betygsätt studenter. Allt på ett ställe." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="/img/favicons/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Raleway:wght@800&display=block" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/language.css">
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/sign-in.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/404.css">
+    <link rel="stylesheet" href="/css/index.css"> 
     <script src="/js/language.js"></script>
-    <script defer src="/js/main.js"></script>
-    <script defer src="/js/sign-in.js"></script>
 </head>
 
 <body>
     <header class="header">
         <nav class="header__nav">
-            <a href="/" class="header__logo"><span>Learnpoint</span><span class="header__logo-dot">.</span></a>
+            <a href="/" class="header__logo">
+                <img width="128" height="34" alt="Learnpoint" src="/img/logos/learnpoint-logo.svg" />
+            </a>
             <div class="header__links">
                 <a class="header__link" href="/sign-in.html">
                     <span lang="en">Sign in</span>
@@ -34,9 +33,10 @@
         </nav>
     </header>
     <main>
-        
 
-<h1 class="sign-in__title">
+<script defer src="/js/sign-in.js"></script>
+
+<h1>
     <span lang="en">Sign in</span>
     <span lang="sv">Logga in</span>
 </h1>
@@ -47,10 +47,16 @@
 </p>
 
 <form autocomplete="off" class="sign-in__form EMPTY" data-element="sign-in__form" action="#">
-    <div class="sign-in__error-message">
-        <span lang="en">Couldn't log in. Check the address.</span>
-        <span lang="sv">Kunde inte logga in. Kontrollera adressen.</span>
-    </div>
+    <div class="sign-in__error">
+        <div class="sign-in__error-message">
+            <span lang="en">Couldn't find the school. Check the address.</span>
+            <span lang="sv">Hittade inte skolan. Kontrollera adressen.</span>
+        </div>
+        <div class="sign-in__empty-error-message">
+            <span lang="en">Enter the Learnpoint address</span>
+            <span lang="sv">Ange Learnpoint-adressen</span>
+        </div>
+    </div>   
     <div class="sign-in__input-wrap">
         <div class="sign-in__input-overlay" data-element="sign-in__input-overlay">school-name</div>
         <input autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off" class="sign-in__input" data-element="sign-in__input" placeholder="school-name" autofocus />
@@ -62,20 +68,20 @@
     </button>
 </form>
 
-<div class="sign-in__saved-schools EMPTY" data-element="sign-in__saved-schools">
-    <p>
-        <span lang="en">Your previous sign ins</span>
-        <span lang="sv">Dina tidigare inloggningar</span>
-    </p>
-    <ul data-element="sign-in__saved-schools-list"></ul>
-</div>
-
 <p class="sign-in__help-message">
     <span lang="en">Trouble signing in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">We'd be happy to help</a>.</span>
     <span lang="sv">Problem att logga in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">Vi hjälper gärna till</a>.</span>
 </p>
 
+<div class="sign-in__previous-logins EMPTY" data-element="sign-in__previous-logins">
+    <p>
+        <span lang="en">Previous sign ins</span>
+        <span lang="sv">Tidigare inloggningar</span>
+    </p>
+</div>
+
 </main>
+
 <footer class="footer">
     <div>
         <span lang="en">Learnpoint is developed by <a href="http://www.viaecole.se/" class="footer__link" target="_blank">ViaEcole</a></span>

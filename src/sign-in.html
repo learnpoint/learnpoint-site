@@ -1,6 +1,8 @@
 [[header.html]]
 
-<h1 class="sign-in__title">
+<script defer src="/js/sign-in.js"></script>
+
+<h1>
     <span lang="en">Sign in</span>
     <span lang="sv">Logga in</span>
 </h1>
@@ -11,10 +13,16 @@
 </p>
 
 <form autocomplete="off" class="sign-in__form EMPTY" data-element="sign-in__form" action="#">
-    <div class="sign-in__error-message">
-        <span lang="en">Couldn't log in. Check the address.</span>
-        <span lang="sv">Kunde inte logga in. Kontrollera adressen.</span>
-    </div>
+    <div class="sign-in__error">
+        <div class="sign-in__error-message">
+            <span lang="en">Couldn't find the school. Check the address.</span>
+            <span lang="sv">Hittade inte skolan. Kontrollera adressen.</span>
+        </div>
+        <div class="sign-in__empty-error-message">
+            <span lang="en">Enter the Learnpoint address</span>
+            <span lang="sv">Ange Learnpoint-adressen</span>
+        </div>
+    </div>   
     <div class="sign-in__input-wrap">
         <div class="sign-in__input-overlay" data-element="sign-in__input-overlay">school-name</div>
         <input autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off" class="sign-in__input" data-element="sign-in__input" placeholder="school-name" autofocus />
@@ -26,17 +34,16 @@
     </button>
 </form>
 
-<div class="sign-in__saved-schools EMPTY" data-element="sign-in__saved-schools">
-    <p>
-        <span lang="en">Your previous sign ins</span>
-        <span lang="sv">Dina tidigare inloggningar</span>
-    </p>
-    <ul data-element="sign-in__saved-schools-list"></ul>
-</div>
-
 <p class="sign-in__help-message">
     <span lang="en">Trouble signing in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">We'd be happy to help</a>.</span>
     <span lang="sv">Problem att logga in? <a href="http://support.learnpoint.se/" target="_blank" class="sign-in__link">Vi hjälper gärna till</a>.</span>
 </p>
+
+<div class="sign-in__previous-logins EMPTY" data-element="sign-in__previous-logins">
+    <p>
+        <span lang="en">Previous sign ins</span>
+        <span lang="sv">Tidigare inloggningar</span>
+    </p>
+</div>
 
 [[footer.html]]
