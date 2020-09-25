@@ -39,12 +39,18 @@
     overflow: hidden;
 }
 
+/* Important that these two are sized exactly the same */
+.sign-in__input-overlay:after,
+.sign-in__input {
+    font-size: 16px;
+    font-family: inherit;
+    line-height: 1.4;
+}
+
 .sign-in__input-overlay:after {
     content: ".learnpoint.se";
     font-weight: 600;
-    line-height: 1.4;
     color: #000;
-    /* margin-left: 1px; */
 }
 
 .sign-in__input {
@@ -55,8 +61,6 @@
     border: 1px solid #aaa;
     border-radius: 5px;
     padding: 12px;
-    font: inherit;
-    line-height: 1.4;
     transition: all .1s;
     -webkit-appearance: none;
     -moz-appearance: none;
