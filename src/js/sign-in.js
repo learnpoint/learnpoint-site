@@ -1,8 +1,8 @@
 (function () {
 
     const SUBMIT_TIMEOUT = 4000;
-    const MIN_SUBMIT_ERROR_WAIT = 1000;
-    const MIN_SUBMIT_SUCCESS_WAIT = 800;
+    const SUBMIT_MIN_ERROR_WAIT = 1000;
+    const SUBMIT_MIN_SUCCESS_WAIT = 800;
     const PREVIOUS_LOGINS_STORAGE_KEY = 'previous-logins';
 
     const schoolUrl = schoolName => `https://${schoolName}.learnpoint.se`;
@@ -25,6 +25,29 @@
 
         renderPreviousLogins();
     });
+
+    function getPreviousLogins() {
+        if (!localStorage.getItem(PREVIOUS_LOGINS_STORAGE_KEY)) {
+            return [];
+        }
+        return JSON.parse(localStorage.getItem(PREVIOUS_LOGINS_STORAGE_KEY));
+    }
+
+    function addPreviousLogin(schoolUrl) {
+        let logins = getPreviousLogins();
+
+        if (!logins.includes(schoolUrl)) {
+            logins.push(schoolUrl);
+        }
+
+        logins.sort();
+
+        localStorage.setItem(PREVIOUS_LOGINS_STORAGE_KEY, JSON.stringify(logins));
+    }
+
+    function removePreviousLogin(schoolUrl) {
+        localStorage.setItem(PREVIOUS_LOGINS_STORAGE_KEY, JSON.stringify(getPreviousLogins().filter(s => s !== schoolUrl)));
+    }
 
     function renderPreviousLogins() {
         const existingUL = el.previousLogins.querySelector('ul');
@@ -96,29 +119,6 @@
         el.previousLogins.append(ul);
 
         el.previousLogins.classList.remove('EMPTY');
-    }
-
-    function getPreviousLogins() {
-        if (!localStorage.getItem(PREVIOUS_LOGINS_STORAGE_KEY)) {
-            return [];
-        }
-        return JSON.parse(localStorage.getItem(PREVIOUS_LOGINS_STORAGE_KEY));
-    }
-
-    function addPreviousLogin(schoolUrl) {
-        let logins = getPreviousLogins();
-
-        if (!logins.includes(schoolUrl)) {
-            logins.push(schoolUrl);
-        }
-
-        logins.sort();
-
-        localStorage.setItem(PREVIOUS_LOGINS_STORAGE_KEY, JSON.stringify(logins));
-    }
-
-    function removePreviousLogin(schoolUrl) {
-        localStorage.setItem(PREVIOUS_LOGINS_STORAGE_KEY, JSON.stringify(getPreviousLogins().filter(s => s !== schoolUrl)));
     }
 
     document.addEventListener('click', event => {
@@ -206,11 +206,11 @@
         validateSchoolName(
             schoolName,
             () => {
-                let wait = Math.max(MIN_SUBMIT_SUCCESS_WAIT - (Date.now() - submitStartTime), 0);
+                let wait = Math.max(SUBMIT_MIN_SUCCESS_WAIT - (Date.now() - submitStartTime), 0);
                 setTimeout(() => submitSuccess(schoolUrl(schoolName)), wait);
             },
             () => {
-                let wait = Math.max(MIN_SUBMIT_ERROR_WAIT - (Date.now() - submitStartTime), 0);
+                let wait = Math.max(SUBMIT_MIN_ERROR_WAIT - (Date.now() - submitStartTime), 0);
                 setTimeout(submitError, wait);
             }
         );
