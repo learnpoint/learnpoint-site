@@ -27,7 +27,7 @@
 
 .sign-in__input-overlay {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1.6;
     white-space: pre;
     position: absolute;
     pointer-events: none;
@@ -51,7 +51,7 @@
 .sign-in__input {
     font-family: inherit;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1.6;
     display: block;
     width: 100%;
     box-sizing: border-box;
