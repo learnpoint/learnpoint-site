@@ -63,87 +63,136 @@
 
         const ul = document.createElement('ul');
 
-        previousLogins.forEach(url => {
-            const li = document.createElement('li');
-            const a = document.createElement('a');
+        ul.innerHTML = `${previousLogins.map(url => `
+        <li class="sign-in__previous-login-item" data-element="sign-in__previous-login-item">
+            <a href="${url}">${url.replace('https://', '')}</a>
+            <img class="sign-in__previous-login-delete-button" src="/img/icons/trash-can.svg" data-element="sign-in__previous-login-delete-button">
+            <div class="sign-in__previous-login-delete-confirm-popover">
+                <button class="sign-in__previous-login-confirm-delete" data-element="sign-in__previous-login-confirm-delete">
+                    <span lang="en">Delete</span>
+                    <span lang="sv">Ta bort</span>
+                </button>
+                <button class="sign-in__previous-login-cancel-delete" data-element="sign-in__previous-login-cancel-delete">
+                    <span lang="en">Cancel</span>
+                    <span lang="sv">Avbryt</span>
+                </button>
+            </div>
+        </li>
+        `).join('')}
+        `;
 
-            const removeIcon = document.createElement("img");
-            removeIcon.classList.add('sign-in__remove-url-icon')
-            const confirmPopover = document.createElement('div');
-            confirmPopover.classList.add('sign-in__confirm-popover');
-            const deleteButton = document.createElement('button');
-            const spanDeleteEng = document.createElement('span');
-            const spanDeleteSv = document.createElement('span');
-            spanDeleteEng.textContent = "Delete";
-            spanDeleteEng.lang = "en"
-            spanDeleteSv.textContent = "Ta bort";
-            spanDeleteSv.lang = "sv"
-            deleteButton.classList.add('sign-in__url-delete-button');
-            const cancelButton = document.createElement('button');
-            const spanCancelEng = document.createElement('span');
-            const spanCancelSv = document.createElement('span');
-            spanCancelEng.textContent = "Cancel";
-            spanCancelEng.lang = "en"
-            spanCancelSv.textContent = "Avbryt";
-            spanCancelSv.lang = "sv"
-            cancelButton.classList.add('sign-in__url-cancel-button');
-            deleteButton.append(spanDeleteEng);
-            deleteButton.append(spanDeleteSv);
-            cancelButton.append(spanCancelEng);
-            cancelButton.append(spanCancelSv);
-            confirmPopover.append(deleteButton);
-            confirmPopover.append(cancelButton);
-            removeIcon.src = "/img/icons/trash-can.png";
+        // previousLogins.forEach(url => {
+        //     const li = document.createElement('li');
+        //     const a = document.createElement('a');
 
-            removeIcon.addEventListener('click', e => {
-                li.classList.add('POPOVER-OPEN');
-            })
+        //     const removeIcon = document.createElement("img");
+        //     removeIcon.classList.add('sign-in__remove-url-icon')
+        //     const confirmPopover = document.createElement('div');
+        //     confirmPopover.classList.add('sign-in__confirm-popover');
+        //     const deleteButton = document.createElement('button');
+        //     const spanDeleteEng = document.createElement('span');
+        //     const spanDeleteSv = document.createElement('span');
+        //     spanDeleteEng.textContent = "Delete";
+        //     spanDeleteEng.lang = "en"
+        //     spanDeleteSv.textContent = "Ta bort";
+        //     spanDeleteSv.lang = "sv"
+        //     deleteButton.classList.add('sign-in__url-delete-button');
+        //     const cancelButton = document.createElement('button');
+        //     const spanCancelEng = document.createElement('span');
+        //     const spanCancelSv = document.createElement('span');
+        //     spanCancelEng.textContent = "Cancel";
+        //     spanCancelEng.lang = "en"
+        //     spanCancelSv.textContent = "Avbryt";
+        //     spanCancelSv.lang = "sv"
+        //     cancelButton.classList.add('sign-in__url-cancel-button');
+        //     deleteButton.append(spanDeleteEng);
+        //     deleteButton.append(spanDeleteSv);
+        //     cancelButton.append(spanCancelEng);
+        //     cancelButton.append(spanCancelSv);
+        //     confirmPopover.append(deleteButton);
+        //     confirmPopover.append(cancelButton);
+        //     removeIcon.src = "/img/icons/trash-can.png";
 
-            deleteButton.addEventListener('click', e => {
-                removePreviousLogin(url);
-                renderPreviousLogins();
-            })
+        //     removeIcon.addEventListener('click', e => {
+        //         li.classList.add('POPOVER-OPEN');
+        //     })
 
-            cancelButton.addEventListener('click', e => {
-                li.classList.remove('POPOVER-OPEN');
-            })
+        //     deleteButton.addEventListener('click', e => {
+        //         removePreviousLogin(url);
+        //         renderPreviousLogins();
+        //     })
 
-            a.href = url;
-            a.textContent = url.replace('https://', '');
-            li.append(a);
-            li.append(removeIcon);
-            li.append(confirmPopover);
-            ul.append(li);
-        });
+        //     cancelButton.addEventListener('click', e => {
+        //         li.classList.remove('POPOVER-OPEN');
+        //     })
+
+        //     a.href = url;
+        //     a.textContent = url.replace('https://', '');
+        //     li.append(a);
+        //     li.append(removeIcon);
+        //     li.append(confirmPopover);
+        //     ul.append(li);
+        // });
 
         el.previousLogins.append(ul);
 
         el.previousLogins.classList.remove('EMPTY');
     }
 
+
     document.addEventListener('click', event => {
-        const confirmPopovers = document.querySelectorAll('.sign-in__confirm-popover');
-        if (!confirmPopovers.length) {
+
+        if (!event.target.closest('[data-element="sign-in__previous-login-delete-button"]')) {
             return;
         }
 
-        confirmPopovers.forEach(confirmPopover => {
-            const listItem = confirmPopover.closest('li');
-            const remove = listItem.querySelector('.sign-in__remove-url-icon');
-            const cancel = confirmPopover.querySelector('.sign-in__url-cancel-button');
-            if (event.target == remove || event.target == cancel) {
-                return;
-            }
-            listItem.classList.remove('POPOVER-OPEN');
-        })
-    })
+        const previousLoginItem = event.target.closest('[data-element="sign-in__previous-login-item"]');
+        if (!previousLoginItem) {
+            return;
+        }
+
+        previousLoginItem.classList.add('POPOVER-OPEN');
+
+    });
+
+    document.addEventListener('click', event => {
+
+        if (!event.target.closest('[data-element="sign-in__previous-login-cancel-delete"]')) {
+            return;
+        }
+
+        const previousLoginItem = event.target.closest('[data-element="sign-in__previous-login-item"]');
+        if (!previousLoginItem) {
+            return;
+        }
+
+        previousLoginItem.classList.remove('POPOVER-OPEN');
+
+    });
+
+    // document.addEventListener('click', event => {
+    //     const confirmPopovers = document.querySelectorAll('.sign-in__previous-login-delete-confirmation-popover');
+    //     if (!confirmPopovers.length) {
+    //         return;
+    //     }
+
+    //     confirmPopovers.forEach(confirmPopover => {
+    //         const listItem = confirmPopover.closest('li');
+    //         const remove = listItem.querySelector('.sign-in__remove-url-icon');
+    //         const cancel = confirmPopover.querySelector('.sign-in__url-cancel-button');
+    //         if (event.target == remove || event.target == cancel) {
+    //             return;
+    //         }
+    //         listItem.classList.remove('POPOVER-OPEN');
+    //     })
+    // });
 
     document.addEventListener('keyup', event => {
         if (event.key !== 'Escape') {
             return;
         }
 
-        const confirmPopovers = document.querySelectorAll('.sign-in__confirm-popover');
+        const confirmPopovers = document.querySelectorAll('.sign-in__previous-login-delete-confirmation-popover');
         if (!confirmPopovers.length) {
             return;
         }

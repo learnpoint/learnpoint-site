@@ -196,7 +196,7 @@
     padding: 0;
 }
 
-.sign-in__previous-logins li {
+.sign-in__previous-login-item {
     margin: 0 0 8px;
     padding: 0;
     background-color: #fff;
@@ -218,7 +218,7 @@
     flex: 1;
 }
 
-.sign-in__previous-logins img {
+.sign-in__previous-login-delete-button {
     width: 16px;
     height: 16px;
     padding: 0 12px;
@@ -229,15 +229,15 @@
     transition: opacity .12s;
 }
 
-.sign-in__previous-logins li.POPOVER-OPEN img {
+.sign-in__previous-login-item.POPOVER-OPEN .sign-in__previous-login-delete-button {
     display: none;
 }
 
-.sign-in__previous-logins img:hover {
+.sign-in__previous-login-delete-button:hover {
     opacity: .6;
 }
 
-.sign-in__confirm-popover {
+.sign-in__previous-login-delete-confirm-popover {
     position: absolute;
     opacity: 0;
     align-items: center;
@@ -247,12 +247,12 @@
     transition: all .2s;
 }
 
-.sign-in__previous-logins li.POPOVER-OPEN .sign-in__confirm-popover {
+.sign-in__previous-login-item.POPOVER-OPEN .sign-in__previous-login-delete-confirm-popover {
     opacity: 1;
 }
 
-.sign-in__url-delete-button,
-.sign-in__url-cancel-button {
+.sign-in__previous-login-confirm-delete,
+.sign-in__previous-login-cancel-delete {
     display: block;
     font-weight: 600;
     padding: 6px 10px;
@@ -271,7 +271,7 @@
     border: 1px solid #aaa;
 }
 
-.sign-in__url-delete-button {
+.sign-in__previous-login-confirm-delete {
     color: #fff;
     background-color: #ed4337;
     border-color: transparent;
