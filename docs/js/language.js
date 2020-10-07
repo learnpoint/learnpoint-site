@@ -1,16 +1,11 @@
 (function () {
-    // We need to init language before document
-    // is loaded. We cannot wait for DOMContentLoaded
-    // because that would cause text flicker.
-    // We support 'en' (default) and 'sv'.
-
     const key = 'selected-language';
 
-    if (localStorage.getItem(key) === null) {
-        if (['sv', 'swe', 'sv-SE'].includes(navigator.language)) {
-            localStorage.setItem(key, 'sv');
-        } else {
+    if (!localStorage.getItem(key)) {
+        if (navigator.language && navigator.language.startsWith('en')) {
             localStorage.setItem(key, 'en');
+        } else {
+            localStorage.setItem(key, 'sv');
         }
     }
 
