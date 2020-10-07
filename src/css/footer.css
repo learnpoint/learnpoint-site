@@ -18,15 +18,21 @@
     display: flex;
 }
 
-.footer__select-language-link {
-    cursor: pointer;
-    color: #777;
+.footer__select-language-button {
+    font: inherit;
+    border: 0;
     padding: 0 4px;
+    cursor: pointer;
+    background: transparent;
+    color: #777;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
 }
 
-html[lang="en"] .footer__select-language-link[data-select-language="en"],
-html[lang="sv"] .footer__select-language-link[data-select-language="sv"] {
-    color: #000;
+html[lang="en"] .footer__select-language-button[data-select-language="en"],
+html[lang="sv"] .footer__select-language-button[data-select-language="sv"] {
+    color: inherit;
     font-weight: 600;
     cursor: text;
 }
