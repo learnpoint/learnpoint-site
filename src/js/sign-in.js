@@ -36,9 +36,11 @@
     function addPreviousLogin(schoolUrl) {
         let logins = getPreviousLogins();
 
-        if (!logins.includes(schoolUrl)) {
-            logins.push(schoolUrl);
+        if (logins.includes(schoolUrl)) {
+            return;
         }
+
+        logins.push(schoolUrl);
 
         logins.sort();
 
@@ -106,7 +108,7 @@
         if (event.target.closest('[data-element="sign-in__previous-login-confirm-delete"]')) {
             const confirmDeleteBtn = event.target.closest('[data-element="sign-in__previous-login-confirm-delete"]');
             const schoolUrl = confirmDeleteBtn.getAttribute('data-url');
-            if(!schoolUrl) {
+            if (!schoolUrl) {
                 return;
             }
 
