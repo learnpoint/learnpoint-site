@@ -10,14 +10,109 @@
     <link rel="mask-icon" href="img/favicons/mask-icon.svg" color="#0780FF">
     <link rel="shortcut icon" type="image/svg+xml" href="/img/favicons/favicon.svg" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Raleway:wght@800&display=block" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/language.css">
-    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/sign-in.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/404.css">
-    <link rel="stylesheet" href="/css/index.css"> 
-    <script src="/js/language.js"></script>
+    <link rel="stylesheet" href="/css/index.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', 'Segoe UI', sans-serif;
+            color: #1d2d35;
+            line-height: 1.3;
+            font-size: 18px;
+            overflow-y: scroll;
+            background-color: #FDEFE2;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        h1 {
+            font-family: 'Raleway', 'Segoe UI', sans-serif;
+            font-weight: 800;
+            text-align: center;
+            font-size: 64px;
+            margin: 64px auto 24px;
+            line-height: 1.1;
+        }
+
+        @media (max-width: 560px) {
+            h1 {
+                font-size: 32px;
+                margin: 24px auto 16px;
+            }
+        }
+
+        html[lang="en"] [lang="sv"] {
+            display: none;
+        }
+
+        html[lang="sv"] [lang="en"] {
+            display: none;
+        }
+
+        .header__nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 16px;
+        }
+
+        .header__logo {
+            padding: 24px 24px 18px;
+        }
+
+        .header__logo img {
+            display: block;
+        }
+
+        .header__links {
+            display: flex;
+            padding: 0 24px;
+            align-items: center;
+        }
+
+        .header__link {
+            padding: 8px;
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+    <script>
+        (function () {
+            const key = 'selected-language';
+
+            if (!localStorage.getItem(key)) {
+                if (navigator.language && navigator.language.startsWith('en')) {
+                    localStorage.setItem(key, 'en');
+                } else {
+                    localStorage.setItem(key, 'sv');
+                }
+            }
+
+            selectLanguage(localStorage.getItem(key));
+
+            function selectLanguage(language) {
+                localStorage.setItem(key, language);
+                document.documentElement.lang = language;
+                document.documentElement.setAttribute('lang', language);
+            }
+
+            document.addEventListener('click', event => {
+                if (!event.target.matches('[data-select-language]')) {
+                    return;
+                }
+
+                selectLanguage(event.target.getAttribute('data-select-language'));
+            });
+        })();
+    </script>
 </head>
 
 <body>
