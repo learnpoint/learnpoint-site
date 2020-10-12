@@ -5,6 +5,14 @@
     line-height: 1.3;
 }
 
+.sign-in__label {
+    display: block;
+    text-align: center;
+    max-width: 520px;
+    margin: 16px auto;
+    line-height: 1.3;
+}
+
 .sign-in__monospaced {
     font-weight: bold;
     padding: 0 1px;
