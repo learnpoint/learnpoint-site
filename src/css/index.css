@@ -50,6 +50,18 @@
     order:2;
 }
 
+@media (max-width: 560px) {
+    .index__feature {
+        display:block;
+        margin: 48px 0;
+    }
+
+    .ALIGN-RIGHT {
+        order:1;
+    } 
+}
+
+
 .index__contact {
     text-align: center;
     padding: 48px 48px 16px;
