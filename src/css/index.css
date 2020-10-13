@@ -13,6 +13,43 @@
     }
 }
 
+.index__hero-image {
+    width: 900px;
+    margin: 64px auto;
+}
+
+.index__hero-image img {
+    width: 100%;
+}
+
+.index__feature {
+    display:flex;
+    margin: 160px 0;
+    flex-wrap: wrap;
+}
+
+.index__feature-title {
+    margin-top: 8px;
+}
+
+.index__feature-text {
+    width:300px;
+    margin: 0 16px;
+}
+
+.index__feature-image {
+    flex: 1;
+}
+
+.index__feature-image img {
+    width:100%;
+    height: 100%;
+}
+
+.ALIGN-RIGHT {
+    order:2;
+}
+
 .index__contact {
     text-align: center;
     padding: 48px 48px 16px;
