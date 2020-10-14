@@ -28,13 +28,13 @@
     flex-wrap: wrap;
 }
 
-.index__feature-title {
-    margin-top: 8px;
-}
-
 .index__feature-text {
     width:300px;
     margin: 0 16px;
+}
+
+.index__feature-title {
+    margin: 8px 0;
 }
 
 .index__feature-image {
@@ -54,6 +54,7 @@
     .index__feature {
         display:block;
         margin: 48px 0;
+        text-align: center;
     }
 
     .ALIGN-RIGHT {
