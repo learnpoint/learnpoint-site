@@ -34,7 +34,7 @@
 }
 
 .index__feature-title {
-    margin: 8px 0;
+    margin: 0 0 8px;
 }
 
 .index__feature-image {
@@ -43,7 +43,9 @@
 
 .index__feature-image img {
     width:100%;
-    height: 100%;
+    box-shadow: 0 1px 4px rgba(0,0,0,.16);
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
 }
 
 .ALIGN-RIGHT {
@@ -55,6 +57,12 @@
         display:block;
         margin: 48px 0;
         text-align: center;
+    }
+
+    .index__feature-text {
+        width: 100%;
+        margin: 0;
+        padding: 16px 0;
     }
 
     .ALIGN-RIGHT {
