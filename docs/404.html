@@ -158,13 +158,13 @@
             background: #f2f2f2;
             line-height: 0;
             border: 1px solid #ddd;
-            box-shadow: 0 1px 4px rgba(0,0,0,.16);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .16);
         }
 
         .browser-frame__header {
             padding: 10px;
             display: flex;
-            align-items: center ;
+            align-items: center;
         }
 
         .browser-frame__button {
@@ -174,9 +174,30 @@
             background-color: #ddd;
             margin: 0 0 0 6px;
         }
-
     </style>
     <script>
+
+        /* Mobile screen */
+
+        (function () {
+            const MOBILE_WIDTH = 768;
+
+            if (document.documentElement.clientWidth && document.documentElement.clientWidth <= MOBILE_WIDTH) {
+
+                window.isMobile = true;
+                document.documentElement.classList.add('is-mobile');
+
+            } else {
+
+                window.isMobile = false;
+                document.documentElement.classList.remove('is-mobile');
+
+            }
+        })();
+
+
+        /* Language */
+
         (function () {
             const key = 'selected-language';
 
