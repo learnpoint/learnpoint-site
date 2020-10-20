@@ -86,7 +86,7 @@
 .iphone-x-frame {
     position: relative;
     overflow: hidden;
-    margin: 24px 16px;
+    margin: 24px 0;
     border-radius: 30px;
     /* box-shadow: 0px 0px 0px 10px #666; */
     background-color: #f3f3f3;
@@ -118,8 +118,6 @@
     left: 50%;
     transform: translateX(-50%);
 }
-
-
 
 .index__contact {
     text-align: center;
