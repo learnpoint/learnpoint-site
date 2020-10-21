@@ -86,13 +86,11 @@
 .iphone-x-frame {
     position: relative;
     overflow: hidden;
-    margin: 24px 0;
     border-radius: 30px;
-    /* box-shadow: 0px 0px 0px 10px #666; */
     background-color: #f3f3f3;
     border: 13px solid #c7c7c7;
     background-color: #fff;
-    box-shadow:  0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
   .iphone-x-frame:before {
