@@ -90,7 +90,7 @@
     background-color: #f3f3f3;
     border: 13px solid #c7c7c7;
     background-color: #fff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
 }
 
   .iphone-x-frame:before {
