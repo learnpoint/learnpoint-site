@@ -1,6 +1,6 @@
 # Development Environment Setup
 
-- [Install Deno](https://github.com/denoland/deno_install) version ```1.4.2```.
+- [Install Deno](https://github.com/denoland/deno_install) version ```1.4.6```.
 - No VSCode extensions for Deno are required.
 
 
