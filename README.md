@@ -1,6 +1,6 @@
 # Development Environment Setup
 
-- [Install Deno](https://github.com/denoland/deno_install) version ```1.4.6```.
+- [Install Deno](https://github.com/denoland/deno_install) version ```1.5.4```.
 - No VSCode extensions for Deno are required.
 
 
@@ -94,7 +94,7 @@ To add, remove, or change dependencies:
 
 - Be mindful about client caching. There's no build in cache invalidation logic, except for file changes. Before implementing a fancy caching strategy, consider one of the following three options.
 
-    1. Do not use any caching at all. Between deployments, request recurrency is expected to be weak, and therefore, the value of caching is low. For end user availability, focus on compression:
+    1. Do not use any caching at all. Between deployments, request recurrency is expected to be weak, and therefore, the value of caching is low. For end user availability, focus on compression and skip caching completely:
 
             cache-control: no-store
 
@@ -102,8 +102,8 @@ To add, remove, or change dependencies:
 
             cache-control: public, max-age=3600
 
-    3. To off-load the production environment, add ETag:
+    3. To off-load the production environment, increase the cache to 24 hours, and add an ETag:
 
-            cache-control: public, max-age=3600
+            cache-control: public, max-age=86400
             ETag: W/"22b6d046870a8db69794472c1ada0ea4"
 
