@@ -1,0 +1,24 @@
+{
+  "headers": {
+    "timing-allow-origin": "*",
+    "cross-origin-resource-policy": "cross-origin",
+    "content-type": "application/javascript; charset=utf-8",
+    "access-control-expose-headers": "*",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "vary": "Accept-Encoding",
+    "access-control-allow-origin": "*",
+    "cf-request-id": "0719580df50000cb0cbfade000000001",
+    "date": "Fri, 18 Dec 2020 21:26:12 GMT",
+    "etag": "W/\"139-OxSgf6USc6yMW7/mOXcbf+9Q2z8\"",
+    "x-content-type-options": "nosniff",
+    "age": "1741",
+    "x-served-by": "cache-fra19153-FRA, cache-bma1620-BMA",
+    "server": "cloudflare",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
+    "cf-cache-status": "HIT",
+    "cf-ray": "603bf5f65a8fcb0c-ARN",
+    "x-cache": "MISS, MISS"
+  },
+  "url": "https://cdn.jsdelivr.net/gh/ekmwest/side@3.0.0/deps.js"
+}

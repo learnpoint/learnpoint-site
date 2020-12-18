@@ -1,5 +1,5 @@
-import { serv } from "https://cdn.jsdelivr.net/gh/ekmwest/serv@2.2.3/serv.js";
-import { sideBuild } from "./side_build.js";
+import { serv } from "./deps.js";
+import { sideBuild } from "./deps.js";
 
 export async function sideServe(sourcePath, targetPath, componentsPath) {
     watchAndBuild(sourcePath, targetPath, componentsPath);

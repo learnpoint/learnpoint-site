@@ -1,5 +1,11 @@
-import * as path from "https://deno.land/std@0.81.0/path/mod.ts";
-import { bold, yellow } from "https://deno.land/std@0.81.0/fmt/colors.ts";
+import { path } from "./deps.js";
+import { bold, yellow } from "./deps.js";
+import { marked } from "./deps.js";
+
+const markdown = marked.default;
+markdown.setOptions({
+    headerIds: false
+});
 
 const buildArgs = {};
 
@@ -82,16 +88,22 @@ async function buildFile(sourceFilePath, targetFilePath) {
     if (isHtmlFile(sourceFilePath)) {
         const sourceContent = await Deno.readTextFile(sourceFilePath);
         Deno.writeTextFile(targetFilePath, renderHtmlFile(sourceContent, sourceFilePath));
+    } else if (isMarkdownFile(sourceFilePath)) {
+        targetFilePath = targetFilePath.slice(0, -2) + 'html'; // Change suffix from .md to .html
+        const sourceContent = await Deno.readTextFile(sourceFilePath);
+        const markedupContent = markdown(sourceContent);
+        Deno.writeTextFile(targetFilePath, renderHtmlFile(markedupContent, sourceFilePath));
     } else {
         Deno.copyFile(sourceFilePath, targetFilePath);
     }
 }
 
 const isHtmlFile = sourceFilePath => path.extname(sourceFilePath) === '.html';
+const isMarkdownFile = sourceFilePath => path.extname(sourceFilePath) === '.md';
 
 const renderHtmlFile = (data, sourceFilePath) => {
-    return data.toString().replace(/\[\[.*\]\]/g, match => {
-        const [error, renderedContent] = renderComponent(match.replace('[[', '').replace(']]', ''));
+    return data.toString().replace(/<!--.*-->/g, match => {
+        const [error, renderedContent] = renderComponent(match.replace('<!--', '').replace('-->', ''));
 
         if (error) {
             console.log();
@@ -108,11 +120,17 @@ const renderComponent = componentString => {
     let error = null;
 
     const componentName = componentString.split(',')[0].trim();
-    const componentContent = Deno.readTextFileSync(path.join(buildArgs.componentsPath, componentName));
+
+    let componentContent = '';
+    try {
+        componentContent = Deno.readTextFileSync(path.join(buildArgs.componentsPath, componentName));
+    } catch {
+        error = 'Component file not found: "' + componentName + '"';
+    }
 
     let componentData = {};
 
-    if (componentString.includes(',')) {
+    if (!error && componentString.includes(',')) {
         const componentDataString = componentString.substring(componentString.indexOf(',') + 1).trim();
         try {
             componentData = eval(`(${componentDataString})`);
@@ -126,7 +144,7 @@ const renderComponent = componentString => {
             componentData = {};
         }
     }
-    
+
     return [error, componentContent.replace(/{{.*}}/g, match => renderComponentData(match.replace('{{', '').replace('}}', ''), componentData))];
 };
 
