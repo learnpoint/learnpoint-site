@@ -1,5 +1,0 @@
-export * as path from "https://deno.land/std@0.81.0/path/mod.ts";
-export { bold, yellow } from "https://deno.land/std@0.81.0/fmt/colors.ts";
-export { serv } from "https://cdn.jsdelivr.net/gh/ekmwest/serv@2.2.3/serv.js";
-export { sideBuild } from "./side_build.js";
-export * as marked from "./marked.esm.js";

@@ -1,6 +1,6 @@
-import { path } from "./deps.js";
-import { bold, yellow } from "./deps.js";
-import { marked } from "./deps.js";
+import { path, bold, yellow } from "./deps.js";
+import * as marked from "./marked.esm.js";
+import { defaults } from "./defaults.js";
 
 const markdown = marked.default;
 markdown.setOptions({
@@ -9,12 +9,14 @@ markdown.setOptions({
 
 const buildArgs = {};
 
-export async function sideBuild(sourcePath, targetPath, componentsPath, forceRebuild = false) {
-    buildArgs.componentsPath = componentsPath;
-    buildArgs.forceRebuild = forceRebuild;
+export async function build(options) {
+    options = { ...defaults(), ...options };
+
+    buildArgs.componentsPath = options.componentsPath;
+    buildArgs.forceRebuild = options.forceRebuild;
     buildArgs.componentsMTime = await getComponentsMTime();
 
-    recursiveBuild(sourcePath, targetPath);
+    recursiveBuild(options.sourcePath, options.targetPath);
 }
 
 async function recursiveBuild(sourcePath, targetPath) {
@@ -60,6 +62,10 @@ async function isBuildNeeded(sourceFilePath, targetFilePath) {
         return [true, 'Build forced'];
     }
 
+    if (isMarkdownFile(sourceFilePath)) {
+        targetFilePath = targetFilePath.slice(0, -2) + 'html';
+    }
+
     try {
         const [sourceFileInfo, targetFileInfo] = await Promise.all([
             Deno.stat(sourceFilePath),
@@ -70,7 +76,7 @@ async function isBuildNeeded(sourceFilePath, targetFilePath) {
             return [true, 'File modified'];
         }
 
-        if (isHtmlFile(sourceFilePath) && buildArgs.componentsMTime > targetFileInfo.mtime) {
+        if ((isHtmlFile(sourceFilePath) || isMarkdownFile(sourceFilePath)) && buildArgs.componentsMTime > targetFileInfo.mtime) {
             return [true, 'Components modified'];
         }
     } catch (error) {
@@ -87,12 +93,12 @@ async function isBuildNeeded(sourceFilePath, targetFilePath) {
 async function buildFile(sourceFilePath, targetFilePath) {
     if (isHtmlFile(sourceFilePath)) {
         const sourceContent = await Deno.readTextFile(sourceFilePath);
-        Deno.writeTextFile(targetFilePath, renderHtmlFile(sourceContent, sourceFilePath));
+        Deno.writeTextFile(targetFilePath, renderHtmlFile(sourceContent, sourceFilePath, sourceContent));
     } else if (isMarkdownFile(sourceFilePath)) {
         targetFilePath = targetFilePath.slice(0, -2) + 'html'; // Change suffix from .md to .html
         const sourceContent = await Deno.readTextFile(sourceFilePath);
         const markedupContent = markdown(sourceContent);
-        Deno.writeTextFile(targetFilePath, renderHtmlFile(markedupContent, sourceFilePath));
+        Deno.writeTextFile(targetFilePath, renderHtmlFile(markedupContent, sourceFilePath, sourceContent));
     } else {
         Deno.copyFile(sourceFilePath, targetFilePath);
     }
@@ -101,20 +107,26 @@ async function buildFile(sourceFilePath, targetFilePath) {
 const isHtmlFile = sourceFilePath => path.extname(sourceFilePath) === '.html';
 const isMarkdownFile = sourceFilePath => path.extname(sourceFilePath) === '.md';
 
-const renderHtmlFile = (data, sourceFilePath) => {
-    return data.toString().replace(/<!--.*-->/g, match => {
+const renderHtmlFile = (data, sourceFilePath, originalSourceContent) => {
+    const originalSourceContentString = originalSourceContent.toString();
+    const dataString = data.toString();
+
+    return dataString.replace(/<!--.*-->/g, (match, matchPos) => {
         const [error, renderedContent] = renderComponent(match.replace('<!--', '').replace('-->', ''));
 
         if (error) {
             console.log();
-            console.log(bold(yellow('Error in:')), bold(yellow(path.relative(Deno.cwd(), sourceFilePath))));
+            console.log(bold(yellow('Error in:')), bold(yellow(path.relative(Deno.cwd(), sourceFilePath))), 'line', lineNumber(matchPos, originalSourceContentString));
             console.log(bold('=== >'), bold(error));
             console.log();
+            return match; // Leave unchanged
         }
 
         return renderedContent;
     });
 };
+
+const lineNumber = (pos, str) => str.substring(0, pos).split('\n').length;
 
 const renderComponent = componentString => {
     let error = null;

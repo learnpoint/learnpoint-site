@@ -1,6 +1,6 @@
 # Development Environment Setup
 
-- [Install Deno](https://github.com/denoland/deno_install) version ```1.5.4```.
+- [Install Deno](https://github.com/denoland/deno_install) version ```1.6.1```.
 - No VSCode extensions for Deno are required.
 
 
@@ -24,7 +24,7 @@ Detailed instructions [here](https://gist.github.com/Chaser324/ce0505fbed06b947d
 
 2. Make file changes in directory ```src```. Keep the server running while your're doing file changes. The development server will automatically rebuild the site and reload your browser as you make files changes.
 
-    Do **not** make file changes in the ```docs``` directory. If there are any problems or file mismatches, it is perfectly safe to  stop the server, completely delete the ```docs``` directory, and then start the server again.
+    Do **not** make file changes in the ```docs``` directory. If there are any problems or file mismatches, it is perfectly safe to stop the server, completely delete the ```docs``` directory, and then start the server again.
 
 3. Stop the server with ```Ctrl + C``` when you're done.
 
