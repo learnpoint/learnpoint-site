@@ -1,0 +1,24 @@
+{
+  "headers": {
+    "timing-allow-origin": "*",
+    "age": "69",
+    "cross-origin-resource-policy": "cross-origin",
+    "content-type": "application/javascript; charset=utf-8",
+    "x-cache": "MISS, HIT",
+    "access-control-expose-headers": "*",
+    "server": "cloudflare",
+    "access-control-allow-origin": "*",
+    "etag": "W/\"10951-dcyid2/0J1zhSoe4LB7UqlagrBo\"",
+    "vary": "Accept-Encoding",
+    "cf-request-id": "0750104e9b000015f41c1ff000000001",
+    "x-content-type-options": "nosniff",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "date": "Tue, 29 Dec 2020 12:26:57 GMT",
+    "cf-cache-status": "HIT",
+    "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-served-by": "cache-fra19164-FRA, cache-bma1628-BMA",
+    "cf-ray": "6093832a997915f4-ARN"
+  },
+  "url": "https://cdn.jsdelivr.net/gh/markedjs/marked@1.2.7/lib/marked.esm.js"
+}

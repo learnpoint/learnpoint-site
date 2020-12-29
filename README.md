@@ -1,7 +1,6 @@
 # Development Environment Setup
 
-- [Install Deno](https://github.com/denoland/deno_install) version ```1.6.1```.
-- No VSCode extensions for Deno are required.
+- [Install Deno](https://deno.land/manual/getting_started/installation) version ```1.6.2```
 
 
 # Fork & Pull Request Workflow
@@ -18,13 +17,13 @@ Detailed instructions [here](https://gist.github.com/Chaser324/ce0505fbed06b947d
 
 # Development Workflow
 
-1. Start the development server on ```http://127.0.0.1:3333```:
+1. Start the dev server:
 
-        deno run -A server.js
+        $ deno run -A server.js
 
-2. Make file changes in directory ```src```. Keep the server running while your're doing file changes. The development server will automatically rebuild the site and reload your browser as you make files changes.
+2. Make file changes in the ```src``` directory. The dev server will automatically rebuild the site and reload your browser as you make files changes.
 
-    Do **not** make file changes in the ```docs``` directory. If there are any problems or file mismatches, it is perfectly safe to stop the server, completely delete the ```docs``` directory, and then start the server again.
+    Do **not** make file changes in the ```docs``` directory. If there are any problems or file mismatches, it is perfectly safe to stop the dev server, completely delete the ```docs``` directory, and then start the server again.
 
 3. Stop the server with ```Ctrl + C``` when you're done.
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Sign in - Learnpoint</title>
+    <title>{{ title || Learnpoint }}</title>
     <meta name="description" content="Skapa utbildningar, registrera studenter, dela ut uppgifter, skriv nyheter, och betygsätt studenter. Allt på ett ställe." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
@@ -255,70 +255,3 @@
         </nav>
     </header>
     <main>
-
-<script defer src="/js/sign-in.js"></script>
-
-<h1>
-    <span lang="en">Sign in</span>
-    <span lang="sv">Logga in</span>
-</h1>
-
-<label for="school-name" class="sign-in__label">
-    <span lang="en">Enter the Learnpoint address for your school.</span>
-    <span lang="sv">Skriv in Learnpoint-adressen till din skola.</span> 
-</label>
-
-<form autocomplete="off" class="sign-in__form EMPTY" data-element="sign-in__form" action="#">
-    <div class="sign-in__error">
-        <div class="sign-in__error-message">
-            <span lang="en">Couldn't find the school. Check the address.</span>
-            <span lang="sv">Hittade inte skolan. Kontrollera adressen.</span>
-        </div>
-        <div class="sign-in__empty-error-message">
-            <span lang="en">Enter the Learnpoint address</span>
-            <span lang="sv">Ange Learnpoint-adressen</span>
-        </div>
-    </div>   
-    <div class="sign-in__input-wrap">
-        <div class="sign-in__input-overlay" data-element="sign-in__input-overlay">school-name</div>
-        <input id="school-name" autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off" class="sign-in__input" data-element="sign-in__input" placeholder="school-name" autofocus />
-    </div>
-    <button class="sign-in__submit" data-element="sign-in__submit" type="submit">
-        <span class="sign-in__submit-spinner"></span>
-        <span lang="en">Continue</span>
-        <span lang="sv">Fortsätt</span>
-    </button>
-</form>
-
-<p class="sign-in__help-message">
-    <span lang="en">Trouble signing in? <a href="http://support.learnpoint.se/" rel="noreferrer" target="_blank" class="sign-in__link">We'd be happy to help</a>.</span>
-    <span lang="sv">Problem att logga in? <a href="http://support.learnpoint.se/" rel="noreferrer" target="_blank" class="sign-in__link">Vi hjälper gärna till</a>.</span>
-</p>
-
-<div class="sign-in__previous-logins EMPTY" data-element="sign-in__previous-logins">
-    <p>
-        <span lang="en">Previous sign ins</span>
-        <span lang="sv">Tidigare inloggningar</span>
-    </p>
-</div>
-
-</main>
-
-<footer class="footer">
-    <div>
-        <span lang="en">Learnpoint is developed by <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
-        <span lang="sv">Learnpoint är utvecklat av <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
-    </div>
-    <div class="footer__select-language-panel">
-        <div>
-            <button class="footer__select-language-button" data-select-language="en">English</button>
-        </div>
-        <div>|</div>
-        <div>
-            <button class="footer__select-language-button" data-select-language="sv">Svenska</button>
-        </div>
-    </div>
-</footer>
-</body>
-
-</html>

@@ -1,3 +1,3 @@
-import { buildAndServe } from "./deps.js";
+import { dev } from "./deps.js";
 
-buildAndServe();
+dev();
