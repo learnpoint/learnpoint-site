@@ -8,11 +8,11 @@ export async function dev(options) {
         buildPath: path.join(Deno.cwd(), 'docs'),
         snippetsPath: path.join(Deno.cwd(), 'src', 'snippets'),
         forceRebuild: false,
-        buildWatch: true
+        buildWatch: true,
+        firstBuildDoneCallback: () => serve(path.join(Deno.cwd(), 'docs'))
     };
 
     options = { ...defaults, ...options };
 
     build(options);
-    serve(options.buildPath);
 }

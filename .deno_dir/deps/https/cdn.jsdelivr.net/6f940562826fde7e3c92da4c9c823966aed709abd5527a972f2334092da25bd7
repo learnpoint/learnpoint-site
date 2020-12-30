@@ -14,7 +14,9 @@ export async function build(options) {
         buildPath: path.join(Deno.cwd(), 'docs'),
         snippetsPath: path.join(Deno.cwd(), 'src', 'snippets'),
         forceRebuild: false,
-        buildWatch: false
+        buildWatch: false,
+        firstBuildDoneCallback: () => { },
+        watchBuildDoneCallback: () => { }
     };
 
     options = { ...defaults, ...options };
@@ -25,7 +27,9 @@ export async function build(options) {
     buildArgs.forceRebuild = options.forceRebuild;
     buildArgs.snippetsLastModifiedTime = await getSnippetsLastModifiedTime();
 
-    recursiveBuild(options.sourcePath, options.buildPath);
+    await recursiveBuild(options.sourcePath, options.buildPath);
+
+    options.firstBuildDoneCallback();
 
     if (options.buildWatch) {
         const watcher = Deno.watchFs(options.sourcePath);
@@ -39,11 +43,14 @@ export async function build(options) {
 
             lastBuild = Date.now();
             buildArgs.snippetsLastModifiedTime = await getSnippetsLastModifiedTime();
-            recursiveBuild(options.sourcePath, options.buildPath);
 
             console.log();
             console.log("Rebuilding...");
             console.log();
+
+            await recursiveBuild(options.sourcePath, options.buildPath);
+
+            options.watchBuildDoneCallback();
         }
     }
 }
@@ -82,19 +89,19 @@ async function recursiveBuild(sourcePath, buildPath) {
         }
 
         if (dirEntry.isDirectory) {
-            recursiveBuild(sPath, bPath);
+            await recursiveBuild(sPath, bPath);
             continue;
         }
 
         if (isMarkdownFile(bPath)) {
-            // Change target file extension from .md to .html
+            // Change build file extension from .md to .html
             bPath = bPath.slice(0, -2) + 'html';
         }
 
         const [buildNeeded, buildReason] = await isBuildNeeded(sPath, bPath)
         if (buildNeeded) {
             console.log('Building', path.relative(Deno.cwd(), bPath), '--', buildReason);
-            buildFile(sPath, bPath);
+            await buildFile(sPath, bPath);
         }
     }
 }
@@ -145,13 +152,13 @@ async function isBuildNeeded(sourceFilePath, buildFilePath) {
 async function buildFile(sourceFilePath, buildFilePath) {
     if (isHtmlFile(sourceFilePath)) {
         const sourceContent = await Deno.readTextFile(sourceFilePath);
-        Deno.writeTextFile(buildFilePath, renderHtmlFile(sourceContent, sourceFilePath, sourceContent));
+        await Deno.writeTextFile(buildFilePath, renderHtmlFile(sourceContent, sourceFilePath, sourceContent));
     } else if (isMarkdownFile(sourceFilePath)) {
         const sourceContent = await Deno.readTextFile(sourceFilePath);
         const markedupContent = markdown(sourceContent);
-        Deno.writeTextFile(buildFilePath, renderHtmlFile(markedupContent, sourceFilePath, sourceContent));
+        await Deno.writeTextFile(buildFilePath, renderHtmlFile(markedupContent, sourceFilePath, sourceContent));
     } else {
-        Deno.copyFile(sourceFilePath, buildFilePath);
+        await Deno.copyFile(sourceFilePath, buildFilePath);
     }
 }
 

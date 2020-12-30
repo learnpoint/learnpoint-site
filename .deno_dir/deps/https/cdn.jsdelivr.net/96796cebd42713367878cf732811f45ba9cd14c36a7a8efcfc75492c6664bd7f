@@ -10,6 +10,8 @@ import {
     brightGreen
 } from "./deps.js";
 
+import { exists } from "./exists.js";
+
 let serverRoot;
 let sockets = [];
 let closingSockets = false;
@@ -18,11 +20,21 @@ export async function serve(servePath) {
     servePath = servePath || Deno.cwd();
 
     if (typeof servePath !== 'string') {
-        throw new TypeError(`Parameter servePath must be a string. Recieved ${typeof servePath}.`);
+        console.log();
+        console.error(`Parameter servePath must be a string. Recieved ${typeof servePath}.`);
+        Deno.exit(1);
     }
 
     if (!path.isAbsolute(servePath)) {
-        throw new TypeError('Parameter servePath must represent an absolute path.');
+        console.log();
+        console.error('Parameter servePath must represent an absolute path.');
+        Deno.exit(1);
+    }
+
+    if (!await exists(servePath)) {
+        console.log();
+        console.error(`servePath ${servePath} was not found.`);
+        Deno.exit(1);
     }
 
     serverRoot = servePath;
@@ -38,11 +50,9 @@ export async function serve(servePath) {
 
     watchAndReload();
 
-    setTimeout(() => {
-        console.log();
-        console.log(bold(brightGreen('Server started at http://127.0.0.1:3333/')));
-        console.log();
-    }, 600);
+    console.log();
+    console.log(bold(brightGreen('Server started at http://127.0.0.1:3333/')));
+    console.log();
 }
 
 async function httpHandler(req) {
