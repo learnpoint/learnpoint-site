@@ -1,0 +1,13 @@
+.mobile-screenshot {
+    /* offset shadow border */
+    margin: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 0 12px #f7f7f7, 0 6px 16px 12px rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.mobile-screenshot img {
+    display: block;
+    width: 100%;
+}

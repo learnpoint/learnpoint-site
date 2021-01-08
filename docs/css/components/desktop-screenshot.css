@@ -1,0 +1,25 @@
+.desktop-screenshot {
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.desktop-screenshot__browser-frame {
+    background: #f2f2f2;
+    padding: 10px 6px;
+    display: flex;
+    align-items: center;
+}
+
+.desktop-screenshot__browser-frame-button {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .12);
+    margin: 0 0 0 6px;
+}
+
+.desktop-screenshot img {
+    display: block;
+    width: 100%;
+}

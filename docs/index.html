@@ -6,18 +6,24 @@
     <title>Learnpoint</title>
     <meta name="description" content="Skapa utbildningar, registrera studenter, dela ut uppgifter, skriv nyheter, och betygsätt studenter. Allt på ett ställe." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png" />
     <link rel="mask-icon" href="/img/favicons/mask-icon.svg" color="#0780FF">
     <link rel="shortcut icon" type="image/svg+xml" href="/img/favicons/favicon.svg" />
+
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@800&display=block" rel="stylesheet">
-    <link href="/css/components/screenshot.css" rel="stylesheet">
-    <link href="/css/components/footer.css" rel="stylesheet">
-    <link href="/css/components/header.css" rel="stylesheet">
-    <link href="/css/components/language.css" rel="stylesheet">
-    <link href="/css/pages/404.css" rel="stylesheet">
+
+    <link href="/css/main.css" rel="stylesheet">
     <link href="/css/pages/index.css" rel="stylesheet">
     <link href="/css/pages/sign-in.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/pages/404.css" rel="stylesheet">
+    
+    <link href="/css/components/header.css" rel="stylesheet">
+    <link href="/css/components/footer.css" rel="stylesheet">
+    <link href="/css/components/language.css" rel="stylesheet">
+    <link href="/css/components/desktop-screenshot.css" rel="stylesheet">
+    <link href="/css/components/mobile-screenshot.css" rel="stylesheet">
+    
     <script src="/js/components/language.js"></script>
     <script src="/js/components/is-mobile.js"></script>
 </head>
@@ -55,10 +61,6 @@
     </p>
 </div>
 
-<div class="index__laptop-frame" style="display: none">
-    <img alt="learnpoint" src="index-assets/coursegrade.png" />
-</div>
-
 <div class="index__features">
     <div class="index__feature">
         <div class="index__feature-text">
@@ -69,22 +71,21 @@
             <span lang="en">Use announcements to inform every member in the class or the course.</span>
             <span lang="sv">Använd nyheter för att förmedla information till alla deltagare i klassen eller kursen.</span>
         </div>
-        <div class="index__feature-image">
-            <div class="screenshot">
-    <div class="browser-frame">
-        <div class="browser-frame__header">
-            <span class="browser-frame__button"></span>
-            <span class="browser-frame__button"></span>
-            <span class="browser-frame__button"></span>
-        </div>
+        <div class="index__feature-image DESKTOP">
+            <div class="desktop-screenshot">
+    <div class="desktop-screenshot__browser-frame">
+        <span class="desktop-screenshot__browser-frame-button"></span>
+        <span class="desktop-screenshot__browser-frame-button"></span>
+        <span class="desktop-screenshot__browser-frame-button"></span>
     </div>
-    <img src= index-assets/newsfeed.png />
+
+    <img alt="Announcements" src="index-assets/announcements.png" />
 </div>
         </div>
-        <div class="index__feature-image-mobile">
-            <div class="iphone-x-frame">
-                <img alt="Feed" src="index-assets/feed-mobile.png" />
-            </div>
+        <div class="index__feature-image MOBILE">
+            <div class="mobile-screenshot">
+    <img alt="Announcements" src="index-assets/announcements-mobile.png" />
+</div>
         </div>
     </div>
     <div class="index__feature">
@@ -96,49 +97,47 @@
             <span lang="en">Create and hand out assignments to the students in the course. Sort the assignments into sections to give the course a pedagogical structure.</span>
             <span lang="sv">Skapa och dela ut uppgifter till dom studerande i kursen. Sortera uppgifterna i avsnitt för att ge kursen en pedagogisk struktur.</span>
         </div>
-        <div class="index__feature-image">
-          <div class="screenshot">
-    <div class="browser-frame">
-        <div class="browser-frame__header">
-            <span class="browser-frame__button"></span>
-            <span class="browser-frame__button"></span>
-            <span class="browser-frame__button"></span>
-        </div>
+        <div class="index__feature-image DESKTOP">
+            <div class="desktop-screenshot">
+    <div class="desktop-screenshot__browser-frame">
+        <span class="desktop-screenshot__browser-frame-button"></span>
+        <span class="desktop-screenshot__browser-frame-button"></span>
+        <span class="desktop-screenshot__browser-frame-button"></span>
     </div>
-    <img src= index-assets/content.png />
+
+    <img alt="Assignments" src="index-assets/assignments.png" />
 </div>
         </div>
-        <div class="index__feature-image-mobile">
-            <div class="iphone-x-frame">
-                <img alt="Content" src="index-assets/content1-mobile.png" />
-            </div>
+        <div class="index__feature-image MOBILE">
+            <div class="mobile-screenshot">
+    <img alt="Assignments" src="index-assets/assignments-mobile.png" />
+</div>
         </div>
     </div>
     <div class="index__feature">
         <div class="index__feature-text">
             <h2 class="index__feature-title">
-                <span lang="en">Assessments</span>
+                <span lang="en">Grading</span>
                 <span lang="sv">Betyg</span>
             </h2>
             <span lang="en">You can grade both assignments and courses. The gradebook gives an overview of all the grades in the course.</span>
             <span lang="sv">Du kan betygsätta både uppgifter och kurser. På betygssidan finns en överskådlig sammanställning av alla betyg.</span>
         </div>
-        <div class="index__feature-image">
-             <div class="screenshot">
-    <div class="browser-frame">
-        <div class="browser-frame__header">
-            <span class="browser-frame__button"></span>
-            <span class="browser-frame__button"></span>
-            <span class="browser-frame__button"></span>
-        </div>
+        <div class="index__feature-image DESKTOP">
+            <div class="desktop-screenshot">
+    <div class="desktop-screenshot__browser-frame">
+        <span class="desktop-screenshot__browser-frame-button"></span>
+        <span class="desktop-screenshot__browser-frame-button"></span>
+        <span class="desktop-screenshot__browser-frame-button"></span>
     </div>
-    <img src= index-assets/grade.png />
+
+    <img alt="Grading" src="index-assets/grading.png" />
 </div>
         </div>
-        <div class="index__feature-image-mobile">
-            <div class="iphone-x-frame">
-                <img alt="Grade" src="index-assets/grade1-mobile.png" />
-            </div>
+        <div class="index__feature-image MOBILE">
+            <div class="mobile-screenshot">
+    <img alt="Grading" src="index-assets/grading-mobile.png" />
+</div>
         </div>
     </div>
 </div>
@@ -157,8 +156,7 @@
         <span lang="sv">Skriv till <a href="mailto:info@learnpoint.se" class="index__contact-link">info@learnpoint.se</a></span>
     </p>
     <p class="index__contact-paragraph">
-        <svg class="index__heart-emoji" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
+        <svg class="index__heart-emoji" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
         </svg>
     </p>

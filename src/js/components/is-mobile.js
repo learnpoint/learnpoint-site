@@ -4,10 +4,14 @@
     function updateIsMobile() {
         if (document.documentElement.clientWidth && document.documentElement.clientWidth <= MOBILE_WIDTH) {
             window.isMobile = true;
+            window.isDesktop = false;
             document.documentElement.classList.add('is-mobile');
+            document.documentElement.classList.remove('is-desktop');
         } else {
             window.isMobile = false;
+            window.isDesktop = true;
             document.documentElement.classList.remove('is-mobile');
+            document.documentElement.classList.add('is-desktop');
         }
     }
 

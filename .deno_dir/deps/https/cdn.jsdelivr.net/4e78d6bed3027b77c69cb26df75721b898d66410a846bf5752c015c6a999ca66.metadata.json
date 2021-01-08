@@ -1,24 +1,23 @@
 {
   "headers": {
-    "content-type": "application/javascript; charset=utf-8",
+    "date": "Fri, 08 Jan 2021 19:51:13 GMT",
+    "x-cache": "MISS, HIT",
+    "server": "cloudflare",
+    "etag": "W/\"10951-dcyid2/0J1zhSoe4LB7UqlagrBo\"",
     "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-served-by": "cache-fra19164-FRA, cache-bma1647-BMA",
+    "cf-request-id": "078526a3b80000f15efa338000000001",
+    "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
+    "access-control-expose-headers": "*",
+    "access-control-allow-origin": "*",
     "x-content-type-options": "nosniff",
     "vary": "Accept-Encoding",
-    "x-served-by": "cache-fra19164-FRA, cache-bma1630-BMA",
-    "cf-cache-status": "HIT",
-    "access-control-expose-headers": "*",
-    "cf-ray": "609b891d1f7af210-ARN",
-    "server": "cloudflare",
-    "date": "Wed, 30 Dec 2020 11:49:06 GMT",
-    "x-cache": "MISS, HIT",
     "timing-allow-origin": "*",
-    "access-control-allow-origin": "*",
-    "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
-    "cross-origin-resource-policy": "cross-origin",
-    "age": "77",
-    "cf-request-id": "075514062b0000f210ab144000000001",
-    "etag": "W/\"10951-dcyid2/0J1zhSoe4LB7UqlagrBo\"",
-    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+    "content-type": "application/javascript; charset=utf-8",
+    "cf-cache-status": "MISS",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "cf-ray": "60e873b2bf05f15e-ARN",
+    "cross-origin-resource-policy": "cross-origin"
   },
   "url": "https://cdn.jsdelivr.net/gh/markedjs/marked@1.2.7/lib/marked.esm.js"
 }
