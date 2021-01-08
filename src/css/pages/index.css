@@ -109,9 +109,7 @@
 
 .index__feature-image img {
     width:100%;
-    box-shadow: 0 1px 4px rgba(0,0,0,.16);
-    border-bottom-left-radius: 13px;
-    border-bottom-right-radius: 13px;
+    display: block;
 }
 
 .index__feature-image-mobile {
