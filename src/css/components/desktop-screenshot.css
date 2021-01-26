@@ -6,17 +6,30 @@
 
 .desktop-screenshot__browser-frame {
     background: #f2f2f2;
-    padding: 10px 6px;
+    padding: 0 10px;
+    height: 42px;
     display: flex;
     align-items: center;
 }
 
 .desktop-screenshot__browser-frame-button {
-    height: 14px;
-    width: 14px;
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, .12);
-    margin: 0 0 0 6px;
+    margin: 0 3px;
+}
+
+.desktop-screenshot__browser-frame-button:nth-child(1) {
+    background-color: #FF6058;
+}
+
+.desktop-screenshot__browser-frame-button:nth-child(2) {
+    background-color: #FFBE2F;
+}
+
+.desktop-screenshot__browser-frame-button:nth-child(3) {
+    background-color: #27CA41;
 }
 
 .desktop-screenshot img {
