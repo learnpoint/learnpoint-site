@@ -80,6 +80,7 @@
     width:400px;
     width: 320px;
     margin: 0 32px;
+    line-height: 1.5;
 }
 
 .is-mobile .index__feature-text {
@@ -98,7 +99,7 @@
 } 
 
 .index__feature-title {
-    margin: 18px 0 12px;
+    margin: 18px 0 4px;
     font-family: Raleway, 'Segoe UI', sans-serif;
 }
 
