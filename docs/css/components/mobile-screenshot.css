@@ -3,6 +3,15 @@
     border-radius: 5vw;
     background-color: #000;
     box-shadow: 0 0 0 3vw #000, 0 3vw 8vw 6vw rgba(0, 0, 0, .1);
+    opacity: 0;
+    transform: scale(.99);
+    transform-origin: 50% 20%;
+    transition: all .6s;
+}
+
+.mobile-screenshot.LOADED {
+    transform: none;
+    opacity: 1;
 }
 
 .mobile-screenshot__header {
