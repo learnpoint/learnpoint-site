@@ -1,7 +1,7 @@
 .index__subtitle {
     font-family: 'Raleway', 'Segoe UI', sans-serif;
     text-align: center;
-    font-size: 26px;
+    font-size: 32px;
     margin: -8px auto 24px;
     line-height: 1.1;
 }
@@ -10,7 +10,7 @@
     margin: 0 auto;
     text-align: center;
     line-height: 1.4;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     max-width: 640px;
 }
