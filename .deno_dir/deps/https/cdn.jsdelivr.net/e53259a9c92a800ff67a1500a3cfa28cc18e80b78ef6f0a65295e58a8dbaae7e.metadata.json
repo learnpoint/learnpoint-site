@@ -1,0 +1,23 @@
+{
+  "headers": {
+    "cross-origin-resource-policy": "cross-origin",
+    "access-control-allow-origin": "*",
+    "cf-cache-status": "MISS",
+    "x-content-type-options": "nosniff",
+    "access-control-expose-headers": "*",
+    "etag": "W/\"1b1-srjD26vFkHYa72hxGKgfQLDIGN8\"",
+    "timing-allow-origin": "*",
+    "vary": "Accept-Encoding",
+    "cf-request-id": "07ee97542a0000f14a6b025000000001",
+    "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
+    "server": "cloudflare",
+    "x-cache": "MISS, HIT",
+    "cf-ray": "619128004f2ff14a-ARN",
+    "x-served-by": "cache-fra19153-FRA, cache-bma1621-BMA",
+    "content-type": "application/javascript; charset=utf-8",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "date": "Fri, 29 Jan 2021 07:14:25 GMT"
+  },
+  "url": "https://cdn.jsdelivr.net/gh/learnpoint/piko@0.9.10/deps.js"
+}

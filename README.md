@@ -1,10 +1,14 @@
-# Development Environment Setup
+# learnpoint-site
 
-- [Install Deno](https://github.com/denoland/deno_install) version ```1.4.6```.
-- No VSCode extensions for Deno are required.
+Repo for [learnpoint.se](https://learnpoint.se)
 
 
-# Fork & Pull Request Workflow
+## Development Environment Setup
+
+- [Install Deno](https://deno.land/manual/getting_started/installation) version ```1.7.0```
+
+
+## Fork & Pull Request Workflow
 
 1. Create your own fork
 2. Create a new development branch in your fork
@@ -16,22 +20,22 @@
 Detailed instructions [here](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
 
-# Development Workflow
+## Development Workflow
 
-1. Start the development server on ```http://127.0.0.1:3333```:
+1. Start the dev server:
 
-        deno run -A server.js
+        $ deno run -A dev.js
 
-2. Make file changes in directory ```src```. Keep the server running while your're doing file changes. The development server will automatically rebuild the site and reload your browser as you make files changes.
+2. Make file changes in the ```src``` directory. The dev server will automatically rebuild the site and reload your browser as you make files changes.
 
-    Do **not** make file changes in the ```docs``` directory. If there are any problems or file mismatches, it is perfectly safe to  stop the server, completely delete the ```docs``` directory, and then start the server again.
+    Do **not** make file changes in the ```docs``` directory. If there are any problems or file mismatches, it is perfectly safe to stop the dev server, completely delete the ```docs``` directory, and then start the server again.
 
 3. Stop the server with ```Ctrl + C``` when you're done.
 
 4. Commit and push to your development branch.
 
 
-# About Dependencies
+## About Dependencies
 
 - No dependencies are allowed for running the site in production. The directory ```docs``` must always be deployable, as it is, by any standard static web server, without any builds, dependencies, or non-standard configurations.
 
@@ -46,7 +50,7 @@ Detailed instructions [here](https://gist.github.com/Chaser324/ce0505fbed06b947d
 - Dependencies are stored ```.deno_dir```.
 
 
-# Dependency Management
+## Dependency Management
 
 To add, remove, or change dependencies:
 
@@ -80,7 +84,7 @@ To add, remove, or change dependencies:
 6. Commit and push your changes. Make sure you've unset the environment variable ```DENO_DIR```. 
 
 
-# Production Environment
+## Production Environment
 
 - Statically serve ```docs``` as the root folder for the site.
 
@@ -88,22 +92,22 @@ To add, remove, or change dependencies:
 
 - Configure the ```404.html``` file to be served for non resovable requests. If a request is made to ```/hey.html``` and that files does not exist, the server should respond with ```404 Not Found``` and with the content in the file ```404.html``` (without any redirects). Note: if a request is made to ```/404.html```, the server should respond with ```200 OK```.
 
-- Configure ```index.html``` as default document. If a request is made to ```/blog```, the server should serve ```/blog/index.html``` (if that file exists), or respond with ```404 Not Found``` (if that file does not exists).
+- Configure ```index.html``` as default document. When a request is made to ```/blog```, the server should try to serve ```/blog/index.html```. If that file does not exist, the server should respond with ```404 Not Found``` with the content in the file ```404.html``` (without any redirects). If that file exist, the server should respond with the contents of that file (without any redirects).
 
 - The server should not list directory content.
 
-- Be mindful about client caching. There's no build in cache invalidation logic, except for file changes. Before implementing a fancy caching strategy, consider one of the following three options.
+- Avoid clever client caching. There's no build in cache invalidation logic (except for file changes), and request recurrency is expected to be weak. Performance is best achieved through network compression, resource minification, and delivery distribution. Here are three suggestions for client caching:
 
-    1. Do not use any caching at all. Between deployments, request recurrency is expected to be weak, and therefore, the value of caching is low. For end user availability, focus on compression:
+    1. No caching:
 
             cache-control: no-store
 
-    2. Use a short (60 min) cache that's easy to understand and manage:
+    2. A short and static cache that's easy to understand:
 
             cache-control: public, max-age=3600
 
-    3. To off-load the production environment, add ETag:
+    3. A longer cache that's invalidated on file change through an ETag:
 
-            cache-control: public, max-age=3600
+            cache-control: public, max-age=86400
             ETag: W/"22b6d046870a8db69794472c1ada0ea4"
 

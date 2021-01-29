@@ -6,175 +6,26 @@
     <title>Learnpoint</title>
     <meta name="description" content="Skapa utbildningar, registrera studenter, dela ut uppgifter, skriv nyheter, och betygsätt studenter. Allt på ett ställe." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
-    <link rel="mask-icon" href="img/favicons/mask-icon.svg" color="#0780FF">
+
+    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/img/favicons/mask-icon.svg" color="#0780FF">
     <link rel="shortcut icon" type="image/svg+xml" href="/img/favicons/favicon.svg" />
+
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@800&display=block" rel="stylesheet">
-    <link rel="stylesheet" href="/css/sign-in.css">
-    <link rel="stylesheet" href="/css/404.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <style>
-        /* ========================
-           Main
-           ======================== */
 
-        body {
-            margin: 0;
-            font-family: 'Open Sans', 'Segoe UI', sans-serif;
-            color: #1d2d35;
-            line-height: 1.3;
-            font-size: 18px;
-            overflow-y: scroll;
-            background-color: #FDEFE2;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
-
-        h1 {
-            font-family: 'Raleway', 'Segoe UI', sans-serif;
-            font-weight: 800;
-            text-align: center;
-            font-size: 64px;
-            margin: 64px auto 24px;
-            line-height: 1.1;
-        }
-
-        @media (max-width: 560px) {
-            h1 {
-                font-size: 32px;
-                margin: 24px auto 16px;
-            }
-        }
-
-
-        /* ========================
-           Language
-           ======================== */
-
-        html[lang="en"] [lang="sv"] {
-            display: none;
-        }
-
-        html[lang="sv"] [lang="en"] {
-            display: none;
-        }
-
-
-        /* ========================
-           Header
-           ======================== */
-
-        .header__nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 16px;
-        }
-
-        .header__logo {
-            padding: 24px 24px 18px;
-        }
-
-        .header__logo img {
-            display: block;
-        }
-
-        .header__links {
-            display: flex;
-            padding: 0 24px;
-            align-items: center;
-        }
-
-        .header__link {
-            padding: 8px;
-            color: #000;
-            font-weight: 600;
-            text-decoration: none;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-
-        /* ========================
-           Footer
-           ======================== */
-
-        .footer {
-            border-top: 1px solid #ccc;
-            max-width: 900px;
-            margin: 128px auto 64px;
-            padding: 12px 16px;
-            display: flex;
-            justify-content: space-between;
-            font-size: 14px;
-        }
-
-        @media (max-width: 560px) {
-            .footer {
-                margin: 64px auto;
-            }
-        }
-
-        .footer__select-language-panel {
-            display: flex;
-        }
-
-        .footer__select-language-button {
-            font: inherit;
-            border: 0;
-            padding: 0 4px;
-            cursor: pointer;
-            background: transparent;
-            color: #777;
-            appearance: none;
-            -webkit-appearance: none;
-            outline: none;
-        }
-
-        html[lang="en"] .footer__select-language-button[data-select-language="en"],
-        html[lang="sv"] .footer__select-language-button[data-select-language="sv"] {
-            color: inherit;
-            font-weight: 600;
-            cursor: text;
-        }
-
-        .footer__link {
-            cursor: pointer;
-            color: #000;
-        }
-    </style>
-    <script>
-        (function () {
-            const key = 'selected-language';
-
-            if (!localStorage.getItem(key)) {
-                if (navigator.language && navigator.language.startsWith('en')) {
-                    localStorage.setItem(key, 'en');
-                } else {
-                    localStorage.setItem(key, 'sv');
-                }
-            }
-
-            selectLanguage(localStorage.getItem(key));
-
-            function selectLanguage(language) {
-                localStorage.setItem(key, language);
-                document.documentElement.lang = language;
-                document.documentElement.setAttribute('lang', language);
-            }
-
-            document.addEventListener('click', event => {
-                if (!event.target.matches('[data-select-language]')) {
-                    return;
-                }
-
-                selectLanguage(event.target.getAttribute('data-select-language'));
-            });
-        })();
-    </script>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/pages/index.css" rel="stylesheet">
+    <link href="/css/pages/sign-in.css" rel="stylesheet">
+    <link href="/css/pages/404.css" rel="stylesheet">
+    
+    <link href="/css/components/header.css" rel="stylesheet">
+    <link href="/css/components/footer.css" rel="stylesheet">
+    <link href="/css/components/language.css" rel="stylesheet">
+    <link href="/css/components/desktop-screenshot.css" rel="stylesheet">
+    <link href="/css/components/mobile-screenshot.css" rel="stylesheet">
+    
+    <script src="/js/components/language.js"></script>
+    <script src="/js/components/is-mobile.js"></script>
 </head>
 
 <body>
@@ -194,15 +45,119 @@
     <main>
 
 <h1>
-    <span lang="en">Education made simple</span>
-    <span lang="sv">Enklare utbildning</span>
+    <span lang="en">Learnpoint</span>
+    <span lang="sv">Learnpoint</span>
 </h1>
+
+<h2 class="index__subtitle">
+    <span lang="en">Integrated LMS and SIS</span>
+    <span lang="sv">Integrerad lärplattform och skoladministration</span>
+</h2>
 
 <div class="index__tagline">
     <p>
         <span lang="en">Create programmes, write announcements, enroll students, hand out assignments, and assess student work. All in one place.</span>
         <span lang="sv">Skapa utbildningar, registrera studenter, dela ut uppgifter, skriv nyheter, och betygsätt studenter. Allt på ett ställe.</span>
     </p>
+</div>
+
+<div class="index__features">
+    <div class="index__feature">
+        <div class="index__feature-text">
+            <h2 class="index__feature-title">
+                <span lang="en">Announcements</span>
+                <span lang="sv">Nyheter</span>
+            </h2>
+            <span lang="en">Write announcements to all students in a group or course. An efficient way to communicate information.</span>
+            <span lang="sv">Skriv nyheter till alla studenter i en klass eller kurs. Ett effektivt sätt att förmedla information.</span>
+        </div>
+        <div class="index__feature-image DESKTOP">
+            <div class="desktop-screenshot">
+    <div class="desktop-screenshot__browser-frame">
+        <span class="desktop-screenshot__browser-frame-button"></span>
+        <span class="desktop-screenshot__browser-frame-button"></span>
+        <span class="desktop-screenshot__browser-frame-button"></span>
+    </div>
+
+    <img alt="Announcements" src="index-assets/announcements-desktop.png" onload="this.parentElement.classList.add('LOADED')" />
+</div>
+        </div>
+        <div class="index__feature-image MOBILE">
+            <div class="mobile-screenshot">
+    <div class="mobile-screenshot__header">
+        <span class="mobile-screenshot__speaker"></span>
+    </div>
+    <img alt="Announcements" src="index-assets/announcements-mobile.png" onload="this.parentElement.classList.add('LOADED')" />
+    <div class="mobile-screenshot__footer">
+        <span class="mobile-screenshot__home-button"></span>
+    </div>
+</div>
+        </div>
+    </div>
+    <div class="index__feature">
+        <div class="index__feature-text ALIGN-RIGHT">
+            <h2 class="index__feature-title">
+                <span lang="en">Assignments</span>
+                <span lang="sv">Uppgifter</span>
+            </h2>
+            <span lang="en">Create and hand out assignments. You can sort the assignments into sections to give the course a clear structure.</span>
+            <span lang="sv">Skapa och dela ut uppgifter. Du kan sortera uppgifterna i avsnitt för att ge kursen en tydlig struktur.</span>
+        </div>
+        <div class="index__feature-image DESKTOP">
+            <div class="desktop-screenshot">
+    <div class="desktop-screenshot__browser-frame">
+        <span class="desktop-screenshot__browser-frame-button"></span>
+        <span class="desktop-screenshot__browser-frame-button"></span>
+        <span class="desktop-screenshot__browser-frame-button"></span>
+    </div>
+
+    <img alt="Assignments" src="index-assets/assignments-desktop.png" onload="this.parentElement.classList.add('LOADED')" />
+</div>
+        </div>
+        <div class="index__feature-image MOBILE">
+            <div class="mobile-screenshot">
+    <div class="mobile-screenshot__header">
+        <span class="mobile-screenshot__speaker"></span>
+    </div>
+    <img alt="Assignments" src="index-assets/assignments-mobile.png" onload="this.parentElement.classList.add('LOADED')" />
+    <div class="mobile-screenshot__footer">
+        <span class="mobile-screenshot__home-button"></span>
+    </div>
+</div>
+        </div>
+    </div>
+    <div class="index__feature">
+        <div class="index__feature-text">
+            <h2 class="index__feature-title">
+                <span lang="en">Grading</span>
+                <span lang="sv">Betyg</span>
+            </h2>
+            <span lang="en">You can grade both courses and assignments. Each course has a comprehensible grading overview.</span>
+            <span lang="sv">Du kan betygsätta både kurser och uppgifter. I varje kurs finns en överskådlig sammanställning.</span>
+        </div>
+        <div class="index__feature-image DESKTOP">
+            <div class="desktop-screenshot">
+    <div class="desktop-screenshot__browser-frame">
+        <span class="desktop-screenshot__browser-frame-button"></span>
+        <span class="desktop-screenshot__browser-frame-button"></span>
+        <span class="desktop-screenshot__browser-frame-button"></span>
+    </div>
+
+    <img alt="Grading" src="index-assets/grading-desktop.png" onload="this.parentElement.classList.add('LOADED')" />
+</div>
+        </div>
+        <div class="index__feature-image MOBILE">
+            <div class="mobile-screenshot">
+    <div class="mobile-screenshot__header">
+        <span class="mobile-screenshot__speaker"></span>
+    </div>
+    <img alt="Grading" src="index-assets/grading-mobile.png" onload="this.parentElement.classList.add('LOADED')" />
+    <div class="mobile-screenshot__footer">
+        <span class="mobile-screenshot__home-button"></span>
+    </div>
+</div>
+        </div>
+    </div>
 </div>
 
 <div class="index__contact">
