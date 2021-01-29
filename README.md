@@ -1,11 +1,11 @@
 # learnpoint-site
 
-Repos for [learnpoint.se](https://learnpoint.se)
+Repo for [learnpoint.se](https://learnpoint.se)
 
 
 ## Development Environment Setup
 
-- [Install Deno](https://deno.land/manual/getting_started/installation) version ```1.6.3```
+- [Install Deno](https://deno.land/manual/getting_started/installation) version ```1.7.0```
 
 
 ## Fork & Pull Request Workflow
