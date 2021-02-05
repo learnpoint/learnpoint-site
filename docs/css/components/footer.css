@@ -12,6 +12,17 @@
     margin: 64px auto;
 }
 
+.footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer li {
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+}
+
 .footer__select-language-panel {
     display: flex;
 }
