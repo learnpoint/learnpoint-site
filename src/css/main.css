@@ -28,3 +28,16 @@ h1 {
     font-size: 32px;
     margin: 24px auto 16px;
 }
+
+h2 {
+    font-family: 'Raleway', 'Segoe UI', sans-serif;
+    margin: 1.6em 0 .2em;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+a {
+    color: #0780ff;
+}
