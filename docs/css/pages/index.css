@@ -6,6 +6,10 @@
     line-height: 1.1;
 }
 
+.is-mobile .index__subtitle {
+    font-size: 18px;
+}
+
 .index__tagline {
     margin: 0 auto;
     text-align: center;
