@@ -14,6 +14,17 @@
             box-sizing: border-box;
         }
 
+        .site {
+            display: grid;
+            grid-template-areas:
+                'navigation header'
+                'navigation sub-navigation'
+                'navigation content';
+            grid-template-rows: 50px 40px 1fr;
+            grid-template-columns: 250px 1fr;
+            min-height: 100vh;
+        }
+
         .site-header {
             grid-area: header;
             border-bottom: 1px solid #e5e5e5;
@@ -57,44 +68,122 @@
 
         .site-content {
             grid-area: content;
-            padding: 16px;
+            padding: 0 32px;
+            background-color: #f3f3f3;
         }
 
-        .site {
-            display: grid;
-            grid-template-areas:
-                'navigation header'
-                'navigation sub-navigation'
-                'navigation content';
-            grid-template-rows: 50px 40px 1fr;
-            grid-template-columns: 250px 1fr;
-            height: 100vh;
+        .documents {
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+            padding: 32px 32px 64px;
+            max-width: 960px;
+            margin: 32px auto;
+        }
+
+        .document-add {
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 14px;
+            line-height: 16px;
+            outline: 0;
+            padding: 6px 14px;
+            margin: 0 0 32px 0;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background-color: #0780ff;
+            border-color: transparent;
+            color: #fff;
+        }
+
+        .documents-list {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .documents-list td,
+        .documents-list th {
+            padding: 16px 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .documents-list th {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .documents-list img {
+            opacity: 0.4;
+        }
+
+        .documents-list img:hover {
+            opacity: 1;
+        }
+
+        .documents-list a {
+            text-decoration: none;
+            color: #0079f2;
         }
     </style>
 </head>
 
 <body>
     <div class="site">
-        <div class="site-header">Course name</div>
-        <div class="site-navigation">School name</div>
+        <div class="site-header">UX Design</div>
+        <div class="site-navigation">The Design Academy</div>
         <div class="site-sub-navigation">
             <ul class="sub-nav-items">
                 <li class="sub-nav-item">
-                    Lorum
+                    Content
                 </li>
                 <li class="sub-nav-item selected">
                     Documents
                 </li>
                 <li class="sub-nav-item">
-                    Ipsum
+                    About
                 </li>
             </ul>
         </div>
         <div class="site-content">
+            <div class="documents">
+                <div class="documents-tools">
+                    <button class="document-add">Add</button>
+                </div>
+                <table class="documents-list">
+                    <tr>
+                        <th>Name</th>
+                        <th>By</th>
+                        <th>Date</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td><a href="">Exam.doc</a></td>
+                        <td>Marie Anders</td>
+                        <td>20 Feb</td>
+                        <td><img src="/img/icons/trash-can.svg"></td>
+                        <td><img src="/img/icons/pencil.svg"></td>
+                    </tr>
 
+                    <tr>
+                        <td><a href="">Lesson.ppt</a></td>
+                        <td>Sammy Jacobsson</td>
+                        <td>1 Feb</td>
+                        <td> <img src="/img/icons/trash-can.svg"></td>
+                        <td> <img src="/img/icons/pencil.svg"></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Course.pdf</a></td>
+                        <td>Christina Berglund</td>
+                        <td>17 feb</td>
+                        <td> <img src="/img/icons/trash-can.svg"></td>
+                        <td> <img src="/img/icons/pencil.svg"></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-
 </body>
 
 </html>
