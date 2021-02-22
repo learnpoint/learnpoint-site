@@ -30,7 +30,7 @@
             border-bottom: 1px solid #e5e5e5;
             line-height: 50px;
             padding: 0 16px;
-            font-weight: bold;
+            font-weight: 600;
             font-size: 16px;
         }
 
@@ -38,9 +38,27 @@
             grid-area: navigation;
             background-color: #222;
             color: #eee;
-            padding: 12px;
-            font-weight: bold;
-            font-size: 18px;
+        }
+
+        .site-navigation h3 {
+          padding: 12px 16px;
+          margin: 0;
+          font-size: 18px;
+        }
+
+        .nav-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            padding: 8px 16px;
+        }
+
+        .nav-item.selected {
+            background-color: rgba(255, 255, 255, .16);
+            color: #fff;
         }
 
         .site-sub-navigation {
@@ -131,18 +149,19 @@
 <body>
     <div class="site">
         <div class="site-header">UX Design</div>
-        <div class="site-navigation">The Design Academy</div>
+        <div class="site-navigation">
+            <h3>The Design Academy</h3>
+            <ul class="nav-items">
+                <li class="nav-item">User Research</li>
+                <li class="nav-item selected">UX Design</li>
+                <li class="nav-item">Usability</li>
+            </ul>
+        </div>
         <div class="site-sub-navigation">
             <ul class="sub-nav-items">
-                <li class="sub-nav-item">
-                    Content
-                </li>
-                <li class="sub-nav-item selected">
-                    Documents
-                </li>
-                <li class="sub-nav-item">
-                    About
-                </li>
+                <li class="sub-nav-item">Content</li>
+                <li class="sub-nav-item selected">Documents</li>
+                <li class="sub-nav-item">About</li>
             </ul>
         </div>
         <div class="site-content">
