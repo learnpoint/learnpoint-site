@@ -40,10 +40,19 @@
             color: #eee;
         }
 
+        .site-navigation h2 {
+            padding: 12px 16px;
+            margin: 0;
+            font-size: 18px;
+        }
+
         .site-navigation h3 {
-          padding: 12px 16px;
-          margin: 0;
-          font-size: 18px;
+            padding: 12px 16px 0;
+            margin: 0;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #f0f0f0;
         }
 
         .nav-items {
@@ -115,31 +124,31 @@
             color: #fff;
         }
 
-        .documents-list {
+        .document-list {
             border-collapse: collapse;
             width: 100%;
         }
 
-        .documents-list td,
-        .documents-list th {
+        .document-list td,
+        .document-list th {
             padding: 16px 8px;
             border-bottom: 1px solid #eee;
         }
 
-        .documents-list th {
+        .document-list th {
             text-align: left;
             font-weight: bold;
         }
 
-        .documents-list img {
-            opacity: 0.4;
+        .document-list img {
+            opacity: 0.3;
         }
 
-        .documents-list img:hover {
+        .document-list img:hover {
             opacity: 1;
         }
 
-        .documents-list a {
+        .document-list a {
             text-decoration: none;
             color: #0079f2;
         }
@@ -150,7 +159,8 @@
     <div class="site">
         <div class="site-header">UX Design</div>
         <div class="site-navigation">
-            <h3>The Design Academy</h3>
+            <h2>Design Academy</h2>
+            <h3>Courses</h3>
             <ul class="nav-items">
                 <li class="nav-item">User Research</li>
                 <li class="nav-item selected">UX Design</li>
@@ -159,7 +169,7 @@
         </div>
         <div class="site-sub-navigation">
             <ul class="sub-nav-items">
-                <li class="sub-nav-item">Content</li>
+                <li class="sub-nav-item">Assignments</li>
                 <li class="sub-nav-item selected">Documents</li>
                 <li class="sub-nav-item">About</li>
             </ul>
@@ -167,13 +177,13 @@
         <div class="site-content">
             <div class="documents">
                 <div class="documents-tools">
-                    <button class="document-add">Add</button>
+                    <button class="document-add">Add document</button>
                 </div>
-                <table class="documents-list">
+                <table class="document-list">
                     <tr>
                         <th>Name</th>
                         <th>By</th>
-                        <th>Date</th>
+                        <th>Added</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -181,23 +191,35 @@
                         <td><a href="">Exam.doc</a></td>
                         <td>Marie Anders</td>
                         <td>20 Feb</td>
-                        <td><img src="/img/icons/trash-can.svg"></td>
-                        <td><img src="/img/icons/pencil.svg"></td>
+                        <td><img alt="Delete"
+                                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjFlbSIgaGVpZ2h0PSIxZW0iIHZpZXdCb3g9IjAgMCAxNiAxNiIgY2xhc3M9ImJpIGJpLXRyYXNoLWZpbGwiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMi41IDFhMSAxIDAgMCAwLTEgMXYxYTEgMSAwIDAgMCAxIDFIM3Y5YTIgMiAwIDAgMCAyIDJoNmEyIDIgMCAwIDAgMi0yVjRoLjVhMSAxIDAgMCAwIDEtMVYyYTEgMSAwIDAgMC0xLTFIMTBhMSAxIDAgMCAwLTEtMUg3YTEgMSAwIDAgMC0xIDFIMi41em0zIDRhLjUuNSAwIDAgMSAuNS41djdhLjUuNSAwIDAgMS0xIDB2LTdhLjUuNSAwIDAgMSAuNS0uNXpNOCA1YS41LjUgMCAwIDEgLjUuNXY3YS41LjUgMCAwIDEtMSAwdi03QS41LjUgMCAwIDEgOCA1em0zIC41YS41LjUgMCAwIDAtMSAwdjdhLjUuNSAwIDAgMCAxIDB2LTd6Ii8+DQo8L3N2Zz4=">
+                        </td>
+                        <td><img alt="Edit"
+                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktcGVuY2lsLWZpbGwiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZD0iTTEyLjg1NC4xNDZhLjUuNSAwIDAgMC0uNzA3IDBMMTAuNSAxLjc5MyAxNC4yMDcgNS41bDEuNjQ3LTEuNjQ2YS41LjUgMCAwIDAgMC0uNzA4bC0zLTN6bS42NDYgNi4wNjFMOS43OTMgMi41IDMuMjkzIDlIMy41YS41LjUgMCAwIDEgLjUuNXYuNWguNWEuNS41IDAgMCAxIC41LjV2LjVoLjVhLjUuNSAwIDAgMSAuNS41di41aC41YS41LjUgMCAwIDEgLjUuNXYuMjA3bDYuNS02LjV6bS03LjQ2OCA3LjQ2OEEuNS41IDAgMCAxIDYgMTMuNVYxM2gtLjVhLjUuNSAwIDAgMS0uNS0uNVYxMmgtLjVhLjUuNSAwIDAgMS0uNS0uNVYxMWgtLjVhLjUuNSAwIDAgMS0uNS0uNVYxMGgtLjVhLjQ5OS40OTkgMCAwIDEtLjE3NS0uMDMybC0uMTc5LjE3OGEuNS41IDAgMCAwLS4xMS4xNjhsLTIgNWEuNS41IDAgMCAwIC42NS42NWw1LTJhLjUuNSAwIDAgMCAuMTY4LS4xMWwuMTc4LS4xNzh6Ii8+Cjwvc3ZnPg==">
+                        </td>
                     </tr>
 
                     <tr>
                         <td><a href="">Lesson.ppt</a></td>
                         <td>Sammy Jacobsson</td>
                         <td>1 Feb</td>
-                        <td> <img src="/img/icons/trash-can.svg"></td>
-                        <td> <img src="/img/icons/pencil.svg"></td>
+                        <td><img alt="Delete"
+                                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjFlbSIgaGVpZ2h0PSIxZW0iIHZpZXdCb3g9IjAgMCAxNiAxNiIgY2xhc3M9ImJpIGJpLXRyYXNoLWZpbGwiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMi41IDFhMSAxIDAgMCAwLTEgMXYxYTEgMSAwIDAgMCAxIDFIM3Y5YTIgMiAwIDAgMCAyIDJoNmEyIDIgMCAwIDAgMi0yVjRoLjVhMSAxIDAgMCAwIDEtMVYyYTEgMSAwIDAgMC0xLTFIMTBhMSAxIDAgMCAwLTEtMUg3YTEgMSAwIDAgMC0xIDFIMi41em0zIDRhLjUuNSAwIDAgMSAuNS41djdhLjUuNSAwIDAgMS0xIDB2LTdhLjUuNSAwIDAgMSAuNS0uNXpNOCA1YS41LjUgMCAwIDEgLjUuNXY3YS41LjUgMCAwIDEtMSAwdi03QS41LjUgMCAwIDEgOCA1em0zIC41YS41LjUgMCAwIDAtMSAwdjdhLjUuNSAwIDAgMCAxIDB2LTd6Ii8+DQo8L3N2Zz4=">
+                        </td>
+                        <td><img alt="Edit"
+                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktcGVuY2lsLWZpbGwiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZD0iTTEyLjg1NC4xNDZhLjUuNSAwIDAgMC0uNzA3IDBMMTAuNSAxLjc5MyAxNC4yMDcgNS41bDEuNjQ3LTEuNjQ2YS41LjUgMCAwIDAgMC0uNzA4bC0zLTN6bS42NDYgNi4wNjFMOS43OTMgMi41IDMuMjkzIDlIMy41YS41LjUgMCAwIDEgLjUuNXYuNWguNWEuNS41IDAgMCAxIC41LjV2LjVoLjVhLjUuNSAwIDAgMSAuNS41di41aC41YS41LjUgMCAwIDEgLjUuNXYuMjA3bDYuNS02LjV6bS03LjQ2OCA3LjQ2OEEuNS41IDAgMCAxIDYgMTMuNVYxM2gtLjVhLjUuNSAwIDAgMS0uNS0uNVYxMmgtLjVhLjUuNSAwIDAgMS0uNS0uNVYxMWgtLjVhLjUuNSAwIDAgMS0uNS0uNVYxMGgtLjVhLjQ5OS40OTkgMCAwIDEtLjE3NS0uMDMybC0uMTc5LjE3OGEuNS41IDAgMCAwLS4xMS4xNjhsLTIgNWEuNS41IDAgMCAwIC42NS42NWw1LTJhLjUuNSAwIDAgMCAuMTY4LS4xMWwuMTc4LS4xNzh6Ii8+Cjwvc3ZnPg==">
+                        </td>
                     </tr>
                     <tr>
                         <td><a href="">Course.pdf</a></td>
                         <td>Christina Berglund</td>
                         <td>17 feb</td>
-                        <td> <img src="/img/icons/trash-can.svg"></td>
-                        <td> <img src="/img/icons/pencil.svg"></td>
+                        <td><img alt="Delete"
+                                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjFlbSIgaGVpZ2h0PSIxZW0iIHZpZXdCb3g9IjAgMCAxNiAxNiIgY2xhc3M9ImJpIGJpLXRyYXNoLWZpbGwiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMi41IDFhMSAxIDAgMCAwLTEgMXYxYTEgMSAwIDAgMCAxIDFIM3Y5YTIgMiAwIDAgMCAyIDJoNmEyIDIgMCAwIDAgMi0yVjRoLjVhMSAxIDAgMCAwIDEtMVYyYTEgMSAwIDAgMC0xLTFIMTBhMSAxIDAgMCAwLTEtMUg3YTEgMSAwIDAgMC0xIDFIMi41em0zIDRhLjUuNSAwIDAgMSAuNS41djdhLjUuNSAwIDAgMS0xIDB2LTdhLjUuNSAwIDAgMSAuNS0uNXpNOCA1YS41LjUgMCAwIDEgLjUuNXY3YS41LjUgMCAwIDEtMSAwdi03QS41LjUgMCAwIDEgOCA1em0zIC41YS41LjUgMCAwIDAtMSAwdjdhLjUuNSAwIDAgMCAxIDB2LTd6Ii8+DQo8L3N2Zz4=">
+                        </td>
+                        <td><img alt="Edit"
+                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktcGVuY2lsLWZpbGwiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZD0iTTEyLjg1NC4xNDZhLjUuNSAwIDAgMC0uNzA3IDBMMTAuNSAxLjc5MyAxNC4yMDcgNS41bDEuNjQ3LTEuNjQ2YS41LjUgMCAwIDAgMC0uNzA4bC0zLTN6bS42NDYgNi4wNjFMOS43OTMgMi41IDMuMjkzIDlIMy41YS41LjUgMCAwIDEgLjUuNXYuNWguNWEuNS41IDAgMCAxIC41LjV2LjVoLjVhLjUuNSAwIDAgMSAuNS41di41aC41YS41LjUgMCAwIDEgLjUuNXYuMjA3bDYuNS02LjV6bS03LjQ2OCA3LjQ2OEEuNS41IDAgMCAxIDYgMTMuNVYxM2gtLjVhLjUuNSAwIDAgMS0uNS0uNVYxMmgtLjVhLjUuNSAwIDAgMS0uNS0uNVYxMWgtLjVhLjUuNSAwIDAgMS0uNS0uNVYxMGgtLjVhLjQ5OS40OTkgMCAwIDEtLjE3NS0uMDMybC0uMTc5LjE3OGEuNS41IDAgMCAwLS4xMS4xNjhsLTIgNWEuNS41IDAgMCAwIC42NS42NWw1LTJhLjUuNSAwIDAgMCAuMTY4LS4xMWwuMTc4LS4xNzh6Ii8+Cjwvc3ZnPg==">
+                        </td>
                     </tr>
                 </table>
             </div>
