@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Documents</title>
+    <title>Design Challenge Code</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -49,7 +49,7 @@
         .site-navigation h3 {
             padding: 12px 16px 0;
             margin: 0;
-            font-weight: 600;
+            font-weight: bold;
             font-size: 14px;
             text-transform: uppercase;
             color: #f0f0f0;
@@ -108,20 +108,43 @@
             margin: 32px auto;
         }
 
+        .document-tools {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 32px 0;
+        }
+
         .document-add {
             border-radius: 4px;
-            cursor: pointer;
             font-family: inherit;
             font-size: 14px;
             line-height: 16px;
             outline: 0;
             padding: 6px 14px;
-            margin: 0 0 32px 0;
             -moz-appearance: none;
             -webkit-appearance: none;
             background-color: #0780ff;
             border-color: transparent;
             color: #fff;
+        }
+
+        .document-search {
+            margin: 0;
+            padding: 4px 6px;
+            font-size: 14px;
+            font-family: inherit;
+            height: 32px;
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #d0d0d0;
+            border-radius: 3px;
+            -webkit-appearance: none;
+        }
+
+        .document-search:focus {
+            border-color: #0780ff;
+            outline: 0;
+            box-shadow: 0 0 3px rgb(7 128 255);
         }
 
         .document-list {
@@ -176,8 +199,9 @@
         </div>
         <div class="site-content">
             <div class="documents">
-                <div class="documents-tools">
+                <div class="document-tools">
                     <button class="document-add">Add document</button>
+                    <input class="document-search" type="search" placeholder="Sök">
                 </div>
                 <table class="document-list">
                     <tr>
@@ -188,8 +212,8 @@
                         <th></th>
                     </tr>
                     <tr>
-                        <td><a href="">Exam.doc</a></td>
-                        <td>Marie Anders</td>
+                        <td><a>Exam.doc</a></td>
+                        <td>Maria Brown</td>
                         <td>20 Feb</td>
                         <td><img alt="Delete"
                                 src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjFlbSIgaGVpZ2h0PSIxZW0iIHZpZXdCb3g9IjAgMCAxNiAxNiIgY2xhc3M9ImJpIGJpLXRyYXNoLWZpbGwiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMi41IDFhMSAxIDAgMCAwLTEgMXYxYTEgMSAwIDAgMCAxIDFIM3Y5YTIgMiAwIDAgMCAyIDJoNmEyIDIgMCAwIDAgMi0yVjRoLjVhMSAxIDAgMCAwIDEtMVYyYTEgMSAwIDAgMC0xLTFIMTBhMSAxIDAgMCAwLTEtMUg3YTEgMSAwIDAgMC0xIDFIMi41em0zIDRhLjUuNSAwIDAgMSAuNS41djdhLjUuNSAwIDAgMS0xIDB2LTdhLjUuNSAwIDAgMSAuNS0uNXpNOCA1YS41LjUgMCAwIDEgLjUuNXY3YS41LjUgMCAwIDEtMSAwdi03QS41LjUgMCAwIDEgOCA1em0zIC41YS41LjUgMCAwIDAtMSAwdjdhLjUuNSAwIDAgMCAxIDB2LTd6Ii8+DQo8L3N2Zz4=">
@@ -200,8 +224,8 @@
                     </tr>
 
                     <tr>
-                        <td><a href="">Lesson.ppt</a></td>
-                        <td>Sammy Jacobsson</td>
+                        <td><a>Lesson.ppt</a></td>
+                        <td>Emma Smith</td>
                         <td>1 Feb</td>
                         <td><img alt="Delete"
                                 src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjFlbSIgaGVpZ2h0PSIxZW0iIHZpZXdCb3g9IjAgMCAxNiAxNiIgY2xhc3M9ImJpIGJpLXRyYXNoLWZpbGwiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMi41IDFhMSAxIDAgMCAwLTEgMXYxYTEgMSAwIDAgMCAxIDFIM3Y5YTIgMiAwIDAgMCAyIDJoNmEyIDIgMCAwIDAgMi0yVjRoLjVhMSAxIDAgMCAwIDEtMVYyYTEgMSAwIDAgMC0xLTFIMTBhMSAxIDAgMCAwLTEtMUg3YTEgMSAwIDAgMC0xIDFIMi41em0zIDRhLjUuNSAwIDAgMSAuNS41djdhLjUuNSAwIDAgMS0xIDB2LTdhLjUuNSAwIDAgMSAuNS0uNXpNOCA1YS41LjUgMCAwIDEgLjUuNXY3YS41LjUgMCAwIDEtMSAwdi03QS41LjUgMCAwIDEgOCA1em0zIC41YS41LjUgMCAwIDAtMSAwdjdhLjUuNSAwIDAgMCAxIDB2LTd6Ii8+DQo8L3N2Zz4=">
@@ -211,8 +235,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><a href="">Course.pdf</a></td>
-                        <td>Christina Berglund</td>
+                        <td><a>Course.pdf</a></td>
+                        <td>Thomas Davis</td>
                         <td>17 feb</td>
                         <td><img alt="Delete"
                                 src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjFlbSIgaGVpZ2h0PSIxZW0iIHZpZXdCb3g9IjAgMCAxNiAxNiIgY2xhc3M9ImJpIGJpLXRyYXNoLWZpbGwiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMi41IDFhMSAxIDAgMCAwLTEgMXYxYTEgMSAwIDAgMCAxIDFIM3Y5YTIgMiAwIDAgMCAyIDJoNmEyIDIgMCAwIDAgMi0yVjRoLjVhMSAxIDAgMCAwIDEtMVYyYTEgMSAwIDAgMC0xLTFIMTBhMSAxIDAgMCAwLTEtMUg3YTEgMSAwIDAgMC0xIDFIMi41em0zIDRhLjUuNSAwIDAgMSAuNS41djdhLjUuNSAwIDAgMS0xIDB2LTdhLjUuNSAwIDAgMSAuNS0uNXpNOCA1YS41LjUgMCAwIDEgLjUuNXY3YS41LjUgMCAwIDEtMSAwdi03QS41LjUgMCAwIDEgOCA1em0zIC41YS41LjUgMCAwIDAtMSAwdjdhLjUuNSAwIDAgMCAxIDB2LTd6Ii8+DQo8L3N2Zz4=">
