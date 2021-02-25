@@ -16,7 +16,7 @@
 .desktop-screenshot__browser-frame {
     background: #f2f2f2;
     padding: 0 10px;
-    height: 42px;
+    height: 36px;
     display: flex;
     align-items: center;
 }
