@@ -1,11 +1,11 @@
 .jobs__list {
-    max-width: 320px;
+    max-width: 480px;
     margin: 64px auto;
     padding: 0;
 }
 
 .jobs__list li {
-    margin: 0;
+    margin: 0 0 1.2em;
     padding: 0;
     list-style: none;
 }
@@ -13,42 +13,35 @@
 .jobs__list a {
     display: block;
     background-color: #fff;
-    padding: 16px 24px;
-    border-radius: 4px;
+    padding: 24px 32px;
+    border-radius: 12px;
     text-decoration: none;
-    color: #333;
     color: inherit;
-    transition: background-color .16s, color .16s, box-shadow .16s;
+    transition: box-shadow .16s;
 }
 
 .jobs__list a:hover {
-    background-color: #0780ff;
-    color: #fff;
     box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
 }
 
 .jobs__title {
+    font-family: inherit;
     font-size: 1.2em;
     font-weight: bold;
-    margin: 0 0 4px;
+    margin: 0 0 6px;
 }
 
 .jobs__information-item {
     font-size: .8em;
     color: #1d2d35;
-    transition: color .16s;
 }
 
 .jobs__information-item::after {
-    content: ' •';
+    content: ' ★';
     display: inline;
-    padding: 0 3px;
+    padding: 0 6px;
 }
 
 .jobs__information-item:last-child::after {
     content: none;
-}
-
-.jobs__list a:hover .jobs__information-item {
-    color: #fff;
 }
