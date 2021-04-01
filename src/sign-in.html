@@ -1,4 +1,4 @@
-<!-- header.html, { title: "Sign in - Learnpoint" } -->
+<!-- header.html, { title: "Sign in - Learnpoint", description: "Sign in to Learnpoint. Logga in på Learnpoint." } -->
 
 <script defer src="/js/pages/sign-in.js"></script>
 
@@ -13,7 +13,7 @@
 </label>
 
 <form autocomplete="off" class="sign-in__form EMPTY" data-element="sign-in__form" action="#">
-    <div class="sign-in__error">
+    <div data-nosnippet class="sign-in__error">
         <div class="sign-in__error-message">
             <span lang="en">Couldn't find the school. Check the address.</span>
             <span lang="sv">Hittade inte skolan. Kontrollera adressen.</span>
@@ -23,7 +23,7 @@
             <span lang="sv">Ange Learnpoint-adressen</span>
         </div>
     </div>   
-    <div class="sign-in__input-wrap">
+    <div data-nosnippet class="sign-in__input-wrap">
         <div class="sign-in__input-overlay" data-element="sign-in__input-overlay">school-name</div>
         <input id="school-name" autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off" class="sign-in__input" data-element="sign-in__input" placeholder="school-name" autofocus />
     </div>
