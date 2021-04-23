@@ -6,7 +6,7 @@
     const PREVIOUS_LOGINS_STORAGE_KEY = 'previous-logins';
 
     const schoolUrl = schoolName => `https://${schoolName}.learnpoint.se`;
-    const schoolPingUrl = schoolName => `https://${schoolName}.learnpoint.se/Images/learnpoint.ico`;
+    const schoolPingUrl = schoolName => `https://${schoolName}.learnpoint.se/ValidLearnpointSchool.aspx`;
 
     const el = {};
 
