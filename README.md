@@ -21,7 +21,11 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 1. Start the dev server:
 
         $ deno run -A dev.js
+
 2. Make file changes in the ```src``` folder. The dev server will automatically rebuild the site and reload your browser as you make files changes.
+
 3. Do **not** make file changes in the ```docs``` folder. If there are any problems or file mismatches, it is perfectly safe to stop the dev server, completely delete the ```docs``` folder, and then start the server again.
+
 4. When done, stop the server with ```Ctrl + C```.
+
 5. Commit and push to your development branch.
