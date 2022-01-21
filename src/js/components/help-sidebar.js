@@ -14,7 +14,7 @@
     window.addEventListener('load', async function () {
         const helpSearchData = await getHelpPagesData();
 
-        console.log(helpSearchData)
+        // console.log(helpSearchData)
 
         const options = {
             includeScore: true,

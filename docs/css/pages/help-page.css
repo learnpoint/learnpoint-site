@@ -1,14 +1,22 @@
 .help-page {
     display: flex;
-    margin-top: 2em;
+    align-items: stretch;
+    max-width: 968px;
+    margin: 2em auto 0;
+    gap: 48px;
 }
 
-.help-page__content {
-    padding: 0 1em;
+.is-mobile .help-page {
+    flex-direction: column-reverse;
+}
+
+.help-page__sidebar {
+    min-width: 240px;
+    /* background-color: rgba(0,0,0,.02); */
 }
 
 .help-page h1 {
-    margin: 0;
+    margin: 0 0 .5em;
     font-size: 2em;
     text-align: left;
 }
