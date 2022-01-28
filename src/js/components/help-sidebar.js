@@ -7,9 +7,34 @@
     let searchTimeout = null;
 
     const Selector = {
+        SIDEBAR: '[data-element="help-sidebar"]',
+        OPEN_BUTTON: '[data-element="help-sidebar.open-button"]',
+        CLOSE_BUTTON: '[data-element="help-sidebar.close-button"]',
         SEARCH_INPUT: '[data-element="help-sidebar.search-input"]',
         SEARCH_RESULTS: '.help-sidebar__search-results'
     }
+
+    const ClassName = {
+        OPEN: 'OPEN'
+    }
+
+    document.addEventListener('click', event => {
+        if (!event.target.closest(Selector.OPEN_BUTTON)) {
+            return;
+        }
+
+        const sidebar = document.querySelector(Selector.SIDEBAR);
+        sidebar.classList.add(ClassName.OPEN);
+    });
+
+    document.addEventListener('click', event => {
+        if (!event.target.closest(Selector.CLOSE_BUTTON)) {
+            return;
+        }
+
+        const sidebar = document.querySelector(Selector.SIDEBAR);
+        sidebar.classList.remove(ClassName.OPEN);
+    });
 
     window.addEventListener('load', async function () {
         const helpSearchData = await getHelpPagesData();

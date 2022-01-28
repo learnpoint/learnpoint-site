@@ -1,11 +1,123 @@
+/* =========================================================================
+   Help Sidebar
+   ========================================================================= */
+
 .help-sidebar {
-    margin-top: .5em;
+    min-width: 246px;
 }
+
+.is-mobile .help-sidebar {
+    display: none;
+    min-width: unset;
+    padding: 32px 24px;
+    background-color: #333;
+}
+
+.is-mobile .help-sidebar.OPEN {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+
+/* =========================================================================
+   Open Button
+   ========================================================================= */
+
+.help-sidebar__open-button {
+    display: none;
+    width: 28px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    border: 0;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.is-mobile .help-sidebar__open-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* =========================================================================
+   Open Button svg
+   ========================================================================= */
+
+.help-sidebar__open-button svg {
+    width: 16px;
+    height: 16px;
+    color: #777;
+}
+
+
+
+/* =========================================================================
+   Close Button
+   ========================================================================= */
+
+.help-sidebar__close-button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border: 0;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border: 0;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 0 16px;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.is-mobile .help-sidebar__close-button {
+    display: flex;
+}
+
+
+
+/* =========================================================================
+   Close Button svg
+   ========================================================================= */
+
+   .help-sidebar__close-button svg {
+    width: 28px;
+    height: 28px;
+    color: #444;
+}
+
+
+
+/* =========================================================================
+   Search
+   ========================================================================= */
 
 .help-sidebar__search {
     position: relative;
     margin-bottom: .5em;
 }
+
+
+
+/* =========================================================================
+   Search Input
+   ========================================================================= */
 
 .help-sidebar__search-input {
     width: 100%;
@@ -18,12 +130,18 @@
     border-radius: 4px;
     outline: none;
     appearance: none;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.16);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .16);
 }
 
 .help-sidebar__search-input:focus {
     box-shadow: 0 0 2px 1px #0780ff;
 }
+
+
+
+/* =========================================================================
+   Search Icon
+   ========================================================================= */
 
 .help-sidebar__search-icon {
     position: absolute;
@@ -32,30 +150,80 @@
     color: #777;
 }
 
+
+
+/* =========================================================================
+   Search Result
+   ========================================================================= */
+
 .help-sidebar__search-results {
     display: none;
     position: absolute;
-    margin-top:3px;
+    margin-top: 3px;
     background-color: #fff;
     width: 130%;
-    box-shadow: 0 0 2px 1px rgba(0,0,0,.2);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, .2);
 }
 
-.help-sidebar__search-input:focus:valid ~ .help-sidebar__search-results {
+.help-sidebar__search-input:focus:valid~.help-sidebar__search-results {
     display: block;
 }
 
-.help-sidebar__search-results > * {
+.help-sidebar__search-results>* {
     display: block;
     padding: 4px 6px;
     text-decoration: none;
 }
+
+
+
+/* =========================================================================
+   ul
+   ========================================================================= */
 
 .help-sidebar ul {
     margin: 0;
     padding: 0 0 0 .3em;
 }
 
+
+
+/* =========================================================================
+   ul ul
+   ========================================================================= */
+
+.help-sidebar ul ul {
+    display: none;
+}
+
+.help-sidebar ul ul.SELECTED {
+    display: block;
+}
+
+
+
+/* =========================================================================
+   li
+   ========================================================================= */
+
 .help-sidebar li {
     list-style: none;
+}
+
+.is-mobile .help-sidebar li {
+    color: #eee;
+}
+
+
+
+/* =========================================================================
+   li a
+   ========================================================================= */
+
+.help-sidebar li a {
+    color: red;
+}
+
+.help-sidebar li a.SELECTED {
+    font-weight: bold;
 }

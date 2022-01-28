@@ -1,22 +1,35 @@
+/* =========================================================================
+   Help Page
+   ========================================================================= */
+
 .help-page {
+    position: relative;
     display: flex;
     align-items: stretch;
     max-width: 968px;
     margin: 2em auto 0;
-    gap: 48px;
+    gap: 32px;
 }
 
 .is-mobile .help-page {
-    flex-direction: column-reverse;
+    display: block;
 }
 
-.help-page__sidebar {
-    min-width: 240px;
-    /* background-color: rgba(0,0,0,.02); */
-}
+
+
+/* =========================================================================
+   h1
+   ========================================================================= */
 
 .help-page h1 {
     margin: 0 0 .5em;
     font-size: 2em;
     text-align: left;
+}
+
+.is-mobile .help-page h1 {
+    text-align: center;
+    font-size: 1em;
+    padding: 0 32px;
+    margin-bottom: 1em;
 }
