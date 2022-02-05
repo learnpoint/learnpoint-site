@@ -1,22 +1,41 @@
 (function () {
 
-    const SEARCH_DEBOUNCE = 500;
-    const STORAGE_KEY = 'help-pages-data';
 
-    let searchService;
-    let searchTimeout = null;
+    /* =====================================================================
+       Selectors
+       ===================================================================== */
 
     const Selector = {
         SIDEBAR: '[data-element="help-sidebar"]',
         OPEN_BUTTON: '[data-element="help-sidebar.open-button"]',
         CLOSE_BUTTON: '[data-element="help-sidebar.close-button"]',
-        SEARCH_INPUT: '[data-element="help-sidebar.search-input"]',
-        SEARCH_RESULTS: '.help-sidebar__search-results'
+        SUBTREE_TOGGLER: '[data-element="help-sidebar.subtree-toggler"]'
     }
 
+
+
+    /* =====================================================================
+       Class Names
+       ===================================================================== */
+
     const ClassName = {
-        OPEN: 'OPEN'
+        OPEN: 'OPEN',
+        SELECTED: 'SELECTED'
     }
+
+
+
+    /* =====================================================================
+       Init Selected and Open
+       ===================================================================== */
+
+       initSelectedAndOpen();
+
+
+
+    /* =====================================================================
+       Open Sidebar
+       ===================================================================== */
 
     document.addEventListener('click', event => {
         if (!event.target.closest(Selector.OPEN_BUTTON)) {
@@ -27,6 +46,12 @@
         sidebar.classList.add(ClassName.OPEN);
     });
 
+
+
+    /* =====================================================================
+       Close Sidebar
+       ===================================================================== */
+
     document.addEventListener('click', event => {
         if (!event.target.closest(Selector.CLOSE_BUTTON)) {
             return;
@@ -36,69 +61,43 @@
         sidebar.classList.remove(ClassName.OPEN);
     });
 
-    window.addEventListener('load', async function () {
-        const helpSearchData = await getHelpPagesData();
 
-        // console.log(helpSearchData)
 
-        const options = {
-            includeScore: true,
-            includeMatches: true,
-            threshold: 0.8,
-            ignoreLocation: true,
-            keys: ['title', 'description', 'content']
-        }
+    /* =====================================================================
+       Toggle Subtree
+       ===================================================================== */
 
-        searchService = new Fuse(helpSearchData, options);
-    });
-
-    document.addEventListener('input', event => {
-        if (!event.target.matches(Selector.SEARCH_INPUT)) {
+       document.addEventListener('click', event => {
+        if (!event.target.closest(Selector.SUBTREE_TOGGLER)) {
             return;
         }
 
-        if (searchTimeout) {
-            clearTimeout(searchTimeout);
-        }
-
-        searchTimeout = setTimeout(() => {
-            searchTimeout = null;
-            search(event.target.value);
-        }, SEARCH_DEBOUNCE);
-
+        const liContainer = event.target.closest('li');
+        const ulSubtree = liContainer.querySelector('ul');
+        ulSubtree.classList.toggle(ClassName.OPEN);
     });
 
-    function search(value) {
-        let searchResultHtml = '';
 
-        const searchResult = searchService.search(value);
 
-        if (searchResult.length === 0) {
-            searchResultHtml = '<span>Inga träffar</span>';
-        } else {
-            searchResult.forEach(item => {
-                searchResultHtml += `<a href="${item.item.url}">${item.item.title}</a>`;
-            });
+    /* =====================================================================
+       Init Selected and Open
+       ===================================================================== */
+
+    function initSelectedAndOpen() {
+        const path = location.pathname.replace('index.html', '');
+        const links = document.querySelectorAll('[data-element="help-sidebar"] ul a');
+
+        for (const link of links) {
+            const href = link.getAttribute('href').replace('index.html', '');
+            if (href === path) {
+                link.classList.add(ClassName.SELECTED);
+                const parentList = link.closest('ul');
+                if (parentList) {
+                    parentList.classList.add(ClassName.OPEN);
+                }
+                break;
+            }
         }
-
-        const searchResultsElement = document.querySelector(Selector.SEARCH_RESULTS);
-        searchResultsElement.innerHTML = searchResultHtml;
-    }
-
-    async function getHelpPagesData() {
-        if (!sessionStorage.getItem(STORAGE_KEY)) {
-            const res = await fetch('/pages.json');
-            const pagesData = await res.json();
-            const searchPagesData = pagesData.filter(item => item.url.includes("/help/"));
-            const searchPagesCleanedData = searchPagesData.map(item => {
-                item.title = item.title.replace(' - Learnpoint', '');
-                return item;
-            });
-
-            sessionStorage.setItem(STORAGE_KEY, JSON.stringify(searchPagesCleanedData));
-        }
-
-        return JSON.parse(sessionStorage.getItem(STORAGE_KEY));
     }
 
 })();

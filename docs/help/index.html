@@ -16,21 +16,13 @@
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/print.css">
-    <link rel="stylesheet" href="/css/pages/index.css">
-    <link rel="stylesheet" href="/css/pages/sign-in.css">
-    <link rel="stylesheet" href="/css/pages/jobs.css">
-    <link rel="stylesheet" href="/css/pages/job-opening.css">
-    <link rel="stylesheet" href="/css/pages/404.css">
-    
     <link rel="stylesheet" href="/css/components/header.css">
     <link rel="stylesheet" href="/css/components/footer.css">
     <link rel="stylesheet" href="/css/components/language.css">
-    <link rel="stylesheet" href="/css/components/desktop-screenshot.css">
-    <link rel="stylesheet" href="/css/components/mobile-screenshot.css">
     
-    <script src="/js/components/language.js"></script>
-    <script src="/js/components/is-mobile.js"></script>
     <script src="/js/components/print.js"></script>
+    <script src="/js/components/is-mobile.js"></script>
+    <script src="/js/components/language.js"></script>
 </head>
 
 <body>
@@ -58,8 +50,8 @@
 <div class="help-page">
 
     <link rel="stylesheet" href="/css/components/help-sidebar.css">
-<script defer src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
-<script defer src="/js/components/help-sidebar.js"></script>
+<script defer src="/js/vendor/fuse-6.5.3.js"></script>
+<script defer src="/js/components/help-sidebar-search.js"></script>
 
 <button type="button" data-element="help-sidebar.open-button" class="help-sidebar__open-button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -75,57 +67,57 @@
         </svg>
     </button>
 
-    <div class="help-sidebar__search">
-        <input required class="help-sidebar__search-input" data-element="help-sidebar.search-input" />
+    <form role="search" class="help-sidebar__search">
+        <input required class="help-sidebar__search-input" name="q" data-element="help-sidebar.search-input" />
         <svg xmlns="http://www.w3.org/2000/svg" class="help-sidebar__search-icon" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
         </svg>
         <div class="help-sidebar__search-results"></div>
-    </div>
+    </form>
 
-    <ul>
-        <li>
-            <a href="/help/">Help</a>
-        </li>
-        <li>
-            <a href="/help/getting-started/">Kom igång</a>
-            <ul>
-                <li>
-                    <a href="/help/getting-started/student.html">Student</a>
-                </li>
-            </ul>
-        </li>
-        <li>Betyg</li>
-        <li>Nyheter</li>
-    </ul>
-
-    <script>
-        // Set css class on current link
-        (function () {
-            const path = location.pathname.replace('index.html', '');
-            const links = document.querySelectorAll('[data-element="help-sidebar"] ul a');
-
-            for (const link of links) {
-                const href = link.getAttribute('href').replace('index.html', '');
-                if (href === path) {
-                    link.classList.add('SELECTED');
-                    const parentList = link.closest('ul');
-                    if(parentList) {
-                        parentList.classList.add('SELECTED');
-                    }
-                    break;
-                }
-            }
-        })();
-    </script>
+    <nav>
+        <ul>
+            <li>
+                <a href="/help/">
+                    <span lang="en">Help</span>
+                    <span lang="sv">Hjälp</span>
+                </a>
+            </li>
+            <li>
+                <button type="button" data-element="help-sidebar.subtree-toggler">Kom igång</button>
+                <ul>
+                    <li>
+                        <a href="/help/getting-started/student.html">Student</a>
+                    </li>
+                    <li>
+                        <a href="/help/getting-started/staff.html">Personal</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-element="help-sidebar.subtree-toggler">Grupper</button>
+                <ul>
+                    <li>
+                        <a href="/help/groups/introduction.html">Inledning</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/news.html">Nyheter</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
 </div>
+
+<script src="/js/components/help-sidebar.js"></script>
+
 
     <div class="help-page__content">
 
         <h1>
-            <span lang="en">Learnpoint Help</span>
-            <span lang="sv">Learnpoint Hjälp</span>
+            <span lang="en">Help</span>
+            <span lang="sv">Hjälp</span>
         </h1>
 
         <p>Vivamus dapibus mauris bibendum est porttitor vehicula. In porttitor massa sed iaculis tincidunt. Mauris pellentesque ante id volutpat condimentum. Aenean quis nibh ipsum. Pellentesque at tellus posuere, feugiat elit nec, varius nisl. Sed vulputate purus id diam rhoncus, a semper odio commodo.</p>

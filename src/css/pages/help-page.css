@@ -9,6 +9,7 @@
     max-width: 968px;
     margin: 2em auto 0;
     gap: 32px;
+    gap: 3vw;
 }
 
 .is-mobile .help-page {

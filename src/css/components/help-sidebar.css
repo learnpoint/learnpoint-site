@@ -96,7 +96,7 @@
    Close Button svg
    ========================================================================= */
 
-   .help-sidebar__close-button svg {
+.help-sidebar__close-button svg {
     width: 28px;
     height: 28px;
     color: #444;
@@ -110,7 +110,7 @@
 
 .help-sidebar__search {
     position: relative;
-    margin-bottom: .5em;
+    margin: .2em 0 1em;
 }
 
 
@@ -183,7 +183,7 @@
 
 .help-sidebar ul {
     margin: 0;
-    padding: 0 0 0 .3em;
+    padding: 0;
 }
 
 
@@ -196,7 +196,7 @@
     display: none;
 }
 
-.help-sidebar ul ul.SELECTED {
+.help-sidebar ul ul.OPEN {
     display: block;
 }
 
@@ -208,6 +208,7 @@
 
 .help-sidebar li {
     list-style: none;
+    display: block;
 }
 
 .is-mobile .help-sidebar li {
@@ -217,13 +218,56 @@
 
 
 /* =========================================================================
-   li a
+   a
    ========================================================================= */
 
-.help-sidebar li a {
-    color: red;
+   .help-sidebar nav a {
+    display: block;
+    text-decoration: none;
+    border-radius: 2px 4px 4px 2px;
+    color: inherit;
 }
 
-.help-sidebar li a.SELECTED {
-    font-weight: bold;
+
+
+/* =========================================================================
+   li li a
+   ========================================================================= */
+
+.help-sidebar nav li li a {
+    padding: 4px 8px;
+    border-left: 3px solid transparent;
+}
+
+.help-sidebar nav li li a.SELECTED {
+    border-color: #0780ff;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.is-mobile .help-sidebar nav li li a.SELECTED {
+    border-color: #0780ff;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+
+/* =========================================================================
+   button
+   ========================================================================= */
+
+.help-sidebar nav button {
+    appearance: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    margin: 1em 0 .2em;
+    border: 0;
+    padding: 0;
+    background: inherit;
+    font: inherit;
+    font-weight: 600;
+}
+
+.is-mobile .help-sidebar nav button {
+    color: #fff;
 }
