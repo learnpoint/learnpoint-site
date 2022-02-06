@@ -29,7 +29,7 @@
        Init Selected and Open
        ===================================================================== */
 
-       initSelectedAndOpen();
+    initSelectedAndOpen();
 
 
 
@@ -67,14 +67,14 @@
        Toggle Subtree
        ===================================================================== */
 
-       document.addEventListener('click', event => {
+    document.addEventListener('click', event => {
         if (!event.target.closest(Selector.SUBTREE_TOGGLER)) {
             return;
         }
 
         const liContainer = event.target.closest('li');
         const ulSubtree = liContainer.querySelector('ul');
-        ulSubtree.classList.toggle(ClassName.OPEN);
+        liContainer.classList.toggle(ClassName.OPEN);
     });
 
 
@@ -91,7 +91,7 @@
             const href = link.getAttribute('href').replace('index.html', '');
             if (href === path) {
                 link.classList.add(ClassName.SELECTED);
-                const parentList = link.closest('ul');
+                const parentList = link.closest('ul').closest('li');
                 if (parentList) {
                     parentList.classList.add(ClassName.OPEN);
                 }

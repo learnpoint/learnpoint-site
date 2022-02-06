@@ -34,3 +34,66 @@
     padding: 0 32px;
     margin-bottom: 1em;
 }
+
+
+
+/* =========================================================================
+   Suppport Contact
+   ========================================================================= */
+
+.help-page__support-contact {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+/* =========================================================================
+   Suppport Contact svg
+   ========================================================================= */
+
+.help-page__support-contact svg {
+    color: rgba(0, 0, 0, .5);
+    /* color: rgba(0, 0, 0, .8); */
+    color: #0780ff;
+    height: 16px;
+    width: 16px;
+    margin: 0 10px 0 4px;
+    position: relative;
+    top: 2px;
+}
+
+
+
+/* =========================================================================
+   Suppport Contact a
+   ========================================================================= */
+
+.help-page__support-contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+/* =========================================================================
+   Suppport Opening Hours
+   ========================================================================= */
+
+.help-page__support-opening-hours {
+    margin-bottom: 6px;
+}
+
+
+
+/* =========================================================================
+   Suppport Opening Hours Table
+   ========================================================================= */
+
+.help-page__support-opening-hours-table {
+    border-collapse: collapse;
+}
+
+.help-page__support-opening-hours-table td {
+    padding: 0 2em 0 2px;
+}

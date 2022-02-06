@@ -20,6 +20,7 @@
     right: 0;
     top: 0;
     bottom: 0;
+    z-index: 1;
 }
 
 
@@ -73,17 +74,18 @@
     display: none;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     cursor: pointer;
     border: 0;
     border: 1px solid rgba(0, 0, 0, .2);
     border: 0;
     border-radius: 50%;
     padding: 0;
-    margin: 0 0 16px;
+    margin: 0 0 24px;
     background-color: #fff;
     background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, .1);
 }
 
 .is-mobile .help-sidebar__close-button {
@@ -99,7 +101,7 @@
 .help-sidebar__close-button svg {
     width: 28px;
     height: 28px;
-    color: #444;
+    color: #fff;
 }
 
 
@@ -110,7 +112,7 @@
 
 .help-sidebar__search {
     position: relative;
-    margin: .2em 0 1em;
+    margin: .2em 0 1.5em;
 }
 
 
@@ -178,6 +180,16 @@
 
 
 /* =========================================================================
+   nav
+   ========================================================================= */
+
+.help-sidebar nav {
+    padding-left: 8px;
+}
+
+
+
+/* =========================================================================
    ul
    ========================================================================= */
 
@@ -196,7 +208,7 @@
     display: none;
 }
 
-.help-sidebar ul ul.OPEN {
+.help-sidebar ul li.OPEN ul {
     display: block;
 }
 
@@ -235,19 +247,24 @@
    ========================================================================= */
 
 .help-sidebar nav li li a {
-    padding: 4px 8px;
+    margin-left: 7px;
+    padding: 4px 12px;
+    border-radius: 2px 4px 4px 2px;
     border-left: 3px solid transparent;
 }
 
 .help-sidebar nav li li a.SELECTED {
     border-color: #0780ff;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, 1);
+    color: #000;
 }
 
 .is-mobile .help-sidebar nav li li a.SELECTED {
-    border-color: #0780ff;
+    /* border-color: #0780ff; */
     background-color: rgba(255, 255, 255, .1);
+    color: #fff;
 }
+
 
 
 /* =========================================================================
@@ -260,7 +277,7 @@
     text-align: left;
     width: 100%;
     cursor: pointer;
-    margin: 1em 0 .2em;
+    margin: 1em 0 .2em -4px;
     border: 0;
     padding: 0;
     background: inherit;
@@ -270,4 +287,32 @@
 
 .is-mobile .help-sidebar nav button {
     color: #fff;
+}
+
+
+
+/* =========================================================================
+   button svg
+   ========================================================================= */
+
+.help-sidebar nav button svg { /* chevron */
+    color: #000;
+    width: 16px;
+    height: 16px;
+}
+
+.is-mobile .help-sidebar nav button svg { /* chevron */
+    color: #fff;
+}
+
+.help-sidebar nav li.OPEN button svg { /* right chevron */
+    display: none;
+}
+
+.help-sidebar nav button svg+svg { /* down chevron */
+    display: none;
+}
+
+.help-sidebar nav li.OPEN button svg+svg { /* down chevron */
+    display: inline;
 }

@@ -50,6 +50,7 @@
 <div class="help-page">
 
     <link rel="stylesheet" href="/css/components/help-sidebar.css">
+<script src="/js/components/replace-with.js"></script>
 <script defer src="/js/vendor/fuse-6.5.3.js"></script>
 <script defer src="/js/components/help-sidebar-search.js"></script>
 
@@ -84,7 +85,12 @@
                 </a>
             </li>
             <li>
-                <button type="button" data-element="help-sidebar.subtree-toggler">Kom igång</button>
+                <button type="button" data-element="help-sidebar.subtree-toggler">
+                    <svg width="16" height="16" data-replace-with="/img/icons/chevron-right.svg"></svg>
+                    <svg width="16" height="16" data-replace-with="/img/icons/chevron-down.svg"></svg>
+                    <span lang="en">Get started</span>
+                    <span lang="sv">Kom igång</span>
+                </button>
                 <ul>
                     <li>
                         <a href="/help/getting-started/student.html">Student</a>
@@ -95,7 +101,12 @@
                 </ul>
             </li>
             <li>
-                <button type="button" data-element="help-sidebar.subtree-toggler">Grupper</button>
+                <button type="button" data-element="help-sidebar.subtree-toggler">
+                    <svg width="16" height="16" data-replace-with="/img/icons/chevron-right.svg"></svg>
+                    <svg width="16" height="16" data-replace-with="/img/icons/chevron-down.svg"></svg>
+                    <span lang="en">Groups</span>
+                    <span lang="sv">Grupper</span>
+                </button>
                 <ul>
                     <li>
                         <a href="/help/groups/introduction.html">Inledning</a>
@@ -111,7 +122,6 @@
 </div>
 
 <script src="/js/components/help-sidebar.js"></script>
-
 
     <div class="help-page__content">
 
