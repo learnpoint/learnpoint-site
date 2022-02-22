@@ -4,6 +4,7 @@
 
 .help-sidebar {
     min-width: 246px;
+    font-size: 16px;
 }
 
 .is-mobile .help-sidebar {
@@ -306,13 +307,5 @@
 }
 
 .help-sidebar nav li.OPEN button svg { /* right chevron */
-    display: none;
-}
-
-.help-sidebar nav button svg+svg { /* down chevron */
-    display: none;
-}
-
-.help-sidebar nav li.OPEN button svg+svg { /* down chevron */
-    display: inline;
+    transform: rotate(90deg);
 }

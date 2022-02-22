@@ -73,7 +73,6 @@
         }
 
         const liContainer = event.target.closest('li');
-        const ulSubtree = liContainer.querySelector('ul');
         liContainer.classList.toggle(ClassName.OPEN);
     });
 
