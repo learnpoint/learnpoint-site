@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kom igång som studerande - Learnpoint</title>
+    <meta name="description" content="Kom igång som studerande" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index" />
+
+    <link rel="mask-icon" href="/img/favicons/mask-icon.svg" color="#0780FF">
+    <link rel="shortcut icon" href="/img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@800&display=block">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/print.css">
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/components/language.css">
+    
+    <script src="/js/components/print.js"></script>
+    <script src="/js/components/is-mobile.js"></script>
+    <script src="/js/components/language.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <a href="/" class="header__logo">
+                <img width="128" height="34" alt="Learnpoint" src="/img/logos/learnpoint-logo.svg" />
+            </a>
+            <div class="header__links">
+                <a class="header__link" href="/help/">
+                    <span lang="en">Help</span>
+                    <span lang="sv">Hjälp</span>
+                </a>
+                <a class="header__link" href="/sign-in.html">
+                    <span lang="en">Sign in</span>
+                    <span lang="sv">Logga in</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+<link rel="stylesheet" href="/css/pages/help-page.css">
+
+<div class="help-page">
+
+    <link rel="stylesheet" href="/css/components/help-sidebar.css">
+<script defer src="/js/vendor/fuse-6.5.3.js"></script>
+<script defer src="/js/components/help-sidebar-search.js"></script>
+
+<button type="button" data-element="help-sidebar.open-button" class="help-sidebar__open-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+    </svg>
+</button>
+
+<div class="help-sidebar" data-element="help-sidebar">
+
+    <button type="button" data-element="help-sidebar.close-button" class="help-sidebar__close-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+        </svg>
+    </button>
+
+    <form role="search" class="help-sidebar__search">
+        <input required class="help-sidebar__search-input" name="q" data-element="help-sidebar.search-input" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="help-sidebar__search-icon" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+        <div class="help-sidebar__search-results"></div>
+    </form>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/help/">
+                    <span lang="en">Help</span>
+                    <span lang="sv">Hjälp</span>
+                </a>
+            </li>
+            <li>
+                <button type="button" data-element="help-sidebar.subtree-toggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
+                    <span lang="en">Get started</span>
+                    <span lang="sv">Kom igång</span>
+                </button>
+                <ul>
+                    <li>
+                        <a href="/help/getting-started/student/">För studenter</a>
+                    </li>
+                    <li>
+                        <a href="/help/getting-started/teacher/">För lärare</a>
+                    </li>
+                    <li>
+                        <a href="/help/getting-started/class-administrator/">För klassadministratörer och andra relevanta roller</a>
+                    </li>
+                    <li>
+                        <a href="/help/getting-started/news/">Nyheter</a>
+                    </li>
+                    <li>
+                        <a href="/help/getting-started/calendar/">Kalender</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-element="help-sidebar.subtree-toggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
+                    <span lang="en">Groups</span>
+                    <span lang="sv">Grupper</span>
+                </button>
+                <ul>
+                    <li>
+                        <a href="/help/groups/introduction/">Inledning</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/news/">Nyheter</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/documents/">Dokument</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/members/">Studenter/Deltagare</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/staff/">Personal</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/calendar/">Kalender</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/courses/">Kurser</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/about/">Om</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-element="help-sidebar.subtree-toggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
+                    <span>Betygsättning</span>
+                </button>
+                <ul>
+                    <li>
+                        <a href="/help/grading/grade/">Sätta betyg</a>
+                    </li>
+                    <li>
+                        <a href="/help/grading/publish/">Publicera betyg</a>
+                    </li>
+                    <li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-element="help-sidebar.subtree-toggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
+                    <span>LIA</span>
+                </button>
+                <ul>
+                    <li>
+                        <a href="/help/internship/introduction/">Inledning</a>
+                    </li>
+                    <li>
+                        <a href="/help/internship/add/">Registrera</a>
+                    </li>
+                    <li>
+                        <a href="/help/internship/log/">Loggbok</a>
+                    </li>
+                    <li>
+                        <a href="/help/internship/settings/">Inställningar</a>
+                    </li>
+                    <li>
+                        <a href="/help/internship/surveys/">Enkäter</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-element="help-sidebar.subtree-toggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
+                    <span>Administration</span>
+                </button>
+                <ul>
+                    <li>
+                        <a href="/help/admin/groups/">Grupper</a>
+                    </li>
+                    <li>
+                        <a href="/help/admin/manage-staff/">Personal</a>
+                    </li>
+                    <li>
+                        <a href="/help/admin/manage-students/">Studenter</a>
+                    </li>
+                    <li>
+                        <a href="/help/admin/manage-student-status/">Studerandestatus</a>
+                    </li>
+                    <li>
+                        <a href="/help/admin/roles/">Roller</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<script src="/js/components/help-sidebar.js"></script>
+
+    <div class="help-page__content">
+
+        <h1>Administrera grupper</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor.<br /><br />
+
+            In bibendum, tellus vel blandit tristique, dui eros tempor ante, vitae porttitor eros nulla non urna. Nam accumsan mi sem. Donec pharetra mauris et orci convallis, vel varius quam tincidunt. Nam posuere lorem sit amet porta ullamcorper. Donec interdum pellentesque pulvinar. Integer bibendum ante sed facilisis volutpat. Aenean fermentum, libero ac fermentum mollis, justo metus vehicula metus, id tincidunt dui tellus vel sem. Quisque lobortis, justo id fermentum ullamcorper, ligula justo pretium ex, vel feugiat dui velit non sapien. Vivamus porttitor feugiat diam, vitae placerat leo ultricies porttitor. Sed rutrum odio sed sapien luctus viverra. Donec dictum blandit nibh, eu dapibus est viverra quis. Aenean at justo ex. Nullam malesuada elit id lacus tincidunt luctus. Sed nisi diam, ullamcorper non volutpat porta, pretium nec est.<br /><br />
+            
+            Maecenas sed sollicitudin nisi. Suspendisse in semper neque. Fusce sit amet nunc nec tortor lacinia imperdiet sed ac magna. Vivamus aliquet mauris eu quam luctus laoreet. Donec eu magna arcu. Curabitur finibus blandit mi. Phasellus mauris elit, congue nec dignissim et, aliquet eu lacus. Mauris vitae pulvinar arcu. Aliquam erat volutpat.<br /><br />
+            
+            Donec massa purus, pretium et pellentesque at, blandit sed ligula. Mauris eu efficitur nunc. In ut odio mauris. Fusce eu mollis urna. Proin nec dignissim enim, a faucibus turpis. Fusce quis tincidunt velit. Praesent posuere ipsum nec quam mattis, ut fermentum ex sollicitudin. Sed faucibus orci eget dolor sagittis, quis elementum metus sagittis. Nullam vitae ultrices orci. Donec eros odio, pretium ut nisi non, fermentum consequat tortor. Quisque tristique diam pharetra leo hendrerit, sit amet dictum est lobortis. Suspendisse et aliquam tortor. Nullam ut dui quis urna malesuada varius.<br /><br />
+            
+            Mauris et volutpat metus. Nullam nulla sapien, faucibus eu urna sit amet, condimentum euismod tortor. Nam sollicitudin, erat sit amet scelerisque pharetra, eros mauris venenatis mi, vel interdum neque lorem sit amet nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum sit amet condimentum est. Aliquam rhoncus velit quis metus fermentum mollis. Suspendisse laoreet elit id justo volutpat egestas.</p>
+
+
+
+    </div>
+
+</div>
+
+</main>
+
+<footer class="footer">
+    <ul>
+        <li>
+            <span lang="en">Learnpoint is developed by <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
+            <span lang="sv">Learnpoint är utvecklat av <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
+        </li>
+        <li>
+            <span lang="en"><a href="/jobs/" class="footer__link">Work with us</a></span>
+            <span lang="sv"><a href="/jobs/" class="footer__link">Lediga tjänster</a></span>
+        </li>
+    </ul>
+    <div class="footer__select-language-panel">
+        <div>
+            <button class="footer__select-language-button" data-select-language="en">English</button>
+        </div>
+        <div>|</div>
+        <div>
+            <button class="footer__select-language-button" data-select-language="sv">Svenska</button>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
