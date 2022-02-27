@@ -3,9 +3,6 @@
    ========================================================================= */
 
 .help-sidebar {
-    /* min-width: 246px; */
-    /* width: 246px; */
-    /* font-size: 16px; */
     flex: 0 0 246px;
 }
 
@@ -19,6 +16,7 @@
 .is-mobile .help-sidebar.OPEN {
     display: block;
     position: fixed;
+    overflow-y: auto;
     left: 0;
     right: 0;
     top: 0;
@@ -128,7 +126,7 @@
     width: 100%;
     display: block;
     box-sizing: border-box;
-    padding: 6px 8px;
+    padding: 6px 32px 6px 8px; /* extra room for search icon */
     font-family: inherit;
     font-size: .9em;
     border: none;
@@ -163,21 +161,42 @@
 
 .help-sidebar__search-results {
     display: none;
+    box-sizing: border-box;
     position: absolute;
-    margin-top: 3px;
+    z-index: 1;
     background-color: #fff;
     width: 130%;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 5px rgb(100 100 100 / 20%);
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.help-sidebar__search-input:focus:valid~.help-sidebar__search-results {
+.is-mobile .help-sidebar__search-results {
+    width: 100%;
+}
+
+.help-sidebar__search-results.OPEN {
     display: block;
 }
 
 .help-sidebar__search-results>* {
     display: block;
-    padding: 4px 6px;
+    font-size: .9em;
+    padding: 4px 8px 4px 12px;
+    margin: 2px 0;
     text-decoration: none;
+}
+
+.help-sidebar__search-results>*:first-child {
+    margin-top: 8px;
+}
+
+.help-sidebar__search-results>*:last-child {
+    margin-bottom: 8px;
+}
+
+.help-sidebar__search-results>*:hover {
+    background-color: rgba(0, 0, 0, .06);
 }
 
 
@@ -224,6 +243,7 @@
 .help-sidebar li {
     list-style: none;
     display: block;
+    margin: 0;
 }
 
 .is-mobile .help-sidebar li {
@@ -297,16 +317,19 @@
    button svg
    ========================================================================= */
 
-.help-sidebar nav button svg { /* chevron */
+.help-sidebar nav button svg {
+    /* chevron */
     color: #000;
     width: 16px;
     height: 16px;
 }
 
-.is-mobile .help-sidebar nav button svg { /* chevron */
+.is-mobile .help-sidebar nav button svg {
+    /* chevron */
     color: #fff;
 }
 
-.help-sidebar nav li.OPEN button svg { /* right chevron */
+.help-sidebar nav li.OPEN button svg {
+    /* right chevron */
     transform: rotate(90deg);
 }

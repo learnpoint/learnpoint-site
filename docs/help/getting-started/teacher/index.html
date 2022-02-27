@@ -28,8 +28,8 @@
 <body>
     <header class="header">
         <nav class="header__nav">
-            <a href="/" class="header__logo">
-                <img width="128" height="34" alt="Learnpoint" src="/img/logos/learnpoint-logo.svg" />
+            <a href="/" class="header__logo" aria-label="Learnpoint Home">
+                <img width="128" height="34" alt="" aria-hidden="true" src="/img/logos/learnpoint-logo.svg" />
             </a>
             <div class="header__links">
                 <a class="header__link" href="/help/">
@@ -67,14 +67,15 @@
         </svg>
     </button>
 
-    <form role="search" class="help-sidebar__search">
-        <input required class="help-sidebar__search-input" name="q" data-element="help-sidebar.search-input" />
+    <form role="search" class="help-sidebar__search" data-element="help-sidebar.search-form">
+        <input class="help-sidebar__search-input" name="q" data-element="help-sidebar.search-input" />
         <svg xmlns="http://www.w3.org/2000/svg" class="help-sidebar__search-icon" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
         </svg>
         <div class="help-sidebar__search-results"></div>
-    </form>
+    </form> 
 
+    <!-- site_db:off -->
     <nav>
         <ul>
             <li>
@@ -97,7 +98,7 @@
                         <a href="/help/getting-started/teacher/">För lärare</a>
                     </li>
                     <li>
-                        <a href="/help/getting-started/class-administrator/">För klassadministratörer och andra relevanta roller</a>
+                        <a href="/help/getting-started/class-administrator/">För klassadministratörer</a>
                     </li>
                     <li>
                         <a href="/help/getting-started/news/">Nyheter</a>
@@ -203,6 +204,7 @@
             </li>
         </ul>
     </nav>
+    <!-- site_db:on -->
 
 </div>
 
@@ -210,12 +212,49 @@
 
     <div class="help-page__content">
 
-        <h1>
-            <span lang="en">Getting started - Staff</span>
-            <span lang="sv">Kom igång som personal</span>
-        </h1>
+        <h1>Kom igång som personal</h1>
 
-        <p>Personal kom igång</p>
+        <h2>Aktivera konto</h2>
+
+        <p>Om det är första gången du loggar in i Learnpoint behöver du aktivera ditt konto:</p>
+
+        <ol>
+            <li>Gå till <a href="/sign-in.html">learnpoint.se/sign-in.html</a>.</li>
+            <li>Ange adressen till din skola.</li>
+            <li>Klicka på Fortsätt.</li>
+            <li>Nu kommer du till inloggningssidan för din skola.</li>
+            <li>Klicka på Aktivera konto.</li>
+            <li>Ange din e-postadress och klicka på OK.</li>
+            <li>Inom kort får du ett mail med instruktioner för att aktivera kontot.</li>
+        </ol>
+
+        <h2>Logga in</h2>
+
+        <p>När du aktiverat ditt konto loggar du in på följande sätt:</p>
+
+        <ol>
+            <li>Gå till <a href="/sign-in.html">learnpoint.se/sign-in.html</a>.</li>
+            <li>Ange adressen till din skola.</li>
+            <li>Klicka på Fortsätt</li>
+            <li>Ange användarnamn och lösenord.</li>
+            <li>Klicka på Logga in.</li>
+        </ol>
+
+        <h2>Dina kurser</h2>
+
+        <p>Pågående kurser visas som grupper i vänstermenyn. Kurser som är avslutade eller inte har börjat ännu hittar du genom att trycka på rubriken Grupper i menyn till vänster.</p>
+
+        <h2>Kursplan</h2>
+
+        <p>Om administratör laddat upp kursplanen för kursen som en fil så finns den åtkomlig för lärare och studerande under fliken Om på kursen. Tryck på filnamnet för Kursplan för att se filen.</p>
+
+        <h2>Deltagare i en kurs</h2>
+
+        <p>På fliken Deltagare visas de studerande på kursen. Om de är fotograferade visas även bilder.</p>
+
+        <p>Du kan även få utskriftsvänliga listor över de studerande, med kontaktuppgifter och foton, genom att trycka på knappen Rapporter och välja Studerandeinformationsrapporter.</p>
+
+        
 
     </div>
 
@@ -223,6 +262,7 @@
 
 </main>
 
+<!-- site_db:off -->
 <footer class="footer">
     <ul>
         <li>
@@ -244,6 +284,8 @@
         </div>
     </div>
 </footer>
+<!-- site_db:on -->
+
 </body>
 
 </html>

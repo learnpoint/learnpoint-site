@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Kom igång som studerande - Learnpoint</title>
-    <meta name="description" content="Kom igång som studerande" />
+    <title>Kom igång som student</title>
+    <meta name="description" content="Kom igång som student" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index" />
 
@@ -28,8 +28,8 @@
 <body>
     <header class="header">
         <nav class="header__nav">
-            <a href="/" class="header__logo">
-                <img width="128" height="34" alt="Learnpoint" src="/img/logos/learnpoint-logo.svg" />
+            <a href="/" class="header__logo" aria-label="Learnpoint Home">
+                <img width="128" height="34" alt="" aria-hidden="true" src="/img/logos/learnpoint-logo.svg" />
             </a>
             <div class="header__links">
                 <a class="header__link" href="/help/">
@@ -67,14 +67,15 @@
         </svg>
     </button>
 
-    <form role="search" class="help-sidebar__search">
-        <input required class="help-sidebar__search-input" name="q" data-element="help-sidebar.search-input" />
+    <form role="search" class="help-sidebar__search" data-element="help-sidebar.search-form">
+        <input class="help-sidebar__search-input" name="q" data-element="help-sidebar.search-input" />
         <svg xmlns="http://www.w3.org/2000/svg" class="help-sidebar__search-icon" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
         </svg>
         <div class="help-sidebar__search-results"></div>
-    </form>
+    </form> 
 
+    <!-- site_db:off -->
     <nav>
         <ul>
             <li>
@@ -97,7 +98,7 @@
                         <a href="/help/getting-started/teacher/">För lärare</a>
                     </li>
                     <li>
-                        <a href="/help/getting-started/class-administrator/">För klassadministratörer och andra relevanta roller</a>
+                        <a href="/help/getting-started/class-administrator/">För klassadministratörer</a>
                     </li>
                     <li>
                         <a href="/help/getting-started/news/">Nyheter</a>
@@ -203,6 +204,7 @@
             </li>
         </ul>
     </nav>
+    <!-- site_db:on -->
 
 </div>
 
@@ -210,22 +212,57 @@
 
     <div class="help-page__content">
 
-        <h1>
-            <span lang="en">Getting started - Student</span>
-            <span lang="sv">Kom igång som studerande</span>
-        </h1>
+        <h1>Kom igång som student</h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor.<br /><br />
+        <h2>Aktivera konto</h2>
 
-            In bibendum, tellus vel blandit tristique, dui eros tempor ante, vitae porttitor eros nulla non urna. Nam accumsan mi sem. Donec pharetra mauris et orci convallis, vel varius quam tincidunt. Nam posuere lorem sit amet porta ullamcorper. Donec interdum pellentesque pulvinar. Integer bibendum ante sed facilisis volutpat. Aenean fermentum, libero ac fermentum mollis, justo metus vehicula metus, id tincidunt dui tellus vel sem. Quisque lobortis, justo id fermentum ullamcorper, ligula justo pretium ex, vel feugiat dui velit non sapien. Vivamus porttitor feugiat diam, vitae placerat leo ultricies porttitor. Sed rutrum odio sed sapien luctus viverra. Donec dictum blandit nibh, eu dapibus est viverra quis. Aenean at justo ex. Nullam malesuada elit id lacus tincidunt luctus. Sed nisi diam, ullamcorper non volutpat porta, pretium nec est.<br /><br />
-            
-            Maecenas sed sollicitudin nisi. Suspendisse in semper neque. Fusce sit amet nunc nec tortor lacinia imperdiet sed ac magna. Vivamus aliquet mauris eu quam luctus laoreet. Donec eu magna arcu. Curabitur finibus blandit mi. Phasellus mauris elit, congue nec dignissim et, aliquet eu lacus. Mauris vitae pulvinar arcu. Aliquam erat volutpat.<br /><br />
-            
-            Donec massa purus, pretium et pellentesque at, blandit sed ligula. Mauris eu efficitur nunc. In ut odio mauris. Fusce eu mollis urna. Proin nec dignissim enim, a faucibus turpis. Fusce quis tincidunt velit. Praesent posuere ipsum nec quam mattis, ut fermentum ex sollicitudin. Sed faucibus orci eget dolor sagittis, quis elementum metus sagittis. Nullam vitae ultrices orci. Donec eros odio, pretium ut nisi non, fermentum consequat tortor. Quisque tristique diam pharetra leo hendrerit, sit amet dictum est lobortis. Suspendisse et aliquam tortor. Nullam ut dui quis urna malesuada varius.<br /><br />
-            
-            Mauris et volutpat metus. Nullam nulla sapien, faucibus eu urna sit amet, condimentum euismod tortor. Nam sollicitudin, erat sit amet scelerisque pharetra, eros mauris venenatis mi, vel interdum neque lorem sit amet nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum sit amet condimentum est. Aliquam rhoncus velit quis metus fermentum mollis. Suspendisse laoreet elit id justo volutpat egestas.</p>
+        <p>Om det är första gången du loggar in i Learnpoint behöver du aktivera ditt konto:</p>
 
+        <ol>
+            <li>Gå till <a href="/sign-in.html">learnpoint.se/sign-in.html</a>.</li>
+            <li>Ange adressen till din skola.</li>
+            <li>Klicka på Fortsätt.</li>
+            <li>Nu kommer du till inloggningssidan för din skola.</li>
+            <li>Klicka på Aktivera konto.</li>
+            <li>Ange din e-postadress och klicka på OK.</li>
+            <li>Inom kort får du ett mail med instruktioner för att aktivera kontot.</li>
+        </ol>
 
+        <h2>Logga in</h2>
+
+        <p>När du aktiverat ditt konto loggar du in på följande sätt:</p>
+
+        <ol>
+            <li>Gå till <a href="/sign-in.html">learnpoint.se/sign-in.html</a>.</li>
+            <li>Ange adressen till din skola.</li>
+            <li>Klicka på Fortsätt</li>
+            <li>Ange användarnamn och lösenord.</li>
+            <li>Klicka på Logga in.</li>
+        </ol>
+
+        <h2>Nyheter och påminnelser</h2>
+
+        <p>Lärare på dina kurser, utbildningsledare för din klass och administratörer för skolan kan skapa nyheter. Du ser nyheterna på direkt när du loggat in i LearnPoint. Du ser även notiser om saker som du kan göra, exempelvis svara på en enkät, skriva i loggbok för LIA-plats eller godkänna en LIA-plats.</p>
+
+        <h2>Schema</h2>
+
+        <p>Skolan kan använda LearnPoint för att lägga schema och då ser du dina lektioner, tentor och aktiviteter i din kalender i LearnPoint. Du kan välja att prenumerera på din LearnPoint-kalender och då kan du se ditt schema som händelser i kalendern på din telefon, surfplatta eller dator.</p>
+
+        <h2>Studieplan och betyg</h2>
+
+        <p>Din studieplan i LearnPoint visar vilka kurser du har, när de går och hur många poäng de har. När betyg har satts och publicerats på någon kurs så syns det här.</p>
+
+        <h2>Kursinnehåll</h2>
+
+        <p>[TEXT]</p>
+
+        <h2>Lärare på kurser</h2>
+
+        <p>Du kan se vilka lärare som är kopplade till kurserna som du har under fliken Personal. Du kan även se deras e-postadress och telefonnummer om de finns tillgängliga.</p>
+
+        <h2>LIA</h2>
+
+        <p>Under dina studier kan du ha kurser som är förlagda till arbetsplatser. Det kan också vara du som ansvarar för att leta upp arbetsplats och handledare för dessa kurser. När du har hittat en handledare kan du registrera den i LearnPoint och därigenom sköta hanteringen av processen kring godkännande av LIA-platsen. Under sökande efter LIA-plats och under praktikperioden kan du föra loggbok i LearnPoint.</p>
 
     </div>
 
@@ -233,6 +270,7 @@
 
 </main>
 
+<!-- site_db:off -->
 <footer class="footer">
     <ul>
         <li>
@@ -254,6 +292,8 @@
         </div>
     </div>
 </footer>
+<!-- site_db:on -->
+
 </body>
 
 </html>

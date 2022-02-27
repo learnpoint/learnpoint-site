@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Kom igång som studerande - Learnpoint</title>
-    <meta name="description" content="Kom igång som studerande" />
+    <title>Roller</title>
+    <meta name="description" content="Roller" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index" />
 
@@ -28,8 +28,8 @@
 <body>
     <header class="header">
         <nav class="header__nav">
-            <a href="/" class="header__logo">
-                <img width="128" height="34" alt="Learnpoint" src="/img/logos/learnpoint-logo.svg" />
+            <a href="/" class="header__logo" aria-label="Learnpoint Home">
+                <img width="128" height="34" alt="" aria-hidden="true" src="/img/logos/learnpoint-logo.svg" />
             </a>
             <div class="header__links">
                 <a class="header__link" href="/help/">
@@ -67,14 +67,15 @@
         </svg>
     </button>
 
-    <form role="search" class="help-sidebar__search">
-        <input required class="help-sidebar__search-input" name="q" data-element="help-sidebar.search-input" />
+    <form role="search" class="help-sidebar__search" data-element="help-sidebar.search-form">
+        <input class="help-sidebar__search-input" name="q" data-element="help-sidebar.search-input" />
         <svg xmlns="http://www.w3.org/2000/svg" class="help-sidebar__search-icon" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
         </svg>
         <div class="help-sidebar__search-results"></div>
-    </form>
+    </form> 
 
+    <!-- site_db:off -->
     <nav>
         <ul>
             <li>
@@ -97,7 +98,7 @@
                         <a href="/help/getting-started/teacher/">För lärare</a>
                     </li>
                     <li>
-                        <a href="/help/getting-started/class-administrator/">För klassadministratörer och andra relevanta roller</a>
+                        <a href="/help/getting-started/class-administrator/">För klassadministratörer</a>
                     </li>
                     <li>
                         <a href="/help/getting-started/news/">Nyheter</a>
@@ -203,6 +204,7 @@
             </li>
         </ul>
     </nav>
+    <!-- site_db:on -->
 
 </div>
 
@@ -230,6 +232,7 @@
 
 </main>
 
+<!-- site_db:off -->
 <footer class="footer">
     <ul>
         <li>
@@ -251,6 +254,8 @@
         </div>
     </div>
 </footer>
+<!-- site_db:on -->
+
 </body>
 
 </html>
