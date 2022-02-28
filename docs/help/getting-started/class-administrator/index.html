@@ -46,9 +46,11 @@
 
 <link rel="stylesheet" href="/css/pages/help-page.css">
 
-<div class="help-page">
+<div class="main__container">
 
-    <link rel="stylesheet" href="/css/components/help-sidebar.css">
+    <div class="help-page">
+
+        <link rel="stylesheet" href="/css/components/help-sidebar.css">
 <script defer src="/js/vendor/fuse-6.5.3.js"></script>
 <script defer src="/js/components/help-sidebar-search.js"></script>
 
@@ -58,7 +60,7 @@
     </svg>
 </button>
 
-<div class="help-sidebar" data-element="help-sidebar">
+<aside class="help-sidebar" data-element="help-sidebar">
 
     <button type="button" data-element="help-sidebar.close-button" class="help-sidebar__close-button">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -74,7 +76,6 @@
         <div class="help-sidebar__search-results"></div>
     </form> 
 
-    <!-- site_db:off -->
     <nav>
         <ul>
             <li>
@@ -203,54 +204,55 @@
             </li>
         </ul>
     </nav>
-    <!-- site_db:on -->
 
-</div>
+</aside>
 
 <script src="/js/components/help-sidebar.js"></script>
 
-    <div class="help-page__content">
+        <main class="help-page__content">
 
-        <h1>Kom igång som klassadministratör</h1>
+            <h1>Kom igång som klassadministratör</h1>
 
-        <h2>Aktivera konto</h2>
+            <h2>Aktivera konto</h2>
 
-        <p>Om det är första gången du loggar in i Learnpoint behöver du aktivera ditt konto:</p>
+            <p>Om det är första gången du loggar in i Learnpoint behöver du aktivera ditt konto:</p>
 
-        <ol>
-            <li>Gå till <a href="/sign-in.html">learnpoint.se/sign-in.html</a>.</li>
-            <li>Ange adressen till din skola.</li>
-            <li>Klicka på Fortsätt.</li>
-            <li>Nu kommer du till inloggningssidan för din skola.</li>
-            <li>Klicka på Aktivera konto.</li>
-            <li>Ange din e-postadress och klicka på OK.</li>
-            <li>Inom kort får du ett mail med instruktioner för att aktivera kontot.</li>
-        </ol>
+            <ol>
+                <li>Gå till <a href="/sign-in.html">learnpoint.se/sign-in.html</a>.</li>
+                <li>Ange adressen till din skola.</li>
+                <li>Klicka på Fortsätt.</li>
+                <li>Nu kommer du till inloggningssidan för din skola.</li>
+                <li>Klicka på Aktivera konto.</li>
+                <li>Ange din e-postadress och klicka på OK.</li>
+                <li>Inom kort får du ett mail med instruktioner för att aktivera kontot.</li>
+            </ol>
 
-        <h2>Logga in</h2>
+            <h2>Logga in</h2>
 
-        <p>När du aktiverat ditt konto loggar du in på följande sätt:</p>
+            <p>När du aktiverat ditt konto loggar du in på följande sätt:</p>
 
-        <ol>
-            <li>Gå till <a href="/sign-in.html">learnpoint.se/sign-in.html</a>.</li>
-            <li>Ange adressen till din skola.</li>
-            <li>Klicka på Fortsätt</li>
-            <li>Ange användarnamn och lösenord.</li>
-            <li>Klicka på Logga in.</li>
-        </ol>
+            <ol>
+                <li>Gå till <a href="/sign-in.html">learnpoint.se/sign-in.html</a>.</li>
+                <li>Ange adressen till din skola.</li>
+                <li>Klicka på Fortsätt</li>
+                <li>Ange användarnamn och lösenord.</li>
+                <li>Klicka på Logga in.</li>
+            </ol>
 
-        <h2>Klasser och kurser</h2>
+            <h2>Klasser och kurser</h2>
 
-        <p>De aktuella klasser som du är registrerade som klassadministratör för visas i menyn till vänster under rubriken grupper. Väljer du en klass kan du se och gå till klassens kurser via fliken Kurser. Trycker du på Grupper i vänstermenyn så visas en lista på alla grupper som du är kopplad till. Du kan sedan se och hantera klassen eller kursens nyheter, material, studerande och personal.</p>
+            <p>De aktuella klasser som du är registrerade som klassadministratör för visas i menyn till vänster under rubriken grupper. Väljer du en klass kan du se och gå till klassens kurser via fliken Kurser. Trycker du på Grupper i vänstermenyn så visas en lista på alla grupper som du är kopplad till. Du kan sedan se och hantera klassen eller kursens nyheter, material, studerande och personal.</p>
 
-        <h2>Hantera studenter i klasser</h2>
+            <h2>Hantera studenter i klasser</h2>
 
-        <p>Du kan lägga till studerande i klassen. Om skolan har använt yh-antagning.se för antagning till en klass så kan du skriva in studerande direkt från yh-antagning.se. Du kan också ändra status på inskrivna studerande när de gör studieupphåll, studieavbrott eller helt enkelt inte dyker upp när utbildningen börjar.</p>
+            <p>Du kan lägga till studerande i klassen. Om skolan har använt yh-antagning.se för antagning till en klass så kan du skriva in studerande direkt från yh-antagning.se. Du kan också ändra status på inskrivna studerande när de gör studieupphåll, studieavbrott eller helt enkelt inte dyker upp när utbildningen börjar.</p>
 
-        <h2>Redigera studenter</h2>
+            <h2>Redigera studenter</h2>
 
-        <p>Varje person i Learnpoint har en profilbild och den som är administratör kan byta profilbilder på de studerande i klassen genom att ladda upp en bildfil eller genom att använda datorn eller mobilens webbkamera. Du kan även ändra kontaktuppgifter för de studerande i dina klasser.</p>
+            <p>Varje person i Learnpoint har en profilbild och den som är administratör kan byta profilbilder på de studerande i klassen genom att ladda upp en bildfil eller genom att använda datorn eller mobilens webbkamera. Du kan även ändra kontaktuppgifter för de studerande i dina klasser.</p>
 
+
+        </main>
 
     </div>
 

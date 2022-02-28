@@ -23,7 +23,7 @@
    Body Defaults
    ========================================================================== */
 
-   .print body {
+.print body {
     background-color: #fff;
     font-size: 16px;
 }

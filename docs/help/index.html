@@ -46,9 +46,11 @@
 
 <link rel="stylesheet" href="/css/pages/help-page.css">
 
-<div class="help-page">
+<div class="main__container">
 
-    <link rel="stylesheet" href="/css/components/help-sidebar.css">
+    <div class="help-page">
+
+        <link rel="stylesheet" href="/css/components/help-sidebar.css">
 <script defer src="/js/vendor/fuse-6.5.3.js"></script>
 <script defer src="/js/components/help-sidebar-search.js"></script>
 
@@ -58,7 +60,7 @@
     </svg>
 </button>
 
-<div class="help-sidebar" data-element="help-sidebar">
+<aside class="help-sidebar" data-element="help-sidebar">
 
     <button type="button" data-element="help-sidebar.close-button" class="help-sidebar__close-button">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -74,7 +76,6 @@
         <div class="help-sidebar__search-results"></div>
     </form> 
 
-    <!-- site_db:off -->
     <nav>
         <ul>
             <li>
@@ -203,63 +204,64 @@
             </li>
         </ul>
     </nav>
-    <!-- site_db:on -->
 
-</div>
+</aside>
 
 <script src="/js/components/help-sidebar.js"></script>
 
-    <div class="help-page__content">
+        <main class="help-page__content">
 
-        <h1>
-            <span lang="en">Help</span>
-            <span lang="sv">Hjälp</span>
-        </h1>
+            <h1>
+                <span lang="en">Help</span>
+                <span lang="sv">Hjälp</span>
+            </h1>
 
-        <p class="help-page__support-contact">
-            <a href="tel:+46850126090">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <p class="help-page__support-contact">
+                <a href="tel:+46850126090">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
 </svg>
-                <span lang="en">+46 850 126 090</span>
-                <span lang="sv">08 - 50 12 60 90</span>
-            </a>
-            <br />
-            <a href="mailto:support@learnpoint.se" target="_blank" rel="noopener noreferrer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <span lang="en">+46 850 126 090</span>
+                    <span lang="sv">08 - 50 12 60 90</span>
+                </a>
+                <br />
+                <a href="mailto:support@learnpoint.se" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
   <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
 </svg>
-                <span>support@learnpoint.se</span>
-            </a>
-        </p>
+                    <span>support@learnpoint.se</span>
+                </a>
+            </p>
 
-        <p class="help-page__support-opening-hours">
-            <span lang="en">Phone support opening hours:</span>
-            <span lang="sv">Öppettider telefon:</span>
-        </p>
+            <p class="help-page__support-opening-hours">
+                <span lang="en">Phone support opening hours:</span>
+                <span lang="sv">Öppettider telefon:</span>
+            </p>
 
-        <table class="help-page__support-opening-hours-table">
-            <tr>
-                <td>
-                    <span lang="en">Mon - Thu</span>
-                    <span lang="sv">Mån - Tor</span>
-                </td>
-                <td>
-                    <span lang="en">9am - 4pm</span>
-                    <span lang="sv">9-16</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <span lang="en">Friday</span>
-                    <span lang="sv">Fredagar</span>
-                </td>
-                <td>
-                    <span lang="en">9am - 12pm</span>
-                    <span lang="sv">9-12</span>
-                </td>
-            </tr>
-        </table>
+            <table class="help-page__support-opening-hours-table">
+                <tr>
+                    <td>
+                        <span lang="en">Mon - Thu</span>
+                        <span lang="sv">Mån - Tor</span>
+                    </td>
+                    <td>
+                        <span lang="en">9am - 4pm</span>
+                        <span lang="sv">9-16</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span lang="en">Friday</span>
+                        <span lang="sv">Fredagar</span>
+                    </td>
+                    <td>
+                        <span lang="en">9am - 12pm</span>
+                        <span lang="sv">9-12</span>
+                    </td>
+                </tr>
+            </table>
+
+        </main>
 
     </div>
 

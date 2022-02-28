@@ -46,9 +46,11 @@
 
 <link rel="stylesheet" href="/css/pages/help-page.css">
 
-<div class="help-page">
+<div class="main__container">
 
-    <link rel="stylesheet" href="/css/components/help-sidebar.css">
+    <div class="help-page">
+
+        <link rel="stylesheet" href="/css/components/help-sidebar.css">
 <script defer src="/js/vendor/fuse-6.5.3.js"></script>
 <script defer src="/js/components/help-sidebar-search.js"></script>
 
@@ -58,7 +60,7 @@
     </svg>
 </button>
 
-<div class="help-sidebar" data-element="help-sidebar">
+<aside class="help-sidebar" data-element="help-sidebar">
 
     <button type="button" data-element="help-sidebar.close-button" class="help-sidebar__close-button">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -74,7 +76,6 @@
         <div class="help-sidebar__search-results"></div>
     </form> 
 
-    <!-- site_db:off -->
     <nav>
         <ul>
             <li>
@@ -203,27 +204,28 @@
             </li>
         </ul>
     </nav>
-    <!-- site_db:on -->
 
-</div>
+</aside>
 
 <script src="/js/components/help-sidebar.js"></script>
 
-    <div class="help-page__content">
+        <main class="help-page__content">
 
-        <h1>Hantera studenter</h1>
+            <h1>Hantera studenter</h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor.<br /><br />
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor.<br /><br />
 
-            In bibendum, tellus vel blandit tristique, dui eros tempor ante, vitae porttitor eros nulla non urna. Nam accumsan mi sem. Donec pharetra mauris et orci convallis, vel varius quam tincidunt. Nam posuere lorem sit amet porta ullamcorper. Donec interdum pellentesque pulvinar. Integer bibendum ante sed facilisis volutpat. Aenean fermentum, libero ac fermentum mollis, justo metus vehicula metus, id tincidunt dui tellus vel sem. Quisque lobortis, justo id fermentum ullamcorper, ligula justo pretium ex, vel feugiat dui velit non sapien. Vivamus porttitor feugiat diam, vitae placerat leo ultricies porttitor. Sed rutrum odio sed sapien luctus viverra. Donec dictum blandit nibh, eu dapibus est viverra quis. Aenean at justo ex. Nullam malesuada elit id lacus tincidunt luctus. Sed nisi diam, ullamcorper non volutpat porta, pretium nec est.<br /><br />
-            
-            Maecenas sed sollicitudin nisi. Suspendisse in semper neque. Fusce sit amet nunc nec tortor lacinia imperdiet sed ac magna. Vivamus aliquet mauris eu quam luctus laoreet. Donec eu magna arcu. Curabitur finibus blandit mi. Phasellus mauris elit, congue nec dignissim et, aliquet eu lacus. Mauris vitae pulvinar arcu. Aliquam erat volutpat.<br /><br />
-            
-            Donec massa purus, pretium et pellentesque at, blandit sed ligula. Mauris eu efficitur nunc. In ut odio mauris. Fusce eu mollis urna. Proin nec dignissim enim, a faucibus turpis. Fusce quis tincidunt velit. Praesent posuere ipsum nec quam mattis, ut fermentum ex sollicitudin. Sed faucibus orci eget dolor sagittis, quis elementum metus sagittis. Nullam vitae ultrices orci. Donec eros odio, pretium ut nisi non, fermentum consequat tortor. Quisque tristique diam pharetra leo hendrerit, sit amet dictum est lobortis. Suspendisse et aliquam tortor. Nullam ut dui quis urna malesuada varius.<br /><br />
-            
-            Mauris et volutpat metus. Nullam nulla sapien, faucibus eu urna sit amet, condimentum euismod tortor. Nam sollicitudin, erat sit amet scelerisque pharetra, eros mauris venenatis mi, vel interdum neque lorem sit amet nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum sit amet condimentum est. Aliquam rhoncus velit quis metus fermentum mollis. Suspendisse laoreet elit id justo volutpat egestas.</p>
+                In bibendum, tellus vel blandit tristique, dui eros tempor ante, vitae porttitor eros nulla non urna. Nam accumsan mi sem. Donec pharetra mauris et orci convallis, vel varius quam tincidunt. Nam posuere lorem sit amet porta ullamcorper. Donec interdum pellentesque pulvinar. Integer bibendum ante sed facilisis volutpat. Aenean fermentum, libero ac fermentum mollis, justo metus vehicula metus, id tincidunt dui tellus vel sem. Quisque lobortis, justo id fermentum ullamcorper, ligula justo pretium ex, vel feugiat dui velit non sapien. Vivamus porttitor feugiat diam, vitae placerat leo ultricies porttitor. Sed rutrum odio sed sapien luctus viverra. Donec dictum blandit nibh, eu dapibus est viverra quis. Aenean at justo ex. Nullam malesuada elit id lacus tincidunt luctus. Sed nisi diam, ullamcorper non volutpat porta, pretium nec est.<br /><br />
+
+                Maecenas sed sollicitudin nisi. Suspendisse in semper neque. Fusce sit amet nunc nec tortor lacinia imperdiet sed ac magna. Vivamus aliquet mauris eu quam luctus laoreet. Donec eu magna arcu. Curabitur finibus blandit mi. Phasellus mauris elit, congue nec dignissim et, aliquet eu lacus. Mauris vitae pulvinar arcu. Aliquam erat volutpat.<br /><br />
+
+                Donec massa purus, pretium et pellentesque at, blandit sed ligula. Mauris eu efficitur nunc. In ut odio mauris. Fusce eu mollis urna. Proin nec dignissim enim, a faucibus turpis. Fusce quis tincidunt velit. Praesent posuere ipsum nec quam mattis, ut fermentum ex sollicitudin. Sed faucibus orci eget dolor sagittis, quis elementum metus sagittis. Nullam vitae ultrices orci. Donec eros odio, pretium ut nisi non, fermentum consequat tortor. Quisque tristique diam pharetra leo hendrerit, sit amet dictum est lobortis. Suspendisse et aliquam tortor. Nullam ut dui quis urna malesuada varius.<br /><br />
+
+                Mauris et volutpat metus. Nullam nulla sapien, faucibus eu urna sit amet, condimentum euismod tortor. Nam sollicitudin, erat sit amet scelerisque pharetra, eros mauris venenatis mi, vel interdum neque lorem sit amet nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum sit amet condimentum est. Aliquam rhoncus velit quis metus fermentum mollis. Suspendisse laoreet elit id justo volutpat egestas.</p>
 
 
+
+        </main>
 
     </div>
 

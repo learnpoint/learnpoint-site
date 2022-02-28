@@ -9,8 +9,14 @@ body {
     background-color: #fef2e4;
 }
 
-main {
+/* main {
     max-width: 1000px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+} */
+
+.main__container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
