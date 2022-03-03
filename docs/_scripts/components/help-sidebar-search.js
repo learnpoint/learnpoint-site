@@ -1,7 +1,15 @@
 (function () {
 
     const SEARCH_DEBOUNCE = 500;
-    const STORAGE_KEY = 'help-site-db';
+    const STORAGE_KEY = 'help-site-content';
+    const SITE_CONTENT_URL = '/site_content.json';
+    const SEARCH_OPTIONS = {
+        includeScore: true,
+        includeMatches: true,
+        threshold: 0.3,
+        ignoreLocation: true,
+        keys: ['title', 'description', 'content']
+    }
 
     let searchService;
     let searchTimeout = null;
@@ -18,17 +26,8 @@
     }
 
     window.addEventListener('load', async function () {
-        const helpSiteDb = await getHelpSiteDb();
-
-        const options = {
-            includeScore: true,
-            includeMatches: true,
-            threshold: 0.3,
-            ignoreLocation: true,
-            keys: ['title', 'description', 'content']
-        }
-
-        searchService = new Fuse(helpSiteDb, options);
+        const helpSiteContent = await getHelpSiteContent();
+        searchService = new Fuse(helpSiteContent, SEARCH_OPTIONS);
     });
 
     document.addEventListener('focus', event => {
@@ -121,17 +120,12 @@
         searchResults.classList.remove(ClassName.SEARCH_RESULTS_OPEN);
     }
 
-    async function getHelpSiteDb() {
+    async function getHelpSiteContent() {
         if (!sessionStorage.getItem(STORAGE_KEY)) {
-            const res = await fetch('/site_db.json');
-            const siteDb = await res.json();
-            const helpSiteDb = siteDb.filter(item => item.url.includes("/help/"));
-            const helpSiteDbCleaned = helpSiteDb.map(item => {
-                item.title = item.title.replace(' - Learnpoint', '');
-                return item;
-            });
-
-            sessionStorage.setItem(STORAGE_KEY, JSON.stringify(helpSiteDbCleaned));
+            const res = await fetch(SITE_CONTENT_URL);
+            const siteContent = await res.json();
+            const helpSiteContent = siteContent.filter(item => item.url.includes("/help/"));
+            sessionStorage.setItem(STORAGE_KEY, JSON.stringify(helpSiteContent));
         }
 
         return JSON.parse(sessionStorage.getItem(STORAGE_KEY));
