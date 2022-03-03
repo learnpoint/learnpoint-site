@@ -14,6 +14,12 @@
     let searchService;
     let searchTimeout = null;
 
+
+
+    /* =====================================================================
+       Selectors
+       ===================================================================== */
+
     const Selector = {
         SIDEBAR: '[data-element="help-sidebar"]',
         SEARCH_FORM: '[data-element="help-sidebar.search-form"]',
@@ -21,14 +27,32 @@
         SEARCH_RESULTS: '.help-sidebar__search-results'
     }
 
+
+
+    /* =====================================================================
+       Class Names
+       ===================================================================== */
+
     const ClassName = {
         SEARCH_RESULTS_OPEN: 'OPEN'
     }
+
+
+
+    /* =====================================================================
+       Init Search Service
+       ===================================================================== */
 
     window.addEventListener('load', async function () {
         const helpSiteContent = await getHelpSiteContent();
         searchService = new Fuse(helpSiteContent, SEARCH_OPTIONS);
     });
+
+
+
+    /* =====================================================================
+       Events for Opening and Closing the Search Results Panel
+       ===================================================================== */
 
     document.addEventListener('focus', event => {
         if (!event.target.matches(Selector.SEARCH_INPUT)) {
@@ -81,24 +105,11 @@
 
     });
 
-    function search(value) {
-        let searchResultHtml = '';
 
-        const searchResult = searchService.search(value);
 
-        if (searchResult.length === 0) {
-            searchResultHtml = '<span>Inga träffar</span>';
-        } else {
-            searchResult.forEach(item => {
-                searchResultHtml += `<a href="${item.item.url}">${item.item.title}</a>`;
-            });
-        }
-
-        const searchResultsElement = document.querySelector(Selector.SEARCH_RESULTS);
-        searchResultsElement.innerHTML = searchResultHtml;
-
-        openSearchResults();
-    }
+    /* =====================================================================
+       Open / Close the Search Results Panel
+       ===================================================================== */
 
     function openSearchResults() {
         const searchResults = document.querySelector(Selector.SEARCH_RESULTS);
@@ -119,6 +130,37 @@
 
         searchResults.classList.remove(ClassName.SEARCH_RESULTS_OPEN);
     }
+
+
+
+    /* =====================================================================
+       Search
+       ===================================================================== */
+
+    function search(value) {
+        let searchResultHtml = '';
+
+        const searchResult = searchService.search(value);
+
+        if (searchResult.length === 0) {
+            searchResultHtml = '<span>Inga träffar</span>';
+        } else {
+            searchResult.forEach(item => {
+                searchResultHtml += `<a href="${item.item.url}">${item.item.title}</a>`;
+            });
+        }
+
+        const searchResultsElement = document.querySelector(Selector.SEARCH_RESULTS);
+        searchResultsElement.innerHTML = searchResultHtml;
+
+        openSearchResults();
+    }
+
+
+
+    /* =====================================================================
+       Get Help Site Content. Cache in Session Storage.
+       ===================================================================== */
 
     async function getHelpSiteContent() {
         if (!sessionStorage.getItem(STORAGE_KEY)) {
