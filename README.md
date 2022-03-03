@@ -29,3 +29,27 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 4. When done, stop the server with ```Ctrl + C```.
 
 5. Commit and push to your development branch.
+
+
+## Add Job Opening Page
+
+1. If it doesn't exist yet, create an appropriate folder inside /jobs.
+2. Create a html file with a descriptive name. For example: /jobs/2022/autumn/backend-developer-internship.html.
+3. Set layout, title and description in front matter.
+4. Make sure the page is written in both swedish and english.
+5. Make sure there is some kind of approximate date information at the beginning of the page. The date can refer to when the page was publish or when the opening is available, whatever makes most sense.
+6. Add a link to the page from /jobs/index.html.
+
+
+## Remove Job Opening Page
+
+1. Remove the link from /jobs/index.html.
+2. Do **not** delete the page. There might exist links to the page on external crawler sites.
+3. Add job-no-longer-available component on the page.
+4. Set robots: noindex in front matter.
+
+
+## Help Page
+
+* Put names for controls (links and buttons) in code tags (or backticks if using markdown).
+* Content images (screenshots) should be stored in a folder named _assets next to the page.
