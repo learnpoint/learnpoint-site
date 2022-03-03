@@ -55,6 +55,11 @@
        ===================================================================== */
 
     document.addEventListener('focus', event => {
+        if (!event.target.matches) {
+            // Sometimes a non-element node recieves focus.
+            return;
+        }
+
         if (!event.target.matches(Selector.SEARCH_INPUT)) {
             return;
         }

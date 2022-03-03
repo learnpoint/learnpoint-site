@@ -4,6 +4,7 @@
 
 .help-sidebar {
     flex: 0 0 246px;
+    flex: 0 0 300px;
 }
 
 .is-mobile .help-sidebar {
@@ -37,7 +38,7 @@
     height: 24px;
     cursor: pointer;
     position: absolute;
-    top: -2px;
+    top: 2px;
     left: 0;
     border: 0;
     border: 1px solid rgba(0, 0, 0, .2);
@@ -135,6 +136,7 @@
     outline: none;
     appearance: none;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .16);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .24);
 }
 
 .help-sidebar__search-input:focus {
@@ -151,7 +153,7 @@
     position: absolute;
     right: 8px;
     top: 8px;
-    color: #777;
+    color: #555;
 }
 
 
@@ -182,10 +184,12 @@
 
 .help-sidebar__search-results>* {
     display: block;
-    font-size: .9em;
-    padding: 4px 8px 4px 12px;
+    font-size: .8em;
+    padding: 6px 8px 6px 12px;
     margin: 2px 0;
     text-decoration: none;
+    line-height: 1.2;
+    color: #090909;
 }
 
 .help-sidebar__search-results>*:first-child {
@@ -274,16 +278,28 @@
 .help-sidebar nav li li a {
     font-size: 17px;
     padding: 6px 17px;
+    border-left: 2px solid rgba(0, 0, 0, .05);
+    margin-left: 4px;
+    border-radius: 0;
+}
+
+.is-mobile .help-sidebar nav li li a {
     border-radius: 6px;
+    border: none;
+    margin-left: 0;
 }
 
 .help-sidebar nav li li a.SELECTED {
     font-weight: 600;
+    /* border-color: #0780ff; */
+    border-left: 2px solid #0780ff;
+    color: #000;
 }
 
 .is-mobile .help-sidebar nav li li a.SELECTED {
     background-color: rgba(255, 255, 255, .2);
     color: #fff;
+    border: none;
 }
 
 

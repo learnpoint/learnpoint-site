@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Open Sans', 'Segoe UI', sans-serif;
     color: #1d2d35;
+    color: #0d1519;
     line-height: 1.5;
     font-size: 18px;
     overflow-y: scroll;
@@ -49,6 +50,8 @@ p {
 
 a {
     color: #0780ff;
+    /* color: #0079f2; */
+    /* color: #006cd8; */
 }
 
 ol, ul {

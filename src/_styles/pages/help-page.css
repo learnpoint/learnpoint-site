@@ -6,7 +6,7 @@
     position: relative;
     display: flex;
     align-items: stretch;
-    max-width: 968px;
+    max-width: 1080px;
     margin: 2em auto 0;
     gap: 32px;
     gap: 3vw;
@@ -35,13 +35,12 @@
 
 .help-page h1 {
     margin: 0 0 .5em;
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: left;
 }
 
 .is-mobile .help-page h1 {
-    /* text-align: center; */
-    font-size: 1em;
+    font-size: 1.5em;
     padding: 0 0 0 40px;
     margin-bottom: 1em;
 }
@@ -49,62 +48,16 @@
 
 
 /* =========================================================================
-   Suppport Contact
+   code
    ========================================================================= */
 
-.help-page__support-contact {
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-
-
-/* =========================================================================
-   Suppport Contact svg
-   ========================================================================= */
-
-.help-page__support-contact svg {
-    color: rgba(0, 0, 0, .5);
-    /* color: rgba(0, 0, 0, .8); */
-    color: #0780ff;
-    height: 16px;
-    width: 16px;
-    margin: 0 10px 0 4px;
-    position: relative;
-    top: 2px;
-}
-
-
-
-/* =========================================================================
-   Suppport Contact a
-   ========================================================================= */
-
-.help-page__support-contact a {
-    color: inherit;
-    text-decoration: none;
-}
-
-
-
-/* =========================================================================
-   Suppport Opening Hours
-   ========================================================================= */
-
-.help-page__support-opening-hours {
-    margin-bottom: 6px;
-}
-
-
-
-/* =========================================================================
-   Suppport Opening Hours Table
-   ========================================================================= */
-
-.help-page__support-opening-hours-table {
-    border-collapse: collapse;
-}
-
-.help-page__support-opening-hours-table td {
-    padding: 0 2em 0 2px;
+.help-page code {
+    /* background-color: #fff; */
+    /* font: inherit; */
+    /* padding: 0 4px; */
+    border-radius: 4px;
+    /* border: 1px solid red; */
+    font-weight: 600;
+    font-size: 16px;
+    /* letter-spacing: -1px; */
 }

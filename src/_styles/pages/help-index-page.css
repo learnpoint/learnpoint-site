@@ -1,0 +1,107 @@
+/* =========================================================================
+   Help Index Page
+   ========================================================================= */
+
+.help-index-page {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    max-width: 1080px;
+    margin: 2em auto 0;
+    gap: 32px;
+    gap: 3vw;
+}
+
+.is-mobile .help-index-page {
+    display: block;
+}
+
+
+
+/* =========================================================================
+   Content
+   ========================================================================= */
+
+.help-index-page__content {
+    flex-grow: 1;
+}
+
+
+
+/* =========================================================================
+   h1
+   ========================================================================= */
+
+.help-index-page h1 {
+    margin: 0 0 .5em;
+    font-size: 2.5em;
+    text-align: left;
+}
+
+.is-mobile .help-index-page h1 {
+    font-size: 1.5em;
+    padding: 0 0 0 40px;
+    margin-bottom: 1em;
+}
+
+
+
+/* =========================================================================
+   Suppport Contact
+   ========================================================================= */
+
+.help-index-page__support-contact {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+/* =========================================================================
+   Suppport Contact svg
+   ========================================================================= */
+
+.help-index-page__support-contact svg {
+    color: rgba(0, 0, 0, .5);
+    color: #0780ff;
+    height: 16px;
+    width: 16px;
+    margin: 0 10px 0 4px;
+    position: relative;
+    top: 2px;
+}
+
+
+
+/* =========================================================================
+   Suppport Contact a
+   ========================================================================= */
+
+.help-index-page__support-contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+/* =========================================================================
+   Suppport Opening Hours
+   ========================================================================= */
+
+.help-index-page__support-opening-hours {
+    margin-bottom: 6px;
+}
+
+
+
+/* =========================================================================
+   Suppport Opening Hours Table
+   ========================================================================= */
+
+.help-index-page__support-opening-hours-table {
+    border-collapse: collapse;
+}
+
+.help-index-page__support-opening-hours-table td {
+    padding: 0 2em 0 2px;
+}
