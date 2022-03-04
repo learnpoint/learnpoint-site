@@ -32,6 +32,3 @@ När du aktiverat ditt konto loggar du in på följande sätt:
 5. Klicka på Logga in.
 
 <!-- desktop-screenshot.html, { src: "_assets/login-screen.png", theme: "dark" } -->
-
-
-## Problem att logga in?
