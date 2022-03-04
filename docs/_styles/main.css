@@ -1,22 +1,12 @@
 body {
     margin: 0;
     font-family: 'Open Sans', 'Segoe UI', sans-serif;
-    color: #1d2d35;
-    color: #0d1519;
     color: #0f1016;
     line-height: 1.5;
     font-size: 18px;
     overflow-y: scroll;
-    background-color: #FDEFE2;
     background-color: #fef2e4;
 }
-
-/* main {
-    max-width: 1000px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-} */
 
 .main__container {
     max-width: 1200px;
@@ -51,20 +41,5 @@ p {
 
 a {
     color: #0780ff;
-    /* color: #0079f2; */
-    /* color: #006cd8; */
 }
 
-ol, ul {
-    margin: 0 0 1em;
-    padding: 0 0 0 1.3em;
-}
-
-p+ol, p+ul {
-    margin-top: -.5em;
-}
-
-li {
-    margin-bottom: .5em;
-    line-height: 1.2;
-}

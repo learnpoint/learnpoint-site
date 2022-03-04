@@ -49,8 +49,9 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 4. Set robots: noindex in front matter.
 
 
-## Help Page
+## Writing Help Pages
 
 * Put names for controls (links and buttons) in code tags (or backticks if using markdown).
 * Content images (screenshots) should be stored in a folder named _assets next to the page.
 * When painting arrows and indicators on a screenshot, use the orange color FF7B00.
+* Screenshots must always have two version. One for desktop and one for mobile.

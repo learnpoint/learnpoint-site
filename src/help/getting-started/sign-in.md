@@ -10,7 +10,7 @@ description: Logga in - Learnpoint Hjälp och Support
 
 1. Gå till [learnpoint.se/sign-in.html](/sign-in.html)
 1. Ange adressen till din skola.
-1. Klicka på knappen `Fortsätt` för att komma till skolan inloggningssida.
+1. Klicka på `Fortsätt` för att komma till skolans inloggningssida.
 
 <!-- desktop-screenshot.html, { src: "_assets/find-school.png", theme: "dark" } -->
 
@@ -38,8 +38,8 @@ När du aktiverat ditt konto loggar du in på följande sätt:
 
 ## Problem att logga in?
 
-1. Kontrollera användarnamnet. Du kan **inte** använda mailadress för inloggning.
-1. Kontrollera att inte CapsLock är aktiverat på tangentbordet.
-1. Har du glömt ditt lösenord kan du återställa det. Klicka på `Glömt ditt lösenord?` på skolans inloggningsida och följ instrktionerna.
+1. Kontrollera användarnamnet. Observera att det **inte** går att logga in mailadress.
+1. Kontrollera att `Caps Lock` inte är aktiverat på tangentbordet.
+1. Har du glömt ditt lösenord kan du återställa det. Klicka på länken `Glömt ditt lösenord?` på skolans inloggningsida och följ därefter instruktionerna.
 
-Har du fortfarande problem att logga in? [Kontakta oss](/help/) så hjälper vi till!
+Lyckas du ändå inte logga in? [Kontakta oss](/help/) så hjälper vi till!
