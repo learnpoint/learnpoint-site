@@ -55,7 +55,6 @@
 .help-index-page__support-contact {
     line-height: 1.6;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 
@@ -93,7 +92,6 @@
 
 .help-index-page__support-opening-hours {
     margin-bottom: 6px;
-    text-align: center;
 }
 
 
@@ -104,7 +102,6 @@
 
 .help-index-page__support-opening-hours-table {
     border-collapse: collapse;
-    margin: 0 auto;
 }
 
 .help-index-page__support-opening-hours-table td {
@@ -130,7 +127,8 @@
 
 .help-index-page__sub-header-tagline {
     text-align: center;
-    margin-bottom: 3em;
+    margin:0 auto 2em;
+    max-width: 640px;
 }
 
 
@@ -141,8 +139,9 @@
 
 .help-index-page__photo-gallery {
     display: flex;
-    gap: 16px;
-    margin-bottom: 10em;
+    gap: 3%;
+    max-width: 480px;
+    margin: 0 auto 2em;
 }
 
 
@@ -154,7 +153,6 @@
 .help-index-page__photo-gallery-item {
     width: 25%;
     flex-grow: 0;
-    /* background-color: rgba(0,0,0,.1); */
 }
 
 
@@ -181,4 +179,5 @@
     display: block;
     font-weight: 600;
     font-size: .8em;
+    padding: .5em 0;
 }
