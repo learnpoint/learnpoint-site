@@ -34,8 +34,10 @@
 
 .help-index-page h1 {
     margin: 0 0 .5em;
-    font-size: 2.5em;
+    font-size: 3em;
     text-align: left;
+    margin-top: 0em;
+    text-align: center;
 }
 
 .is-mobile .help-index-page h1 {
@@ -53,6 +55,7 @@
 .help-index-page__support-contact {
     line-height: 1.6;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 
@@ -90,6 +93,7 @@
 
 .help-index-page__support-opening-hours {
     margin-bottom: 6px;
+    text-align: center;
 }
 
 
@@ -100,8 +104,81 @@
 
 .help-index-page__support-opening-hours-table {
     border-collapse: collapse;
+    margin: 0 auto;
 }
 
 .help-index-page__support-opening-hours-table td {
-    padding: 0 2em 0 2px;
+    padding: 0 1em;
+}
+
+
+/* =========================================================================
+   Sub Header
+   ========================================================================= */
+
+.help-index-page__sub-header {
+    text-align: center;
+    margin: 2em 0 1em;
+    font-size: 2em;
+}
+
+
+
+/* =========================================================================
+   Sub Header Tagline
+   ========================================================================= */
+
+.help-index-page__sub-header-tagline {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+
+
+/* =========================================================================
+   Photo Gallery
+   ========================================================================= */
+
+.help-index-page__photo-gallery {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 10em;
+}
+
+
+
+/* =========================================================================
+   Photo Gallery Item
+   ========================================================================= */
+
+.help-index-page__photo-gallery-item {
+    width: 25%;
+    flex-grow: 0;
+    /* background-color: rgba(0,0,0,.1); */
+}
+
+
+
+/* =========================================================================
+   Photo
+   ========================================================================= */
+
+.help-index-page__photo-gallery-item img {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 50%;
+}
+
+
+
+/* =========================================================================
+   Photo Caption
+   ========================================================================= */
+
+.help-index-page__photo-gallery-item span {
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    font-size: .8em;
 }
