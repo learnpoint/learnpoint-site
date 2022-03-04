@@ -18,6 +18,8 @@ Om det är första gången du loggar in behöver du aktivera ditt konto:
 6. Ange din e-postadress och klicka på `OK`.
 7. Inom kort får du ett mail med instruktioner för att aktivera kontot.
 
+<!-- desktop-screenshot.html, { src: "_assets/login-choose-school-screen.png", theme: "dark" } -->
+
 
 ## Logga in
 
@@ -29,8 +31,7 @@ När du aktiverat ditt konto loggar du in på följande sätt:
 4. Ange användarnamn och lösenord.
 5. Klicka på Logga in.
 
+<!-- desktop-screenshot.html, { src: "_assets/login-screen.png", theme: "dark" } -->
+
 
 ## Problem att logga in?
-
-1. Hej
-2. Svejs

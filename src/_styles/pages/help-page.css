@@ -55,9 +55,19 @@
     /* background-color: #fff; */
     /* font: inherit; */
     /* padding: 0 4px; */
-    border-radius: 4px;
+    /* border-radius: 4px; */
     /* border: 1px solid red; */
+    font: inherit;
     font-weight: 600;
     font-size: 16px;
-    /* letter-spacing: -1px; */
 }
+
+
+
+/* =========================================================================
+   Desktop Screenshot
+   ========================================================================= */
+
+/* .help-page .desktop-screenshot img {
+    
+} */
