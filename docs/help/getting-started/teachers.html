@@ -54,167 +54,164 @@
 <script defer src="/_scripts/vendor/fuse-6.5.3.js"></script>
 <script defer src="/_scripts/components/help-sidebar-search.js"></script>
 
-<aside>
 
-    <button type="button" data-element="help-sidebar.open-button" class="help-sidebar__open-button">
+<button type="button" data-element="help-sidebar.open-button" class="help-sidebar__open-button" aria-label="Open Menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+    </svg>
+</button>
+
+<aside class="help-sidebar" data-element="help-sidebar">
+
+    <button type="button" data-element="help-sidebar.close-button" class="help-sidebar__close-button" aria-label="Open Menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
         </svg>
     </button>
 
-    <aside class="help-sidebar" data-element="help-sidebar">
+    <form role="search" class="help-sidebar__search" data-element="help-sidebar.search-form">
+        <input aria-label="Search Help" class="help-sidebar__search-input" name="q" data-element="help-sidebar.search-input" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="help-sidebar__search-icon" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+        <div class="help-sidebar__search-results"></div>
+    </form>
 
-        <button type="button" data-element="help-sidebar.close-button" class="help-sidebar__close-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-            </svg>
-        </button>
-
-        <form role="search" class="help-sidebar__search" data-element="help-sidebar.search-form">
-            <input aria-label="Search Help" class="help-sidebar__search-input" name="q" data-element="help-sidebar.search-input" />
-            <svg xmlns="http://www.w3.org/2000/svg" class="help-sidebar__search-icon" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-            </svg>
-            <div class="help-sidebar__search-results"></div>
-        </form>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="/help/">
-                        <span lang="en">Help</span>
-                        <span lang="sv">Hjälp</span>
-                    </a>
-                </li>
-                <li>
-                    <button type="button" data-element="help-sidebar.subtree-toggler">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
-                        <span lang="en">Get started</span>
-                        <span lang="sv">Kom igång</span>
-                    </button>
-                    <ul>
-                        <li>
-                            <a href="/help/getting-started/sign-in.html">Logga in</a>
-                        </li>
-                        <li>
-                            <a href="/help/getting-started/students.html">Introduktion för studenter</a>
-                        </li>
-                        <li>
-                            <a href="/help/getting-started/teachers.html">Introduktion för lärare</a>
-                        </li>
-                        <li>
-                            <a href="/help/getting-started/class-administrators.html">Introduktion för klassadministratörer</a>
-                        </li>
-                        <li>
-                            <a href="/help/getting-started/news.html">Nyheter</a>
-                        </li>
-                        <li>
-                            <a href="/help/getting-started/calendar.html">Kalender</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <button type="button" data-element="help-sidebar.subtree-toggler">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
-                        <span lang="en">Groups</span>
-                        <span lang="sv">Grupper</span>
-                    </button>
-                    <ul>
-                        <li>
-                            <a href="/help/groups/introduction/">Inledning</a>
-                        </li>
-                        <li>
-                            <a href="/help/groups/news/">Nyheter</a>
-                        </li>
-                        <li>
-                            <a href="/help/groups/documents/">Dokument</a>
-                        </li>
-                        <li>
-                            <a href="/help/groups/members/">Studenter/Deltagare</a>
-                        </li>
-                        <li>
-                            <a href="/help/groups/staff/">Personal</a>
-                        </li>
-                        <li>
-                            <a href="/help/groups/calendar/">Kalender</a>
-                        </li>
-                        <li>
-                            <a href="/help/groups/courses/">Kurser</a>
-                        </li>
-                        <li>
-                            <a href="/help/groups/about/">Om</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <button type="button" data-element="help-sidebar.subtree-toggler">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
-                        <span>Betygsättning</span>
-                    </button>
-                    <ul>
-                        <li>
-                            <a href="/help/grading/grade/">Sätta betyg</a>
-                        </li>
-                        <li>
-                            <a href="/help/grading/publish/">Publicera betyg</a>
-                        </li>
-                        <li>
-                    </ul>
-                </li>
-                <li>
-                    <button type="button" data-element="help-sidebar.subtree-toggler">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
-                        <span>LIA</span>
-                    </button>
-                    <ul>
-                        <li>
-                            <a href="/help/internship/introduction/">Inledning</a>
-                        </li>
-                        <li>
-                            <a href="/help/internship/add/">Registrera</a>
-                        </li>
-                        <li>
-                            <a href="/help/internship/log/">Loggbok</a>
-                        </li>
-                        <li>
-                            <a href="/help/internship/settings/">Inställningar</a>
-                        </li>
-                        <li>
-                            <a href="/help/internship/surveys/">Enkäter</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <button type="button" data-element="help-sidebar.subtree-toggler">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
-                        <span>Administration</span>
-                    </button>
-                    <ul>
-                        <li>
-                            <a href="/help/admin/groups/">Grupper</a>
-                        </li>
-                        <li>
-                            <a href="/help/admin/manage-staff/">Personal</a>
-                        </li>
-                        <li>
-                            <a href="/help/admin/manage-students/">Studenter</a>
-                        </li>
-                        <li>
-                            <a href="/help/admin/manage-student-status/">Studerandestatus</a>
-                        </li>
-                        <li>
-                            <a href="/help/admin/roles/">Roller</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
-    </aside>
-
-    <script src="/_scripts/components/help-sidebar.js"></script>
+    <nav>
+        <ul>
+            <li>
+                <a href="/help/">
+                    <span lang="en">Help</span>
+                    <span lang="sv">Hjälp</span>
+                </a>
+            </li>
+            <li>
+                <button type="button" data-element="help-sidebar.subtree-toggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
+                    <span lang="en">Get started</span>
+                    <span lang="sv">Kom igång</span>
+                </button>
+                <ul>
+                    <li>
+                        <a href="/help/getting-started/sign-in.html">Logga in</a>
+                    </li>
+                    <li>
+                        <a href="/help/getting-started/students.html">Introduktion för studenter</a>
+                    </li>
+                    <li>
+                        <a href="/help/getting-started/teachers.html">Introduktion för lärare</a>
+                    </li>
+                    <li>
+                        <a href="/help/getting-started/class-administrators.html">Introduktion för klassadministratörer</a>
+                    </li>
+                    <li>
+                        <a href="/help/getting-started/news.html">Nyheter</a>
+                    </li>
+                    <li>
+                        <a href="/help/getting-started/calendar.html">Kalender</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-element="help-sidebar.subtree-toggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
+                    <span lang="en">Groups</span>
+                    <span lang="sv">Grupper</span>
+                </button>
+                <ul>
+                    <li>
+                        <a href="/help/groups/introduction/">Inledning</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/news/">Nyheter</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/documents/">Dokument</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/members/">Studenter/Deltagare</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/staff/">Personal</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/calendar/">Kalender</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/courses/">Kurser</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/about/">Om</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-element="help-sidebar.subtree-toggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
+                    <span>Betygsättning</span>
+                </button>
+                <ul>
+                    <li>
+                        <a href="/help/grading/grade/">Sätta betyg</a>
+                    </li>
+                    <li>
+                        <a href="/help/grading/publish/">Publicera betyg</a>
+                    </li>
+                    <li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-element="help-sidebar.subtree-toggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
+                    <span>LIA</span>
+                </button>
+                <ul>
+                    <li>
+                        <a href="/help/internship/introduction/">Inledning</a>
+                    </li>
+                    <li>
+                        <a href="/help/internship/add/">Registrera</a>
+                    </li>
+                    <li>
+                        <a href="/help/internship/log/">Loggbok</a>
+                    </li>
+                    <li>
+                        <a href="/help/internship/settings/">Inställningar</a>
+                    </li>
+                    <li>
+                        <a href="/help/internship/surveys/">Enkäter</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-element="help-sidebar.subtree-toggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
+                    <span>Administration</span>
+                </button>
+                <ul>
+                    <li>
+                        <a href="/help/admin/groups/">Grupper</a>
+                    </li>
+                    <li>
+                        <a href="/help/admin/manage-staff/">Personal</a>
+                    </li>
+                    <li>
+                        <a href="/help/admin/manage-students/">Studenter</a>
+                    </li>
+                    <li>
+                        <a href="/help/admin/manage-student-status/">Studerandestatus</a>
+                    </li>
+                    <li>
+                        <a href="/help/admin/roles/">Roller</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
 </aside>
+
+<script src="/_scripts/components/help-sidebar.js"></script>
             <main class="help-page__content">
                 <h1>Introduktion för lärare</h1>
 
