@@ -1,3 +1,7 @@
+/* =========================================================================
+   Mobile Screenshot
+   ========================================================================= */
+
 .mobile-screenshot {
     margin: 6vw 16vw;
     border-radius: 5vw;
@@ -9,10 +13,23 @@
     transition: opacity, transform .6s;
 }
 
+.print .mobile-screenshot {
+    box-shadow: 0 0 0 2vw #000;
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .mobile-screenshot.LOADED {
     transform: none;
     opacity: 1;
 }
+
+
+
+/* =========================================================================
+   Header
+   ========================================================================= */
 
 .mobile-screenshot__header {
     height: 14vw;
@@ -22,6 +39,16 @@
     justify-content: center;
 }
 
+.print .mobile-screenshot__header {
+    height: 7vw;
+}
+
+
+
+/* =========================================================================
+   Speaker
+   ========================================================================= */
+
 .mobile-screenshot__speaker {
     margin-bottom: 1.5vw;
     width: 16vw;
@@ -29,6 +56,17 @@
     background-color: rgba(255, 255, 255, 0.16);
     border-radius: .5vw;
 }
+
+.print .mobile-screenshot__speaker {
+    width: 12vw;
+    height: .5vw;
+}
+
+
+
+/* =========================================================================
+   Footer
+   ========================================================================= */
 
 .mobile-screenshot__footer {
     height: 14vw;
@@ -39,6 +77,16 @@
 
 }
 
+.print .mobile-screenshot__footer {
+    height: 8vw;
+}
+
+
+
+/* =========================================================================
+   Home Button
+   ========================================================================= */
+
 .mobile-screenshot__home-button {
     margin-top: 2.8vw;
     width: 9vw;
@@ -46,6 +94,18 @@
     background-color: rgba(255, 255, 255, 0.12);
     border-radius: 50%;
 }
+
+.print .mobile-screenshot__home-button {
+    margin-top: 2vw;
+    width: 5vw;
+    height: 5vw;
+}
+
+
+
+/* =========================================================================
+   img
+   ========================================================================= */
 
 .mobile-screenshot img {
     display: block;

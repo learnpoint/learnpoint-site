@@ -45,6 +45,10 @@
     margin-bottom: 1em;
 }
 
+.print .help-page h1 {
+    padding: 0;
+}
+
 
 
 /* =========================================================================
@@ -98,5 +102,6 @@
    ========================================================================= */
 
 .help-page .desktop-screenshot {
-    margin-bottom: 3em;
+    margin: 0 auto 3em;
+    max-width: 640px;
 }

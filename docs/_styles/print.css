@@ -35,7 +35,7 @@
    ========================================================================== */
 
 .print .print__hide {
-    display: none;
+    display: none !important;
 }
 
 
