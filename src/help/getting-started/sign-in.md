@@ -6,6 +6,8 @@ description: Logga in - Learnpoint Hjälp och Support
 
 # Logga in
 
+<!-- only-in-swedish.html -->
+
 ## Hitta till skolans inloggningssida
 
 1. Gå till [learnpoint.se/sign-in.html](/sign-in.html)
@@ -22,7 +24,6 @@ Om det är första gången du loggar in behöver du aktivera ditt konto:
 1. Du får inom kort ett mail med instruktioner för att aktivera kontot.
 
 <!-- desktop-screenshot.html, { src: "_assets/activate-account.png", theme: "dark" } -->
-
 
 ## Logga in
 

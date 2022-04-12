@@ -1,141 +1,141 @@
 [
     {
-        "title": "Administrera grupper",
-        "description": "Administrera grupper - Learnpoint Hjälp och Support",
-        "url": "/help/admin/groups/index.html",
-        "content": "Administrera grupper Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "title": "Administration / Grupper",
+        "description": "Administration / Grupper - Learnpoint Hjälp och Support",
+        "url": "/help/admin/groups.html",
+        "content": "Administrera Grupper This page is only available in swedish."
     },
     {
-        "title": "Hantera personal",
-        "description": "Hantera personal - Learnpoint Hjälp och Support",
-        "url": "/help/admin/manage-staff/index.html",
-        "content": "Hantera personal Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "title": "Administration / Roller",
+        "description": "Administration / Roller - Learnpoint Hjälp och Support",
+        "url": "/help/admin/roles.html",
+        "content": "Administrera Roller This page is only available in swedish."
     },
     {
-        "title": "Hantera status för studenter",
-        "description": "Hantera status för studenter - Learnpoint Hjälp och Support",
-        "url": "/help/admin/manage-student-status/index.html",
-        "content": "Hantera status för studenter Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus."
+        "title": "Administration / Personal",
+        "description": "Administration / Personal - Learnpoint Hjälp och Support",
+        "url": "/help/admin/staff.html",
+        "content": "Administrera Personal This page is only available in swedish."
     },
     {
-        "title": "Hantera studenter",
-        "description": "Hantera studenter - Learnpoint Hjälp och Support",
-        "url": "/help/admin/manage-students/index.html",
-        "content": "Hantera studenter Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor. In bibendum, tellus vel blandit tristique, dui eros tempor ante, vitae porttitor eros nulla non urna. Nam accumsan mi sem. Donec pharetra mauris et orci convallis, vel varius quam tincidunt. Nam posuere lorem sit amet porta ullamcorper. Donec interdum pellentesque pulvinar. Integer bibendum ante sed facilisis volutpat. Aenean fermentum, libero ac fermentum mollis, justo metus vehicula metus, id tincidunt dui tellus vel sem. Quisque lobortis, justo id fermentum ullamcorper, ligula justo pretium ex, vel feugiat dui velit non sapien. Vivamus porttitor feugiat diam, vitae placerat leo ultricies porttitor. Sed rutrum odio sed sapien luctus viverra. Donec dictum blandit nibh, eu dapibus est viverra quis. Aenean at justo ex. Nullam malesuada elit id lacus tincidunt luctus. Sed nisi diam, ullamcorper non volutpat porta, pretium nec est."
+        "title": "Administration / Studerandestatus",
+        "description": "Administration / Studerandestatus - Learnpoint Hjälp och Support",
+        "url": "/help/admin/student-status.html",
+        "content": "Administrera Studerandestatus This page is only available in swedish."
     },
     {
-        "title": "Roller",
-        "description": "Roller - Learnpoint Hjälp och Support",
-        "url": "/help/admin/roles/index.html",
-        "content": "Roller Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus."
+        "title": "Administration / Studenter",
+        "description": "Administration / Studenter - Learnpoint Hjälp och Support",
+        "url": "/help/admin/students.html",
+        "content": "Administrera Studenter This page is only available in swedish."
     },
     {
         "title": "Kom igång / Logga in",
         "description": "Logga in - Learnpoint Hjälp och Support",
         "url": "/help/getting-started/sign-in.html",
-        "content": "Logga in Hitta till skolans inloggningssida Gå till learnpoint.se/sign-in.html Ange adressen till din skola. Klicka på Fortsätt för att komma till skolans inloggningssida. Aktivera konto Om det är första gången du loggar in behöver du aktivera ditt konto: Gå till skolan inloggningssida (se ovan). Klicka på länken Aktivera konto. Ange din e-postadress och klicka på OK. Du får inom kort ett mail med instruktioner för att aktivera kontot. Logga in När du aktiverat ditt konto loggar du in på följande sätt: Gå till skolan inloggningssida (se ovan). Ange användarnamn och lösenord. Klicka på Logga in. Problem att logga in? Kontrollera användarnamnet. Observera att det inte går att logga in mailadress. Kontrollera att Caps Lock inte är aktiverat på tangentbordet. Har du glömt ditt lösenord kan du återställa det. Klicka på länken Glömt ditt lösenord? på skolans inloggningsida och följ därefter instruktionerna. Lyckas du ändå inte logga in? Kontakta oss så hjälper vi till!"
+        "content": "Logga in This page is only available in swedish. Hitta till skolans inloggningssida Gå till learnpoint.se/sign-in.html Ange adressen till din skola. Klicka på Fortsätt för att komma till skolans inloggningssida. Aktivera konto Om det är första gången du loggar in behöver du aktivera ditt konto: Gå till skolan inloggningssida (se ovan). Klicka på länken Aktivera konto. Ange din e-postadress och klicka på OK. Du får inom kort ett mail med instruktioner för att aktivera kontot. Logga in När du aktiverat ditt konto loggar du in på följande sätt: Gå till skolan inloggningssida (se ovan). Ange användarnamn och lösenord. Klicka på Logga in. Problem att logga in? Kontrollera användarnamnet. Observera att det inte går att logga in mailadress. Kontrollera att Caps Lock inte är aktiverat på tangentbordet. Har du glömt ditt lösenord kan du återställa det. Klicka på länken Glömt ditt lösenord? på skolans inloggningsida och följ därefter instruktionerna. Lyckas du ändå inte logga in? Kontakta oss så hjälper vi till!"
     },
     {
-        "title": "Sätta betyg",
-        "description": "Sätta betyg - Learnpoint Hjälp och Support",
-        "url": "/help/grading/grade/index.html",
-        "content": "Sätta betyg Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "title": "Betygsättning / Sätta betyg",
+        "description": "Betygsättning / Sätta betyg - Learnpoint Hjälp och Support",
+        "url": "/help/grading/grade.html",
+        "content": "Sätta betyg This page is only available in swedish."
     },
     {
-        "title": "Publicera betyg",
-        "description": "Publicera betyg - Learnpoint Hjälp och Support",
-        "url": "/help/grading/publish/index.html",
-        "content": "Publicera betyg Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "title": "Betygsättning / Publicera betyg",
+        "description": "Betygsättning / Publicera betyg - Learnpoint Hjälp och Support",
+        "url": "/help/grading/publish.html",
+        "content": "Publicera Betyg This page is only available in swedish."
     },
     {
         "title": "Grupper / Om",
         "description": "Grupper / Om - Learnpoint Hjälp och Support",
         "url": "/help/groups/about.html",
-        "content": "Om Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "content": "Om This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
     },
     {
         "title": "Grupper / Kalender",
         "description": "Grupper / Kalender - Learnpoint Hjälp och Support",
         "url": "/help/groups/calendar.html",
-        "content": "Kalender Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "content": "Kalender This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
     },
     {
         "title": "Grupper / Innehåll",
         "description": "Grupper / Innehåll - Learnpoint Hjälp och Support",
         "url": "/help/groups/content.html",
-        "content": "Innehåll Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "content": "Innehåll This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
     },
     {
         "title": "Grupper / Kurser",
         "description": "Grupper / Kurser - Learnpoint Hjälp och Support",
         "url": "/help/groups/courses.html",
-        "content": "Kurser Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "content": "Kurser This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
     },
     {
         "title": "Grupper / Material",
         "description": "Grupper / Material - Learnpoint Hjälp och Support",
         "url": "/help/groups/documents.html",
-        "content": "Material Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "content": "Material This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
     },
     {
         "title": "Grupper / Inledning",
         "description": "Grupper / Inledning - Learnpoint Hjälp och Support",
         "url": "/help/groups/introduction.html",
-        "content": "Inledning Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "content": "Inledning This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
     },
     {
         "title": "Grupper / Nyheter",
         "description": "Grupper / Nyheter - Learnpoint Hjälp och Support",
         "url": "/help/groups/news.html",
-        "content": "Nyheter Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "content": "Nyheter This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
     },
     {
         "title": "Grupper / Personal",
         "description": "Grupper / Personal - Learnpoint Hjälp och Support",
         "url": "/help/groups/staff.html",
-        "content": "Personal Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "content": "Personal This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
     },
     {
         "title": "Grupper / Studenter",
         "description": "Grupper / Studenter - Learnpoint Hjälp och Support",
         "url": "/help/groups/students.html",
-        "content": "Studenter Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "content": "Studenter This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
     },
     {
         "title": "Hjälp",
         "description": "Learnpoint Hjälp och Support",
         "url": "/help/index.html",
-        "content": "Help Hjälp Support Support +46 850 126 090 08 - 50 12 60 90 support@learnpoint.se Phone support opening hours: Öppettider telefon: Mon - Thu Mån - Tor 9am - 12pm and 1pm - 4pm 9-12 och 13-16 Friday Fredagar 9am - 12pm 9-12"
+        "content": "Help Hjälp Support Support support@learnpoint.se +46 850 126 090 08 - 50 12 60 90 Phone support opening hours: Telefontider: Mon-Thu Mån-Tor 9am - 12pm and 1pm - 4pm 9-12 och 13-16 Friday Fre 9am - 12pm 9-12"
     },
     {
-        "title": "LIA / Registrera LIA-plats",
-        "description": "LIA / Registrera LIA-plats - Learnpoint Hjälp och Support",
-        "url": "/help/internship/add/index.html",
-        "content": "Registrera LIA-plats Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "title": "LIA / Lägg till LIA-plats",
+        "description": "LIA / Lägg till LIA-plats - Learnpoint Hjälp och Support",
+        "url": "/help/internship/add.html",
+        "content": "Lägg till LIA-plats This page is only available in swedish."
     },
     {
         "title": "LIA / Inledning",
         "description": "LIA / Inledning - Learnpoint Hjälp och Support",
-        "url": "/help/internship/introduction/index.html",
-        "content": "LIA Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor. In bibendum, tellus vel blandit tristique, dui eros tempor ante, vitae porttitor eros nulla non urna. Nam accumsan mi sem. Donec pharetra mauris et orci convallis, vel varius quam tincidunt. Nam posuere lorem sit amet porta ullamcorper. Donec interdum pellentesque pulvinar. Integer bibendum ante sed facilisis volutpat. Aenean fermentum, libero ac fermentum mollis, justo metus vehicula metus, id tincidunt dui tellus vel sem. Quisque lobortis, justo id fermentum ullamcorper, ligula justo pretium ex, vel feugiat dui velit non sapien. Vivamus porttitor feugiat diam, vitae placerat leo ultricies porttitor. Sed rutrum odio sed sapien luctus viverra. Donec dictum blandit nibh, eu dapibus est viverra quis. Aenean at justo ex. Nullam malesuada elit id lacus tincidunt luctus. Sed nisi diam, ullamcorper non volutpat porta, pretium nec est. Maecenas sed sollicitudin nisi. Suspendisse in semper neque. Fusce sit amet nunc nec tortor lacinia imperdiet sed ac magna. Vivamus aliquet mauris eu quam luctus laoreet. Donec eu magna arcu. Curabitur finibus blandit mi. Phasellus mauris elit, congue nec dignissim et, aliquet eu lacus. Mauris vitae pulvinar arcu. Aliquam erat volutpat."
+        "url": "/help/internship/introduction.html",
+        "content": "Inledning This page is only available in swedish."
     },
     {
         "title": "LIA / Loggbok",
         "description": "LIA / Loggbok - Learnpoint Hjälp och Support",
-        "url": "/help/internship/log/index.html",
-        "content": "Loggbok Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "url": "/help/internship/log.html",
+        "content": "Loggbok This page is only available in swedish."
     },
     {
         "title": "LIA / Inställningar",
         "description": "LIA / Inställningar - Learnpoint Hjälp och Support",
-        "url": "/help/internship/settings/index.html",
-        "content": "LIA-inställningar Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor. In bibendum, tellus vel blandit tristique, dui eros tempor ante, vitae porttitor eros nulla non urna. Nam accumsan mi sem. Donec pharetra mauris et orci convallis, vel varius quam tincidunt. Nam posuere lorem sit amet porta ullamcorper. Donec interdum pellentesque pulvinar. Integer bibendum ante sed facilisis volutpat. Aenean fermentum, libero ac fermentum mollis, justo metus vehicula metus, id tincidunt dui tellus vel sem. Quisque lobortis, justo id fermentum ullamcorper, ligula justo pretium ex, vel feugiat dui velit non sapien. Vivamus porttitor feugiat diam, vitae placerat leo ultricies porttitor. Sed rutrum odio sed sapien luctus viverra. Donec dictum blandit nibh, eu dapibus est viverra quis. Aenean at justo ex. Nullam malesuada elit id lacus tincidunt luctus. Sed nisi diam, ullamcorper non volutpat porta, pretium nec est."
+        "url": "/help/internship/settings.html",
+        "content": "LIA-inställningar This page is only available in swedish."
     },
     {
         "title": "LIA / Enkäter",
         "description": "LIA / Enkäter - Learnpoint Hjälp och Support",
-        "url": "/help/internship/surveys/index.html",
-        "content": "LIA-enkäter Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor. In bibendum, tellus vel blandit tristique, dui eros tempor ante, vitae porttitor eros nulla non urna. Nam accumsan mi sem. Donec pharetra mauris et orci convallis, vel varius quam tincidunt. Nam posuere lorem sit amet porta ullamcorper. Donec interdum pellentesque pulvinar. Integer bibendum ante sed facilisis volutpat. Aenean fermentum, libero ac fermentum mollis, justo metus vehicula metus, id tincidunt dui tellus vel sem. Quisque lobortis, justo id fermentum ullamcorper, ligula justo pretium ex, vel feugiat dui velit non sapien. Vivamus porttitor feugiat diam, vitae placerat leo ultricies porttitor. Sed rutrum odio sed sapien luctus viverra. Donec dictum blandit nibh, eu dapibus est viverra quis. Aenean at justo ex. Nullam malesuada elit id lacus tincidunt luctus. Sed nisi diam, ullamcorper non volutpat porta, pretium nec est. Maecenas sed sollicitudin nisi. Suspendisse in semper neque. Fusce sit amet nunc nec tortor lacinia imperdiet sed ac magna. Vivamus aliquet mauris eu quam luctus laoreet. Donec eu magna arcu. Curabitur finibus blandit mi. Phasellus mauris elit, congue nec dignissim et, aliquet eu lacus. Mauris vitae pulvinar arcu. Aliquam erat volutpat. Donec massa purus, pretium et pellentesque at, blandit sed ligula. Mauris eu efficitur nunc. In ut odio mauris. Fusce eu mollis urna. Proin nec dignissim enim, a faucibus turpis. Fusce quis tincidunt velit. Praesent posuere ipsum nec quam mattis, ut fermentum ex sollicitudin. Sed faucibus orci eget dolor sagittis, quis elementum metus sagittis. Nullam vitae ultrices orci. Donec eros odio, pretium ut nisi non, fermentum consequat tortor. Quisque tristique diam pharetra leo hendrerit, sit amet dictum est lobortis. Suspendisse et aliquam tortor. Nullam ut dui quis urna malesuada varius."
+        "url": "/help/internship/surveys.html",
+        "content": "LIA-enkäter This page is only available in swedish."
     },
     {
         "title": "Learnpoint",
