@@ -12,8 +12,6 @@ description: Logga in - Learnpoint Hjälp och Support
 1. Ange adressen till din skola.
 1. Klicka på `Fortsätt` för att komma till skolans inloggningssida.
 
-<!-- desktop-screenshot.html, { src: "_assets/find-school.png", theme: "dark" } -->
-
 ## Aktivera konto
 
 Om det är första gången du loggar in behöver du aktivera ditt konto:

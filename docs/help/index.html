@@ -23,7 +23,9 @@
 <script src="/_scripts/components/print.js"></script>
 <script src="/_scripts/components/is-mobile.js"></script>
 <script src="/_scripts/components/language.js"></script>
-    <link rel="stylesheet" href="/_styles/pages/help-index-page.css">
+    <link rel="stylesheet" href="/_styles/pages/help-page.css">
+    <link rel="stylesheet" href="/_styles/components/desktop-screenshot.css">
+    <link rel="stylesheet" href="/_styles/components/mobile-screenshot.css">
 </head>
 
 <body>
@@ -47,34 +49,7 @@
 </header>
 
     <div class="main__container">
-        <h1>Hjälp</h1>
-
-        <p class="help-index-page__sub-header-tagline">Always humans, never bots. The hands-down, sharpest and friendliest support team in the biz. Questions? Accessibility concerns? Reach out, we're here for you!</p>
-
-        <div class="help-index-page__photo-gallery">
-
-            <div class="help-index-page__photo-gallery-item">
-                <img src="_assets/stock-photos/05.jpg" alt="Anna" />
-                <span>Anna</span>
-            </div>
-            <div class="help-index-page__photo-gallery-item">
-                <img src="_assets/stock-photos/03.jpg" alt="Adam" />
-                <span>Adam</span>
-            </div>
-            <div class="help-index-page__photo-gallery-item">
-                <img src="_assets/stock-photos/16.jpg" alt="Sarah" />
-                <span>Sarah</span>
-            </div>
-            <div class="help-index-page__photo-gallery-item">
-                <img src="_assets/stock-photos/02.jpg" alt="Sam" />
-                <span>Sam</span>
-            </div>
-
-        </div>
-
-        <hr class="help-index-page__horizontal-rule" />
-
-        <div class="help-index-page">
+        <div class="help-page">
             <link rel="stylesheet" href="/_styles/components/help-sidebar.css">
 <script defer src="/_scripts/vendor/fuse-6.5.3.js"></script>
 <script defer src="/_scripts/components/help-sidebar-search.js"></script>
@@ -120,21 +95,6 @@
                     <li>
                         <a href="/help/getting-started/sign-in.html">Logga in</a>
                     </li>
-                    <li>
-                        <a href="/help/getting-started/students.html">Introduktion för studenter</a>
-                    </li>
-                    <li>
-                        <a href="/help/getting-started/teachers.html">Introduktion för lärare</a>
-                    </li>
-                    <li>
-                        <a href="/help/getting-started/class-administrators.html">Introduktion för klassadministratörer</a>
-                    </li>
-                    <li>
-                        <a href="/help/getting-started/news.html">Nyheter</a>
-                    </li>
-                    <li>
-                        <a href="/help/getting-started/calendar.html">Kalender</a>
-                    </li>
                 </ul>
             </li>
             <li>
@@ -145,28 +105,31 @@
                 </button>
                 <ul>
                     <li>
-                        <a href="/help/groups/introduction/">Inledning</a>
+                        <a href="/help/groups/introduction.html">Inledning</a>
                     </li>
                     <li>
-                        <a href="/help/groups/news/">Nyheter</a>
+                        <a href="/help/groups/content.html">Innehåll</a>
                     </li>
                     <li>
-                        <a href="/help/groups/documents/">Dokument</a>
+                        <a href="/help/groups/news.html">Nyheter</a>
                     </li>
                     <li>
-                        <a href="/help/groups/members/">Studenter/Deltagare</a>
+                        <a href="/help/groups/documents.html">Dokument</a>
                     </li>
                     <li>
-                        <a href="/help/groups/staff/">Personal</a>
+                        <a href="/help/groups/students.html">Studenter/Deltagare</a>
                     </li>
                     <li>
-                        <a href="/help/groups/calendar/">Kalender</a>
+                        <a href="/help/groups/staff.html">Personal</a>
                     </li>
                     <li>
-                        <a href="/help/groups/courses/">Kurser</a>
+                        <a href="/help/groups/calendar.html">Kalender</a>
                     </li>
                     <li>
-                        <a href="/help/groups/about/">Om</a>
+                        <a href="/help/groups/courses.html">Kurser</a>
+                    </li>
+                    <li>
+                        <a href="/help/groups/about.html">Om</a>
                     </li>
                 </ul>
             </li>
@@ -237,13 +200,27 @@
 </aside>
 
 <script src="/_scripts/components/help-sidebar.js"></script>
-            <main class="help-index-page__content">
-                <h2>
+            <main class="help-page__content">
+                <link rel="stylesheet" href="/_styles/pages/help-index-page.css">
+
+<h1>
+    <span lang="en">Help</span>
+    <span lang="sv">Hjälp</span>
+</h1>
+
+<h2>
     <span lang="en">Support</span>
     <span lang="sv">Support</span>
 </h2>
 
 <p class="help-index-page__support-contact">
+    <a href="mailto:support@learnpoint.se" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+</svg>
+        <span>support@learnpoint.se</span>
+    </a>
+    <br />
     <a href="tel:+46850126090">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
@@ -251,35 +228,28 @@
         <span lang="en">+46 850 126 090</span>
         <span lang="sv">08 - 50 12 60 90</span>
     </a>
-    <br />
-    <a href="mailto:support@learnpoint.se" target="_blank" rel="noopener noreferrer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
-</svg>
-        <span>support@learnpoint.se</span>
-    </a>
 </p>
 
 <p class="help-index-page__support-opening-hours">
     <span lang="en">Phone support opening hours:</span>
-    <span lang="sv">Öppettider telefon:</span>
+    <span lang="sv">Telefontider:</span>
 </p>
 
 <table class="help-index-page__support-opening-hours-table">
     <tr>
         <td>
-            <span lang="en">Mon - Thu</span>
-            <span lang="sv">Mån - Tor</span>
+            <span lang="en">Mon-Thu</span>
+            <span lang="sv">Mån-Tor</span>
         </td>
         <td>
-            <span lang="en">9am - 4pm</span>
-            <span lang="sv">9-16</span>
+            <span lang="en">9am - 12pm and 1pm - 4pm</span>
+            <span lang="sv">9-12 och 13-16</span>
         </td>
     </tr>
     <tr>
         <td>
             <span lang="en">Friday</span>
-            <span lang="sv">Fredagar</span>
+            <span lang="sv">Fre</span>
         </td>
         <td>
             <span lang="en">9am - 12pm</span>
