@@ -1,3 +1,3 @@
-import { dev } from "https://cdn.jsdelivr.net/gh/learnpoint/piko@0.9.53/dev.js";
+import { dev } from "https://cdn.jsdelivr.net/gh/learnpoint/piko@1.0.0/dev.js";
 
 dev();
