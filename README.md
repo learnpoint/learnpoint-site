@@ -45,7 +45,7 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 
 1. Remove the link from /jobs/index.html.
 2. Do **not** delete the page. There might exist links to the page on external crawler sites.
-3. Add job-no-longer-available component on the page.
+3. Add job-no-longer-available include on the page.
 4. Set robots: noindex in front matter.
 
 
@@ -55,3 +55,4 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 * Content images (screenshots) should be stored in a folder named _assets next to the page.
 * When painting arrows and indicators on a screenshot, use the orange color FF7B00.
 * Screenshots must always have two version. One for desktop and one for mobile.
+* If page only in swedish, add only-in-swedish include just after the h1 header.
