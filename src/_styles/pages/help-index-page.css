@@ -18,7 +18,7 @@
     color: #0780ff;
     height: 16px;
     width: 16px;
-    margin: 0 10px 0 4px;
+    margin: 0 12px 0 4px;
     position: relative;
     top: 2px;
 }
@@ -52,13 +52,14 @@
 
 .help-index-page__support-opening-hours-table {
     border-collapse: collapse;
-    font-family: monospace;
+    /* font-family: monospace; */
     font-size: .9em;
 }
 
 .help-index-page__support-opening-hours-table td {
-    padding: 0 .6em 0 .2em;
+    padding: 0 1.5em 0 .3em;
 }
+
 
 
 /* =========================================================================
