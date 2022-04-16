@@ -1,6 +1,6 @@
 ## Set up Development Environment
 
-- [Install Deno](https://deno.land/manual/getting_started/installation) version ```1.20.5``` or later.
+- [Install Deno](https://deno.land/manual/getting_started/installation) version ```1.20.6``` or later.
 
 
 ## Fork & Pull Request Workflow
