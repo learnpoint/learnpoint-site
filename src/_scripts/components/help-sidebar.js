@@ -83,18 +83,14 @@
        ===================================================================== */
 
     function initSelectedAndOpen() {
-        const path = location.pathname.replace('index.html', '');
-        const links = document.querySelectorAll('[data-element="help-sidebar"] ul a');
+        const currentPath = location.pathname;
+        const matchingLinks = document.querySelectorAll(`[data-element="help-sidebar"] ul a[href="${currentPath}"]`);
 
-        for (const link of links) {
-            const href = link.getAttribute('href').replace('index.html', '');
-            if (href === path) {
-                link.classList.add(ClassName.SELECTED);
-                const parentList = link.closest('ul').closest('li');
-                if (parentList) {
-                    parentList.classList.add(ClassName.OPEN);
-                }
-                break;
+        for (const matchingLink of matchingLinks) {
+            matchingLink.classList.add(ClassName.SELECTED);
+            const parentList = matchingLink.closest('ul').closest('li');
+            if (parentList) {
+                parentList.classList.add(ClassName.OPEN);
             }
         }
     }
