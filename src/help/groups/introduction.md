@@ -10,14 +10,12 @@ description: Grupper / Inledning - Learnpoint Hjälp och Support
 
 ## Hitta dina grupper
 
-Aktuella grupper i menyn till vänster.
+Klicka på länken `Grupper` för att se och söka bland dom grupper du har tillgång till:
 
-Vad innebär "aktuell" grupper? Grupper för enskilda kurser syns från och med 2 dagar innan kursen börjar och är synliga till och med 14 dagar efter det att kursens slutdatum har passerat. För att kunna se klasser och kurser som inte är pågående kan man trycka på Grupper i menyn till vänster så visas en lista på alla klasser och grupper som man har koppling till.
+<!-- desktop-screenshot.html, { src: "_assets/groups.png" } -->
 
-Gamla grupper hittar du i grupplistan. Går att söka.
+## Dina aktuella grupper
 
-Har du rätt behörighet kan du se alla grupper.
+Dina aktuella grupper (dom du är medlem i och som pågår just nu) finns i huvudmenyn:
 
-## Typer av grupper
-
-Klass, Kurs, Skola
+[IMAGE]
