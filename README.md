@@ -1,6 +1,7 @@
 ## Set up Development Environment
 
-- [Install Deno](https://deno.land/manual/getting_started/installation) version ```1.20.6``` or later.
+- [Install Deno](https://deno.land/manual/getting_started/installation) version **1.23.1** or later.
+
 
 
 ## Fork & Pull Request Workflow
@@ -16,43 +17,49 @@
 Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
 
+
 ## Development Workflow
 
-1. Start the dev server:
+1. Start dev server:
 
-        $ deno run -A dev.js
+        $ deno task dev
 
-2. Make file changes in the ```src``` folder. The dev server will automatically rebuild the site and reload your browser as you make files changes.
+2. Open site at `http://localhost:3333`
 
-3. Do **not** make file changes in the ```docs``` folder. If there are any problems or file mismatches, it is perfectly safe to stop the dev server, completely delete the ```docs``` folder, and then start the server again.
+3. Write your changes to the ```src``` folder. The dev server will automatically rebuild the site and reload your browser as you make your changes.
 
-4. When done, stop the server with ```Ctrl + C```.
+4. Do **not** make file changes in the ```docs``` folder. If there are any problems or file mismatches, it is perfectly safe to stop the dev server, completely delete the ```docs``` folder, and then start the dev server again.
 
-5. Commit and push to your development branch.
+5. When done, stop the server with ```Ctrl + C```.
+
+6. Commit and push to your development branch.
+
+7. When done, make a pull request (as explained in previous section).
 
 
-## Add Job Opening Page
 
-1. If it doesn't exist yet, create an appropriate folder inside /jobs.
-2. Create a html file with a descriptive name. For example: /jobs/2022/autumn/backend-developer-internship.html.
+## How to: Add a Job Opening Page
+
+1. If it does not exist yet, create an appropriate folder inside the `/jobs` folder.
+2. Create a html file with a descriptive name. For example: `/jobs/2022/autumn/backend-developer-internship.html`.
 3. Set layout, title and description in front matter.
 4. Make sure the page is written in both swedish and english.
 5. Make sure there is some kind of approximate date information at the beginning of the page. The date can refer to when the page was publish or when the opening is available, whatever makes most sense.
-6. Add a link to the page from /jobs/index.html.
+6. Add a link to the page in `/jobs/index.html`.
 
 
-## Remove Job Opening Page
+## How to: Remove a Job Opening Page
 
-1. Remove the link from /jobs/index.html.
-2. Do **not** delete the page. There might exist links to the page on external crawler sites.
-3. Add job-no-longer-available include on the page.
-4. Set robots: noindex in front matter.
+1. Remove the link to the page in `/jobs/index.html`.
+2. Do ***not*** delete the page! We don't want to break external links.
+3. Add the `<!-- job-no-longer-available.html -->` include on the page.
+4. Set `robots: noindex` in front matter for the page.
 
 
-## Writing Help Pages
+## How to: Write Help Page
 
 * Put names for controls (links and buttons) in code tags (or backticks if using markdown).
 * Content images (screenshots) should be stored in a folder named _assets next to the page.
-* When painting arrows and indicators on a screenshot, use the orange color FF7B00.
-* Screenshots must always have two version. One for desktop and one for mobile.
-* If page only in swedish, add only-in-swedish include just after the h1 header.
+* When painting arrows and indicators on a screenshot, use the orange color `#FF7B00`.
+* Screenshots must always have 2 version. One for desktop and one for mobile.
+* If the page is only written in swedish, add the `<!-- only-in-swedish.html -->` include after the `h1` element.
