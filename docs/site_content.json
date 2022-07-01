@@ -33,7 +33,7 @@
         "title": "Kom igång / Logga in",
         "description": "Logga in - Learnpoint Hjälp och Support",
         "url": "/help/getting-started/sign-in.html",
-        "content": "Logga in This page is only available in swedish. Hitta till skolans inloggningssida Gå till learnpoint.se/sign-in.html Ange adressen till din skola. Klicka på Fortsätt för att komma till skolans inloggningssida. Aktivera konto Om det är första gången du loggar in behöver du aktivera ditt konto: Gå till skolan inloggningssida (se ovan). Klicka på länken Aktivera konto. Ange din e-postadress och klicka på OK. Du får inom kort ett mail med instruktioner för att aktivera kontot. Logga in När du aktiverat ditt konto loggar du in på följande sätt: Gå till skolan inloggningssida (se ovan). Ange användarnamn och lösenord. Klicka på Logga in. Problem att logga in? Kontrollera användarnamnet. Observera att det inte går att logga in mailadress. Kontrollera att Caps Lock inte är aktiverat på tangentbordet. Har du glömt ditt lösenord kan du återställa det. Klicka på länken Glömt ditt lösenord? på skolans inloggningsida och följ därefter instruktionerna. Lyckas du ändå inte logga in? Kontakta oss så hjälper vi till!"
+        "content": "Logga in This page is only available in swedish. Hitta till skolans inloggningssida Gå till learnpoint.se/sign-in.html Ange adressen till din skola. Klicka på Fortsätt för att komma till skolans inloggningssida. Aktivera konto Om det är första gången du loggar in behöver du aktivera ditt konto: Gå till skolan inloggningssida (se ovan). Klicka på länken Aktivera konto. Ange din e-postadress och klicka på OK. Du får inom kort ett mail med instruktioner för att aktivera kontot. Logga in När du aktiverat ditt konto loggar du in på följande sätt: Gå till skolan inloggningssida (se ovan). Ange användarnamn och lösenord. Klicka på Logga in. Problem att logga in? Kontrollera användarnamnet. Observera att det inte går att logga in med mailadress. Kontrollera att Caps Lock inte är aktiverat på tangentbordet. Har du glömt ditt lösenord kan du återställa det. Klicka på länken Glömt ditt lösenord? och följ instruktionerna. Lyckas du ändå inte logga in? Kontakta oss så hjälper vi till!"
     },
     {
         "title": "Betygsättning / Sätta betyg",
@@ -105,7 +105,7 @@
         "title": "Hjälp",
         "description": "Learnpoint Hjälp och Support",
         "url": "/help/index.html",
-        "content": "Help Hjälp Support Support support@learnpoint.se +46 850 126 090 08 - 50 12 60 90 Phone support opening hours: Telefontider: Mon - Thu Mån-Tor 9am - 12pm and 1pm - 4pm 9-12 och 13-16 Fri Fre 9am - 12pm 9-12 Documentation Dokumentation Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accessibility Tillgänglighet Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "content": "Help Hjälp Support Support support@learnpoint.se +46 850 126 090 08 - 50 12 60 90 Phone opening hours: Telefontider support: Mon-Thu Mån-Tor 9am-12pm and 1pm-5pm 9-12 och 13-17 Fri Fre 9am-12pm 9-12 Documentation Dokumentation Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accessibility Tillgänglighet Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
         "title": "LIA / Lägg till LIA-plats",

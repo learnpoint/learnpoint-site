@@ -18,7 +18,7 @@
     color: #0780ff;
     height: 16px;
     width: 16px;
-    margin: 0 12px 0 4px;
+    margin: 0 8px 0 4px;
     position: relative;
     top: 2px;
 }
@@ -32,6 +32,12 @@
 .help-index-page__support-contact a {
     color: inherit;
     text-decoration: none;
+    padding: 0 1px;
+}
+
+.help-index-page__support-contact a:hover {
+    color: #0780ff;
+    border-bottom: 1.5px solid #0780ff;
 }
 
 
@@ -52,12 +58,12 @@
 
 .help-index-page__support-opening-hours-table {
     border-collapse: collapse;
-    /* font-family: monospace; */
+    font-family: monospace;
     font-size: .9em;
 }
 
 .help-index-page__support-opening-hours-table td {
-    padding: 0 1em 0 .3em;
+    padding: 0 .5em 0 .3em;
 }
 
 

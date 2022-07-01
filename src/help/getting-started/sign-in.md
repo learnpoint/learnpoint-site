@@ -37,8 +37,8 @@ När du aktiverat ditt konto loggar du in på följande sätt:
 
 ## Problem att logga in?
 
-1. Kontrollera användarnamnet. Observera att det **inte** går att logga in mailadress.
+1. Kontrollera användarnamnet. Observera att det **inte** går att logga in med mailadress.
 1. Kontrollera att `Caps Lock` inte är aktiverat på tangentbordet.
-1. Har du glömt ditt lösenord kan du återställa det. Klicka på länken `Glömt ditt lösenord?` på skolans inloggningsida och följ därefter instruktionerna.
+1. Har du glömt ditt lösenord kan du återställa det. Klicka på länken `Glömt ditt lösenord?` och följ instruktionerna.
 
 Lyckas du ändå inte logga in? [Kontakta oss](/help/) så hjälper vi till!
