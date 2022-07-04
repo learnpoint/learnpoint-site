@@ -1,6 +1,6 @@
 ## Set up Development Environment
 
-- [Install Deno](https://deno.land/manual/getting_started/installation) version **1.23.1** or later.
+- [Install Deno](https://deno.land/manual/getting_started/installation) version **1.23.2** or later.
 
 
 
