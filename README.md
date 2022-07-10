@@ -1,6 +1,6 @@
 ## Set up Development Environment
 
-- [Install Deno](https://deno.land/manual/getting_started/installation) version **1.23.2** or later.
+- [Install Deno](https://deno.land/manual/getting_started/installation) version **1.23.3** or later.
 
 
 
@@ -9,10 +9,11 @@
 1. Create your own fork.
 2. Clone the fork to your computer.
 3. Create a new development branch on your fork.
-4. Do all coding in your development branch (as explained in next section).
-5. When done, merge upstream/master and rebase your development branch.
-6. If appropriate, squash your commits.
-7. Make a pull request.
+4. Do all coding in your development branch (explained in next section).
+5. You can publish your fork on a static host (like Netlify), but **do not** use github pages because the `CNAME` file is used for production.
+6. When done, merge upstream/master and rebase your development branch.
+7. If appropriate, squash your commits.
+8. Make a pull request.
 
 Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
@@ -28,13 +29,18 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 
 3. Write your changes to the ```src``` folder. The dev server will automatically rebuild the site and reload your browser as you make your changes.
 
-4. Do **not** make file changes in the ```docs``` folder. If there are any problems or file mismatches, it is perfectly safe to stop the dev server, completely delete the ```docs``` folder, and then start the dev server again.
+4. **Do not** make any file changes in the ```docs``` folder.
 
-5. When done, stop the server with ```Ctrl + C```.
+5. If there are any file mismatches or build problems, it's perfectly safe to:
+    1. Stop the dev server
+    2. Completely delete the ```docs``` folder
+    3. Start the dev server again.
 
-6. Commit and push to your development branch.
+6. When done, stop the server with ```Ctrl + C```.
 
-7. When done, make a pull request (as explained in previous section).
+7. Commit and push to your development branch.
+
+8. When done, make a pull request (as explained in previous section).
 
 
 
@@ -61,5 +67,5 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 * Put names for controls (links and buttons) in code tags (or backticks if using markdown).
 * Content images (screenshots) should be stored in a folder named _assets next to the page.
 * When painting arrows and indicators on a screenshot, use the orange color `#FF7B00`.
-* Screenshots must always have 2 version. One for desktop and one for mobile.
-* If the page is only written in swedish, add the `<!-- only-in-swedish.html -->` include after the `h1` element.
+* Screenshots must always have 2 versions, one for desktop and one for mobile.
+* If the page is only written in swedish, add the `<!-- only-in-swedish.html -->` include immediately after the `h1` element.
