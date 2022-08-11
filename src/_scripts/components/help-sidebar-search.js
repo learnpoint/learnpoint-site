@@ -8,7 +8,6 @@
         includeMatches: true,
         threshold: 0.3,
         ignoreLocation: true,
-        //keys: ['title', 'description', 'content']
         keys: ['title', 'content']
     }
 
