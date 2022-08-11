@@ -212,47 +212,31 @@
 
 .help-sidebar nav {
     padding: 0 4px;
+    font-size: 16px;
 }
 
 
 
 /* =========================================================================
-   ul
+   section
    ========================================================================= */
 
-.help-sidebar ul {
-    margin: 0;
+.help-sidebar section {
+    margin-bottom: 1.5em;
+}
+
+
+
+/* =========================================================================
+    h2
+   ========================================================================= */
+
+.help-sidebar h2 {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    margin: 0 0 .2em;
     padding: 0;
-}
-
-
-
-/* =========================================================================
-   ul ul
-   ========================================================================= */
-
-.help-sidebar ul ul {
-    display: none;
-}
-
-.help-sidebar ul li.OPEN ul {
-    display: block;
-}
-
-
-
-/* =========================================================================
-   li
-   ========================================================================= */
-
-.help-sidebar li {
-    list-style: none;
-    display: block;
-    margin: 0;
-}
-
-.is-mobile .help-sidebar li {
-    color: #eee;
 }
 
 
@@ -264,89 +248,5 @@
 .help-sidebar nav a {
     display: block;
     text-decoration: none;
-    border-radius: 2px 4px 4px 2px;
     color: inherit;
-    line-height: 1.2;
-}
-
-
-
-/* =========================================================================
-   li li a
-   ========================================================================= */
-
-.help-sidebar nav li li a {
-    font-size: 17px;
-    padding: 6px 17px;
-    border-left: 2px solid rgba(0, 0, 0, .05);
-    margin-left: 4px;
-    border-radius: 0;
-}
-
-.is-mobile .help-sidebar nav li li a {
-    border-radius: 6px;
-    border: none;
-    margin-left: 0;
-}
-
-.help-sidebar nav li li a.SELECTED {
-    font-weight: 600;
-    /* border-color: #0780ff; */
-    border-left: 2px solid #0780ff;
-    color: #000;
-}
-
-.is-mobile .help-sidebar nav li li a.SELECTED {
-    background-color: rgba(255, 255, 255, .2);
-    color: #fff;
-    border: none;
-}
-
-
-
-/* =========================================================================
-   button
-   ========================================================================= */
-
-.help-sidebar nav button {
-    appearance: none;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
-    margin: 1em 0 .2em -4px;
-    margin: 8px 0 4px -4px;
-    border: 0;
-    padding: 0;
-    padding: 6px 24px 4px 0;
-    background: inherit;
-    font: inherit;
-    font-weight: 600;
-}
-
-.is-mobile .help-sidebar nav button {
-    color: #fff;
-}
-
-
-
-/* =========================================================================
-   button svg
-   ========================================================================= */
-
-.help-sidebar nav button svg {
-    /* chevron */
-    color: #000;
-    width: 16px;
-    height: 16px;
-}
-
-.is-mobile .help-sidebar nav button svg {
-    /* chevron */
-    color: #fff;
-}
-
-.help-sidebar nav li.OPEN button svg {
-    /* right chevron */
-    transform: rotate(90deg);
 }
