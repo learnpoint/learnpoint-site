@@ -4,7 +4,6 @@
 
 .help-sidebar {
     flex: 0 0 246px;
-    flex: 0 0 300px;
 }
 
 .is-mobile .help-sidebar {
@@ -234,8 +233,7 @@
 .help-sidebar h2 {
     font-family: inherit;
     font-size: inherit;
-    font-weight: 600;
-    margin: 0 0 .2em;
+    margin: 0 0 .3em 6px;
     padding: 0;
 }
 
@@ -248,5 +246,20 @@
 .help-sidebar nav a {
     display: block;
     text-decoration: none;
-    color: inherit;
+    color: #444;
+    padding: 3px 6px;
+    border-radius: 0 4px 4px 0;
+    border-left: 2px solid transparent;
+}
+
+.is-desktop .help-sidebar nav a:hover {
+    color: #000;
+    background-color: rgba(0, 0, 0, .02);
+}
+
+.help-sidebar nav a.SELECTED,
+.is-desktop .help-sidebar nav a.SELECTED {
+    color: #000;
+    border-color: #0780ff;
+    background-color: rgba(0, 0, 0, .04);
 }

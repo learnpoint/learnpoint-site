@@ -8,8 +8,7 @@
     const Selector = {
         SIDEBAR: '[data-element="help-sidebar"]',
         OPEN_BUTTON: '[data-element="help-sidebar.open-button"]',
-        CLOSE_BUTTON: '[data-element="help-sidebar.close-button"]',
-        SUBTREE_TOGGLER: '[data-element="help-sidebar.subtree-toggler"]'
+        CLOSE_BUTTON: '[data-element="help-sidebar.close-button"]'
     }
 
 
@@ -64,34 +63,15 @@
 
 
     /* =====================================================================
-       Toggle Subtree
-       ===================================================================== */
-
-    document.addEventListener('click', event => {
-        if (!event.target.closest(Selector.SUBTREE_TOGGLER)) {
-            return;
-        }
-
-        const liContainer = event.target.closest('li');
-        liContainer.classList.toggle(ClassName.OPEN);
-    });
-
-
-
-    /* =====================================================================
        Init Selected and Open
        ===================================================================== */
 
     function initSelectedAndOpen() {
         const currentPath = location.pathname;
-        const matchingLinks = document.querySelectorAll(`[data-element="help-sidebar"] ul a[href="${currentPath}"]`);
+        const matchingLinks = document.querySelectorAll(`[data-element="help-sidebar"] a[href="${currentPath}"]`);
 
         for (const matchingLink of matchingLinks) {
             matchingLink.classList.add(ClassName.SELECTED);
-            const parentList = matchingLink.closest('ul').closest('li');
-            if (parentList) {
-                parentList.classList.add(ClassName.OPEN);
-            }
         }
     }
 
