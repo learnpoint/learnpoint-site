@@ -1,6 +1,7 @@
 .footer {
     border-top: 1px solid #ccc;
     max-width: 980px;
+    max-width: 1200px;
     margin: 128px auto 64px;
     padding: 12px 16px;
     display: flex;

@@ -3,7 +3,15 @@
    ========================================================================= */
 
 .help-sidebar {
-    flex: 0 0 246px;
+    /* flex: 0 0 246px; */
+    /* width: 246px; */
+    /* position: sticky;
+    top: 112px; */
+    /* position: sticky; */
+    /* top: 32px; */
+    /* overflow-y: auto; */
+    /* overscroll-behavior: contain; */
+    /* max-height: calc(100vh - 8em); */
 }
 
 .is-mobile .help-sidebar {
@@ -38,7 +46,8 @@
     cursor: pointer;
     position: absolute;
     top: 2px;
-    left: 0;
+    /* left: 0; */
+    right: 0;
     border: 0;
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 4px;
@@ -113,8 +122,10 @@
    ========================================================================= */
 
 .help-sidebar__search {
-    position: relative;
-    margin: .4em 0 1.5em;
+    position: sticky;
+    top: 0;
+    margin: 0 .1em 1.5em;
+    background-color: yellow;
 }
 
 
@@ -210,7 +221,6 @@
    ========================================================================= */
 
 .help-sidebar nav {
-    padding: 0 4px;
     font-size: 16px;
 }
 
@@ -233,8 +243,12 @@
 .help-sidebar h2 {
     font-family: inherit;
     font-size: inherit;
-    margin: 0 0 .3em 6px;
+    margin: 0 0 .3em 10px;
     padding: 0;
+}
+
+.is-mobile .help-sidebar h2 {
+    color: #ccc;
 }
 
 
@@ -246,10 +260,15 @@
 .help-sidebar nav a {
     display: block;
     text-decoration: none;
-    color: #444;
-    padding: 3px 6px;
+    color: #666;
+    padding: 2px 8px;
+    margin: 1px 0;
     border-radius: 0 4px 4px 0;
     border-left: 2px solid transparent;
+}
+
+.is-mobile .help-sidebar nav a {
+    color: #bbb;
 }
 
 .is-desktop .help-sidebar nav a:hover {
@@ -257,9 +276,15 @@
     background-color: rgba(0, 0, 0, .02);
 }
 
-.help-sidebar nav a.SELECTED,
-.is-desktop .help-sidebar nav a.SELECTED {
+.help-sidebar nav a.SELECTED {
     color: #000;
     border-color: #0780ff;
-    background-color: rgba(0, 0, 0, .04);
+    background-color: rgba(0, 0, 0, .02);
+    /* background-color: transparent; */
+}
+
+.is-mobile .help-sidebar nav a.SELECTED {
+    color: #fff;
+    border-color: #0780ff;
+    background-color: rgba(255, 255, 2666, .2);
 }

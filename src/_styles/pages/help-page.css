@@ -4,12 +4,11 @@
 
 .help-page {
     position: relative;
-    display: flex;
-    align-items: stretch;
     max-width: 1080px;
     margin: 2em auto 0;
+    display: grid;
+    grid-template-columns: 246px auto;
     gap: 32px;
-    gap: 3vw;
 }
 
 .is-mobile .help-page {
@@ -18,13 +17,23 @@
 
 
 
-
 /* =========================================================================
-   Content
+   Sidebar Area
    ========================================================================= */
 
-.help-page__content {
-    flex-grow: 1;
+.help-page__sidebar-area {
+    border-right: 1px solid #ccc;
+    padding-right: 24px;
+}
+
+
+
+/* =========================================================================
+   Main Area
+   ========================================================================= */
+
+.help-page__main-area {
+
 }
 
 
@@ -42,6 +51,7 @@
 .is-mobile .help-page h1 {
     font-size: 1.5em;
     padding: 0 0 0 40px;
+    padding: 0 40px 0 0;
     margin-bottom: 1em;
 }
 
@@ -56,7 +66,6 @@
    ========================================================================= */
 
 .help-page h2 {
-    /* margin: default; */
     margin-top: 1.6em;
 }
 
