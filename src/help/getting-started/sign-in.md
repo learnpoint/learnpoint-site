@@ -23,7 +23,7 @@ Om det är första gången du loggar in behöver du aktivera ditt konto:
 1. Ange din e-postadress och klicka på `OK`.
 1. Du får inom kort ett mail med instruktioner för att aktivera kontot.
 
-<!-- desktop-screenshot.html, { src: "_assets/activate-account.png", theme: "dark" } -->
+<!-- desktop-screenshot.html, { src: "_assets/activate-account.png", alt: "Aktivera konto", theme: "dark" } -->
 
 ## Logga in
 
@@ -33,7 +33,7 @@ När du aktiverat ditt konto loggar du in på följande sätt:
 1. Ange användarnamn och lösenord.
 1. Klicka på `Logga in`.
 
-<!-- desktop-screenshot.html, { src: "_assets/sign-in.png", theme: "dark" } -->
+<!-- desktop-screenshot.html, { src: "_assets/sign-in.png", alt: "Logga in", theme: "dark" } -->
 
 ## Problem att logga in?
 
