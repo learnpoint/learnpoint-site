@@ -44,3 +44,10 @@ a {
     color: #0780ff;
 }
 
+.is-mobile .desktop {
+    display: none;
+}
+
+.is-desktop .mobile {
+    display: none;
+}
