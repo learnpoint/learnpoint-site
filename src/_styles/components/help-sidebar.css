@@ -3,15 +3,8 @@
    ========================================================================= */
 
 .help-sidebar {
-    /* flex: 0 0 246px; */
-    /* width: 246px; */
-    /* position: sticky;
-    top: 112px; */
-    /* position: sticky; */
-    /* top: 32px; */
-    /* overflow-y: auto; */
-    /* overscroll-behavior: contain; */
-    /* max-height: calc(100vh - 8em); */
+    position: sticky;
+    top: 16px;
 }
 
 .is-mobile .help-sidebar {
@@ -78,11 +71,23 @@
 
 
 /* =========================================================================
+   Close Button Panel
+   ========================================================================= */
+
+.help-sidebar__close-button-panel {
+    display: flex;
+    justify-content: end;
+}
+
+
+
+/* =========================================================================
    Close Button
    ========================================================================= */
 
 .help-sidebar__close-button {
     display: none;
+    right: 0;
     justify-content: center;
     align-items: center;
     width: 36px;
@@ -123,6 +128,7 @@
 
 .help-sidebar__search {
     margin: .5em .1em 1.5em;
+    position: relative;
 }
 
 
@@ -257,7 +263,7 @@
 .help-sidebar nav a {
     display: block;
     text-decoration: none;
-    color: #666;
+    color: #555;
     padding: 2px 8px;
     margin: 1px 0;
     border-radius: 0 4px 4px 0;
