@@ -1,5 +1,5 @@
 .desktop-screenshot {
-    border-radius: 10px;
+    border-radius: 10px 10px 6px 6px;  /* Must be same as browser-frame and img/video */
     box-shadow: 2px 8px 32px rgba(0, 0, 0, 0.1),
                 4px 16px 64px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
@@ -25,6 +25,7 @@
     height: 36px;
     display: flex;
     align-items: center;
+    border-radius: 10px 10px 0 0; /* Must be same as wrapper */
 }
 
 .desktop-screenshot.dark .desktop-screenshot__browser-frame {
@@ -55,4 +56,5 @@
 .desktop-screenshot video {
     display: block;
     width: 100%;
+    border-radius: 0 0 6px 6px; /* Must be same as wrapper */
 }
