@@ -8,24 +8,19 @@ description: Grupper / Inledning - Learnpoint Hjälp och Support
 
 <!-- only-in-swedish.html -->
 
+Learnpoint är huvudsakligen organiserat i grupper. Varje grupp innehåller information och funktionalitet för just den gruppen.
 
-## Hitta grupper
+Det finns tre typer av grupper i Learnpoint — *skola*, *klass* och *kurs*. Dom fungerar på ungefär samma sätt, men det finns några skillnader. Exempelvis finns funktionen *innehåll* endast i kurser, och funktionen *material* finns endast i klasser och skolan.
 
-Klicka på länken `Grupper` för att se och söka bland dina grupper:
+## Dina aktuella grupper
 
-<!-- desktop-screenshot.html, { src: "_assets/groups.png" } -->
-
-
-## Aktuella grupper
-
-Dina aktuella grupper visas i vänstermenyn:
+Dina aktuella (pågående) grupper visas i menyn till vänster:
 
 <!-- desktop-screenshot.html, { src: "_assets/current-groups.png" } -->
 
 
-## Grupptyper
+## Hitta grupper
 
-Det finns tre typer av grupper i Learnpoint:
-1. *Skola.* Den gemensamma gruppen för skolan har samma namn som skolan och innehåller alla inskrivna studerande och de som är anställda på skolan. Konsulter och LIA-handledare är inte medlemmar i denna grupp.
-2. *Klass.* En klass motsvarar en utbildning och innehåller en eller flera kurser.
-3. *Kurs.* En kurs kan tillhöra en klass eller vara fristående.
+Klicka på länken `Grupper` för att se och söka bland alla dina grupper:
+
+<!-- desktop-screenshot.html, { src: "_assets/groups.png" } -->

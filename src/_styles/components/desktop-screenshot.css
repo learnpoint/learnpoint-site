@@ -51,7 +51,8 @@
     background-color: #27CA41;
 }
 
-.desktop-screenshot img {
+.desktop-screenshot img,
+.desktop-screenshot video {
     display: block;
     width: 100%;
 }

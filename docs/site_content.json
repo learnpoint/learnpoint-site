@@ -30,6 +30,18 @@
         "content": "Administrera Studenter This page is only available in swedish."
     },
     {
+        "title": "Kom igång / Aviseringar",
+        "description": "Aviseringar - Learnpoint Hjälp och Support",
+        "url": "/help/getting-started/notifications.html",
+        "content": "Aviseringar This page is only available in swedish. Du behöver inte leta runt i Learnpoint för att hitta det senaste som hänt. Allt nytt (och relevant för dig) finns samlat på sidan Aviseringar. Sidan aviseringar Sidan Aviseringar finns längst upp i menyn till vänster: Markera en avisering som läst När du klickar på en avisering kommer du till det aviseringen avser (ex. en nyhet eller en kommentar). Aviseringen markeras då automatiskt som läst. Du kan dessutom manuellt markera en avisering som läst. Klicka på meny-ikonen (tre prickar till höger om aviseringen) och sedan på knappen Markera som läst: För att markera alla aviseringar som lästa, klicka på knappen Markera alla som lästa: Markera en avisering som oläst Om en avisering är läst, kan du markera den som oläst. Klicka på meny-ikonen (tre prickar till höger om den lästa aviseringen) och sedan på knappen Markera som oläst: Avisering per e-post Du kan välja att bli aviserad med e-post. Aviseringarna visas alltid på aviseringssidan, men du kan dessutom få e-post när det kommer nya aviseringar. För att bli aviserad med e-post, gå till inställningssidan genom att klicka på kugghjulet och kryssa sedan i checkboxen:"
+    },
+    {
+        "title": "Kom igång / Profilsidan",
+        "description": "Profilsidan - Learnpoint Hjälp och Support",
+        "url": "/help/getting-started/profile-page.html",
+        "content": "Profilsidan This page is only available in swedish. Se profilsida Redigera information Dina kurser (staff) Din studieplan (student) Din kalender (student) Dokumentation (student)"
+    },
+    {
         "title": "Kom igång / Logga in",
         "description": "Logga in - Learnpoint Hjälp och Support",
         "url": "/help/getting-started/sign-in.html",
@@ -81,12 +93,18 @@
         "title": "Grupper / Inledning",
         "description": "Grupper / Inledning - Learnpoint Hjälp och Support",
         "url": "/help/groups/introduction.html",
-        "content": "Grupper This page is only available in swedish. Hitta grupper Klicka på länken Grupper för att se och söka bland dina grupper: Aktuella grupper Dina aktuella grupper visas i vänstermenyn: Grupptyper Det finns tre typer av grupper i Learnpoint: Skola. Den gemensamma gruppen för skolan har samma namn som skolan och innehåller alla inskrivna studerande och de som är anställda på skolan. Konsulter och LIA-handledare är inte medlemmar i denna grupp. Klass. En klass motsvarar en utbildning och innehåller en eller flera kurser. Kurs. En kurs kan tillhöra en klass eller vara fristående."
+        "content": "Grupper This page is only available in swedish. Learnpoint är huvudsakligen organiserat i grupper. Varje grupp innehåller information och funktionalitet för just den gruppen. Det finns tre typer av grupper i Learnpoint — skola, klass och kurs. Dom fungerar på ungefär samma sätt, men det finns några skillnader. Exempelvis finns funktionen innehåll endast i kurser, och funktionen material finns endast i klasser och skolan. Dina aktuella grupper Dina aktuella (pågående) grupper visas i menyn till vänster: Hitta grupper Klicka på länken Grupper för att se och söka bland alla dina grupper:"
+    },
+    {
+        "title": "Grupper / Hantera",
+        "description": "Grupper / Hantera - Learnpoint Hjälp och Support",
+        "url": "/help/groups/manage.html",
+        "content": "Hantera grupper This page is only available in swedish."
     },
     {
         "title": "Grupper / Nyheter",
         "description": "Grupper / Nyheter - Learnpoint Hjälp och Support",
-        "url": "/help/groups/news.html",
+        "url": "/help/groups/posts.html",
         "content": "Nyheter This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
     },
     {
@@ -105,7 +123,7 @@
         "title": "Hjälp",
         "description": "Learnpoint Hjälp och Support",
         "url": "/help/index.html",
-        "content": "Help Hjälp Support Support support@learnpoint.se +46 850 126 090 08 - 50 12 60 90 Phone opening hours: Telefontider: Mon-Thu Mån-Tor 9am-12pm and 1pm-5pm 9-12 och 13-17 Fri Fre 9am-12pm 9-12 User Guides Användardokumentation Check out the guides in the menu to the left for instructions on how to use Learnpoint. I menyn till vänster finns instruktioner som beskriver hur du använder de olika funktionerna i Learnpoint. Check out the guides in the I menyn menu in the upper right corner for instructions on how to use Learnpoint. uppe till höger hittar du instruktioner som beskriver hur man använder de olika funktionerna i Learnpoint. Feedback Feedback We really appreciate feedback from our users! Get in touch with our support with your ideas on how we can improve Learnpoint. Vi uppskattar alltid feedback från våra användare! Kontakta vår support om du har synpunkter eller förslag kring Learnpoint. User Testing Användartester If you want to participate in user testing or user interviews, please send an email to: karl.west@viaecole.se Vill du delta i våra användartester eller verksamhetsintervjuer, skicka en intresseanmälan till: karl.west@viaecole.se"
+        "content": "Help Hjälp Support Support support@learnpoint.se +46 850 126 090 08 - 50 12 60 90 Phone opening hours: Telefontider: Mon-Thu Mån-Tor 9am-12pm and 1pm-5pm 9-12 och 13-17 Fri Fre 9am-12pm 9-12 User Guides Användardokumentation Check out the guides in the menu to the left for instructions on how to use Learnpoint. I menyn till vänster finns instruktioner som beskriver hur du använder de olika funktionerna i Learnpoint. Check out the guides in the I menyn menu in the upper right corner for instructions on how to use Learnpoint. uppe till höger hittar du instruktioner som beskriver hur man använder de olika funktionerna i Learnpoint. Feedback Feedback We really appreciate feedback from our users! Get in touch with our support with your ideas on how we can improve Learnpoint. Vi uppskattar alltid feedback från våra användare! Kontakta vår support om du har synpunkter eller förslag kring Learnpoint. User Testing Användartester If you want to participate in user testing or user interviews, please send an email to: karl.west@viaecole.se Vill du delta i våra användartester eller verksamhetsintervjuer? Skicka intresseanmälan till: karl.west@viaecole.se"
     },
     {
         "title": "LIA / Lägg till LIA-plats",
