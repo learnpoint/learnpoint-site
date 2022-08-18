@@ -14,7 +14,7 @@ Det finns tre typer av grupper i Learnpoint — *skola*, *klass* och *kurs*. Dom
 
 ## Dina aktuella grupper
 
-Dina aktuella (pågående) grupper visas i menyn till vänster:
+"Aktuella grupper" är dom du är medlem i och som pågår just nu. Du hittar dina aktuella grupper i menyn till vänster:
 
 <!-- desktop-screenshot.html, { src: "_assets/current-groups.png" } -->
 
