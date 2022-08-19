@@ -47,7 +47,39 @@
    ========================================================================= */
 
 .help-index-page__support-opening-hours {
-    margin-bottom: 6px;
+    margin-bottom: 2px;
+}
+
+
+
+/* =========================================================================
+   Suppport Open / Closed Label
+   ========================================================================= */
+
+.help-index-page__support-open-label,
+.help-index-page__support-closed-label {
+    padding: 0 .6em;
+    margin: 0 1px;
+    border-radius: .8em;
+    font-size: .9em;
+}
+
+.help-index-page__support-open-label {
+    color: #188038;
+    background-color: rgba(24, 128, 56, .08);
+}
+
+.help-index-page__support-closed-label {
+    color: #d93025;
+    background-color: rgba(217, 48, 37, .06);
+}
+
+.help-index-page__support-opening-hours.CLOSED .help-index-page__support-open-label {
+    display: none;
+}
+
+.help-index-page__support-opening-hours.OPEN .help-index-page__support-closed-label {
+    display: none;
 }
 
 
@@ -63,7 +95,7 @@
 }
 
 .help-index-page__support-opening-hours-table td {
-    padding: 0 .5em 0 .3em;
+    padding: 0 1em 0 .1em;
 }
 
 

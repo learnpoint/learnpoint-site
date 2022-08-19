@@ -214,9 +214,46 @@
 </p>
 
 <p class="help-index-page__support-opening-hours">
-    <span lang="en">Phone opening hours:</span>
-    <span lang="sv">Telefontider:</span>
+    <span lang="en">
+        <span>Phone opening hours</span>
+        <span class="help-index-page__support-open-label">Open</span>
+        <span class="help-index-page__support-closed-label">Closed</span>
+    </span>
+    <span lang="sv">
+        <span>Telefontider</span>
+        <span class="help-index-page__support-open-label">Öppet</span>
+        <span class="help-index-page__support-closed-label">Stängt</span>
+    </span>
 </p>
+
+<script>
+    const phoneSupportOpenHours = {
+        0: [],                          // Sun
+        1: [9, 10, 11, 13, 14, 15, 16], // Mon
+        2: [9, 10, 11, 13, 14, 15, 16], // Tue
+        3: [9, 10, 11, 13, 14, 15, 16], // Wed
+        4: [9, 10, 11, 13, 14, 15, 16], // Thu
+        5: [9, 10, 11],                 // Fri
+        6: [],                          // Sat
+    };
+
+    function phoneSupportIsOpen() {
+        const nowAtOffice = new Date((new Date()).toLocaleString('en-US', { timeZone: 'Europe/Stockholm' }));
+        const dayAtOffice = nowAtOffice.getDay();
+        const hourAtOffice = nowAtOffice.getHours();
+        return phoneSupportOpenHours[dayAtOffice].includes(hourAtOffice);
+    }
+
+    const isOpen = phoneSupportIsOpen();
+
+    const supportOpeningHoursPanel = document.querySelector('.help-index-page__support-opening-hours');
+
+    if (isOpen) {
+        supportOpeningHoursPanel.classList.add('OPEN');
+    } else {
+        supportOpeningHoursPanel.classList.add('CLOSED');
+    }
+</script>
 
 <table class="help-index-page__support-opening-hours-table">
     <tr>
