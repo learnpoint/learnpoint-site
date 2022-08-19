@@ -10,7 +10,7 @@ description: Grupper / Inledning - Learnpoint Hjälp och Support
 
 Learnpoint är huvudsakligen organiserat i grupper. Varje grupp innehåller information och funktionalitet för just den gruppen.
 
-Det finns tre typer av grupper i Learnpoint — *skola*, *klass* och *kurs*. Dom fungerar på ungefär samma sätt, men det finns några skillnader. Exempelvis finns funktionen *innehåll* endast i kurser, och funktionen *material* finns endast i klasser och skolan.
+Det finns tre typer av grupper i Learnpoint — *skola*, *klass* och *kurs*. Dom fungerar på ungefär samma sätt, men det finns några skillnader. Funktionen *innehåll* finns endast i kurser, och funktionen *material* finns endast i klasser och skolan.
 
 ## Aktuella grupper
 
