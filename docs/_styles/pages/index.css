@@ -124,8 +124,10 @@
 .index__contact {
     text-align: center;
     padding: 48px 48px 16px;
+    padding: 48px 132px 16px;
     color: #fff;
     max-width: 420px;
+    max-width: 320px;
     margin: 64px auto;
     border-radius: 32px;
     background: #0780ff;
@@ -137,21 +139,22 @@
 }   
 
 .index__contact-title {
-    font-size: 24px;
+    font-size: 28px;
     line-height: 1.1;
     font-weight: bold;
-    margin: 0 0 20px;
+    margin: 0 0 24px;
 }
 
 .is-mobile .index__contact-title {
     font-size: 20px;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
 } 
 
 .index__contact-paragraph {
     font-size: 20px;
     line-height: 1.3;
     margin: 0 0 20px;
+    margin: 0 0 24px;
 }
 
 .is-mobile .index__contact-paragraph {
@@ -170,4 +173,3 @@
     vertical-align: middle;
     font-size: 1.2em;
 }
-
