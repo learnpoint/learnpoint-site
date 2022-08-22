@@ -51,6 +51,7 @@
 
 .is-mobile .help-page h1 {
     font-size: 1.5em;
+    font-size: 1.6em;
     padding: 0 0 0 38px;
     padding: 0 40px 0 0;
     margin-bottom: 1em;
@@ -69,6 +70,10 @@
 .help-page h2 {
     margin-top: 1.8em;
     font-size: 1.4em;
+}
+
+.is-mobile .help-page h2 {
+    font-size: 1.1em;
 }
 
 .help-page .screenshot + h2,
