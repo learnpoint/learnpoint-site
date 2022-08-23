@@ -22,4 +22,4 @@ Klicka på pennan för att ändra profilbild och på länken `Redigera` för att
 
 Klicka på länken `Byt lösenord` för att byta lösenord:
 
-<!-- desktop-screenshot.html, { src: "_assets/profile-page-edit.png", alt: "Redigera profil", theme: "light" } -->
+<!-- desktop-screenshot.html, { src: "_assets/profile-page-change-password.png", alt: "Byta lösenord", theme: "light" } -->
