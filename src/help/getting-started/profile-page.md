@@ -8,14 +8,18 @@ description: Profilsidan - Learnpoint Hjälp och Support
 
 <!-- only-in-swedish.html -->
 
-## Se profilsida
+På din profilsida finns allmän information om dig som exempelvis namn, e-post och bild. Du kommmer till profilsidan genom att klicka på ditt namn längst ned i menyn till vänster:
 
-## Redigera information
+<!-- desktop-screenshot.html, { src: "_assets/profile-page.png", alt: "Profilsida", theme: "light" } -->
 
-## Dina kurser (staff)
+## Ändra profil
 
-## Din studieplan (student)
+Klicka på pennan för att ändra profilbild och på länken `Redigera` för att ändra information:
 
-## Din kalender (student)
+<!-- desktop-screenshot.html, { src: "_assets/profile-page-edit.png", alt: "Redigera profil", theme: "light" } -->
 
-## Dokumentation (student)
+## Byt lösenord
+
+Klicka på länken `Byt lösenord` för att byta lösenord:
+
+<!-- desktop-screenshot.html, { src: "_assets/profile-page-edit.png", alt: "Redigera profil", theme: "light" } -->
