@@ -8,4 +8,24 @@ description: Grupper / Nyheter - Learnpoint Hjälp och Support
 
 <!-- only-in-swedish.html -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor.
+Du kan skriva nyheter för att meddela information till medlemmarna i en grupp. Nyheterna finns under fliken `Nyheter` i respektive grupp:
+
+<!-- desktop-screenshot.html, { src: "_assets/posts.png", alt: "Nyheter", theme: "light" } -->
+
+
+## Skriva och publicera nyheter
+
+För att skriva en nyhet, klicka först på knappen `Skriv nyhet` uppe till vänster. Fyll sedan i titel, innehåll och klicka på knappen `Publicera`:
+
+<!-- desktop-screenshot.html, { src: "_assets/write-and-publish-post.png", alt: "Publicera nyhet", theme: "light" } -->
+
+
+## Spara utkast
+
+När du publicerar en nyhet får medlemmarna i gruppen en avisering och kan läsa nyheten. Om du vill spara nyheten och publicera vid ett senare tillfälle, klickar du istället på knappen `Spara utkast`:
+
+<!-- desktop-screenshot.html, { src: "_assets/save-post-as-draft.png", alt: "Spara nyhet som utkast", theme: "light" } -->
+
+Dina sparade utkast finns under knappen `Dina utkast` uppe till höger på nyhetsfliken:
+
+<!-- desktop-screenshot.html, { src: "_assets/post-drafts.png", alt: "Utkast", theme: "light" } -->
