@@ -53,11 +53,12 @@
 
 
 /* =========================================================================
-   Suppport Open / Closed Label
+   Suppport Open / Closed / Closed For Lunch Labels
    ========================================================================= */
 
 .help-index-page__support-open-label,
-.help-index-page__support-closed-label {
+.help-index-page__support-closed-label,
+.help-index-page__support-closed-for-lunch-label {
     padding: 0 .6em;
     border-radius: .8em;
     font-size: .9em;
@@ -68,16 +69,24 @@
     background-color: rgba(24, 128, 56, .08);
 }
 
-.help-index-page__support-closed-label {
+.help-index-page__support-closed-label,
+.help-index-page__support-closed-for-lunch-label {
     color: #d93025;
     background-color: rgba(217, 48, 37, .06);
 }
 
-.help-index-page__support-opening-hours.CLOSED .help-index-page__support-open-label {
+.help-index-page__support-opening-hours.CLOSED .help-index-page__support-open-label,
+.help-index-page__support-opening-hours.CLOSED-FOR-LUNCH .help-index-page__support-open-label {
     display: none;
 }
 
-.help-index-page__support-opening-hours.OPEN .help-index-page__support-closed-label {
+.help-index-page__support-opening-hours.OPEN .help-index-page__support-closed-label,
+.help-index-page__support-opening-hours.CLOSED-FOR-LUNCH .help-index-page__support-closed-label {
+    display: none;
+}
+
+.help-index-page__support-opening-hours.OPEN .help-index-page__support-closed-for-lunch-label,
+.help-index-page__support-opening-hours.CLOSED .help-index-page__support-closed-for-lunch-label {
     display: none;
 }
 
