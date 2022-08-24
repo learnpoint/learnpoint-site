@@ -25,6 +25,8 @@ Man kan inte lägga till en student direkt på skolan eller på en kurs. Iställ
 
 <!-- desktop-recording.html, { src: "_assets/add-student.mp4", alt: "Lägg till student", theme: "light" } -->
 
+Om studenten är helt ny på skolan, så blir du ombedd att även ange namn, födelsedatum, adress, m.m.
+
 
 ## Ta bort student
 
