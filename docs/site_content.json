@@ -63,25 +63,7 @@
         "title": "Grupper / Om",
         "description": "Grupper / Om - Learnpoint Hjälp och Support",
         "url": "/help/groups/about.html",
-        "content": "Om This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
-    },
-    {
-        "title": "Grupper / Kalender",
-        "description": "Grupper / Kalender - Learnpoint Hjälp och Support",
-        "url": "/help/groups/calendar.html",
-        "content": "Kalender This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
-    },
-    {
-        "title": "Grupper / Innehåll",
-        "description": "Grupper / Innehåll - Learnpoint Hjälp och Support",
-        "url": "/help/groups/content.html",
-        "content": "Innehåll This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
-    },
-    {
-        "title": "Grupper / Kurser",
-        "description": "Grupper / Kurser - Learnpoint Hjälp och Support",
-        "url": "/help/groups/courses.html",
-        "content": "Kurser This page is only available in swedish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor."
+        "content": "Om This page is only available in swedish. Varje grupp har en sida med allmän information: Redigera allmän information om gruppen Klicka på länken Redigera för att ändra gruppens information:"
     },
     {
         "title": "Grupper / Material",
@@ -96,12 +78,6 @@
         "content": "Grupper This page is only available in swedish. Learnpoint är huvudsakligen organiserat i grupper. Varje grupp innehåller information och funktionalitet för just den gruppen. Det finns tre typer av grupper i Learnpoint — skola, klass och kurs. Dom fungerar på ungefär samma sätt, men det finns några skillnader. Funktionen innehåll finns endast i kurser, och funktionen material finns endast i klasser och skolan. Aktuella grupper &quot;Aktuella grupper&quot; är dom grupper som du är medlem i och som pågår just nu. Dom finns i menyn till vänster: Alla grupper Klicka på länken Grupper för att se och söka bland alla dina grupper:"
     },
     {
-        "title": "Grupper / Hantera",
-        "description": "Grupper / Hantera - Learnpoint Hjälp och Support",
-        "url": "/help/groups/manage.html",
-        "content": "Hantera grupper This page is only available in swedish."
-    },
-    {
         "title": "Grupper / Nyheter",
         "description": "Grupper / Nyheter - Learnpoint Hjälp och Support",
         "url": "/help/groups/posts.html",
@@ -111,7 +87,7 @@
         "title": "Grupper / Personal",
         "description": "Grupper / Personal - Learnpoint Hjälp och Support",
         "url": "/help/groups/staff.html",
-        "content": "Personal This page is only available in swedish. Varje grupp innehåller personal som visas på fliken Personal: Lägg till personal Klicka på knappen Lägg till. Fyll i mailadress och klicka på Nästa. Kryssa i dom roller personalen skall ha i gruppen. Klicka på Klar: Om personalen är helt ny på skolan, så blir du ombedd att även ange namn, signatur, e-post, m.m. Ta bort eller ändra roll för personal Klicka på dom tre prickarna längst till höger. Klicka på Redigera medlemskap. Klicka på Ta bort eller Ändra roll. Om du valde att ändra roll, kryssa i rätt roller och klicka på Spara: Visa profilsidan för personal Varje personal har en profilsida med allmän information. Klicka på personalens bild. Klicka på Visa profilsidan. På profilsidan kan du se information om personalen:"
+        "content": "Personal This page is only available in swedish. Varje grupp innehåller personal som visas på fliken Personal: Lägg till personal Klicka på knappen Lägg till. Fyll i mailadress och klicka på Nästa. Kryssa i dom roller personalen skall ha i gruppen. Klicka på Klar: Om personalen är helt ny på skolan, så blir du ombedd att även ange namn, signatur, e-post, m.m. Ta bort eller ändra roll för personal Klicka på dom tre prickarna längst till höger. Klicka på Redigera medlemskap. Klicka på Ta bort eller Ändra roll. Om du valde att ändra roll, kryssa i rätt roller och klicka på Spara: Vilka roller som kan väljas beror på vilken typ av grupp det är. Visa profilsidan för personal Varje personal har en profilsida med allmän information. Klicka på personalens bild. Klicka på Visa profilsidan. På profilsidan kan du se information om personalen:"
     },
     {
         "title": "Grupper / Studenter",

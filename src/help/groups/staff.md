@@ -34,6 +34,8 @@ Om personalen är helt ny på skolan, så blir du ombedd att även ange namn, si
 
 <!-- desktop-recording.html, { src: "_assets/edit-staff-membership.mp4", alt: "Ta bort eller ändra roll för personal", theme: "light" } -->
 
+Vilka roller som kan väljas beror på vilken typ av grupp det är.
+
 
 ## Visa profilsidan för personal
 

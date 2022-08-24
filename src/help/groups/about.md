@@ -8,4 +8,13 @@ description: Grupper / Om - Learnpoint Hjälp och Support
 
 <!-- only-in-swedish.html -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam orci nec leo auctor tempus. Fusce a lorem orci. Nulla at laoreet risus. Aenean et tortor egestas metus vulputate gravida eget ac quam. Donec nisi mi, suscipit a risus eu, volutpat dignissim lectus. Maecenas nec tempor ante, vulputate lobortis dolor. Proin accumsan justo et lorem ornare, non mattis mi tempor.
+Varje grupp har en sida med allmän information:
+
+<!-- desktop-screenshot.html, { src: "_assets/about.png", alt: "Personal", theme: "light" } -->
+
+
+## Redigera allmän information om gruppen
+
+Klicka på länken `Redigera` för att ändra gruppens information:
+
+<!-- desktop-screenshot.html, { src: "_assets/edit-about.png", alt: "Personal", theme: "light" } -->
