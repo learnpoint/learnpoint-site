@@ -75,6 +75,6 @@
         "title": "Produktnyhet: Aviseringar i Learnpoint",
         "description": "Skapa utbildningar, registrera studenter, dela ut uppgifter, skriv nyheter, och betygsätt studenter. Allt på ett ställe.",
         "url": "/updates/2022-09/notifications.html",
-        "content": "Sign in Logga in .update { max-width: 768px; margin: 0 auto; } .update h1 { font-size: 2em; text-align: left; } .update h2 { font-size: 1.2em; } Produktnyhet: Aviseringar i Learnpoint Torsdag den 8 sep 2022 installerar vi en ny funktion i Learnpoint: Aviseringar. Underrubrik Lorem ipsum. Underrubrik Lorem ipsum. We love learning Learnpoint is developed by ViaEcole Learnpoint är utvecklat av ViaEcole Work with us Lediga tjänster English | Svenska"
+        "content": "Sign in Logga in .update { max-width: 768px; margin: 0 auto; } .update time { margin: 3em 0 .5em; display: block; color: #777; font-family: monospace; font-size: 0.9em; text-align: center; } .update h1 { font-size: 2em; text-align: center; margin: .5em 0 1.5em; } .is-mobile .update h1 { font-size: 1.6em; } .update h2 { font-size: 1.2em; } 5 sep 2022 Produktnyhet: Aviseringar i Learnpoint Ons 7 sep 2022 lanserar vi funktionen Aviseringar i Learnpoint. Underrubrik Lorem ipsum. Underrubrik Lorem ipsum. We love learning Learnpoint is developed by ViaEcole Learnpoint är utvecklat av ViaEcole Work with us Lediga tjänster English | Svenska"
     }
 ]
