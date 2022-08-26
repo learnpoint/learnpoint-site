@@ -70,5 +70,11 @@
         "description": "Sign in to Learnpoint. Logga in på Learnpoint.",
         "url": "/sign-in.html",
         "content": "Sign in Logga in Sign in Logga in Enter the Learnpoint address for your school. Skriv in Learnpoint-adressen till din skola. Couldn't find the school. Check the address. Hittade inte skolan. Kontrollera adressen. Enter the Learnpoint address Ange Learnpoint-adressen school-name Continue Fortsätt Trouble signing in? We'd be happy to help. Problem att logga in? Vi hjälper gärna till. Previous sign ins Tidigare inloggningar Learnpoint is developed by ViaEcole Learnpoint är utvecklat av ViaEcole Work with us Lediga tjänster English | Svenska"
+    },
+    {
+        "title": "Produktnyhet: Aviseringar i Learnpoint",
+        "description": "Skapa utbildningar, registrera studenter, dela ut uppgifter, skriv nyheter, och betygsätt studenter. Allt på ett ställe.",
+        "url": "/updates/2022-09/notifications.html",
+        "content": "Sign in Logga in .update { max-width: 768px; margin: 0 auto; } .update h1 { font-size: 2em; text-align: left; } .update h2 { font-size: 1.2em; } Produktnyhet: Aviseringar i Learnpoint Torsdag den 8 sep 2022 installerar vi en ny funktion i Learnpoint: Aviseringar. Underrubrik Lorem ipsum. Underrubrik Lorem ipsum. We love learning Learnpoint is developed by ViaEcole Learnpoint är utvecklat av ViaEcole Work with us Lediga tjänster English | Svenska"
     }
 ]
