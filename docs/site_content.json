@@ -54,6 +54,12 @@
         "content": "Sätta betyg This page is only available in swedish."
     },
     {
+        "title": "Betygsättning / Inledning",
+        "description": "Betygsättning / Inledning - Learnpoint Hjälp och Support",
+        "url": "/help/grading/introduction.html",
+        "content": "Betyg This page is only available in swedish. Både kurser och enskilda kursdelar kan ha betyg i Learnpoint. Som student hittar du en sammanställning av dina kursbetyg på studieplanen: Som lärare hittare du en sammanställning av kursens betyg på betygsfliken:"
+    },
+    {
         "title": "Betygsättning / Publicera betyg",
         "description": "Betygsättning / Publicera betyg - Learnpoint Hjälp och Support",
         "url": "/help/grading/publish.html",
