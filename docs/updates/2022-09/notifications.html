@@ -54,7 +54,7 @@
     }
 
     .update time {
-        margin: 3em 0 .5em;
+        margin: 3em 0 0;
         display: block;
         color: #777;
         font-family: monospace;
@@ -65,7 +65,7 @@
     .update h1 {
         font-size: 2em;
         text-align: center;
-        margin: .5em 0 1.5em;
+        margin: .3em 0 1.5em;
     }
 
     .is-mobile .update h1 {
@@ -74,16 +74,27 @@
 
     .update h2 {
         font-size: 1.2em;
+        margin: 1.6em 0 .2em;
+    }
+
+    .update .desktop-screenshot + h2 {
+        margin-top: 2em;
     }
 </style>
 
 <div class="update">
 
-    <time>5 sep 2022</time>
+    <time lang="en">Sep 5, 2022</time>
+    <time lang="sv">5 sep 2022</time>
 
-    <h1>Produktnyhet: Aviseringar i Learnpoint</h1>
+    <h1>
+        <span lang="en">Product update: Notifications in Learnpoint</span>
+        <span lang="sv">Produktnyhet: Aviseringar i Learnpoint</span>
+    </h1>
 
-    <p>Ons 7 sep 2022 lanserar vi funktionen Aviseringar i Learnpoint.</p>
+    <p>Ons 7 sep 2022 lanseras funktionen <em>Aviseringar</em>. Den traditionella startsidan med ett nyhetsflöde, ersätts med en aviseringssida som innehåller allt nytt (och relevant) som hänt sedan du senast loggade in.</p>
+    
+    <p>Bilden nedan illustrerar hur den nya startsidan kommer se ut:</p>
 
     <div class="desktop-screenshot">
     <div class="desktop-screenshot__browser-frame">
@@ -95,21 +106,30 @@
     <img alt="Aviseringar" src="assets/notifications.png" onload="this.parentElement.classList.add('LOADED')" />
 </div>
 
-    <h2>
-        <span>Underrubrik</span>
-    </h2>
+    <h2>Vart hittar man nyheter?</h2>
 
-    <p>
-        <span>Lorem ipsum.</span>
-    </p>
+    <p>Dom finns kvar i form av aviseringar.</p>
 
-    <h2>
-        <span>Underrubrik</span>
-    </h2>
+    <p>Dom finns kvar i grupperna.</p>
 
-    <p>
-        <span>Lorem ipsum.</span>
-    </p>
+    <h2>Vad aviserar Learnpoint om?</h2>
+
+    <p>Till att börja med x, y och z. På sikt även a, b och c. Vi utvärderar.</p>
+
+    <h2>Bergränsningar</h2>
+
+    <p>Inga notifieringar i mobilapp. Men kan man få mail.</p>
+
+    <h2>Påminnelser</h2>
+
+    <p>Vissa aviseringar kan påminna. Exempelvis enkäter.</p>
+
+    <h2>Krav på medlemskap</h2>
+
+    <p>UL på klass utan medlemskap i underliggande kurs, få inte aviseringar från underliggande kurs.</p>
+
+
+    <p><br /></p>
 
     <p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="#ef0000">
