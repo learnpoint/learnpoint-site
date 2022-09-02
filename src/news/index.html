@@ -1,0 +1,63 @@
+<!-- header.html, { title: "Learnpoint News" } -->
+
+<style>
+    .preamble {
+        text-align: center;
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    .news-list {
+        max-width: 480px;
+        margin: 3em auto;
+    }
+
+    .news-list a {
+        display: flex;
+        text-decoration: none;
+        flex-direction: column;
+        color: inherit;
+        margin-bottom: 1em;
+        background-color: #fff;
+        padding: 1em 1.5em;
+        border-radius: 8px;
+    }
+
+    .news-list a .title {
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+
+    .news-list a:hover .title {
+        color: #0780ff;
+    }
+
+    .news-list a .date,
+    .news-list a:hover .date {
+        font-weight: normal;
+        font-family: monospace;
+        font-size: .9em;
+        color: #888;
+    }
+</style>
+
+<h1>
+    <span lang="en">News</span>
+    <span lang="sv">Nyheter</span>
+</h1>
+
+<p class="preamble">
+    <span lang="en">On this page you'll find product announcements and updates. <a href="http://eepurl.com/h9Z37b" target="_blank">Subscribe to our newsletter</a> to get notified by mail.</span>
+    <span lang="sv">Här publiceras produktnyheter och uppdateringar. Vill du få nyheterna skickad till din mail så kan du <a href="http://eepurl.com/h9Z37b" target="_blank">prenumerera på vårt nyhetsbrev</a>.</span>
+</p>
+
+<div class="news-list">
+    <a href="/news/2022-09/notifications.html">
+        <span lang="en" class="title">New feature: Notifications</span>
+        <span lang="sv" class="title">Ny funktion: Aviseringar</span>
+        <span lang="en" class="date">Sep 5, 2022</span>
+        <span lang="sv" class="date">5 sep 2022</span>
+    </a>
+</div>
+
+<!-- footer.html -->
