@@ -11,6 +11,10 @@
     margin-bottom: .8em
 }
 
+.is-mobile .news-article hr {
+    max-width: 120px;
+}
+
 .news-article .meta {
     margin: 0 0 3em;
     display: block;
