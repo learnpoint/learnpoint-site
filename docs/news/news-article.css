@@ -8,7 +8,11 @@
     max-width: 240px;
     border: 0;
     border-top: 1px solid #aaa;
-    margin-bottom: .8em
+    margin-bottom: .8em;
+}
+
+.is-mobile .news-article hr {
+    max-width: 120px;
 }
 
 .news-article .meta {
