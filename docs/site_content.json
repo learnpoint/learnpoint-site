@@ -30,6 +30,12 @@
         "content": "Administrera Studenter This page is only available in swedish."
     },
     {
+        "title": "Kursinnehåll / Inledning",
+        "description": "Kursinnehåll / Inledning - Learnpoint Hjälp och Support",
+        "url": "/help/content/introduction.html",
+        "content": "Kursinnehåll This page is only available in swedish. Lorem ipsum A Lorem ipsum B Lorem ipsum"
+    },
+    {
         "title": "Kom igång / Aviseringar",
         "description": "Aviseringar - Learnpoint Hjälp och Support",
         "url": "/help/getting-started/notifications.html",
@@ -81,7 +87,7 @@
         "title": "Grupper / Inledning",
         "description": "Grupper / Inledning - Learnpoint Hjälp och Support",
         "url": "/help/groups/introduction.html",
-        "content": "Grupper This page is only available in swedish. Learnpoint är huvudsakligen organiserat i grupper. Varje grupp innehåller information och funktionalitet för just den gruppen. Det finns tre typer av grupper i Learnpoint — skola, klass och kurs. Dom fungerar på ungefär samma sätt, men det finns några skillnader. Funktionen innehåll finns endast i kurser, och funktionen material finns endast i klasser och skolan. Aktuella grupper &quot;Aktuella grupper&quot; är dom grupper som du är medlem i och som pågår just nu. Dom finns i menyn till vänster: Alla grupper Klicka på länken Grupper för att se och söka bland alla dina grupper:"
+        "content": "Grupper This page is only available in swedish. Learnpoint är huvudsakligen organiserat i grupper. Varje grupp innehåller information och funktionalitet för just den gruppen. Det finns tre typer av grupper i Learnpoint — skola, klass och kurs. Dom fungerar på ungefär samma sätt, men det finns några skillnader. Funktionen innehåll finns endast i kurser, och funktionen material finns endast i klasser och skolan. Aktuella grupper &quot;Aktuella grupper&quot; är dom grupper som du är medlem i och som pågår just nu. Du hittar dina aktuella grupper i menyn till vänster: Alla grupper Klicka på länken Grupper för att se och söka bland alla dina grupper:"
     },
     {
         "title": "Grupper / Nyheter",
