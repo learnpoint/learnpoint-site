@@ -45,15 +45,15 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 
 ## Language
 
-* Pages should be written in both english and swedish.
-* Default language is english. Use english for `<title>` and `<meta name="description" ... >`.
-* Help pages are an exception, they are only written in swedish. For help pages, the `<title>` and `<meta name="description" ... >` should be in swedish.
+* All pages should be written in both english and swedish. Use `lang="en"` and `lang="sv"` to specify the language for the content of an element.
+* English is the default language. Use english where there's only room for a single language, for example `<title>`, `<meta name="description" ... >`, and `alt` attributes.
+* Help pages are an exception. They are only written in swedish. For help pages, when there's only room for a single language, use swedish.
 
 
 ## Screenshots
 
 * When appropriate, screenshots should have two versions, one for desktop and one for mobile.
-* Screenshots should be cropped and zoomed in to make the text in the screenshot readable. This is especially important for desktop screenshots. 
+* Screenshots should be cropped and zoomed to make the text in the screenshot readable. This is especially important for desktop screenshots. 
 
 
 ## How to: Add a Job Opening Page
@@ -81,4 +81,4 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 * When painting arrows and indicators on a screenshot, use the orange color `#FF7B00`.
 * If appropriate, screenshots should have two versions, one for desktop and one for mobile.
 * For now, help pages are only written in swedish. Add the `<!-- only-in-swedish.html -->` include immediately after the `h1` element.
-* The `<title>` and `<meta name="description" ... >` should be in swedish. These elements are used by the help search index.
+* `<title>`, `<meta name="description" ... >` and `alt` attributes should be written in swedish.
