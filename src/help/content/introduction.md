@@ -8,7 +8,7 @@ description: Kursinnehåll / Inledning - Learnpoint Hjälp och Support
 
 <!-- only-in-swedish.html -->
 
-Lorem ipsum
+På 
 
 ## A
 
