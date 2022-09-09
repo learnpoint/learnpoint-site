@@ -45,9 +45,9 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 
 ## Language
 
-- All content should be written in both english and swedish.
-- The default language is english. Therefore, use english for `<title>` and `<meta name="description" ... >`.
-- Help pages are an exception. For now, those pages are only written in swedish. For help pages, the `<title>` and `<meta name="description" ... >` should be in swedish.
+* All content should be written in both english and swedish.
+* The default language is english. Therefore, use english for `<title>` and `<meta name="description" ... >`.
+* Help pages are an exception. For now, those pages are only written in swedish. For help pages, the `<title>` and `<meta name="description" ... >` should be in swedish.
 
 
 ## How to: Add a Job Opening Page
@@ -75,3 +75,4 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 * When painting arrows and indicators on a screenshot, use the orange color `#FF7B00`.
 * If appropriate, screenshots should have two versions, one for desktop and one for mobile.
 * For now, help pages are only written in swedish. Add the `<!-- only-in-swedish.html -->` include immediately after the `h1` element.
+* The `<title>` and `<meta name="description" ... >` should be in swedish. These elements are used by the help search index.
