@@ -22,7 +22,7 @@ För att skriva en nyhet, klicka först på knappen `Skriv nyhet` uppe till vän
 
 ## Spara utkast
 
-När du publicerar en nyhet får medlemmarna i gruppen en avisering och kan läsa nyheten. Om du vill spara nyheten och publicera vid ett senare tillfälle, klickar du istället på knappen `Spara utkast`:
+När du publicerar en nyhet får medlemmarna i gruppen en avisering och kan läsa nyheten. Om du vill spara nyheten men publicera vid ett senare tillfälle, klickar du istället på knappen `Spara utkast`:
 
 <!-- desktop-screenshot.html, { src: "_assets/save-post-as-draft.png", alt: "Spara nyhet som utkast", theme: "light" } -->
 

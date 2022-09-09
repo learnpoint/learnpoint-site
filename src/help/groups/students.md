@@ -15,7 +15,7 @@ Varje grupp innehåller studenter. I grupper av typen *kurs* finns studenterna p
 
 ## Lägg till student
 
-Man kan inte lägga till en student direkt på skolan eller på en kurs. Istället lägger man till studenten på en klass och hon blir då automatiskt tillagd på skolan och klassens kurser.
+Studenter kan endast läggas till på klasser. (Du kan inte lägga till studenter på skolan eller på kurser). När du lagt till en student på en klass, blir hon automatiskt tillagd på skolan och på klassens ingående kurser.
 
 1. Klicka på knappen `Lägg till`.
 2. Klicka på `Lägg till studerande`.
@@ -25,7 +25,7 @@ Man kan inte lägga till en student direkt på skolan eller på en kurs. Iställ
 
 <!-- desktop-recording.html, { src: "_assets/add-student.mp4", alt: "Lägg till student", theme: "light" } -->
 
-Om studenten är helt ny på skolan, så blir du ombedd att även ange namn, födelsedatum, adress, m.m.
+Om studenten är helt ny på skolan, behöver du även ange namn, födelsedatum, adress, m.m.
 
 
 ## Ta bort student

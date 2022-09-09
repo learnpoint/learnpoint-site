@@ -8,14 +8,21 @@ description: Aviseringar - Learnpoint Hjälp och Support
 
 <!-- only-in-swedish.html -->
 
-Du behöver inte leta runt i Learnpoint för att hitta det senaste som hänt. Allt nytt (och relevant för dig) finns samlat på sidan Aviseringar.
+Du behöver inte klicka runt i Learnpoint för att se vad som hänt. Allt nytt finns på aviseringssidan.
 
 
 ## Aviseringssidan
 
-Aviseringssidan finns längst upp i menyn till vänster:
+Aviseringssidan hittar du längst upp i menyn till vänster:
 
 <!-- desktop-screenshot.html, { src: "_assets/notifications.png", alt: "Aviseringar", theme: "light" } -->
+
+
+## Vad aviserar Learnpoint om?
+
+Learnpoint aviserar om nyheter, kommentarer, enkäter, LIA-platser och loggböcker.
+
+För att få aviseringar från en grupp, måste du vara medlem gruppen. Om du är administratör eller utbildningsledare för en klass, har du behörighet till flera grupper utan att vara medlem. Vill du få aviseringar från dessa grupper behöver du lägga till dig själv som medlem.
 
 
 ## Markera avisering som läst

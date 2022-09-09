@@ -8,7 +8,7 @@ description: Grupper / Personal - Learnpoint Hjälp och Support
 
 <!-- only-in-swedish.html -->
 
-Varje grupp innehåller personal som visas på fliken `Personal`:
+Varje grupp innehåller personal. Personalen visas på fliken `Personal`:
 
 <!-- desktop-screenshot.html, { src: "_assets/staff.png", alt: "Personal", theme: "light" } -->
 
@@ -22,7 +22,7 @@ Varje grupp innehåller personal som visas på fliken `Personal`:
 
 <!-- desktop-recording.html, { src: "_assets/add-staff.mp4", alt: "Lägg till personal", theme: "light" } -->
 
-Om personalen är helt ny på skolan, så blir du ombedd att även ange namn, signatur, e-post, m.m.
+Om personalen är helt ny på skolan, behöver du även ange namn, signatur, e-post, m.m.
 
 
 ## Ta bort eller ändra roll för personal
@@ -30,7 +30,7 @@ Om personalen är helt ny på skolan, så blir du ombedd att även ange namn, si
 1. Klicka på dom tre prickarna längst till höger.
 2. Klicka på `Redigera medlemskap`.
 3. Klicka på `Ta bort` eller `Ändra roll`.
-4. Om du valde att ändra roll, kryssa i rätt roller och klicka på `Spara`:
+4. Om du valde att ändra roll, kryssa i rätt roller och klicka sedan på `Spara`:
 
 <!-- desktop-recording.html, { src: "_assets/edit-staff-membership.mp4", alt: "Ta bort eller ändra roll för personal", theme: "light" } -->
 
