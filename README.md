@@ -45,9 +45,15 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 
 ## Language
 
-* All content should be written in both english and swedish.
-* The default language is english. Therefore, use english for `<title>` and `<meta name="description" ... >`.
-* Help pages are an exception. For now, those pages are only written in swedish. For help pages, the `<title>` and `<meta name="description" ... >` should be in swedish.
+* Pages should be written in both english and swedish.
+* Default language is english. Use english for `<title>` and `<meta name="description" ... >`.
+* Help pages are an exception, they are only written in swedish. For help pages, the `<title>` and `<meta name="description" ... >` should be in swedish.
+
+
+## Screenshots
+
+* When appropriate, screenshots should have two versions, one for desktop and one for mobile.
+* Screenshots should be cropped and zoomed in to make the text in the screenshot readable. This is especially important for desktop screenshots. 
 
 
 ## How to: Add a Job Opening Page
