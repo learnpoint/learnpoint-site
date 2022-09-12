@@ -8,15 +8,8 @@ description: Kursinnehåll / Inledning - Learnpoint Hjälp och Support
 
 <!-- only-in-swedish.html -->
 
-På 
+Kursinnehållet i Learnpoint består av avsnitt och kursdelar. Avsnitten ger innehållet en tydlig struktur och kursdelarna fungerar som uppgifter, instruktioner eller information.
 
-## A
-
-Lorem ipsum
-
-
-## B
-
-Lorem ipsum
+Kursinnehållet hittar du på fliken `Innehåll`:
 
 
