@@ -1,0 +1,42 @@
+.news-article {}
+
+.news-article h1 {
+    margin-bottom: .2em;
+}
+
+.news-article hr {
+    max-width: 240px;
+    border: 0;
+    border-top: 1px solid #aaa;
+    margin-bottom: .8em;
+}
+
+.is-mobile .news-article hr {
+    max-width: 120px;
+}
+
+.news-article .meta {
+    margin: 0 0 3em;
+    display: block;
+    color: #666;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.news-article .meta .divider {
+    padding: 0 .3em;
+}
+
+.news-article .content {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.news-article h2 {
+    font-size: 1.2em;
+    margin: 1.6em 0 .2em;
+}
+
+.news-article .desktop-screenshot+h2 {
+    margin-top: 2.5em;
+}
