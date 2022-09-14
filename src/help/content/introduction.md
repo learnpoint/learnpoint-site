@@ -8,8 +8,8 @@ description: Kursinnehåll / Inledning - Learnpoint Hjälp och Support
 
 <!-- only-in-swedish.html -->
 
-Kursinnehållet i Learnpoint består av avsnitt och kursdelar. Avsnitten ger innehållet en tydlig struktur och kursdelarna fungerar som uppgifter, instruktioner eller information.
+Innehållet i kurserna byggs upp av *kursdelar* och *avsnitt*. Kursdelarna kan innehålla information, uppgifter och bifogade filer. Avsnitten fungerar som platshållare för kursdelarna, så att du kan ge innehållet en tydlig struktur.
 
-Kursinnehållet hittar du på fliken `Innehåll`:
+Kursinnehållet finns på fliken `Innehåll` i respektive kurs:
 
-
+<!-- desktop-screenshot.html, { src: "_assets/content-page.png", alt: "Innehåll", theme: "light" } -->

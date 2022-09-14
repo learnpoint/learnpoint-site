@@ -1,0 +1,62 @@
+---
+layout: help-page-layout.html
+title: Kursinnehåll / Avsnitt
+description: Kursinnehåll / Avsnitt - Learnpoint Hjälp och Support
+---
+
+# Avsnitt
+
+<!-- only-in-swedish.html -->
+
+Avsnitten fungerar som platshållare för kursdelarna så att du kan ge kursinnehållet en tydlig struktur.
+
+
+## Lägg till
+
+1. Skrolla längs ned på innehållssidan.
+2. Klicka på `Nytt avsnitt`.
+3. Fyll i namn.
+4. Fyll i beskrivning om du vill.
+5. Klicka på `Skapa`:
+
+<!-- desktop-recording.html, { src: "_assets/add-section.mp4", alt: "Lägg till avsnitt", theme: "light" } -->
+
+
+## Publicera
+
+Avsnitten (och kursdelarna) visas inte för studenterna förrän dom är publicerade.
+
+1. Klicka på meny-ikonen (dom tre prickarna till höger).
+2. Klicka på `Publicera`:
+
+<!-- desktop-screenshot.html, { src: "_assets/publish-section.png", alt: "Publicera avsnitt", theme: "light" } -->
+
+
+## Flytta
+
+Avsnitten kan flyttas så att dom hamnar i rätt ordning.
+
+1. Klicka på meny-ikonen till höger (dom tre prickarna till höger).
+2. Klicka på `Flytta`.
+3. Nu visas blå knappar som indikerar vart du kan flytta avsnittet.
+4. Klicka på någon av dom blå knapparna:
+
+<!-- desktop-recording.html, { src: "_assets/move-section.mp4", alt: "Flytta avsnitt", theme: "light" } -->
+
+
+## Ta bort
+
+1. Klicka på meny-ikonen (dom tre prickarna till höger).
+2. Klicka på `Ta bort`:
+
+<!-- desktop-screenshot.html, { src: "_assets/delete-section.png", alt: "Publicera avsnitt", theme: "light" } -->
+
+
+## Återställ borttaget avsnitt
+
+Borttagna avsnitt sparas i 30 dagar. Under den tiden är det möjligt att återställa dom.
+
+1. Skrolla längst ned på innehållsidan.
+2. Klicka på `Visa borttagna`.
+3. Hitta det avsnitt du vill återställa.
+4. Klicka på `Återställ`.
