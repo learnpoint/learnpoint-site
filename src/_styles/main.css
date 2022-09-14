@@ -9,6 +9,10 @@ body {
     background-color: #fdf1e3;
 }
 
+.print body {
+    overflow: visible;
+}
+
 .main__container {
     max-width: 1200px;
     margin: 0 auto;

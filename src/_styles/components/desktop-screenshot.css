@@ -12,6 +12,7 @@
 
 .print .desktop-screenshot {
     box-shadow: none;
+    overflow: visible;
 }
 
 .desktop-screenshot.LOADED {

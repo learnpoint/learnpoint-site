@@ -30,6 +30,12 @@
         "content": "Administrera Studenter This page is only available in swedish."
     },
     {
+        "title": "Kursinnehåll / Kursdelar",
+        "description": "Kursinnehåll / Kursdelar - Learnpoint Hjälp och Support",
+        "url": "/help/content/course-items.html",
+        "content": "Kursdelar This page is only available in swedish. Kursdelarna kan innehålla information, uppgifter och bifogade filer. Lägg till En kursdel måste alltid ligga i ett avsnitt. Se till att det finns avsnitt innan du lägger till en kursdel. Välj i vilket avsnitt kursdelen skall läggas till. Klicka på Ny kursdel. Fyll i namn. Klicka på Skapa: Publicera Kursdelarna (och avsnitten) visas inte för studenterna förrän dom är publicerade. Klicka på meny-ikonen (dom tre prickarna till höger). Klicka på Publicera: Lägg till innehåll Kursdelarna kan innehålla text, länkar, bilder, filmer och bifogade filer. Klicka på kursdelen. Klicka på redigeringsknappen (den grå pennan till höger om kursdelens namn). Lägg till text, länkar, bilder, etc. Klicka på Spara: Ange inställningar Det finns fyra inställningar på varje kursdel. Uppgift: Inställningen anger om kursdelen skall vara en inlämningsuppgift. Tid: Anger ett tidsintervall eller endast en sluttid. Betyg: Anger om läraren skall sätta betyg på kursdelen. Bilagor: Anger vilka filer som hör till kursdelen. Såhär gör du för att ange kursdelens inställningar: Klicka på kursdelen. Klicka på redigeringsknappen (den grå pennan till höger om inställningen). Välj inställning. Klicka på Spara: Flytta Kursdelarna kan flyttas så att dom hamnar i rätt ordning. Klicka på meny-ikonen till höger (dom tre prickarna till höger). Klicka på Flytta. Nu visas blå knappar som indikerar vart du kan flytta kursdelen. Klicka på någon av dom blå knapparna: Ta bort Klicka på meny-ikonen (dom tre prickarna till höger). Klicka på Ta bort: Återställ borttagen kursdel Borttagna kursdelar sparas i 30 dagar. Under den tiden är det möjligt att återställa dom. Skrolla längst ned på innehållsidan. Klicka på Visa borttagna. Hitta den kursdel du vill återställa. Klicka på Återställ."
+    },
+    {
         "title": "Kursinnehåll / Inledning",
         "description": "Kursinnehåll / Inledning - Learnpoint Hjälp och Support",
         "url": "/help/content/introduction.html",

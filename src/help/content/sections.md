@@ -49,7 +49,7 @@ Avsnitten kan flyttas så att dom hamnar i rätt ordning.
 1. Klicka på meny-ikonen (dom tre prickarna till höger).
 2. Klicka på `Ta bort`:
 
-<!-- desktop-screenshot.html, { src: "_assets/delete-section.png", alt: "Publicera avsnitt", theme: "light" } -->
+<!-- desktop-screenshot.html, { src: "_assets/delete-section.png", alt: "Ta bort avsnitt", theme: "light" } -->
 
 
 ## Återställ borttaget avsnitt
