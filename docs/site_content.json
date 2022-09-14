@@ -66,16 +66,16 @@
         "content": "Logga in This page is only available in swedish. Hitta till skolans inloggningssida Gå till learnpoint.se/sign-in.html Ange adressen till din skola. Klicka på Fortsätt för att komma till skolans inloggningssida. Aktivera konto Om det är första gången du loggar in behöver du aktivera ditt konto: Gå till skolan inloggningssida (se ovan). Klicka på Aktivera konto. Ange din e-postadress och klicka på OK. Du får inom kort ett mail med instruktioner för att aktivera kontot. Logga in När du aktiverat ditt konto loggar du in på följande sätt: Gå till skolan inloggningssida (se ovan). Ange användarnamn och lösenord. Klicka på Logga in. Problem att logga in? Kontrollera användarnamnet. Observera att du inte kan logga in med en mailadress. Kontrollera att Caps Lock inte är aktiverat på tangentbordet. Har du glömt ditt lösenord kan du återställa det. Klicka på Glömt ditt lösenord? och följ instruktionerna. Lyckas du ändå inte logga in? Kontakta vår support så hjälper vi till!"
     },
     {
-        "title": "Betygsättning / Sätta betyg",
-        "description": "Betygsättning / Sätta betyg - Learnpoint Hjälp och Support",
-        "url": "/help/grading/grade.html",
-        "content": "Sätta betyg This page is only available in swedish."
+        "title": "Betyg / Kursdelar",
+        "description": "Betyg / Kursdelar - Learnpoint Hjälp och Support",
+        "url": "/help/grading/course-items.html",
+        "content": "Kursdelar This page is only available in swedish. Aktivera betygsättning på kursdelar För att kunna betygsätta en kursdel behöver det anges bland inställningarna på kursdelen: Uppföljningssidan Varje kursdel har en uppföljningssida. Här visas: En liten blå ikon för nya inlämningar. En siffra för nya kommentarer. Det angivna betyget. Om betyget har publicerats. En knapp för att publicera samtliga betyg som inte publicerats. Sätt betyg Gå till kursdelens uppföljningssida. Klicka på en student. Välj betyg. Ange Feedback om du vill förtydliga betyget på något sätt. Klicka på Publicera när du vill att studenten skall se betyget. Du kan även öppna inlämningsuppgifter och skriva kommentarer till studenten. Använd genvägarna för att navigera till nästa student. Ta bort betyg Gå till studenten. Klicka på meny-ikonen (dom tre prickarna till höger). Klicka på Ta bort betyget. Klicka på Ta bort. Klicka på Publicera när du vill att borttagningen skall visas för studenten. Klicka på OK."
     },
     {
-        "title": "Betygsättning / Inledning",
-        "description": "Betygsättning / Inledning - Learnpoint Hjälp och Support",
+        "title": "Betyg / Inledning",
+        "description": "Betyg / Inledning - Learnpoint Hjälp och Support",
         "url": "/help/grading/introduction.html",
-        "content": "Betyg This page is only available in swedish. Både kurser och enskilda kursdelar kan ha betyg i Learnpoint. Som student hittar du en sammanställning av dina kursbetyg på studieplanen: Som lärare hittare du en sammanställning av kursens betyg på betygsfliken:"
+        "content": "Betyg This page is only available in swedish. Betyg kan sättas både på kurser och kursdelar. En överblick av alla betyg finns på fliken Betyg i respektive kurs: På studenternas profilsida, under fliken Studieplan, finns en överblick av studentens kursbetyg:"
     },
     {
         "title": "Betygsättning / Publicera betyg",

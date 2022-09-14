@@ -1,17 +1,18 @@
 ---
 layout: help-page-layout.html
-title: Betygsättning / Inledning
-description: Betygsättning / Inledning - Learnpoint Hjälp och Support
+title: Betyg / Inledning
+description: Betyg / Inledning - Learnpoint Hjälp och Support
 ---
 
 # Betyg
 
 <!-- only-in-swedish.html -->
 
-Både kurser och enskilda kursdelar kan ha betyg i Learnpoint.
+Betyg kan sättas både på kurser och kursdelar. En överblick av alla betyg finns på fliken `Betyg` i respektive kurs:
 
-Som student hittar du en sammanställning av dina kursbetyg på studieplanen:
+<!-- desktop-screenshot.html, { src: "_assets/gradebook.png", alt: "Betygsfliken", theme: "light" } -->
 
-<!-- desktop-screenshot.html, { src: "_assets/studyplan.png", alt: "Studieplan", theme: "light" } -->
 
-Som lärare hittare du en sammanställning av kursens betyg på betygsfliken:
+På studenternas profilsida, under fliken `Studieplan`, finns en överblick av studentens kursbetyg:
+
+<!-- desktop-screenshot.html, { src: "_assets/student-grades.png", alt: "Studentens studieplan", theme: "light" } -->
