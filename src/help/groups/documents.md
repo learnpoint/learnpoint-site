@@ -16,7 +16,7 @@ Med materialfunktionen kan du lagra filer och länkar i grupper av typen klass o
 
 ## Lägg till
 
-Lägg till en fil eller en länk genom att klicka på knappen `Lägg till` och följ sedan instruktionerna:
+Lägg till en fil eller en länk genom att klicka på `Lägg till` och följ sedan instruktionerna:
 
 <!-- screenshot.html, { src: "_assets/add-document.png", alt: "Lägg till material", theme: "light" } -->
 

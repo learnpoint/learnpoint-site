@@ -19,7 +19,7 @@ description: Logga in - Learnpoint Hjälp och Support
 Om det är första gången du loggar in behöver du aktivera ditt konto:
 
 1. Gå till skolan inloggningssida (se ovan).
-1. Klicka på länken `Aktivera konto`.
+1. Klicka på `Aktivera konto`.
 1. Ange din e-postadress och klicka på `OK`.
 1. Du får inom kort ett mail med instruktioner för att aktivera kontot.
 
@@ -39,6 +39,6 @@ När du aktiverat ditt konto loggar du in på följande sätt:
 
 1. Kontrollera användarnamnet. Observera att du **inte** kan logga in med en mailadress.
 1. Kontrollera att `Caps Lock` inte är aktiverat på tangentbordet.
-1. Har du glömt ditt lösenord kan du återställa det. Klicka på länken `Glömt ditt lösenord?` och följ instruktionerna.
+1. Har du glömt ditt lösenord kan du återställa det. Klicka på `Glömt ditt lösenord?` och följ instruktionerna.
 
 Lyckas du ändå inte logga in? [Kontakta vår support](/help/) så hjälper vi till!

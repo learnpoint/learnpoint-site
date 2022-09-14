@@ -15,6 +15,6 @@ Varje grupp har en sida med allmän information:
 
 ## Redigera allmän information om gruppen
 
-Klicka på länken `Redigera` för att ändra gruppens information:
+Klicka på `Redigera` för att ändra gruppens information:
 
 <!-- desktop-screenshot.html, { src: "_assets/edit-about.png", alt: "Personal", theme: "light" } -->

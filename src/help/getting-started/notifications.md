@@ -29,18 +29,18 @@ För att få aviseringar från en grupp, måste du vara medlem gruppen. Om du ä
 
 När du klickar på en avisering kommer du till det aviseringen avser (ex. en nyhet eller en kommentar). Aviseringen markeras automatiskt som läst när du klickar på den.
 
-Du kan även manuellt markera en avisering som läst. Klicka på meny-ikonen (dom tre prickarna till höger) och sedan på knappen `Markera som läst`:
+Du kan även manuellt markera en avisering som läst. Klicka på meny-ikonen (dom tre prickarna till höger) och sedan på `Markera som läst`:
 
 <!-- screenshot.html, { src: "_assets/notification-mark-as-read.png", alt: "Aviseringar", theme: "light" } -->
 
-För att markera alla aviseringar som lästa, klicka på knappen `Markera alla som lästa`:
+För att markera alla aviseringar som lästa, klicka på `Markera alla som lästa`:
 
 <!-- desktop-screenshot.html, { src: "_assets/notifications-mark-all-as-read.png", alt: "Aviseringar", theme: "light" } -->
 
 
 ## Markera avisering som oläst
 
-Om en avisering är läst, kan du markera den som oläst. Klicka på meny-ikonen (dom tre prickarna till höger) och sedan på knappen `Markera som oläst`:
+Om en avisering är läst, kan du markera den som oläst. Klicka på meny-ikonen (dom tre prickarna till höger) och sedan på `Markera som oläst`:
 
 <!-- screenshot.html, { src: "_assets/notification-mark-as-unread.png", alt: "Aviseringar", theme: "light" } -->
 

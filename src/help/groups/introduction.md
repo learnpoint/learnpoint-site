@@ -21,6 +21,6 @@ Det finns tre typer av grupper i Learnpoint — *skola*, *klass* och *kurs*. Dom
 
 ## Alla grupper
 
-Klicka på länken `Grupper` för att se och söka bland alla dina grupper:
+Klicka på `Grupper` för att se och söka bland alla dina grupper:
 
 <!-- desktop-screenshot.html, { src: "_assets/groups.png" } -->

@@ -15,7 +15,7 @@ Varje grupp innehåller personal. Personalen visas på fliken `Personal`:
 
 ## Lägg till personal
 
-1. Klicka på knappen `Lägg till`.
+1. Klicka på `Lägg till`.
 2. Fyll i mailadress och klicka på `Nästa`.
 3. Kryssa i dom roller personalen skall ha i gruppen.
 4. Klicka på `Klar`:
