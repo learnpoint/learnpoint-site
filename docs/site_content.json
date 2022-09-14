@@ -1,35 +1,5 @@
 [
     {
-        "title": "Administration / Grupper",
-        "description": "Administration / Grupper - Learnpoint Hjälp och Support",
-        "url": "/help/admin/groups.html",
-        "content": "Administrera Grupper This page is only available in swedish."
-    },
-    {
-        "title": "Administration / Roller",
-        "description": "Administration / Roller - Learnpoint Hjälp och Support",
-        "url": "/help/admin/roles.html",
-        "content": "Administrera Roller This page is only available in swedish."
-    },
-    {
-        "title": "Administration / Personal",
-        "description": "Administration / Personal - Learnpoint Hjälp och Support",
-        "url": "/help/admin/staff.html",
-        "content": "Administrera Personal This page is only available in swedish."
-    },
-    {
-        "title": "Administration / Studerandestatus",
-        "description": "Administration / Studerandestatus - Learnpoint Hjälp och Support",
-        "url": "/help/admin/student-status.html",
-        "content": "Administrera Studerandestatus This page is only available in swedish."
-    },
-    {
-        "title": "Administration / Studenter",
-        "description": "Administration / Studenter - Learnpoint Hjälp och Support",
-        "url": "/help/admin/students.html",
-        "content": "Administrera Studenter This page is only available in swedish."
-    },
-    {
         "title": "Kursinnehåll / Kursdelar",
         "description": "Kursinnehåll / Kursdelar - Learnpoint Hjälp och Support",
         "url": "/help/content/course-items.html",
@@ -135,7 +105,7 @@
         "title": "LIA / Inledning",
         "description": "LIA / Inledning - Learnpoint Hjälp och Support",
         "url": "/help/internship/introduction.html",
-        "content": "Inledning This page is only available in swedish."
+        "content": "Inledning This page is only available in swedish. LIA är en funktion för att hantera praktik under utbildningen. Funktionen är aktiverad på LIA-kurser och finns på fliken LIA:"
     },
     {
         "title": "LIA / Loggbok",
