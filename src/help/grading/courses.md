@@ -13,7 +13,7 @@ En överblick av samtliga betyg på en kurs finns på fliken `Betyg`. Kursbetyge
 <!-- desktop-screenshot.html, { src: "_assets/course-grades-in-gradebook.png", alt: "Kursbetyg på betygsfliken", theme: "light" } -->
 
 
-## Sätt betyg
+## Sätt betyg på kurs
 
 1. Gå till fliken `Betyg`.
 2. Klicka på rutan för kursbetyg på någon av studenterna.
@@ -25,7 +25,7 @@ En överblick av samtliga betyg på en kurs finns på fliken `Betyg`. Kursbetyge
 <!-- desktop-recording.html, { src: "_assets/grade-course.mp4", alt: "Betygsätt kurs", theme: "light" } -->
 
 
-## Ta bort
+## Ta bort på kurs
 
 1. Gå till studentens kursbetyg.
 2. Klicka på meny-ikonen (dom tre prickarna till höger).

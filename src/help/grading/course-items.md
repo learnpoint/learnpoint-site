@@ -29,7 +29,7 @@ Varje kursdel har en uppföljningssida. På den visas:
 <!-- desktop-screenshot.html, { src: "_assets/results-page.png", alt: "Uppföljningssidan", theme: "light" } -->
 
 
-## Sätt betyg
+## Sätt betyg på kursdel
 
 1. Gå till kursdelens uppföljningssida.
 2. Klicka på en student.
@@ -42,7 +42,7 @@ Varje kursdel har en uppföljningssida. På den visas:
 <!-- desktop-recording.html, { src: "_assets/grade-course-item.mp4", alt: "Betygsätt kursdel", theme: "light" } -->
 
 
-## Ta bort betyg
+## Ta bort betyg på kursdel
 
 1. Gå till studenten.
 2. Klicka på meny-ikonen (dom tre prickarna till höger).

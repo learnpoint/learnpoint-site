@@ -11,7 +11,7 @@ description: Kursinnehåll / Avsnitt - Learnpoint Hjälp och Support
 Avsnitten fungerar som platshållare för kursdelarna så att du kan ge kursinnehållet en tydlig struktur.
 
 
-## Lägg till
+## Lägg till avsnit
 
 1. Skrolla längs ned på innehållssidan.
 2. Klicka på `Nytt avsnitt`.
@@ -22,7 +22,7 @@ Avsnitten fungerar som platshållare för kursdelarna så att du kan ge kursinne
 <!-- desktop-recording.html, { src: "_assets/add-section.mp4", alt: "Lägg till avsnitt", theme: "light" } -->
 
 
-## Publicera
+## Publicera avsnitt
 
 Avsnitten (och kursdelarna) visas inte för studenterna förrän dom är publicerade.
 
@@ -32,7 +32,7 @@ Avsnitten (och kursdelarna) visas inte för studenterna förrän dom är publice
 <!-- desktop-screenshot.html, { src: "_assets/publish-section.png", alt: "Publicera avsnitt", theme: "light" } -->
 
 
-## Flytta
+## Flytta avsnitt
 
 Avsnitten kan flyttas så att dom hamnar i rätt ordning.
 
@@ -44,7 +44,7 @@ Avsnitten kan flyttas så att dom hamnar i rätt ordning.
 <!-- desktop-recording.html, { src: "_assets/move-section.mp4", alt: "Flytta avsnitt", theme: "light" } -->
 
 
-## Ta bort
+## Ta bort avsnitt
 
 1. Klicka på meny-ikonen (dom tre prickarna till höger).
 2. Klicka på `Ta bort`:

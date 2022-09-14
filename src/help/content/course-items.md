@@ -11,7 +11,7 @@ description: Kursinnehåll / Kursdelar - Learnpoint Hjälp och Support
 Kursdelarna kan innehålla information, uppgifter och bifogade filer.
 
 
-## Lägg till
+## Lägg till kursdel
 
 En kursdel måste alltid ligga i ett avsnitt. Se till att det finns avsnitt innan du lägger till en kursdel.
 
@@ -23,7 +23,7 @@ En kursdel måste alltid ligga i ett avsnitt. Se till att det finns avsnitt inna
 <!-- desktop-recording.html, { src: "_assets/add-course-item.mp4", alt: "Lägg till kursdel", theme: "light" } -->
 
 
-## Publicera
+## Publicera kursdel
 
 Kursdelarna (och avsnitten) visas inte för studenterna förrän dom är publicerade.
 
@@ -64,7 +64,7 @@ Såhär gör du för att ange kursdelens inställningar:
 <!-- desktop-recording.html, { src: "_assets/course-item-settings.mp4", alt: "Ange inställningar", theme: "light" } -->
 
 
-## Flytta
+## Flytta kursdel
 
 Kursdelarna kan flyttas så att dom hamnar i rätt ordning.
 
@@ -76,7 +76,7 @@ Kursdelarna kan flyttas så att dom hamnar i rätt ordning.
 <!-- desktop-recording.html, { src: "_assets/move-course-item.mp4", alt: "Flytta kursdel", theme: "light" } -->
 
 
-## Ta bort
+## Ta bort kursdel
 
 1. Klicka på meny-ikonen (dom tre prickarna till höger).
 2. Klicka på `Ta bort`:
