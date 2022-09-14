@@ -69,19 +69,19 @@
         "title": "Betyg / Kursdelar",
         "description": "Betyg / Kursdelar - Learnpoint Hjälp och Support",
         "url": "/help/grading/course-items.html",
-        "content": "Kursdelar This page is only available in swedish. Aktivera betygsättning på kursdelar För att kunna betygsätta en kursdel behöver det anges bland inställningarna på kursdelen: Uppföljningssidan Varje kursdel har en uppföljningssida. Här visas: En liten blå ikon för nya inlämningar. En siffra för nya kommentarer. Det angivna betyget. Om betyget har publicerats. En knapp för att publicera samtliga betyg som inte publicerats. Sätt betyg Gå till kursdelens uppföljningssida. Klicka på en student. Välj betyg. Ange Feedback om du vill förtydliga betyget på något sätt. Klicka på Publicera när du vill att studenten skall se betyget. Du kan även öppna inlämningsuppgifter och skriva kommentarer till studenten. Använd genvägarna för att navigera till nästa student. Ta bort betyg Gå till studenten. Klicka på meny-ikonen (dom tre prickarna till höger). Klicka på Ta bort betyget. Klicka på Ta bort. Klicka på Publicera när du vill att borttagningen skall visas för studenten. Klicka på OK."
+        "content": "Kursdelar This page is only available in swedish. Aktivera betygsättning på kursdelar För att kunna betygsätta en kursdel behöver det anges bland inställningarna på kursdelen: Uppföljningssidan Varje kursdel har en uppföljningssida. På den visas: En liten blå ikon för nya inlämningar. En siffra för nya kommentarer. Det angivna betyget. Om betyget har publicerats. En knapp för att publicera samtliga betyg som inte publicerats. Sätt betyg Gå till kursdelens uppföljningssida. Klicka på en student. Välj betyg. Ange Feedback om du vill förtydliga betyget på något sätt. Klicka på Publicera när du vill att studenten skall se betyget. Du kan även öppna inlämningsuppgifter och skriva kommentarer till studenten. Använd genvägarna för att navigera till nästa student. Ta bort betyg Gå till studenten. Klicka på meny-ikonen (dom tre prickarna till höger). Klicka på Ta bort betyget. Klicka på Ta bort. Klicka på Publicera när du vill att borttagningen skall visas för studenten. Klicka på OK."
+    },
+    {
+        "title": "Betyg / Kurser",
+        "description": "Betyg / Kurser - Learnpoint Hjälp och Support",
+        "url": "/help/grading/courses.html",
+        "content": "Kurser This page is only available in swedish. En överblick av samtliga betyg på en kurs finns på fliken Betyg. Kursbetygen visas i den första kolumnen: Sätt betyg Gå till fliken Betyg. Klicka på rutan för kursbetyg på någon av studenterna. Välj betyg. Klicka på Klarrapportera när du är färdig med betygsättningen. Klicka på Publicera när du vill att betyget skall visas för studenten. NOTERA: Ibland har du som lärare inte behörighet att publicera kursbetyg och då kan du hoppa över detta steg. Välj nästa student bland genvägarna: Ta bort Gå till studentens kursbetyg. Klicka på meny-ikonen (dom tre prickarna till höger). Klicka på Ta bort betyget. Klicka på Ta bort. Klicka på Klarrapportera. Klicka på Publicera när du vill att borttagningen skall visas för studenten. NOTERA: Ibland har du som lärare inte behörighet att publicera kursbetyg och då kan du hoppa över detta steg."
     },
     {
         "title": "Betyg / Inledning",
         "description": "Betyg / Inledning - Learnpoint Hjälp och Support",
         "url": "/help/grading/introduction.html",
         "content": "Betyg This page is only available in swedish. Betyg kan sättas både på kurser och kursdelar. En överblick av alla betyg finns på fliken Betyg i respektive kurs: På studenternas profilsida, under fliken Studieplan, finns en överblick av studentens kursbetyg:"
-    },
-    {
-        "title": "Betygsättning / Publicera betyg",
-        "description": "Betygsättning / Publicera betyg - Learnpoint Hjälp och Support",
-        "url": "/help/grading/publish.html",
-        "content": "Publicera Betyg This page is only available in swedish."
     },
     {
         "title": "Grupper / Om",

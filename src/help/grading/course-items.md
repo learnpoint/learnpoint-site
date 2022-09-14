@@ -18,7 +18,7 @@ För att kunna betygsätta en kursdel behöver det anges bland inställningarna 
 
 ## Uppföljningssidan
 
-Varje kursdel har en uppföljningssida. Här visas:
+Varje kursdel har en uppföljningssida. På den visas:
 
 * En liten blå ikon för nya inlämningar.
 * En siffra för nya kommentarer.
