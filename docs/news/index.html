@@ -3,104 +3,52 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Learnpoint News</title>
-    <meta name="description" content="Skapa utbildningar, registrera studenter, dela ut uppgifter, skriv nyheter, och betygsätt studenter. Allt på ett ställe." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index" />
+<title>Learnpoint News</title>
+<meta name="description" content="Learnpoint News, Learnpoint Nyheter" />
+<meta name="robots" content="index" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="mask-icon" href="/img/favicons/mask-icon.svg" color="#0780FF">
-    <link rel="shortcut icon" href="/img/favicons/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="/_images/favicons/mask-icon.svg" color="#0780FF">
+<link rel="shortcut icon" href="/_images/favicons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/_images/favicons/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@800&display=block">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@800&display=block">
 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/pages/index.css">
-    <link rel="stylesheet" href="/css/pages/sign-in.css">
-    <link rel="stylesheet" href="/css/pages/jobs.css">
-    <link rel="stylesheet" href="/css/pages/job-opening.css">
-    <link rel="stylesheet" href="/css/pages/404.css">
-    
-    <link rel="stylesheet" href="/css/components/header.css">
-    <link rel="stylesheet" href="/css/components/footer.css">
-    <link rel="stylesheet" href="/css/components/language.css">
-    <link rel="stylesheet" href="/css/components/desktop-screenshot.css">
-    <link rel="stylesheet" href="/css/components/mobile-screenshot.css">
-    
-    <script src="/js/components/language.js"></script>
-    <script src="/js/components/is-mobile.js"></script>
+<link rel="stylesheet" href="/_styles/main.css">
+<link rel="stylesheet" href="/_styles/print.css">
+<link rel="stylesheet" href="/_styles/components/header.css">
+<link rel="stylesheet" href="/_styles/components/footer.css">
+<link rel="stylesheet" href="/_styles/components/language.css">
+
+<script src="/_scripts/components/print.js"></script>
+<script src="/_scripts/components/is-mobile.js"></script>
+<script src="/_scripts/components/language.js"></script>
+    <link rel="stylesheet" href="/_styles/pages/news-index-page.css">
 </head>
 
 <body>
+
     <header class="header">
-        <nav class="header__nav">
-            <a href="/" class="header__logo">
-                <img width="128" height="34" alt="Learnpoint" src="/img/logos/learnpoint-logo.svg" />
+    <nav class="header__nav">
+        <a href="/" class="header__logo" aria-label="Learnpoint Home">
+            <img class="header__logo-desktop-img" width="128" height="34" alt="" aria-hidden="true" src="/_images/logos/learnpoint-logo.svg" />
+            <img class="header__logo-mobile-img" width="85" height="23" alt="" aria-hidden="true" src="/_images/logos/learnpoint-logo.svg" />
+        </a>
+        <div class="header__links">
+            <a class="header__link" href="/help/">
+                <span lang="en">Help</span>
+                <span lang="sv">Hjälp</span>
             </a>
-            <div class="header__links">
-                <a class="header__link" href="/sign-in.html">
-                    <span lang="en">Sign in</span>
-                    <span lang="sv">Logga in</span>
-                </a>
-            </div>
-        </nav>
-    </header>
-    <main>
+            <a class="header__link" href="/sign-in.html">
+                <span lang="en">Sign in</span>
+                <span lang="sv">Logga in</span>
+            </a>
+        </div>
+    </nav>
+</header>
 
-<style>
-    .preamble {
-        text-align: center;
-        max-width: 640px;
-        margin: 0 auto;
-    }
-
-    .news-list {
-        max-width: 560px;
-        margin: 3em auto;
-    }
-
-    .news-list a {
-        display: flex;
-        text-decoration: none;
-        flex-direction: column;
-        gap: 4px;
-        color: inherit;
-        margin-bottom: 1em;
-        background-color: rgba(255, 255, 255, .8);
-        padding: 1em 1.5em;
-        border-radius: 8px;
-    }
-
-    .news-list a:hover {
-        background-color: rgba(255, 255, 255, 1);
-        box-shadow: 1px 2px 1em rgba(0, 0, 0, .05);
-    }
-
-    .news-list a .title {
-        font-weight: bold;
-        font-size: 1.1em;
-        color: #444;
-    }
-
-    .is-mobile a .title {
-        font-size: 1em;
-    }
-
-    .news-list a:hover .title {
-        color: #0070df;
-        color: #000;
-    }
-
-    .news-list a .date,
-    .news-list a:hover .date {
-        font-weight: normal;
-        font-size: .8em;
-        color: #888;
-        margin: 0 2px
-    }
-</style>
-
-<h1>
+    <main class="main__container">
+        <h1>
     <span lang="en">News</span>
     <span lang="sv">Nyheter</span>
 </h1>
@@ -130,18 +78,17 @@
         <span lang="sv" class="date">22 nov 2021</span>
     </a>
 </div>
+    </main>
 
-</main>
-
-<footer class="footer">
+    <footer class="footer print__hide">
     <ul>
         <li>
             <span lang="en">Learnpoint is developed by <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
-            <span lang="sv">Learnpoint är utvecklat av <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
+            <span lang="sv">Learnpoint utvecklas av <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
         </li>
         <li>
-            <span lang="en"><a href="/jobs" class="footer__link">Work with us</a></span>
-            <span lang="sv"><a href="/jobs" class="footer__link">Lediga tjänster</a></span>
+            <span lang="en"><a href="/jobs/" class="footer__link">Work with us</a></span>
+            <span lang="sv"><a href="/jobs/" class="footer__link">Lediga tjänster</a></span>
         </li>
     </ul>
     <div class="footer__select-language-panel">
@@ -154,6 +101,7 @@
         </div>
     </div>
 </footer>
+
 </body>
 
 </html>

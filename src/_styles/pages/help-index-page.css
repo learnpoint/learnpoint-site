@@ -1,0 +1,195 @@
+/* =========================================================================
+   Suppport Contact
+   ========================================================================= */
+
+.help-index-page__support-contact {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+/* =========================================================================
+   Suppport Contact svg
+   ========================================================================= */
+
+.help-index-page__support-contact svg {
+    color: rgba(0, 0, 0, .5);
+    color: #0780ff;
+    height: 16px;
+    width: 16px;
+    margin: 0 8px 0 4px;
+    position: relative;
+    top: 2px;
+}
+
+
+
+/* =========================================================================
+   Suppport Contact a
+   ========================================================================= */
+
+.help-index-page__support-contact a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 1px;
+}
+
+.help-index-page__support-contact a:hover {
+    color: #0780ff;
+    border-bottom: 1.5px solid #0780ff;
+}
+
+
+
+/* =========================================================================
+   Suppport Opening Hours
+   ========================================================================= */
+
+.help-index-page__support-opening-hours {
+    margin-bottom: 2px;
+}
+
+
+
+/* =========================================================================
+   Suppport Open / Closed / Closed For Lunch Labels
+   ========================================================================= */
+
+.help-index-page__support-open-label,
+.help-index-page__support-closed-label,
+.help-index-page__support-closed-for-lunch-label {
+    padding: 0 .6em;
+    border-radius: .8em;
+    font-size: .9em;
+}
+
+.help-index-page__support-open-label {
+    color: #188038;
+    background-color: rgba(24, 128, 56, .08);
+}
+
+.help-index-page__support-closed-label,
+.help-index-page__support-closed-for-lunch-label {
+    color: #d93025;
+    background-color: rgba(217, 48, 37, .06);
+}
+
+.help-index-page__support-opening-hours.CLOSED .help-index-page__support-open-label,
+.help-index-page__support-opening-hours.CLOSED-FOR-LUNCH .help-index-page__support-open-label {
+    display: none;
+}
+
+.help-index-page__support-opening-hours.OPEN .help-index-page__support-closed-label,
+.help-index-page__support-opening-hours.CLOSED-FOR-LUNCH .help-index-page__support-closed-label {
+    display: none;
+}
+
+.help-index-page__support-opening-hours.OPEN .help-index-page__support-closed-for-lunch-label,
+.help-index-page__support-opening-hours.CLOSED .help-index-page__support-closed-for-lunch-label {
+    display: none;
+}
+
+
+
+/* =========================================================================
+   Suppport Opening Hours Table
+   ========================================================================= */
+
+.help-index-page__support-opening-hours-table {
+    border-collapse: collapse;
+    font-family: monospace;
+    font-size: .9em;
+}
+
+.help-index-page__support-opening-hours-table td {
+    padding: 0 1em 0 .1em;
+}
+
+
+
+/* =========================================================================
+   Sub Header
+   ========================================================================= */
+
+.help-index-page__sub-header {
+    text-align: center;
+    margin: 2em 0 1em;
+    font-size: 2em;
+}
+
+
+
+/* =========================================================================
+   Sub Header Tagline
+   ========================================================================= */
+
+.help-index-page__sub-header-tagline {
+    text-align: center;
+    margin:0 auto 2em;
+    max-width: 640px;
+}
+
+
+
+/* =========================================================================
+   Photo Gallery
+   ========================================================================= */
+
+.help-index-page__photo-gallery {
+    display: flex;
+    gap: 3%;
+    max-width: 480px;
+    max-width: 380px;
+    margin: 0 auto 2em;
+}
+
+
+
+/* =========================================================================
+   Photo Gallery Item
+   ========================================================================= */
+
+.help-index-page__photo-gallery-item {
+    width: 25%;
+    flex-grow: 0;
+}
+
+
+
+/* =========================================================================
+   Photo
+   ========================================================================= */
+
+.help-index-page__photo-gallery-item img {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 50%;
+}
+
+
+
+/* =========================================================================
+   Photo Caption
+   ========================================================================= */
+
+.help-index-page__photo-gallery-item span {
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    font-size: .8em;
+    padding: .5em 0;
+}
+
+
+
+/* =========================================================================
+   Horizontal Rule
+   ========================================================================= */
+
+.help-index-page__horizontal-rule {
+    border: 0;
+    height: 2px;
+    background: #444;
+}

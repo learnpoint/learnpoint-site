@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.header {
+    overflow: hidden;
+}
+
+.print .header {
+    display: none;
+}
+
+
+
+/* ==========================================================================
+   Nav
+   ========================================================================== */
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.is-mobile .header__nav {
+    font-size: 14px;
+}
+
+
+/* ==========================================================================
+   Logo
+   ========================================================================== */
+
+.header__logo {
+    padding: 24px 24px 18px;
+}
+
+.is-mobile .header__logo {
+    padding: 16px 16px 12px;
+}
+
+
+
+/* ==========================================================================
+   Logo Img
+   ========================================================================== */
+
+.header__logo-desktop-img,
+.header__logo-mobile-img {
+    display: block;
+}
+
+.is-desktop .header__logo-mobile-img,
+.is-mobile .header__logo-desktop-img {
+    display: none;
+}
+
+
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+.header__links {
+    display: flex;
+    padding: 0 24px;
+    align-items: center;
+}
+
+.is-mobile .header__links {
+    padding: 0 12px;
+}
+
+
+
+/* ==========================================================================
+   Link
+   ========================================================================== */
+
+.header__link {
+    padding: 8px;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.is-mobile .header__link {
+    padding: 4px;
+}

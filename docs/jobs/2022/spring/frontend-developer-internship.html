@@ -3,182 +3,179 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Frontend Developer Internship - Learnpoint</title>
-    <meta name="description" content="Skapa utbildningar, registrera studenter, dela ut uppgifter, skriv nyheter, och betygsätt studenter. Allt på ett ställe." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex" />
+<title>Frontend Developer Internship</title>
+<meta name="description" content="Frontend Developer Internship, Spring 2022" />
+<meta name="robots" content="noindex" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="mask-icon" href="/img/favicons/mask-icon.svg" color="#0780FF">
-    <link rel="shortcut icon" href="/img/favicons/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="/_images/favicons/mask-icon.svg" color="#0780FF">
+<link rel="shortcut icon" href="/_images/favicons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/_images/favicons/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@800&display=block">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@800&display=block">
 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/pages/index.css">
-    <link rel="stylesheet" href="/css/pages/sign-in.css">
-    <link rel="stylesheet" href="/css/pages/jobs.css">
-    <link rel="stylesheet" href="/css/pages/job-opening.css">
-    <link rel="stylesheet" href="/css/pages/404.css">
-    
-    <link rel="stylesheet" href="/css/components/header.css">
-    <link rel="stylesheet" href="/css/components/footer.css">
-    <link rel="stylesheet" href="/css/components/language.css">
-    <link rel="stylesheet" href="/css/components/desktop-screenshot.css">
-    <link rel="stylesheet" href="/css/components/mobile-screenshot.css">
-    
-    <script src="/js/components/language.js"></script>
-    <script src="/js/components/is-mobile.js"></script>
+<link rel="stylesheet" href="/_styles/main.css">
+<link rel="stylesheet" href="/_styles/print.css">
+<link rel="stylesheet" href="/_styles/components/header.css">
+<link rel="stylesheet" href="/_styles/components/footer.css">
+<link rel="stylesheet" href="/_styles/components/language.css">
+
+<script src="/_scripts/components/print.js"></script>
+<script src="/_scripts/components/is-mobile.js"></script>
+<script src="/_scripts/components/language.js"></script>
+    <link rel="stylesheet" href="/_styles/pages/job-opening.css">
 </head>
 
 <body>
+
     <header class="header">
-        <nav class="header__nav">
-            <a href="/" class="header__logo">
-                <img width="128" height="34" alt="Learnpoint" src="/img/logos/learnpoint-logo.svg" />
+    <nav class="header__nav">
+        <a href="/" class="header__logo" aria-label="Learnpoint Home">
+            <img class="header__logo-desktop-img" width="128" height="34" alt="" aria-hidden="true" src="/_images/logos/learnpoint-logo.svg" />
+            <img class="header__logo-mobile-img" width="85" height="23" alt="" aria-hidden="true" src="/_images/logos/learnpoint-logo.svg" />
+        </a>
+        <div class="header__links">
+            <a class="header__link" href="/help/">
+                <span lang="en">Help</span>
+                <span lang="sv">Hjälp</span>
             </a>
-            <div class="header__links">
-                <a class="header__link" href="/sign-in.html">
-                    <span lang="en">Sign in</span>
-                    <span lang="sv">Logga in</span>
-                </a>
-            </div>
-        </nav>
-    </header>
-    <main>
+            <a class="header__link" href="/sign-in.html">
+                <span lang="en">Sign in</span>
+                <span lang="sv">Logga in</span>
+            </a>
+        </div>
+    </nav>
+</header>
 
-<div class="job-opening">
+    <main class="main__container">
+        <div class="job-opening">
+            <h1>
+    <span lang="en">Frontend Developer</span>
+    <span lang="sv">Frontendutvecklare</span>
+</h1>
 
-    <h1>
-        <span lang="en">Frontend Developer</span>
-        <span lang="sv">Frontendutvecklare</span>
-    </h1>
-
-    <p style="background-color: #ff061c;border-radius: 12px; padding: 24px 32px;color: #fff;margin: 48px auto 64px;">
-    <span lang="en">You can no longer apply for this position. You can find all our open positions <a href="/jobs" style="color: #fff;">here</a>.</span>
-    <span lang="sv">Den här tjänsten går inte längre att söka. Alla våra lediga tjänster finns annonserade <a href="/jobs" style="color: #fff;">här</a>.</span>
+<p style="background-color: #ff061c;border-radius: 12px; padding: 24px 32px;color: #fff;margin: 48px auto 64px;">
+    <span lang="en">You can no longer apply for this position. You can find all our <a href="/jobs/" style="color: #fff;">open positions here</a>.</span>
+    <span lang="sv">Den här tjänsten går inte längre att söka. Alla våra lediga tjänster finns <a href="/jobs/" style="color: #fff;">annonserade här</a>.</span>
 </p>
 
-    <h6 style="margin-bottom:1em;">
-        <span lang="en">Spring 2022</span>
-        <span lang="sv">Våren 2022</span>
-    </h6>
+<h6 style="margin-bottom:1em;">
+    <span lang="en">Spring 2022</span>
+    <span lang="sv">Våren 2022</span>
+</h6>
 
-    <p>
-        <span lang="en">Learnpoint is an integrated LMS and SIS made for teachers, students, and school managers. The Learnpoint team is on a mission to simplify education and we have internship positions open for frontend developers during spring 2022.</span>
-        <span lang="sv">Learnpoint är ett integrerat LMS och administrativt system för lärare, studenter, och skolledare. Vår mission är att förenkla utbildning och vi har praktikplatser öppna för frontendutvecklare under våren 2022.</span>
-    </p>
+<p>
+    <span lang="en">Learnpoint is an integrated LMS and SIS made for teachers, students, and school managers. The Learnpoint team is on a mission to simplify education and we have internship positions open for frontend developers during spring 2022.</span>
+    <span lang="sv">Learnpoint är ett integrerat LMS och administrativt system för lärare, studenter, och skolledare. Vår mission är att förenkla utbildning och vi har praktikplatser öppna för frontendutvecklare under våren 2022.</span>
+</p>
 
-    <h2>
-        <span lang="en">About the Internship</span>
-        <span lang="sv">Om praktiken</span>
-    </h2>
+<h2>
+    <span lang="en">About the Internship</span>
+    <span lang="sv">Om praktiken</span>
+</h2>
 
-    <p>
-        <span lang="en">The main task will be to design and implement an application. The first step is to discuss and decide which application to build, based on the length of the internship, your skillset and our organizational needs. You will make a demo at the end of the intership.</span>
-        <span lang="sv">Praktikens primära uppdrag är designa och implementera en applikation. Första steget blir att diskutera och bestämma vilken applikation som skall utvecklas, utifrån praktikens längd, dina förkunskaper och verksamhetens behov. Praktiken avslutas med en presentation.</span>
-    </p>
+<p>
+    <span lang="en">The main task will be to design and implement an application. The first step is to discuss and decide which application to build, based on the length of the internship, your skillset and our organizational needs. You will make a demo at the end of the intership.</span>
+    <span lang="sv">Praktikens primära uppdrag är designa och implementera en applikation. Första steget blir att diskutera och bestämma vilken applikation som skall utvecklas, utifrån praktikens längd, dina förkunskaper och verksamhetens behov. Praktiken avslutas med en presentation.</span>
+</p>
 
-    <p>
-        <span lang="en">In addition to the main task, you'll also participate in a few meetings and workshops.</span>
-        <span lang="sv">Utöver det primära uppdraget kommer du även delta i några arbetsmöten och workshops.</span>
-    </p>
+<p>
+    <span lang="en">In addition to the main task, you'll also participate in a few meetings and workshops.</span>
+    <span lang="sv">Utöver det primära uppdraget kommer du även delta i några arbetsmöten och workshops.</span>
+</p>
 
-    <p>
-        <span lang="en">You'll have access to a supervisor throughout the whole internship. You'll meet with the supervisor at least once every week.</span>
-        <span lang="sv">Du har tillgång till en handledare under hela praktiken. Ni träffas minst en gång per vecka.</span>
-    </p>
+<p>
+    <span lang="en">You'll have access to a supervisor throughout the whole internship. You'll meet with the supervisor at least once every week.</span>
+    <span lang="sv">Du har tillgång till en handledare under hela praktiken. Ni träffas minst en gång per vecka.</span>
+</p>
 
-    <p>
-        <span lang="en">The internship is 2-6 months and takes place during spring 2022.</span>
-        <span lang="sv">Praktiken utförs under våren 2022 och är 2-6 månader.</span>
-    </p>
+<p>
+    <span lang="en">The internship is 2-6 months and takes place during spring 2022.</span>
+    <span lang="sv">Praktiken utförs under våren 2022 och är 2-6 månader.</span>
+</p>
 
-    <p>
-        <span lang="en">The internship is a team effort. You should apply together with at least one other intern.</span>
-        <span lang="sv">Praktiken är ett teamarbete. Du skall söka praktikplatsen tillsammans med en eller flera andra praktikanter.</span>
-    </p>
+<p>
+    <span lang="en">The internship is a team effort. You should apply together with at least one other intern.</span>
+    <span lang="sv">Praktiken är ett teamarbete. Du skall söka praktikplatsen tillsammans med en eller flera andra praktikanter.</span>
+</p>
 
-    <p>
-        <span lang="en">The internship is remote.</span>
-        <span lang="sv">Praktiken sker på distans.</span>
-    </p>
+<p>
+    <span lang="en">The internship is remote.</span>
+    <span lang="sv">Praktiken sker på distans.</span>
+</p>
 
-    <h2>
-        <span lang="en">About Us</span>
-        <span lang="sv">Om oss</span>
-    </h2>
+<h2>
+    <span lang="en">About Us</span>
+    <span lang="sv">Om oss</span>
+</h2>
 
-    <p>
-        <span lang="en">Learnpoint is part of the edtech company ViaEcole. We're a customer focused company with two products — Learnpoint and yh-antagning.se.</span>
-        <span lang="sv">Learnpoint är en del av edtech bolaget ViaEcole. Vi är ett kundorienterat bolag med två produkter — Learnpoint och yh-antagning.se.</span>
-    </p>
+<p>
+    <span lang="en">Learnpoint is part of the edtech company ViaEcole. We're a customer focused company with two products — Learnpoint and yh-antagning.se.</span>
+    <span lang="sv">Learnpoint är en del av edtech bolaget ViaEcole. Vi är ett kundorienterat bolag med två produkter — Learnpoint och yh-antagning.se.</span>
+</p>
 
-    <h2>
-        <span lang="en">About You</span>
-        <span lang="sv">Om dig</span>
-    </h2>
+<h2>
+    <span lang="en">About You</span>
+    <span lang="sv">Om dig</span>
+</h2>
 
-    <p>
-        <span lang="en">You are truly interested in frontend development, but you're also interested in users. How do they think, what's difficult for them, and what do they like? You understand that a usable application is as much about code as it is about humans.</span>
-        <span lang="sv">Du är genuint intresserad av frontendutveckling, men du är också intresserad av slutanvändare. Hur tänker dom, vad tycker dom är svårt och vad gillar dom? Du förstår att en användarvänlig applikation handlar lika mycket om kod som om människor.</span>
-    </p>
+<p>
+    <span lang="en">You are truly interested in frontend development, but you're also interested in users. How do they think, what's difficult for them, and what do they like? You understand that a usable application is as much about code as it is about humans.</span>
+    <span lang="sv">Du är genuint intresserad av frontendutveckling, men du är också intresserad av slutanvändare. Hur tänker dom, vad tycker dom är svårt och vad gillar dom? Du förstår att en användarvänlig applikation handlar lika mycket om kod som om människor.</span>
+</p>
 
-    <p>
-        <span lang="en">You want to achieve results, but you're also interested in questions. You are curious, you love learning, and you understand there's no simple prescription for designing user friendly applications.</span>
-        <span lang="sv">Du vill uppnå resultat, men du är också intresserad av frågor. Du är nyfiken, älskar lärande och förstår att det inte finns något färdig recept för att designa användarvänliga applikationer.</span>
-    </p>
+<p>
+    <span lang="en">You want to achieve results, but you're also interested in questions. You are curious, you love learning, and you understand there's no simple prescription for designing user friendly applications.</span>
+    <span lang="sv">Du vill uppnå resultat, men du är också intresserad av frågor. Du är nyfiken, älskar lärande och förstår att det inte finns något färdig recept för att designa användarvänliga applikationer.</span>
+</p>
 
-    <p>
-        <span lang="en">You are proficient in HTML, CSS, and JavaScript.</span>
-        <span lang="sv">Du behärskar HTML, CSS, och JavaScript.</span>
-    </p>
+<p>
+    <span lang="en">You are proficient in HTML, CSS, and JavaScript.</span>
+    <span lang="sv">Du behärskar HTML, CSS, och JavaScript.</span>
+</p>
 
-    <h2>
-        <span lang="en">How to Apply</span>
-        <span lang="sv">Sök praktikplatsen</span>
-    </h2>
+<h2>
+    <span lang="en">How to Apply</span>
+    <span lang="sv">Sök praktikplatsen</span>
+</h2>
 
-    <p>
-        <span lang="en">Write an application where you tell us about yourself and your interest in education, learning, and frontend development. Attach CV and portfolio. Make sure to mention the other interns you are applying with. Send your application to <strong><a href="mailto:karl.west@viaecole.se">karl.west@viaecole.se</a></strong></span>
-        <span lang="sv">Skriv en ansökan där du beskriver dig själv och ditt intresse för utbildning, lärande och frontendutveckling. Bifoga CV och portfolio. Ange vem eller vilka du söker tillsammans med. Skicka din ansökan till <strong><a href="mailto:karl.west@viaecole.se">karl.west@viaecole.se</a></strong></span>
-    </p>
+<p>
+    <span lang="en">Write an application where you tell us about yourself and your interest in education, learning, and frontend development. Attach CV and portfolio. Make sure to mention the other interns you are applying with. Send your application to <strong><a href="mailto:karl.west@viaecole.se">karl.west@viaecole.se</a></strong></span>
+    <span lang="sv">Skriv en ansökan där du beskriver dig själv och ditt intresse för utbildning, lärande och frontendutveckling. Bifoga CV och portfolio. Ange vem eller vilka du söker tillsammans med. Skicka din ansökan till <strong><a href="mailto:karl.west@viaecole.se">karl.west@viaecole.se</a></strong></span>
+</p>
 
-    <h2>
-        <span lang="en">What happens next?</span>
-        <span lang="sv">Vad är nästa steg?</span>
-    </h2>
+<h2>
+    <span lang="en">What happens next?</span>
+    <span lang="sv">Vad är nästa steg?</span>
+</h2>
 
-    <p>
-        <span lang="en">When we've reviewed your application, you'll hear from us within a week about advancement to an interview.</span>
-        <span lang="sv">När vi läst igenom din ansökan, meddelar vi dig inom en vecka om du gått vidare till intervju.</span>
-    </p>
+<p>
+    <span lang="en">When we've reviewed your application, you'll hear from us within a week about advancement to an interview.</span>
+    <span lang="sv">När vi läst igenom din ansökan, meddelar vi dig inom en vecka om du gått vidare till intervju.</span>
+</p>
 
-    <p>
-        <span lang="en">During the interview you'll tell us more about yourself and your interest in education, learning and frontend development. We'll explain the internship in detail and at the end of the interview we'll agree upon how to move forward together.</span>
-        <span lang="sv">Under intervjun får du berätta mer om dig själv och ditt intresse för utbildning, lärande och frontendutveckling. Vi beskriver praktiken lite mer detaljerat och i slutet av intervjun kommer vi överens om hur vi går vidare tillsammans.</span>
-    </p>
-
-    <p>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="#ef0000">
+<p>
+    <span lang="en">During the interview you'll tell us more about yourself and your interest in education, learning and frontend development. We'll explain the internship in detail and at the end of the interview we'll agree upon how to move forward together.</span>
+    <span lang="sv">Under intervjun får du berätta mer om dig själv och ditt intresse för utbildning, lärande och frontendutveckling. Vi beskriver praktiken lite mer detaljerat och i slutet av intervjun kommer vi överens om hur vi går vidare tillsammans.</span>
+</p>
+            <p class="job-opening__we-love-learning">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="#ef0000">
     <title>We love learning</title>
     <path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 01-.686 0 16.709 16.709 0 01-.465-.252 31.147 31.147 0 01-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0114 20.408z"></path>
 </svg>
-    </p>
+            </p>
+        </div>
+    </main>
 
-</div>
-
-</main>
-
-<footer class="footer">
+    <footer class="footer print__hide">
     <ul>
         <li>
             <span lang="en">Learnpoint is developed by <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
-            <span lang="sv">Learnpoint är utvecklat av <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
+            <span lang="sv">Learnpoint utvecklas av <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
         </li>
         <li>
-            <span lang="en"><a href="/jobs" class="footer__link">Work with us</a></span>
-            <span lang="sv"><a href="/jobs" class="footer__link">Lediga tjänster</a></span>
+            <span lang="en"><a href="/jobs/" class="footer__link">Work with us</a></span>
+            <span lang="sv"><a href="/jobs/" class="footer__link">Lediga tjänster</a></span>
         </li>
     </ul>
     <div class="footer__select-language-panel">
@@ -191,6 +188,7 @@
         </div>
     </div>
 </footer>
+
 </body>
 
 </html>

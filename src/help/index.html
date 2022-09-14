@@ -1,0 +1,159 @@
+---
+layout: help-page-layout.html
+title: Hjälp
+description: Learnpoint Hjälp och Support
+---
+
+<link rel="stylesheet" href="/_styles/pages/help-index-page.css">
+
+<h1>
+    <span lang="en">Help</span>
+    <span lang="sv">Hjälp</span>
+</h1>
+
+<h2>
+    <span lang="en">Support</span>
+    <span lang="sv">Support</span>
+</h2>
+
+<p class="help-index-page__support-contact">
+    <a href="mailto:support@learnpoint.se" target="_blank" rel="noopener noreferrer">
+        <!-- svg/envelope-fill.svg -->
+        <span>support@learnpoint.se</span>
+    </a>
+    <br />
+    <a href="tel:+46850126090">
+        <!-- svg/telephone-fill.svg -->
+        <span lang="en">+46 850 126 090</span>
+        <span lang="sv">08 - 50 12 60 90</span>
+    </a>
+</p>
+
+<p class="help-index-page__support-opening-hours">
+    <span lang="en">
+        <span>Phone opening hours</span>
+        <span class="help-index-page__support-open-label">Open</span>
+        <span class="help-index-page__support-closed-label">Closed</span>
+        <span class="help-index-page__support-closed-for-lunch-label">Closed for lunch</span>
+    </span>
+    <span lang="sv">
+        <span>Telefontider</span>
+        <span class="help-index-page__support-open-label">Öppet</span>
+        <span class="help-index-page__support-closed-label">Stängt</span>
+        <span class="help-index-page__support-closed-for-lunch-label">Lunchstängt</span>
+    </span>
+</p>
+
+<script>
+    const phoneSupportOpenHours = {
+        0: [],                      // Sun
+        1: [9, 10, 11, 13, 14, 15], // Mon
+        2: [9, 10, 11, 13, 14, 15], // Tue
+        3: [9, 10, 11, 13, 14, 15], // Wed
+        4: [9, 10, 11, 13, 14, 15], // Thu
+        5: [9, 10, 11],             // Fri
+        6: [],                      // Sat
+    };
+
+    function phoneSupportIsOpen() {
+        const nowAtOffice = new Date((new Date()).toLocaleString('en-US', { timeZone: 'Europe/Stockholm' }));
+        const dayAtOffice = nowAtOffice.getDay();
+        const hourAtOffice = nowAtOffice.getHours();
+
+        const openNow = phoneSupportOpenHours[dayAtOffice].includes(hourAtOffice);
+        const openPreviousHour = phoneSupportOpenHours[dayAtOffice].includes(hourAtOffice - 1);
+        const openNextHour = phoneSupportOpenHours[dayAtOffice].includes(hourAtOffice + 1);
+
+        return { openNow, openPreviousHour, openNextHour };
+    }
+
+    const { openNow, openPreviousHour, openNextHour } = phoneSupportIsOpen();
+
+    const supportOpeningHoursPanel = document.querySelector('.help-index-page__support-opening-hours');
+
+    if (openNow) {
+        supportOpeningHoursPanel.classList.add('OPEN');
+    } else {
+        if (openPreviousHour && openNextHour) {
+            supportOpeningHoursPanel.classList.add('CLOSED-FOR-LUNCH');
+        } else {
+            supportOpeningHoursPanel.classList.add('CLOSED');
+        }
+    }
+</script>
+
+<table class="help-index-page__support-opening-hours-table">
+    <tr>
+        <td>
+            <span lang="en">Mon-Thu</span>
+            <span lang="sv">Mån-Tor</span>
+        </td>
+        <td>
+            <span lang="en">9am-12pm and 1pm-4pm</span>
+            <span lang="sv">9-12 och 13-16</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span lang="en">Fri</span>
+            <span lang="sv">Fre</span>
+        </td>
+        <td>
+            <span lang="en">9am-12pm</span>
+            <span lang="sv">9-12</span>
+        </td>
+    </tr>
+</table>
+
+<h2>
+    <span lang="en">User guides</span>
+    <span lang="sv">Dokumentation</span>
+</h2>
+
+<p class="desktop">
+    <span lang="en">Check out the guides in the menu to the left for instructions on how to use Learnpoint.</span>
+    <span lang="sv">I menyn till vänster hittar du instruktioner för alla funktioner i Learnpoint.</span>
+</p>
+
+<p class="mobile">
+    <span lang="en">Check out the guides in the</span>
+    <span lang="sv">I</span>
+    <span style="display:inline-flex; background-color:#fff; border:1px solid #ddd;padding:3px 6px; color:#666; border-radius:4px; vertical-align:center;">
+        <!-- svg/hamburger.svg -->
+    </span>
+    <span lang="en">menu in the upper right corner for instructions on how to use Learnpoint.</span>
+    <span lang="sv">menyn uppe till höger hittar du instruktioner för alla funktioner i Learnpoint.</span>
+</p>
+
+
+<h2>
+    <span lang="en">News</span>
+    <span lang="sv">Nyheter</span>
+</h2>
+
+<p>
+    <span lang="en">Product announcements and updates are published on <a href="/news/">the news page</a>, where you also can subscribe to our newsletter.</span>
+    <span lang="sv"><a href="/news/">På nyhetssidan</a> publiceras produktnyheter och uppdateringar. Där kan du även prenumerera på vårt nyhetsbrev.</span>
+</p>
+
+
+<h2>
+    <span lang="en">Feedback</span>
+    <span lang="sv">Feedback</span>
+</h2>
+
+<p>
+    <span lang="en">We really appreciate feedback from our users. Get in touch with our support with your ideas on how we can improve Learnpoint.</span>
+    <span lang="sv">Vi uppskattar alltid feedback från våra användare. Kontakta vår support med synpunkter och förslag kring Learnpoint.</span>
+</p>
+
+
+<h2>
+    <span lang="en">User testing</span>
+    <span lang="sv">Användartester</span>
+</h2>
+
+<p>
+    <span lang="en">If you want to participate in user testing or user interviews, please send an email to: <a href="mailto:karl.west@learnpoint.se">karl.west@learnpoint.se</a></span>
+    <span lang="sv">Vill du delta i användartester eller verksamhetsintervjuer? Skicka en intresseanmälan till: <a href="mailto:karl.west@learnpoint.se">karl.west@learnpoint.se</a></span>
+</p>

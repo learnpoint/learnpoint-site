@@ -1,6 +1,8 @@
-<!-- header.html, { title: "Sign in - Learnpoint", description: "Sign in to Learnpoint. Logga in på Learnpoint." } -->
-
-<script defer src="/js/pages/sign-in.js"></script>
+---
+layout: sign-in-layout.html
+title: Sign In
+description: Sign In to Learnpoint
+---
 
 <h1>
     <span lang="en">Sign in</span>
@@ -9,7 +11,7 @@
 
 <label for="school-name" class="sign-in__label">
     <span lang="en">Enter the Learnpoint address for your school.</span>
-    <span lang="sv">Skriv in Learnpoint-adressen till din skola.</span> 
+    <span lang="sv">Skriv in Learnpoint-adressen till din skola.</span>
 </label>
 
 <form autocomplete="off" class="sign-in__form EMPTY" data-element="sign-in__form" action="#">
@@ -22,7 +24,7 @@
             <span lang="en">Enter the Learnpoint address</span>
             <span lang="sv">Ange Learnpoint-adressen</span>
         </div>
-    </div>   
+    </div>
     <div data-nosnippet class="sign-in__input-wrap">
         <div class="sign-in__input-overlay" data-element="sign-in__input-overlay">school-name</div>
         <input id="school-name" autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off" class="sign-in__input" data-element="sign-in__input" placeholder="school-name" autofocus />
@@ -35,8 +37,8 @@
 </form>
 
 <p class="sign-in__help-message">
-    <span lang="en">Trouble signing in? <a href="http://support.learnpoint.se/" rel="noreferrer" target="_blank" class="sign-in__link">We'd be happy to help</a>.</span>
-    <span lang="sv">Problem att logga in? <a href="http://support.learnpoint.se/" rel="noreferrer" target="_blank" class="sign-in__link">Vi hjälper gärna till</a>.</span>
+    <span lang="en">Trouble signing in? <a href="/help/getting-started/sign-in.html" class="sign-in__link">We'd be happy to help</a>.</span>
+    <span lang="sv">Problem att logga in? <a href="/help/getting-started/sign-in.html" class="sign-in__link">Vi hjälper gärna till</a>.</span>
 </p>
 
 <div class="sign-in__previous-logins EMPTY" data-element="sign-in__previous-logins">
@@ -45,5 +47,3 @@
         <span lang="sv">Tidigare inloggningar</span>
     </p>
 </div>
-
-<!-- footer.html -->

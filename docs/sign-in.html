@@ -3,60 +3,60 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Sign in - Learnpoint</title>
-    <meta name="description" content="Sign in to Learnpoint. Logga in på Learnpoint." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index" />
+<title>Sign In</title>
+<meta name="description" content="Sign In to Learnpoint" />
+<meta name="robots" content="index" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="mask-icon" href="/img/favicons/mask-icon.svg" color="#0780FF">
-    <link rel="shortcut icon" href="/img/favicons/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="/_images/favicons/mask-icon.svg" color="#0780FF">
+<link rel="shortcut icon" href="/_images/favicons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/_images/favicons/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@800&display=block">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@800&display=block">
 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/pages/index.css">
-    <link rel="stylesheet" href="/css/pages/sign-in.css">
-    <link rel="stylesheet" href="/css/pages/jobs.css">
-    <link rel="stylesheet" href="/css/pages/job-opening.css">
-    <link rel="stylesheet" href="/css/pages/404.css">
-    
-    <link rel="stylesheet" href="/css/components/header.css">
-    <link rel="stylesheet" href="/css/components/footer.css">
-    <link rel="stylesheet" href="/css/components/language.css">
-    <link rel="stylesheet" href="/css/components/desktop-screenshot.css">
-    <link rel="stylesheet" href="/css/components/mobile-screenshot.css">
-    
-    <script src="/js/components/language.js"></script>
-    <script src="/js/components/is-mobile.js"></script>
+<link rel="stylesheet" href="/_styles/main.css">
+<link rel="stylesheet" href="/_styles/print.css">
+<link rel="stylesheet" href="/_styles/components/header.css">
+<link rel="stylesheet" href="/_styles/components/footer.css">
+<link rel="stylesheet" href="/_styles/components/language.css">
+
+<script src="/_scripts/components/print.js"></script>
+<script src="/_scripts/components/is-mobile.js"></script>
+<script src="/_scripts/components/language.js"></script>
+    <link rel="stylesheet" href="/_styles/pages/sign-in.css">
+    <script defer src="/_scripts/pages/sign-in.js"></script>
 </head>
 
 <body>
+
     <header class="header">
-        <nav class="header__nav">
-            <a href="/" class="header__logo">
-                <img width="128" height="34" alt="Learnpoint" src="/img/logos/learnpoint-logo.svg" />
+    <nav class="header__nav">
+        <a href="/" class="header__logo" aria-label="Learnpoint Home">
+            <img class="header__logo-desktop-img" width="128" height="34" alt="" aria-hidden="true" src="/_images/logos/learnpoint-logo.svg" />
+            <img class="header__logo-mobile-img" width="85" height="23" alt="" aria-hidden="true" src="/_images/logos/learnpoint-logo.svg" />
+        </a>
+        <div class="header__links">
+            <a class="header__link" href="/help/">
+                <span lang="en">Help</span>
+                <span lang="sv">Hjälp</span>
             </a>
-            <div class="header__links">
-                <a class="header__link" href="/sign-in.html">
-                    <span lang="en">Sign in</span>
-                    <span lang="sv">Logga in</span>
-                </a>
-            </div>
-        </nav>
-    </header>
-    <main>
+            <a class="header__link" href="/sign-in.html">
+                <span lang="en">Sign in</span>
+                <span lang="sv">Logga in</span>
+            </a>
+        </div>
+    </nav>
+</header>
 
-<script defer src="/js/pages/sign-in.js"></script>
-
-<h1>
+    <main class="main__container">
+        <h1>
     <span lang="en">Sign in</span>
     <span lang="sv">Logga in</span>
 </h1>
 
 <label for="school-name" class="sign-in__label">
     <span lang="en">Enter the Learnpoint address for your school.</span>
-    <span lang="sv">Skriv in Learnpoint-adressen till din skola.</span> 
+    <span lang="sv">Skriv in Learnpoint-adressen till din skola.</span>
 </label>
 
 <form autocomplete="off" class="sign-in__form EMPTY" data-element="sign-in__form" action="#">
@@ -69,7 +69,7 @@
             <span lang="en">Enter the Learnpoint address</span>
             <span lang="sv">Ange Learnpoint-adressen</span>
         </div>
-    </div>   
+    </div>
     <div data-nosnippet class="sign-in__input-wrap">
         <div class="sign-in__input-overlay" data-element="sign-in__input-overlay">school-name</div>
         <input id="school-name" autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off" class="sign-in__input" data-element="sign-in__input" placeholder="school-name" autofocus />
@@ -82,8 +82,8 @@
 </form>
 
 <p class="sign-in__help-message">
-    <span lang="en">Trouble signing in? <a href="http://support.learnpoint.se/" rel="noreferrer" target="_blank" class="sign-in__link">We'd be happy to help</a>.</span>
-    <span lang="sv">Problem att logga in? <a href="http://support.learnpoint.se/" rel="noreferrer" target="_blank" class="sign-in__link">Vi hjälper gärna till</a>.</span>
+    <span lang="en">Trouble signing in? <a href="/help/getting-started/sign-in.html" class="sign-in__link">We'd be happy to help</a>.</span>
+    <span lang="sv">Problem att logga in? <a href="/help/getting-started/sign-in.html" class="sign-in__link">Vi hjälper gärna till</a>.</span>
 </p>
 
 <div class="sign-in__previous-logins EMPTY" data-element="sign-in__previous-logins">
@@ -92,18 +92,17 @@
         <span lang="sv">Tidigare inloggningar</span>
     </p>
 </div>
+    </main>
 
-</main>
-
-<footer class="footer">
+    <footer class="footer print__hide">
     <ul>
         <li>
             <span lang="en">Learnpoint is developed by <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
-            <span lang="sv">Learnpoint är utvecklat av <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
+            <span lang="sv">Learnpoint utvecklas av <a href="http://www.viaecole.se/" rel="noreferrer" class="footer__link" target="_blank">ViaEcole</a></span>
         </li>
         <li>
-            <span lang="en"><a href="/jobs" class="footer__link">Work with us</a></span>
-            <span lang="sv"><a href="/jobs" class="footer__link">Lediga tjänster</a></span>
+            <span lang="en"><a href="/jobs/" class="footer__link">Work with us</a></span>
+            <span lang="sv"><a href="/jobs/" class="footer__link">Lediga tjänster</a></span>
         </li>
     </ul>
     <div class="footer__select-language-panel">
@@ -116,6 +115,7 @@
         </div>
     </div>
 </footer>
+
 </body>
 
 </html>
