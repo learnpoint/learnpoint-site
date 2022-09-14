@@ -53,7 +53,7 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 ## Screenshots
 
 * When appropriate, screenshots should have two versions, one for desktop and one for mobile.
-* Screenshots should be cropped and zoomed to make the text in the screenshot readable. This is especially important for desktop screenshots. 
+* Screenshots should be cropped and zoomed to make the text in the screenshot readable. This is particularly important when there's no mobile screenshot.
 
 
 ## How to: Add a Job Opening Page
@@ -76,9 +76,24 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 
 ## How to: Write Help Pages
 
+* Write primarily for staff and teachers, but, as much as possible, try to make help pages applicable to any role.
+* Use clear but compact language. Write: *"Klicka på `Spara`"* rather than: *"Klicka på knappen `Spara`"*.
 * Put labels for links and buttons in code tags (or backticks if using markdown).
-* Content images (screenshots) should be stored in a folder named _assets next to the page.
+* Assets (like screenshots) should be stored in a folder named `_assets` next to the page.
 * When painting arrows and indicators on a screenshot, use the orange color `#FF7B00`.
-* If appropriate, screenshots should have two versions, one for desktop and one for mobile.
 * For now, help pages are only written in swedish. Add the `<!-- only-in-swedish.html -->` include immediately after the `h1` element.
 * `<title>`, `<meta name="description" ... >` and `alt` attributes should be written in swedish.
+
+
+## How to: Write News Articles
+
+1. If it doesn't exist yet, create an appropriate folder inside the `/news` folder.
+2. Create a html file with a descriptive name. For example: `/news/2022-06/group-code-in-title-field.html`.
+3. Set layout, title and description in front matter. Title should be in english, but description can be in both english and swedish.
+4. Set `robots: noindex` in front matter. We don't want news articles to compete with other pages on google search results.
+5. Try to include at least one relevant screenshot in the article.
+6. Language should be correct, compact and casual.
+7. Speak directly to the reader. Use the pronoun *"you"* in active sentences. Avoid pronouns like *"teachers"*, *"users"*, etc.
+8. Avoid using *"we"*, unless the reader is clearly included. Instead of: *"We've added a new feature"*, write: "*A new feature is added"*.
+9. Use a neutral and descriptive language. Instead of: *"The page is simplified"*, write: "*The page is updated*" or: "*Some elements are removed from the page*".
+10. Write in both swedish and english.
