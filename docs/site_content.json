@@ -204,10 +204,10 @@
         "content": "News Nyheter On this page you'll find product announcements and updates. To get notified by email, subscribe to our newsletter. Här publiceras produktnyheter och uppdateringar. Vill du få nyheterna skickad till din mejl kan du prenumerera på vårt nyhetsbrev. New feature: Notifications Ny funktion: Aviseringar Sep 12, 2022 12 sep 2022 Group code in title field Gruppkod i titelfältet Jun 10, 2022 10 jun 2022 Breadcrumb shortcuts Genvägar i brödsmulorna Nov 22, 2021 22 nov 2021"
     },
     {
-        "title": "",
-        "description": "",
+        "title": "Unsubscribed",
+        "description": "Unsubscribed. Prenumerationen avslutad.",
         "url": "/news/unsubscribed/index.html",
-        "content": ""
+        "content": "Unsubscribed! Prenumerationen avslutad! You're now unsubscribed from Learnpoint News. Go to the news page if you want to re-subscribe or read the news online. Din prenumeration på Learnpoint News har avslutats. Gå till nyhetssidan om du vill prenumerera igen eller läsa nyheterna online."
     },
     {
         "title": "Sign In",
