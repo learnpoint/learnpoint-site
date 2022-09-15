@@ -15,6 +15,10 @@
     display: block;
 }
 
+.print .help-page {
+    display: block;
+}
+
 
 
 /* =========================================================================
@@ -25,6 +29,10 @@
     border-right: 1px solid #ccc;
     padding-right: 24px;
     padding-right: 16px;
+}
+
+.print .help-page__sidebar-area {
+    display: none;
 }
 
 

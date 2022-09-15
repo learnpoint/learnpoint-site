@@ -13,7 +13,7 @@ Avsnitten fungerar som platshållare för kursdelarna så att du kan ge kursinne
 
 ## Lägg till avsnit
 
-1. Skrolla längs ned på innehållssidan.
+1. Skrolla längst ned på innehållssidan.
 2. Klicka på `Nytt avsnitt`.
 3. Fyll i namn.
 4. Fyll i beskrivning om du vill.
