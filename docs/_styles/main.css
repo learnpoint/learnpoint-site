@@ -5,8 +5,7 @@ body {
     line-height: 1.5;
     font-size: 18px;
     overflow-y: scroll;
-    background-color: #fef2e4;
-    background-color: #fdf1e3;
+    background-color: #fff8ef;
 }
 
 .print body {
@@ -29,7 +28,7 @@ h1 {
 }
 
 .is-mobile h1 {
-    font-size: 32px;
+    font-size: 28px;
     margin: 24px auto 16px;
 }
 
@@ -45,7 +44,7 @@ p {
 }
 
 a {
-    color: #0780ff;
+    color: #0470e1;
 }
 
 .is-mobile .desktop {
