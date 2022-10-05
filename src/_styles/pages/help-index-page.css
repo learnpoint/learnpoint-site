@@ -15,7 +15,6 @@
 
 .help-index-page__support-contact a {
     color: inherit;
-    
     text-decoration: none;
     padding: 0 2px;
     display: inline-flex;
@@ -24,9 +23,7 @@
 }
 
 .help-index-page__support-contact a:hover {
-    color: #0780ff;
     color: #0470e1;
-    border-bottom: 1.5px solid #0780ff;
     border-bottom: 1.5px solid #0470e1;
 }
 
@@ -37,8 +34,6 @@
    ========================================================================= */
 
 .help-index-page__support-contact svg {
-    color: rgba(0, 0, 0, .5);
-    color: #0780ff;
     color: #0470e1;
     height: 16px;
     width: 16px;
@@ -71,14 +66,12 @@
 }
 
 .help-index-page__support-open-label {
-    color: #188038;
     color: #177b36;
     background-color: rgba(24, 128, 56, .08);
 }
 
 .help-index-page__support-closed-label,
 .help-index-page__support-closed-for-lunch-label {
-    color: #d93025;
     color: #ce2f25;
     background-color: rgba(217, 48, 37, .06);
 }
@@ -147,7 +140,6 @@
 .help-index-page__photo-gallery {
     display: flex;
     gap: 3%;
-    max-width: 480px;
     max-width: 380px;
     margin: 0 auto 2em;
 }
