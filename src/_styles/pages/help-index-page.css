@@ -72,12 +72,14 @@
 
 .help-index-page__support-open-label {
     color: #188038;
+    color: #177b36;
     background-color: rgba(24, 128, 56, .08);
 }
 
 .help-index-page__support-closed-label,
 .help-index-page__support-closed-for-lunch-label {
     color: #d93025;
+    color: #ce2f25;
     background-color: rgba(217, 48, 37, .06);
 }
 
