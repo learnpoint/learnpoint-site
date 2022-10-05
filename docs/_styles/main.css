@@ -7,6 +7,7 @@ body {
     overflow-y: scroll;
     background-color: #fef2e4;
     background-color: #fdf1e3;
+    background-color: #fff8ef;
 }
 
 .print body {
@@ -46,6 +47,8 @@ p {
 
 a {
     color: #0780ff;
+    /* color: #006cdc; */
+    color: #0470e1;
 }
 
 .is-mobile .desktop {

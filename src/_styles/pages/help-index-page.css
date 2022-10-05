@@ -10,26 +10,12 @@
 
 
 /* =========================================================================
-   Suppport Contact svg
-   ========================================================================= */
-
-.help-index-page__support-contact svg {
-    color: rgba(0, 0, 0, .5);
-    color: #0780ff;
-    height: 16px;
-    width: 16px;
-    margin: 0 12px 0 0;
-    margin-top: 1px;
-}
-
-
-
-/* =========================================================================
    Suppport Contact a
    ========================================================================= */
 
 .help-index-page__support-contact a {
     color: inherit;
+    
     text-decoration: none;
     padding: 0 2px;
     display: inline-flex;
@@ -39,7 +25,25 @@
 
 .help-index-page__support-contact a:hover {
     color: #0780ff;
+    color: #0470e1;
     border-bottom: 1.5px solid #0780ff;
+    border-bottom: 1.5px solid #0470e1;
+}
+
+
+
+/* =========================================================================
+   Suppport Contact svg
+   ========================================================================= */
+
+.help-index-page__support-contact svg {
+    color: rgba(0, 0, 0, .5);
+    color: #0780ff;
+    color: #0470e1;
+    height: 16px;
+    width: 16px;
+    margin: 0 12px 0 0;
+    margin-top: 1px;
 }
 
 
