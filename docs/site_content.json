@@ -210,6 +210,12 @@
         "content": "Show if survey is anonymous Visa om enkät är anonym 13 Oct 2022 13 okt 2022 • Frida B When you create a survey, you can choose whether it should be anonymous or not. När du skapar en enkät kan du välja om den ska vara anonym eller inte. Today, the person who is answering can see whether the survey is anonymous or not. Previously this was not shown. Nu kan den som svarar se om enkäten är anonym eller inte. Tidigare har det inte visats. If the survey is anonymous it says \"Ja\", otherwise it says \"Nej\". Here is an example of a survey that is anonymous: Om enkäten är anonym står det \"Ja\" och är den inte anonym står det \"Nej\". Här är ett exempel på en anonym enkät: View all news → Visa alla nyheter → We love learning"
     },
     {
+        "title": "Comments on announcements",
+        "description": "Comments on announcements",
+        "url": "/news/2022-10/comments-on-announcements.html",
+        "content": "Comments on announcements Kommentarer på nyheter 17 Oct 2022 17 okt 2022 • Karl W Every group in Learnpoint has an announcement feature. You can use the feature to communicate information to all the members in the group. Alla grupper i Learnpoint har en nyhetsfunktion. Du kan använda funktionen för att kommunicera information till alla medlemmar i gruppen. On the evening of 19 Oct, the announcement feature will be updated. The update will make it possible to write comments to announcements. På kvällen den 19 okt uppdateras nyhetsfunktionen. Uppdateringen gör det möjligt att skriva kommentarer på nyheter. This is how it will look like after the update: Såhär kan det se ut efter uppdateringen: View all news → Visa alla nyheter → We love learning"
+    },
+    {
         "title": "Gradebook colors",
         "description": "Gradebook colors",
         "url": "/news/2022-10/gradebook-colors.html",
@@ -219,7 +225,7 @@
         "title": "Learnpoint News",
         "description": "Learnpoint News, Learnpoint Nyheter",
         "url": "/news/index.html",
-        "content": "News Nyheter On this page you'll find product announcements and updates. To get notified by email, subscribe to our newsletter. Här publiceras produktnyheter och uppdateringar. Vill du få nyheterna skickad till din mejl kan du prenumerera på vårt nyhetsbrev. Show if survey is anonymous Visa om enkät är anonym 13 Oct 2022 13 okt 2022 Gradebook colors Färger på betygssidan 10 Oct 2022 10 okt 2022 New feature: Notifications Ny funktion: Aviseringar 12 Sep 2022 12 sep 2022 Group code in title field Gruppkod i titelfältet 10 Jun 2022 10 jun 2022 Breadcrumb shortcuts Genvägar i brödsmulorna 22 Nov 2021 22 nov 2021"
+        "content": "News Nyheter On this page you'll find product announcements and updates. To get notified by email, subscribe to our newsletter. Här publiceras produktnyheter och uppdateringar. Vill du få nyheterna skickad till din mejl kan du prenumerera på vårt nyhetsbrev. Comments on announcements Kommentarer på nyheter 17 Oct 2022 17 okt 2022 Show if survey is anonymous Visa om enkät är anonym 13 Oct 2022 13 okt 2022 Gradebook colors Färger på betygssidan 10 Oct 2022 10 okt 2022 New feature: Notifications Ny funktion: Aviseringar 12 Sep 2022 12 sep 2022 Group code in title field Gruppkod i titelfältet 10 Jun 2022 10 jun 2022 Breadcrumb shortcuts Genvägar i brödsmulorna 22 Nov 2021 22 nov 2021"
     },
     {
         "title": "Unsubscribed",
