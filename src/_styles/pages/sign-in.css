@@ -140,8 +140,7 @@
     text-align: center;
     transition: opacity .2s;
     -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
-    -moz-appearance: none;
-    -webkit-appearance: none;
+    appearance: none;
     cursor: pointer;
     pointer-events: unset;
     opacity: 1;
@@ -273,8 +272,7 @@
     outline: 0;
     text-align: center;
     -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
-    -moz-appearance: none;
-    -webkit-appearance: none;
+    appearance: none;
     border: 1px solid #aaa;
 }
 
