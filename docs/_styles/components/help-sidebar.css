@@ -251,7 +251,7 @@
 }
 
 .is-mobile .help-sidebar h2 {
-    color: #ccc;
+    color: #f3f3f3;
 }
 
 
@@ -271,7 +271,7 @@
 }
 
 .is-mobile .help-sidebar nav a {
-    color: #bbb;
+    color: #ccc;
 }
 
 .is-desktop .help-sidebar nav a:hover {
