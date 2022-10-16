@@ -2,6 +2,8 @@
 layout: help-page-layout.html
 title: Betyg / Inledning
 description: Betyg / Inledning - Learnpoint Hjälp och Support
+next: "Betyg / Kursdelar"
+next_url: /help/grading/course-items.html
 ---
 
 # Betyg

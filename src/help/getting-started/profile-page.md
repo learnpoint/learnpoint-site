@@ -2,6 +2,8 @@
 layout: help-page-layout.html
 title: Kom igång / Profilsidan
 description: Profilsidan - Learnpoint Hjälp och Support
+next: "Grupper / Inledning"
+next_url: /help/groups/introduction.html
 ---
 
 # Profilsidan
