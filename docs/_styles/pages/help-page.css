@@ -148,3 +148,30 @@
     margin: 0 auto 2em;
     max-width: 640px;
 }
+
+
+
+/* =========================================================================
+   Next Page Link
+   ========================================================================= */
+
+.help-page__next-page-link {
+    display: none;
+    border-top: 1px solid #ddd;
+    margin: 4em 0 0;
+    padding: 1.5em 0 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.help-page__next-page-link::before {
+    content: 'Nästa: ';
+}
+
+.help-page__next-page-link::after {
+    content: ' →';
+}
+
+.help-page__next-page-link:not([href=""]) {
+    display: block; /* Only show when href has value. */
+}

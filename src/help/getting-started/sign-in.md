@@ -2,6 +2,8 @@
 layout: help-page-layout.html
 title: Kom igång / Logga in
 description: Logga in - Learnpoint Hjälp och Support
+next: "Kom igång / Aviseringar"
+next_url: /help/getting-started/notifications.html
 ---
 
 # Logga in

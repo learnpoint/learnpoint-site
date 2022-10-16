@@ -2,6 +2,8 @@
 layout: help-page-layout.html
 title: Betyg / Kurser
 description: Betyg / Kurser - Learnpoint Hjälp och Support
+next: "LIA / Inledning"
+next_url: /help/internship/introduction.html
 ---
 
 # Kurser

@@ -2,6 +2,8 @@
 layout: help-page-layout.html
 title: Grupper / Nyheter
 description: Grupper / Nyheter - Learnpoint Hjälp och Support
+next: "Grupper / Material"
+next_url: /help/groups/documents.html
 ---
 
 # Nyheter

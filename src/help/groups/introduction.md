@@ -2,6 +2,8 @@
 layout: help-page-layout.html
 title: Grupper / Inledning
 description: Grupper / Inledning - Learnpoint Hjälp och Support
+next: "Grupper / Nyheter"
+next_url: /help/groups/posts.html
 ---
 
 # Grupper
