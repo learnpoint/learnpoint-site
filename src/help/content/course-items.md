@@ -10,7 +10,7 @@ next_url: /help/grading/introduction.html
 
 <!-- only-in-swedish.html -->
 
-Kursdelarna kan innehålla information, uppgifter och bifogade filer.
+Kursdelarna kan innehålla uppgifter, information och dokument.
 
 
 ## Lägg till kursdel

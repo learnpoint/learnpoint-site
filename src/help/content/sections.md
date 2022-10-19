@@ -10,10 +10,10 @@ next_url: /help/content/course-items.html
 
 <!-- only-in-swedish.html -->
 
-Avsnitten fungerar som platshållare för kursdelarna så att du kan ge kursinnehållet en tydlig struktur.
+Avsnitten fungerar som platshållare för kursdelar. Varje kursdel ligger i ett avsnitt.
 
 
-## Lägg till avsnit
+## Lägg till avsnitt
 
 1. Skrolla längst ned på innehållssidan.
 2. Klicka på `Nytt avsnitt`.
