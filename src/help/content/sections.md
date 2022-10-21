@@ -10,7 +10,7 @@ next_url: /help/content/course-items.html
 
 <!-- only-in-swedish.html -->
 
-Avsnitten fungerar som platshållare för kursdelar. Varje kursdel ligger i ett avsnitt.
+Avsnitten innehåller kursdelar. Varje avsnitt har ett namn och en beskrivning.
 
 
 ## Lägg till avsnitt
