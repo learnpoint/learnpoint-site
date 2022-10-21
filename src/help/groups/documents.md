@@ -2,6 +2,7 @@
 layout: help-page-layout.html
 title: Grupper / Material
 description: Grupper / Material - Learnpoint Hjälp och Support
+robots: noindex
 next: "Grupper / Studenter"
 next_url: /help/groups/students.html
 ---

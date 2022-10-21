@@ -2,6 +2,7 @@
 layout: help-page-layout.html
 title: Grupper / Om
 description: Grupper / Om - Learnpoint Hjälp och Support
+robots: noindex
 next: "Kursinnehåll / Inledning"
 next_url: /help/content/introduction.html
 ---

@@ -2,6 +2,7 @@
 layout: help-page-layout.html
 title: LIA / LIA-plats
 description: LIA / LIA-plats - Learnpoint Hjälp och Support
+robots: noindex
 next: "LIA / Inställningar"
 next_url: /help/internship/settings.html
 ---
