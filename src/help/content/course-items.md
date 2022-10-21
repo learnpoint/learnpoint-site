@@ -2,6 +2,7 @@
 layout: help-page-layout.html
 title: Kursinnehåll / Kursdelar
 description: Kursinnehåll / Kursdelar - Learnpoint Hjälp och Support
+robots: noindex
 next: "Betyg / Inledning"
 next_url: /help/grading/introduction.html
 ---
@@ -10,7 +11,7 @@ next_url: /help/grading/introduction.html
 
 <!-- only-in-swedish.html -->
 
-Kursdelarna kan innehålla information, uppgifter och bifogade filer.
+Kursdelarna kan innehålla uppgifter, information och dokument.
 
 
 ## Lägg till kursdel

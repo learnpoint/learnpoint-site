@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Desktop Screenshot
+   ========================================================================== */
+
 .desktop-screenshot {
     border-radius: 10px 10px 6px 6px;  /* Must be same as browser-frame and img/video */
     box-shadow: 2px 8px 32px rgba(0, 0, 0, 0.1),
@@ -20,10 +24,16 @@
     opacity: 1;
 }
 
+
+
+/* ==========================================================================
+   Browser Frame
+   ========================================================================== */
+
 .desktop-screenshot__browser-frame {
     background: #f2f2f2;
-    padding: 0 10px;
-    height: 36px;
+    padding: 0 9px;
+    height: 32px;
     display: flex;
     align-items: center;
     border-radius: 10px 10px 0 0; /* Must be same as wrapper */
@@ -33,12 +43,18 @@
     background: #555;
 }
 
+
+
+/* ==========================================================================
+   Browser Frame Button
+   ========================================================================== */
+
 .desktop-screenshot__browser-frame-button {
-    height: 12px;
-    width: 12px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, .12);
-    margin: 0 3px;
+    margin: 0 2px;
 }
 
 .desktop-screenshot__browser-frame-button:nth-child(1) {
@@ -52,6 +68,12 @@
 .desktop-screenshot__browser-frame-button:nth-child(3) {
     background-color: #27CA41;
 }
+
+
+
+/* ==========================================================================
+   img, video
+   ========================================================================== */
 
 .desktop-screenshot img,
 .desktop-screenshot video {

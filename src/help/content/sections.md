@@ -2,6 +2,7 @@
 layout: help-page-layout.html
 title: Kursinnehåll / Avsnitt
 description: Kursinnehåll / Avsnitt - Learnpoint Hjälp och Support
+robots: noindex
 next: "Kursinnehåll / Kursdelar"
 next_url: /help/content/course-items.html
 ---
@@ -10,10 +11,10 @@ next_url: /help/content/course-items.html
 
 <!-- only-in-swedish.html -->
 
-Avsnitten fungerar som platshållare för kursdelarna så att du kan ge kursinnehållet en tydlig struktur.
+Avsnitten innehåller kursdelar. Varje avsnitt har ett namn och en beskrivning.
 
 
-## Lägg till avsnit
+## Lägg till avsnitt
 
 1. Skrolla längst ned på innehållssidan.
 2. Klicka på `Nytt avsnitt`.

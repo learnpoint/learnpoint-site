@@ -2,6 +2,7 @@
 layout: help-page-layout.html
 title: LIA / Inställningar
 description: LIA / Inställningar - Learnpoint Hjälp och Support
+robots: noindex
 ---
 
 # Inställningar

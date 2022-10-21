@@ -105,13 +105,18 @@
 .index__feature-title {
     margin: 18px 0 4px;
     font-family: Raleway, 'Segoe UI', sans-serif;
+    font-size: 1.6em;
+}
+
+.is-mobile .index__feature-title {
+    font-size: 1.4em;
 }
 
 .index__feature-image {
     flex: 1;
 }
 
-.is-mobile .index__feature-image.MOBILE,
+/* .is-mobile .index__feature-image.MOBILE,
 .is-desktop .index__feature-image.DESKTOP {
     display: block;
 }
@@ -119,7 +124,15 @@
 .is-mobile .index__feature-image.DESKTOP,
 .is-desktop .index__feature-image.MOBILE {
     display: none;
+} */
+
+/* .index__feature-image.DESKTOP {
+    display: block;
 }
+
+.index__feature-image.MOBILE {
+    display: none;
+} */
 
 .index__contact {
     text-align: center;
