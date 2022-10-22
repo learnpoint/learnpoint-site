@@ -11,7 +11,7 @@ next_url: /help/grading/course-items.html
 
 <!-- only-in-swedish.html -->
 
-Betyg kan sättas både på kurser och kursdelar. En överblick av alla betyg finns på sidan `Betyg` i respektive kurs:
+Betyg kan sättas på både kurser och kursdelar. I varje kurs finns en översikt på sidan `Betyg`. Den blå triangeln indikerar att betyget ännu inte är publicerat till studenten:
 
 <!-- desktop-screenshot.html, { src: "_assets/gradebook.png", alt: "Betygssidan", theme: "light" } -->
 
