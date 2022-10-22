@@ -67,7 +67,9 @@
 
         ul.innerHTML = previousLogins.map(url => `
             <li class="sign-in__previous-login-item" data-element="sign-in__previous-login-item">
-                <a href="${url}">${url.replace('https://', '')}</a>
+                <a href="${url}">
+                    <span>${url.replace('https://', '')}</span>
+                </a>
                 <button class="sign-in__previous-login-delete-button" data-element="sign-in__previous-login-delete-button" title="Remove">
                     <img src="/_images/icons/trash.svg" alt="Remove" />
                 </button>
