@@ -7,7 +7,10 @@ next: "Grupper / Material"
 next_url: /help/groups/documents.html
 ---
 
-# Nyheter
+<h1>
+    <span lang="sv">Nyheter</span>
+    <span lang="en">Announcements</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 
@@ -29,6 +32,6 @@ När du publicerar en nyhet får medlemmarna i gruppen en avisering och kan läs
 
 <!-- desktop-screenshot.html, { src: "_assets/save-post-as-draft.png", alt: "Spara nyhet som utkast", theme: "light" } -->
 
-Dina sparade utkast finns under `Dina utkast` uppe till höger på nyhetsfliken:
+Dina sparade utkast finns under `Dina utkast` uppe till höger på nyhetssidan:
 
 <!-- desktop-screenshot.html, { src: "_assets/post-drafts.png", alt: "Utkast", theme: "light" } -->

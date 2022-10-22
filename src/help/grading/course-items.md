@@ -7,7 +7,10 @@ next: "Betyg / Kurser"
 next_url: /help/grading/courses.html
 ---
 
-# Kursdelar
+<h1>
+    <span lang="sv">Kursdelar</span>
+    <span lang="en">Course items</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 
@@ -26,8 +29,8 @@ Varje kursdel har en uppföljningssida. På den visas:
 * En liten blå ikon för nya inlämningar.
 * En siffra för nya kommentarer.
 * Det angivna betyget.
-* Om betyget har publicerats.
-* En knapp för att publicera samtliga betyg som inte publicerats.
+* Om betyget inte har publicerats.
+* En knapp för att publicera samtliga betyg som ännu inte publicerats.
 
 <!-- desktop-screenshot.html, { src: "_assets/results-page.png", alt: "Uppföljningssidan", theme: "light" } -->
 

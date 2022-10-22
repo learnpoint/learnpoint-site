@@ -7,25 +7,28 @@ next: "LIA / Inledning"
 next_url: /help/internship/introduction.html
 ---
 
-# Kurser
+<h1>
+    <span lang="sv">Kurser</span>
+    <span lang="en">Courses</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 
-En överblick av samtliga betyg på en kurs finns på fliken `Betyg`. Kursbetygen visas i den första kolumnen:
+Kursbetygen finns i den första kolumnen på betygssidan:
 
-<!-- desktop-screenshot.html, { src: "_assets/course-grades-in-gradebook.png", alt: "Kursbetyg på betygsfliken", theme: "light" } -->
+<!-- desktop-screenshot.html, { src: "_assets/course-grades-in-gradebook.png", alt: "Kursbetyg på betygssidan", theme: "light" } -->
 
 
 ## Sätt betyg på kurs
 
-1. Gå till fliken `Betyg`.
+1. Gå till sidan `Betyg`.
 2. Klicka på rutan för kursbetyg på någon av studenterna.
 3. Välj betyg.
-4. Klicka på `Klarrapportera` när du är färdig med betygsättningen.
+4. Klicka på `Klarrapportera` när du är klar med betygsättningen.
 5. Klicka på `Publicera` när du vill att betyget skall visas för studenten. *NOTERA:* Ibland har du som lärare inte behörighet att publicera kursbetyg och då kan du hoppa över detta steg.
 6. Välj nästa student bland genvägarna:
 
-<!-- desktop-recording.html, { src: "_assets/grade-course.mp4", alt: "Betygsätt kurs", theme: "light" } -->
+<!-- desktop-recording.html, { src: "_assets/grade-course.mp4", alt: "Sätt betyg på kurs", theme: "light" } -->
 
 
 ## Ta bort betyg på kurs

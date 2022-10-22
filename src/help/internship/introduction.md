@@ -7,11 +7,14 @@ next: "LIA / LIA-plats"
 next_url: /help/internship/internship.html
 ---
 
-# Inledning
+<h1>
+    <span lang="sv">LIA</span>
+    <span lang="en">Internship</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 
-LIA är ett verktyg för att hantera praktik under utbildningen. Verktyget finns på LIA-kurser under fliken `LIA`:
+LIA är ett verktyg för att hantera praktik under utbildningen. Verktyget finns på LIA-kurser på sidan `LIA`:
 
 <!-- desktop-screenshot.html, { src: "_assets/internship-page.png", alt: "LIA-sidan", theme: "light" } -->
 

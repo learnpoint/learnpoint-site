@@ -7,11 +7,14 @@ next: "Grupper / Om"
 next_url: /help/groups/about.html
 ---
 
-# Personal
+<h1>
+    <span lang="sv">Personal</span>
+    <span lang="en">Staff</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 
-Varje grupp innehåller personal. Personalen visas på fliken `Personal`:
+Varje grupp innehåller personal. Personalen visas på sidan `Personal`:
 
 <!-- desktop-screenshot.html, { src: "_assets/staff.png", alt: "Personal", theme: "light" } -->
 

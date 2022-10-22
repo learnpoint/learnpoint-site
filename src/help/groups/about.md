@@ -7,7 +7,10 @@ next: "Kursinnehåll / Inledning"
 next_url: /help/content/introduction.html
 ---
 
-# Om
+<h1>
+    <span lang="sv">Om</span>
+    <span lang="en">About</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 

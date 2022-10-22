@@ -7,15 +7,18 @@ next: "Betyg / Kursdelar"
 next_url: /help/grading/course-items.html
 ---
 
-# Betyg
+<h1>
+    <span lang="sv">Betyg</span>
+    <span lang="en">Grading</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 
-Betyg kan sättas både på kurser och kursdelar. En överblick av alla betyg finns på fliken `Betyg` i respektive kurs:
+Betyg kan sättas på både kurser och kursdelar. I varje kurs finns en översikt på sidan `Betyg`. Den blå triangeln indikerar att betyget ännu inte är publicerat till studenten:
 
-<!-- desktop-screenshot.html, { src: "_assets/gradebook.png", alt: "Betygsfliken", theme: "light" } -->
+<!-- desktop-screenshot.html, { src: "_assets/gradebook.png", alt: "Betygssidan", theme: "light" } -->
 
 
-På studenternas profilsida, under fliken `Studieplan`, finns en överblick av studentens kursbetyg:
+På studenternas profilsida, på sidan `Studieplan`, finns en överblick av studentens kursbetyg:
 
 <!-- desktop-screenshot.html, { src: "_assets/student-grades.png", alt: "Studentens studieplan", theme: "light" } -->

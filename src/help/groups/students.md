@@ -7,11 +7,14 @@ next: "Grupper / Personal"
 next_url: /help/groups/staff.html
 ---
 
-# Studenter
+<h1>
+    <span lang="sv">Studenter</span>
+    <span lang="en">Students</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 
-Varje grupp innehåller studenter. I grupper av typen *kurs* finns studenterna på fliken `Deltagare` och i grupper av typen *skola* och *klass* finns dom på fliken `Studerande`:
+Varje grupp innehåller studenter. I grupper av typen *kurs* finns studenterna på sidan `Deltagare` och i grupper av typen *skola* och *klass* finns dom på sidan `Studerande`:
 
 <!-- desktop-screenshot.html, { src: "_assets/students.png", alt: "Studenter", theme: "light" } -->
 

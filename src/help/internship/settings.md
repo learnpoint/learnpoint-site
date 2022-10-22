@@ -5,14 +5,17 @@ description: LIA / Inställningar - Learnpoint Hjälp och Support
 robots: noindex
 ---
 
-# Inställningar
+<h1>
+    <span lang="sv">Inställningar</span>
+    <span lang="en">Settings</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 
 
 ## Inställningar på kursen
 
-Inställningarna för LIA-vertyget finns under länken `LIA-inställningar` på fliken `LIA`:
+Inställningarna för LIA-vertyget finns under länken `LIA-inställningar` på sidan `LIA`:
 
 <!-- desktop-screenshot.html, { src: "_assets/settings-link.png", alt: "Länk till LIA-inställningar", theme: "light" } -->
 
@@ -39,7 +42,7 @@ Du som administratör kan ändra dom skolövergripande standardinställningarna 
 
 ## Inställningar för enkäter
 
-Inställningarna för LIA-vertygets enkäter finns under länken `LIA-enkäter` på fliken `LIA`:
+Inställningarna för LIA-vertygets enkäter finns under länken `LIA-enkäter` på sidan `LIA`:
 
 <!-- desktop-screenshot.html, { src: "_assets/survey-settings-link.png", alt: "Länk till enkätinställningar", theme: "light" } -->
 
