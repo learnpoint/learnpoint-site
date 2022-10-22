@@ -7,7 +7,10 @@ next: "Kom igång / Aviseringar"
 next_url: /help/getting-started/notifications.html
 ---
 
-# Logga in
+<h1>
+    <span lang="sv">Logga in</span>
+    <span lang="en">Sign in</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 

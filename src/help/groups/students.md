@@ -7,7 +7,10 @@ next: "Grupper / Personal"
 next_url: /help/groups/staff.html
 ---
 
-# Studenter
+<h1>
+    <span lang="sv">Studenter</span>
+    <span lang="en">Students</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 

@@ -7,7 +7,10 @@ next: "Betyg / Kurser"
 next_url: /help/grading/courses.html
 ---
 
-# Kursdelar
+<h1>
+    <span lang="sv">Kursdelar</span>
+    <span lang="en">Course items</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 

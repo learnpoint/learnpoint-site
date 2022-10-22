@@ -7,7 +7,10 @@ next: "Grupper / Inledning"
 next_url: /help/groups/introduction.html
 ---
 
-# Profilsidan
+<h1>
+    <span lang="sv">Profilsidan</span>
+    <span lang="en">Profile page</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 

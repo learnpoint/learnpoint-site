@@ -7,7 +7,10 @@ next: "Kom igång / Profilsidan"
 next_url: /help/getting-started/profile-page.html
 ---
 
-# Aviseringar
+<h1>
+    <span lang="sv">Aviseringar</span>
+    <span lang="en">Notifications</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 

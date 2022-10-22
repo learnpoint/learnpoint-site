@@ -7,7 +7,10 @@ next: "Grupper / Material"
 next_url: /help/groups/documents.html
 ---
 
-# Nyheter
+<h1>
+    <span lang="sv">Nyheter</span>
+    <span lang="en">Announcements</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 

@@ -7,7 +7,10 @@ next: "Grupper / Om"
 next_url: /help/groups/about.html
 ---
 
-# Personal
+<h1>
+    <span lang="sv">Personal</span>
+    <span lang="en">Staff</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 

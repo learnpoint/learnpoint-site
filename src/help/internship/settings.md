@@ -5,7 +5,10 @@ description: LIA / Inställningar - Learnpoint Hjälp och Support
 robots: noindex
 ---
 
-# Inställningar
+<h1>
+    <span lang="sv">Inställningar</span>
+    <span lang="en">Settings</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 

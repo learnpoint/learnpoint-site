@@ -7,8 +7,10 @@ next: "Grupper / Studenter"
 next_url: /help/groups/students.html
 ---
 
-
-# Material
+<h1>
+    <span lang="sv">Material</span>
+    <span lang="en">Documents</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 

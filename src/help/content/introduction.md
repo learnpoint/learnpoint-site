@@ -7,7 +7,10 @@ next: "Kursinnehåll / Avsnitt"
 next_url: /help/content/sections.html
 ---
 
-# Kursinnehåll
+<h1>
+    <span lang="sv">Kursinnehåll</span>
+    <span lang="en">Learning content</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 

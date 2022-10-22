@@ -7,7 +7,10 @@ next: "LIA / LIA-plats"
 next_url: /help/internship/internship.html
 ---
 
-# Inledning
+<h1>
+    <span lang="sv">LIA</span>
+    <span lang="en">Internship</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 

@@ -7,7 +7,10 @@ next: "LIA / Inledning"
 next_url: /help/internship/introduction.html
 ---
 
-# Kurser
+<h1>
+    <span lang="sv">Kurser</span>
+    <span lang="en">Courses</span>
+</h1>
 
 <!-- only-in-swedish.html -->
 
