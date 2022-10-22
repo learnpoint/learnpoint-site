@@ -1,46 +1,106 @@
-## Set up Development Environment
+## Development Environment Set Up
 
-- [Install Deno](https://deno.land/manual/getting_started/installation) version **1.26.0** or later.
+1. [Install Deno](https://deno.land/manual@v1.26.0/getting_started/installation) **v1.26.0** or later.
 
+2. [Create a fork](https://github.com/learnpoint/learnpoint-site/fork) to your personal GitHub account.
 
+3. On GitHub, navigate to your fork (repository) and create a new branch named `dev`.
 
-## Fork & Pull Request Workflow
+4. Open a terminal and move into an appropriate folder.
 
-1. Create your own fork.
-2. Clone the fork to your computer.
-3. Create a new development branch on your fork.
-4. Do all coding in your development branch (explained in next section).
-5. You can publish your fork on a static host (like Netlify), but **do not** use github pages, because the `CNAME` file is used for production. Make sure that your host respond with a `x-robots-tag: noindex` header on every request. (This is to prevent your published fork from ending up in google searches.)
-6. When done, merge upstream/master and rebase your development branch.
-7. If appropriate, squash your commits.
-8. Make a pull request.
+5. Clone the fork. Should be something similar to this:
 
-Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
+        git clone https://github.com/GITHUB-USERNAME/learnpoint-site.git
+
+6. Move into the cloned fork (repository):
+
+        cd learnpoint-site
+
+7. Checkout the `dev` branch:
+
+        git checkout dev
+
+8. Add upstream to your fork:
+
+        git remote add upstream https://github.com/learnpoint/learnpoint-site.git
+
+9. Verify upstream was added. This command should not give any errors:
+
+        git remote show upstream
+
+10. [Sign up to Netlify](https://app.netlify.com/signup) using your GitHub account.
+
+11. Create a new site on Netlify:
+    1. Find and click the button **Add new site**.
+    2. Select **Import existing project**.
+    3. Choose **GitHub**.
+    4. Select the `dev` branch on your fork.
+    5. Choose `docs` as the **Publish directory**. Keep everything else empty.
+    6. Finish the wizard.
+
+12. Verify that your Netlify site is working. If you navigate to the created Netlify site, your should see the Learnpoint home page.
+
+13. Whenever you want to discuss your work, just share the link to your Netlify site. The Netlify site should automatically update when you push commits to your fork.
 
 
 
 ## Development Workflow
 
-1. Start dev server:
+1. Start the dev server:
 
         deno task dev
 
-2. Open site at `http://localhost:3333`
+2. Open the site at `http://localhost:3333`
 
-3. Write your changes to the ```src``` folder.
+3. Write all your changes to the `src` folder. You should never make any changes to the `docs` folder.
 
-4. Do **not** make any file changes in the ```docs``` folder.
+4. If there are any file mismatches, or build problems, it's perfectly safe to:
+    1. Stop the dev server: `Ctrl + C`.
+    2. Completely delete the ```docs``` folder.
+    3. Restart the dev server: `deno task dev`.
 
-5. If there are any file mismatches or build problems, it's perfectly safe to:
-    1. Stop the dev server
-    2. Completely delete the ```docs``` folder
-    3. Start the dev server again.
+5. When done, stop the server:
 
-6. When done, stop the server with ```Ctrl + C```.
+        Ctrl + C
 
-7. Commit and push to your development branch.
+6. Commit and push to your fork.
 
-8. When done, make a pull request (as explained in previous section).
+7. Verify that your changes are deployed to your Netlify site.
+
+8. Share and discuss your work.
+
+
+
+## Keeping Your Fork Up To Date
+
+1. Make sure that you're on the `dev` branch on your fork.
+
+2. Commit and push all your changes.
+
+3. Fetch upstream changes:
+
+        git fetch upstream
+
+4. Merge upstream to your fork:
+
+        git merge upstream/master
+
+5. Push the changes:
+
+        git push
+
+
+
+## Make A Pull Request When You're öDone
+
+1. Make sure that you're on the `dev` branch on your fork.
+
+2. Commit and push all your changes.
+
+3. Navigate to your fork on GitHub.
+
+4. Find and click the button `Compare and pull request`.
+
 
 
 ## Language
@@ -50,10 +110,12 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 * Help pages are an exception. They are only written in swedish. For help pages, when there's only room for a single language, use swedish.
 
 
+
 ## Screenshots
 
 * When appropriate, screenshots should have two versions, one for desktop and one for mobile.
 * Screenshots should be cropped and zoomed to make the text in the screenshot readable. This is particularly important when there's no mobile screenshot.
+
 
 
 ## How to: Add a Job Opening Page
@@ -66,12 +128,14 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 6. Add a link to the page in `/jobs/index.html`.
 
 
+
 ## How to: Remove a Job Opening Page
 
 1. Remove the link to the page in `/jobs/index.html`.
 2. Do ***not*** delete the page! We don't want to break external links.
 3. Add the `<!-- job-no-longer-available.html -->` include on the page.
 4. Set `robots: noindex` in front matter for the page.
+
 
 
 ## How to: Write Help Pages
@@ -83,6 +147,7 @@ Read more about Fork & Pull Request Workflow  [here](https://gist.github.com/Cha
 * When painting arrows and indicators on a screenshot, use the orange color `#FF7B00`.
 * For now, help pages are only written in swedish. Add the `<!-- only-in-swedish.html -->` include immediately after the `h1` element.
 * `<title>`, `<meta name="description" ... >` and `alt` attributes should be written in swedish.
+
 
 
 ## How to: Write News Articles
