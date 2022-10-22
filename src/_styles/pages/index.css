@@ -1,73 +1,65 @@
+/* =========================================================================
+   Subtitle
+   ========================================================================= */
+
 .index__subtitle {
     font-family: 'Raleway', 'Segoe UI', sans-serif;
     text-align: center;
-    font-size: 32px;
-    margin: -8px auto 24px;
+    font-size: 24px;
+    margin: -16px auto 38px;
     line-height: 1.1;
 }
 
 .is-mobile .index__subtitle {
-    font-size: 18px;
+    font-size: 16px;
+    margin: -12px auto 32px;
 }
+
+
+
+/* =========================================================================
+   Tagline
+   ========================================================================= */
 
 .index__tagline {
     margin: 0 auto;
     text-align: center;
     line-height: 1.4;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     max-width: 640px;
 }
 
 .is-mobile .index__tagline {
-    font-size: 20px;
+    font-weight: normal;
 }
 
-.index__hero-image {
-    width: 900px;
-    margin: 64px auto;
+
+
+/* =========================================================================
+   Features
+   ========================================================================= */
+
+.index__features {
+    padding: 0 16px;
 }
 
-.index__laptop-frame {
-    position: relative;
-    width: 700px;
-    height: 425px;
-    margin: 32px auto;
-    border: 15px solid #3f3f41;
-    border-top: 20px solid #3f3f41;
-    border-radius: 14px 14px 0 0;
-    box-shadow: 0 0 0 1px #d1d2d4;
-    background-color: #000;
+.is-mobile .index__features {
+    padding: 0;
 }
 
-.is-mobile .index__laptop-frame {
-    display: none;
-}
 
-.index__laptop-frame::after {
-    content: "";
-    bottom: -35px;
-    background: #f2f2f2;
-    border: 1px solid #ddd;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .16);
-    height: 20px;
-    width: 850px;
-    border-radius: 0 0 10px 10px;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
 
-.index__laptop-frame img {
-    width: 100%;
-    height: 100%;
-}
+/* =========================================================================
+   Feature
+   ========================================================================= */
 
 .index__feature {
     display:flex;
-    margin: 164px 0;
+    margin: 96px 0 128px;
     flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px;
 }
 
 .is-mobile .index__feature {
@@ -80,10 +72,15 @@
     margin: 16px 0 96px;
 }
 
+
+
+/* =========================================================================
+   Feature Text
+   ========================================================================= */
+
 .index__feature-text {
     width:400px;
     width: 320px;
-    margin: 0 32px;
     line-height: 1.5;
 }
 
@@ -102,6 +99,12 @@
     order:1;
 } 
 
+
+
+/* =========================================================================
+   Feature Title
+   ========================================================================= */
+
 .index__feature-title {
     margin: 18px 0 4px;
     font-family: Raleway, 'Segoe UI', sans-serif;
@@ -112,27 +115,21 @@
     font-size: 1.4em;
 }
 
+
+
+/* =========================================================================
+   Feature Image
+   ========================================================================= */
+
 .index__feature-image {
     flex: 1;
 }
 
-/* .is-mobile .index__feature-image.MOBILE,
-.is-desktop .index__feature-image.DESKTOP {
-    display: block;
-}
 
-.is-mobile .index__feature-image.DESKTOP,
-.is-desktop .index__feature-image.MOBILE {
-    display: none;
-} */
 
-/* .index__feature-image.DESKTOP {
-    display: block;
-}
-
-.index__feature-image.MOBILE {
-    display: none;
-} */
+/* =========================================================================
+   Contact
+   ========================================================================= */
 
 .index__contact {
     text-align: center;
@@ -151,6 +148,12 @@
     margin: 32px auto;
 }   
 
+
+
+/* =========================================================================
+   Contact Title
+   ========================================================================= */
+
 .index__contact-title {
     font-size: 28px;
     line-height: 1.1;
@@ -162,6 +165,12 @@
     font-size: 20px;
     margin: 0 0 20px;
 } 
+
+
+
+/* =========================================================================
+   Contact Paragraph
+   ========================================================================= */
 
 .index__contact-paragraph {
     font-size: 20px;
@@ -175,11 +184,23 @@
         margin: 0 0 16px;
 }
 
+
+
+/* =========================================================================
+   Contact Link
+   ========================================================================= */
+
 .index__contact-link {
     color: #fff;
     font-weight: 600;
     padding: 0 2px;
 }
+
+
+
+/* =========================================================================
+   Heart Emoji
+   ========================================================================= */
 
 .index__heart-emoji {
     display: inline-block;
