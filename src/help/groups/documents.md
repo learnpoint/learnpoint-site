@@ -12,7 +12,7 @@ next_url: /help/groups/students.html
 
 <!-- only-in-swedish.html -->
 
-Med materialfunktionen kan du lagra filer och länkar i grupper av typen klass och skola. Funktionen finns på fliken `Material`:
+Med materialfunktionen kan du lagra filer och länkar i grupper av typen klass och skola. Funktionen finns på sidan `Material`:
 
 <!-- desktop-screenshot.html, { src: "_assets/documents.png", alt: "Material", theme: "light" } -->
 

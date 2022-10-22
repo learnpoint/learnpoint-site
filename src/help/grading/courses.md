@@ -11,14 +11,14 @@ next_url: /help/internship/introduction.html
 
 <!-- only-in-swedish.html -->
 
-En överblick av samtliga betyg på en kurs finns på fliken `Betyg`. Kursbetygen visas i den första kolumnen:
+En överblick av samtliga betyg på en kurs finns på sidan `Betyg`. Kursbetygen visas i den första kolumnen:
 
-<!-- desktop-screenshot.html, { src: "_assets/course-grades-in-gradebook.png", alt: "Kursbetyg på betygsfliken", theme: "light" } -->
+<!-- desktop-screenshot.html, { src: "_assets/course-grades-in-gradebook.png", alt: "Kursbetyg på betygssidan", theme: "light" } -->
 
 
 ## Sätt betyg på kurs
 
-1. Gå till fliken `Betyg`.
+1. Gå till sidan `Betyg`.
 2. Klicka på rutan för kursbetyg på någon av studenterna.
 3. Välj betyg.
 4. Klicka på `Klarrapportera` när du är färdig med betygsättningen.

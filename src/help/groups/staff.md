@@ -11,7 +11,7 @@ next_url: /help/groups/about.html
 
 <!-- only-in-swedish.html -->
 
-Varje grupp innehåller personal. Personalen visas på fliken `Personal`:
+Varje grupp innehåller personal. Personalen visas på sidan `Personal`:
 
 <!-- desktop-screenshot.html, { src: "_assets/staff.png", alt: "Personal", theme: "light" } -->
 
