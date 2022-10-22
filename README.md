@@ -101,7 +101,7 @@
 
 3. Navigate to your fork on GitHub.
 
-4. Find and click the button `Compare and pull request`.
+4. Find and click the button `Create pull request`.
 
 
 
