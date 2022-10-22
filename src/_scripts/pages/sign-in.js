@@ -68,14 +68,14 @@
         ul.innerHTML = previousLogins.map(url => `
             <li class="sign-in__previous-login-item" data-element="sign-in__previous-login-item">
                 <a href="${url}">${url.replace('https://', '')}</a>
-                <img class="sign-in__previous-login-delete-button"
-                    src="/_images/icons/trash-can.svg" 
-                    data-element="sign-in__previous-login-delete-button">
+                <button class="sign-in__previous-login-delete-button" data-element="sign-in__previous-login-delete-button" title="Remove">
+                    <img src="/_images/icons/trash.svg" alt="Remove" />
+                </button>
                 <div class="sign-in__previous-login-delete-confirm-popover">
                     <button class="sign-in__previous-login-confirm-delete" 
                             data-element="sign-in__previous-login-confirm-delete"
                             data-url="${url}">
-                        <span lang="en">Delete</span>
+                        <span lang="en">Remove</span>
                         <span lang="sv">Ta bort</span>
                     </button>
                     <button class="sign-in__previous-login-cancel-delete"
