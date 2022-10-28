@@ -3,3 +3,10 @@
     margin: 0 auto;
     line-height: 1.5;
 }
+
+.job-opening time {
+    display: block;
+    font-weight: bold;
+    font-size: .73em;
+    margin: 4em 0 1em;
+}
