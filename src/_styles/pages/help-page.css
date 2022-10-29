@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: 246px auto;
     gap: 32px;
+    gap: 16px;
 }
 
 .is-mobile .help-page {
@@ -42,7 +43,11 @@
    ========================================================================= */
 
 .help-page__main-area {
+    padding: 0 16px;
+}
 
+.is-mobile .help-page__main-area {
+    padding: 0;
 }
 
 
