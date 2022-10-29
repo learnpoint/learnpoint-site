@@ -3,10 +3,13 @@
    ========================================================================== */
 
 .desktop-screenshot {
-    border-radius: 10px 10px 6px 6px;  /* Must be same as browser-frame and img/video */
-    box-shadow: 2px 8px 32px rgba(0, 0, 0, 0.1),
-                4px 16px 64px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
+    border-radius: 6px 6px 4px 4px;                    /* Must be same as browser-frame and img/video */
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06),         /* border */
+                0 10px 40px -20px rgba(0, 0, 0, 0.25), /* border-bottom */
+                0 20px 60px -25px rgba(0, 0, 0, 0.2),
+                0 20px 20px -30px rgba(0, 0, 0, 0.1),
+                0 40px 30px -40px rgba(0, 0, 0, 0.2),
+                0 60px 40px -50px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     opacity: 0;
     transform: scale(.98);
@@ -36,7 +39,7 @@
     height: 32px;
     display: flex;
     align-items: center;
-    border-radius: 10px 10px 0 0; /* Must be same as wrapper */
+    border-radius: 6px 6px 0 0; /* Must be same as wrapper */
 }
 
 .desktop-screenshot.dark .desktop-screenshot__browser-frame {
@@ -79,5 +82,5 @@
 .desktop-screenshot video {
     display: block;
     width: 100%;
-    border-radius: 0 0 6px 6px; /* Must be same as wrapper */
+    border-radius: 0 0 4px 4px; /* Must be same as wrapper */
 }
