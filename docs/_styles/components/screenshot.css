@@ -16,6 +16,7 @@
 
 .print .screenshot {
     box-shadow: none;
+    border: 1px solid #ddd;
 }
 
 .screenshot.LOADED {
