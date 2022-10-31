@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: 246px auto;
     gap: 32px;
+    gap: 16px;
 }
 
 .is-mobile .help-page {
@@ -42,7 +43,11 @@
    ========================================================================= */
 
 .help-page__main-area {
+    padding: 0 16px;
+}
 
+.is-mobile .help-page__main-area {
+    padding: 0;
 }
 
 
@@ -157,21 +162,13 @@
 
 .help-page__next-page-link {
     display: none;
-    border-top: 1px solid #ddd;
-    margin: 4em 0 0;
+    margin: 3em 0 0;
     padding: 1.5em 0 0;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
 }
 
-.help-page__next-page-link::before {
-    content: 'Nästa: ';
-}
-
-.help-page__next-page-link::after {
-    content: ' →';
-}
-
-.help-page__next-page-link:not([href=""]) {
-    display: block; /* Only show when href has value. */
+.help-page__next-page-link:has(a:not([href=""])) {
+    display: block;
 }

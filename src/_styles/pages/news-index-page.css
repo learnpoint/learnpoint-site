@@ -5,7 +5,7 @@
 }
 
 .news-list {
-    max-width: 560px;
+    max-width: 520px;
     margin: 3em auto;
 }
 
@@ -16,19 +16,24 @@
     gap: 4px;
     color: inherit;
     margin-bottom: 1em;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .9);
     padding: 1em 1.5em;
+    padding: 24px 32px;
     border-radius: 8px;
+    transition: all .1s;
 }
 
 .news-list a:hover {
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 1px 2px 1em rgba(0, 0, 0, .05);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 8%),
+        0 2px 8px rgb(0 0 0 / 2%);
 }
 
 .news-list a .title {
     font-weight: bold;
     font-size: 1.1em;
+    line-height: 1.2;
+    padding: 3px 0;
     color: #444;
 }
 
