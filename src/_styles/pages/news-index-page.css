@@ -20,7 +20,8 @@
     padding: 1em 1.5em;
     padding: 24px 32px;
     border-radius: 8px;
-    transition: all .1s;
+    transition-property: background-color, box-shadow;
+    transition-duration: .1s;
 }
 
 .news-list a:hover {
