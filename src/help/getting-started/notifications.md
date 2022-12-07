@@ -51,10 +51,13 @@ Om en avisering är läst, kan du markera den som oläst. Klicka på meny-ikonen
 <!-- screenshot.html, { src: "_assets/notification-mark-as-unread.png", alt: "Aviseringar", theme: "light" } -->
 
 
-## Bli aviserad med e-post
+## Inställningar
 
-Du kan välja att bli aviserad med e-post. Aviseringarna visas alltid på aviseringssidan, men du kan dessutom få e-post när det kommer nya aviseringar.
+Du kommer till inställningssidan genom att klicka på kugghjulet längst upp till höger på aviseringssidan.
 
-För att bli aviserad med e-post, klicka på kugghjulet och kryssa sedan i checkboxen:
+På inställningssidan kan du:
 
-<!-- desktop-recording.html, { src: "_assets/notifications-enable-email.mp4", alt: "Aktivera e-post aviseringar", theme: "light" } -->
+- Välja att bli aviserad med e-post.
+- Stänga av aviseringar för enskilda grupper:
+
+<!-- screenshot.html, { src: "_assets/notification-settings.png", alt: "Inställningar", theme: "light" } -->
