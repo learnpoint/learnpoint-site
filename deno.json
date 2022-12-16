@@ -1,5 +1,6 @@
 {
+    "lock": false,
     "tasks": {
-        "dev": "deno run -A --no-lock dev.js"
+        "dev": "deno run -A dev.js"
     }
 }
