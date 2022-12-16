@@ -4,13 +4,13 @@
 
 2. [Create a fork](https://github.com/learnpoint/learnpoint-site/fork) to your personal GitHub account.
 
-3. On GitHub, navigate to your fork that you just created, and create a new branch named `dev`.
+3. On GitHub, navigate to the new fork you just created, and create a new branch named `dev`.
 
 4. On GitHub, make the new branch `dev` the default branch.
 
 5. Open a terminal and move into an appropriate folder.
 
-6. Clone the fork. Should be something like this:
+6. Clone the fork into the folder. Should be something like this:
 
         git clone https://github.com/GITHUB-USERNAME/learnpoint-site.git
 
@@ -22,7 +22,7 @@
 
         git checkout dev
 
-9. Add upstream to your fork:
+9. Add upstream repo to your fork:
 
         git remote add upstream https://github.com/learnpoint/learnpoint-site.git
 
@@ -30,19 +30,31 @@
 
         git remote show upstream
 
-11. [Sign up to Netlify](https://app.netlify.com/signup) using your GitHub account.
 
-12. Create a new site on Netlify:
-    1. Find and click the button **Add new site**.
-    2. Select **Import existing project**.
-    3. Choose **GitHub**.
-    4. Select the `dev` branch on your fork.
-    5. Choose `docs` as the **Publish directory**. Keep everything else empty.
-    6. Finish the wizard.
 
-13. Verify that your Netlify site is working. If you navigate to the created Netlify site, your should see the Learnpoint home page.
+## Optional: Deploy Your Fork to Netlify
 
-14. Whenever you want to discuss your work, just share the link to your Netlify site. The Netlify site should automatically update when you push commits to your fork.
+Deploying your fork to Netlify is optional, but highly recommended.
+
+1. [Sign up to Netlify](https://app.netlify.com/signup) using your GitHub account.
+
+2. Deploy your fork to Netlify:
+    - Navigate to the `Sites` page on Netlify.
+    - Click the button `Add new site` and select `Import existing project`.
+    - Click the button `GitHub`.
+    - Click the repository (fork) that you just created.
+    - In the `Branch to deploy` drop-down, select `dev`.
+    - In the `Publish directory` textbox, type `docs`.
+    - Keep everything else empty.
+    - Click the button `Deploy site`.
+
+3. Verify that your Netlify site is working:
+    - Navigate to the `Sites` page on Netlify.
+    - Click on the site that you just created.
+    - Click on the deployment-link close to the top of the page.
+    - You should now be navigated to your deployed site.
+
+4. Whenever you want to show or discuss your work, just share the link to your Netlify site. The site should be automatically updated when you push commits to your fork (with some seconds of delay).
 
 
 
