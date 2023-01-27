@@ -26,9 +26,17 @@ Aviseringssidan hittar du längst upp i menyn till vänster:
 
 ## Vad aviserar Learnpoint om?
 
-Learnpoint aviserar om nyheter, kommentarer, enkäter, LIA-platser och loggböcker.
+Learnpoint aviserar om:
 
-För att få aviseringar från en grupp, måste du vara medlem gruppen. Om du är administratör eller utbildningsledare för en klass, har du behörighet till flera grupper utan att vara medlem. Vill du få aviseringar från dessa grupper behöver du lägga till dig själv som medlem.
+- Nyheter
+- Kommentarer
+- Enkäter
+- LIA-platser
+- Loggböcker
+- Betyg
+- Inlämningar
+
+För att få aviseringar från en grupp, måste du vara medlem. Om du är administratör eller utbildningsledare för en klass, får du behörighet till grupper utan att du är medlem. Lägg till dig själv som medlem om du vill få aviseringar från dessa grupper.
 
 
 ## Markera avisering som läst
