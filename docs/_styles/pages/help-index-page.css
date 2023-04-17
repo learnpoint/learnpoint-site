@@ -60,7 +60,7 @@
 .help-index-page__support-open-label,
 .help-index-page__support-closed-label,
 .help-index-page__support-closed-for-lunch-label {
-    padding: 0 .6em;
+    padding: .1em .75em .1em .7em;
     border-radius: .8em;
     font-size: .9em;
 }
@@ -89,6 +89,34 @@
 .help-index-page__support-opening-hours.OPEN .help-index-page__support-closed-for-lunch-label,
 .help-index-page__support-opening-hours.CLOSED .help-index-page__support-closed-for-lunch-label {
     display: none;
+}
+
+
+
+/* =========================================================================
+   Special Days Closed
+   ========================================================================= */
+
+.help-index-page__special-days-closed {
+    display: none;
+}
+
+.help-index-page__special-days-closed.SHOW {
+    display: block;
+}
+
+.help-index-page__special-days-closed span {
+    font-size: .9em;
+    display: inline-block;
+    padding: .1em 0 0 0;
+    margin: .6em 0 1em;
+    font-style: italic;
+}
+
+.help-index-page__special-days-closed p {
+    font-weight: 600;
+    margin: 0 0 .2em;
+    font-size: .8em;
 }
 
 

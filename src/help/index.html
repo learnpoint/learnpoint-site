@@ -44,43 +44,12 @@ description: Learnpoint Hjälp och Support
     </span>
 </p>
 
-<script>
-    const phoneSupportOpenHours = {
-        0: [],                      // Sun
-        1: [9, 10, 11, 13, 14, 15], // Mon
-        2: [9, 10, 11, 13, 14, 15], // Tue
-        3: [9, 10, 11, 13, 14, 15], // Wed
-        4: [9, 10, 11, 13, 14, 15], // Thu
-        5: [9, 10, 11],             // Fri
-        6: [],                      // Sat
-    };
-
-    function phoneSupportIsOpen() {
-        const nowAtOffice = new Date((new Date()).toLocaleString('en-US', { timeZone: 'Europe/Stockholm' }));
-        const dayAtOffice = nowAtOffice.getDay();
-        const hourAtOffice = nowAtOffice.getHours();
-
-        const openNow = phoneSupportOpenHours[dayAtOffice].includes(hourAtOffice);
-        const openPreviousHour = phoneSupportOpenHours[dayAtOffice].includes(hourAtOffice - 1);
-        const openNextHour = phoneSupportOpenHours[dayAtOffice].includes(hourAtOffice + 1);
-
-        return { openNow, openPreviousHour, openNextHour };
-    }
-
-    const { openNow, openPreviousHour, openNextHour } = phoneSupportIsOpen();
-
-    const supportOpeningHoursPanel = document.querySelector('.help-index-page__support-opening-hours');
-
-    if (openNow) {
-        supportOpeningHoursPanel.classList.add('OPEN');
-    } else {
-        if (openPreviousHour && openNextHour) {
-            supportOpeningHoursPanel.classList.add('CLOSED-FOR-LUNCH');
-        } else {
-            supportOpeningHoursPanel.classList.add('CLOSED');
-        }
-    }
-</script>
+<div class="help-index-page__special-days-closed">
+    <span lang="en"></span>
+    <span lang="sv"></span>
+    <p lang="en">Regular phone opening hours</p>
+    <p lang="sv">Ordinarie telefontider</p>
+</div>
 
 <table class="help-index-page__support-opening-hours-table">
     <tr>
@@ -104,6 +73,123 @@ description: Learnpoint Hjälp och Support
         </td>
     </tr>
 </table>
+
+<script>
+    const phoneSupportOpenHours = {
+        0: [],                      // Sun
+        1: [7, 9, 10, 11, 13, 14, 15], // Mon
+        2: [9, 10, 11, 13, 14, 15], // Tue
+        3: [9, 10, 11, 13, 14, 15], // Wed
+        4: [9, 10, 11, 13, 14, 15], // Thu
+        5: [9, 10, 11],             // Fri
+        6: [],                      // Sat
+    };
+
+    const closedDaysRanges = [
+        ['2023-04-17', '2023-04-20', "We're closed", "Vi har stängt"]
+    ];
+
+    function isWithinClosedDaysRange(date) {
+
+        for (const closedDaysRange of closedDaysRanges) {
+            const rangeStartDate = new Date(closedDaysRange[0]);
+            const rangeEndDate = new Date(closedDaysRange[1]);
+
+            isAfterOrOnStartDate = compareDates(date, rangeStartDate) > -1;
+            isBeforeOrOnEndDate = compareDates(date, rangeEndDate) < 1;
+
+            if (isAfterOrOnStartDate && isBeforeOrOnEndDate) {
+                return closedDaysRange;
+            }
+        }
+
+        return false;
+    }
+
+    function phoneSupportIsOpen(date) {
+        const dateAtOffice = new Date((date).toLocaleString('en-US', { timeZone: 'Europe/Stockholm' }));
+        const dayAtOffice = dateAtOffice.getDay();
+        const hourAtOffice = dateAtOffice.getHours();
+
+        const isClosedDay = isWithinClosedDaysRange(dateAtOffice);
+
+        const openNow = phoneSupportOpenHours[dayAtOffice].includes(hourAtOffice) && !isClosedDay;
+        const openPreviousHour = phoneSupportOpenHours[dayAtOffice].includes(hourAtOffice - 1) && !isClosedDay;
+        const openNextHour = phoneSupportOpenHours[dayAtOffice].includes(hourAtOffice + 1) && !isClosedDay;
+
+        return { openNow, openPreviousHour, openNextHour, isClosedDay };
+    }
+
+    function compareDates(a, b) {
+        const aYear = a.getFullYear();
+        const aMonth = a.getMonth();
+        const aDay = a.getDate();
+
+        const bYear = b.getFullYear();
+        const bMonth = b.getMonth();
+        const bDay = b.getDate();
+
+        if (aYear < bYear) return -1;
+        if (aYear > bYear) return 1;
+
+        if (aMonth < bMonth) return -1;
+        if (aMonth > bMonth) return 1;
+
+        if (aDay < bDay) return -1;
+        if (aDay > bDay) return 1;
+
+        return 0;
+    }
+
+    const { openNow, openPreviousHour, openNextHour, isClosedDay } = phoneSupportIsOpen(new Date());
+
+    const supportOpeningHoursPanel = document.querySelector('.help-index-page__support-opening-hours');
+
+
+    // OPEN SIGN
+
+    if (openNow) {
+
+        supportOpeningHoursPanel.classList.add('OPEN');
+
+    } else {
+
+        if (openPreviousHour && openNextHour) {
+            supportOpeningHoursPanel.classList.add('CLOSED-FOR-LUNCH');
+        } else {
+            supportOpeningHoursPanel.classList.add('CLOSED');
+        }
+    }
+
+
+    // SPECIAL DAYS CLOSED PANEL
+
+    if (isClosedDay) {
+        const specialDaysClosedPanel = document.querySelector('.help-index-page__special-days-closed');
+        specialDaysClosedPanel.classList.add('SHOW');
+
+        const specialDaysClosedSpanEn = specialDaysClosedPanel.querySelector('[lang=en]');
+        const specialDaysClosedSpanSv = specialDaysClosedPanel.querySelector('[lang=sv]');
+
+        const startDate = new Date(isClosedDay[0]);
+        const endDate = new Date(isClosedDay[1]);
+
+        const dateFormatOptions = { day: 'numeric', month: 'long' };
+
+        const startDateStringEn = startDate.toLocaleDateString('en', dateFormatOptions);
+        const startDateStringSv = startDate.toLocaleDateString('sv', dateFormatOptions);
+
+        const endDateStringEn = endDate.toLocaleDateString('en', dateFormatOptions);
+        const endDateStringSv = endDate.toLocaleDateString('sv', dateFormatOptions);
+
+        let textEn = `${isClosedDay[2]} ${startDateStringEn} - ${endDateStringEn}`;
+        let textSv = `${isClosedDay[3]} ${startDateStringSv} - ${endDateStringSv}`;
+
+        specialDaysClosedSpanEn.innerHTML = textEn;
+        specialDaysClosedSpanSv.innerHTML = textSv;
+    }
+
+</script>
 
 <h2>
     <span lang="en">User guides</span>
