@@ -17,17 +17,19 @@ next_url: /help/getting-started/notifications.html
 ## Hitta till skolans inloggningssida
 
 1. Gå till [learnpoint.se/sign-in.html](/sign-in.html)
-1. Ange adressen till din skola.
-1. Klicka på `Fortsätt` för att komma till skolans inloggningssida.
+1. Skriv in adressen till din skola.
+1. Klicka på `Fortsätt`:
+
+<!-- desktop-screenshot.html, { src: "_assets/find-school-signin-page.png", alt: "Hitta skolans inloggningssida", theme: "dark" } -->
 
 ## Aktivera konto
 
-Om det är första gången du loggar in behöver du aktivera ditt konto:
+Du behöver aktivera ditt konto innan du kan logga in:
 
-1. Gå till skolan inloggningssida (se ovan).
+1. Hitta till skolan inloggningssida (se ovan).
 1. Klicka på `Aktivera konto`.
 1. Ange din e-postadress och klicka på `OK`.
-1. Du får inom kort ett mail med instruktioner för att aktivera kontot.
+1. Nu får du ett mejl med instruktioner. Kolla skräpposten om du inte hittar mejlet.
 
 <!-- desktop-screenshot.html, { src: "_assets/activate-account.png", alt: "Aktivera konto", theme: "dark" } -->
 
@@ -35,8 +37,9 @@ Om det är första gången du loggar in behöver du aktivera ditt konto:
 
 När du aktiverat ditt konto loggar du in på följande sätt:
 
-1. Gå till skolan inloggningssida (se ovan).
+1. Hitta till skolan inloggningssida (se ovan).
 1. Ange användarnamn och lösenord.
+1. Kryssa i `Håll mig inloggad` om du vill hållas inloggad.
 1. Klicka på `Logga in`.
 
 <!-- desktop-screenshot.html, { src: "_assets/sign-in.png", alt: "Logga in", theme: "dark" } -->
@@ -45,6 +48,6 @@ När du aktiverat ditt konto loggar du in på följande sätt:
 
 1. Kontrollera användarnamnet. Observera att du **inte** kan logga in med en mailadress.
 1. Kontrollera att `Caps Lock` inte är aktiverat på tangentbordet.
-1. Har du glömt ditt lösenord kan du återställa det. Klicka på `Glömt ditt lösenord?` och följ instruktionerna.
+2. Har du glömt lösenordet så kan du återställa det. Klicka på `Glömt ditt lösenord?` och följ instruktionerna.
 
 Lyckas du ändå inte logga in? [Kontakta vår support](/help/) så hjälper vi till!
