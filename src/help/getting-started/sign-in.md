@@ -14,13 +14,13 @@ next_url: /help/getting-started/notifications.html
 
 <!-- only-in-swedish.html -->
 
+
 ## Hitta till skolans inloggningssida
 
 1. Gå till [learnpoint.se/sign-in.html](/sign-in.html)
 1. Skriv in adressen till din skola.
-1. Klicka på `Fortsätt`:
+1. Klicka på `Fortsätt`.
 
-<!-- desktop-screenshot.html, { src: "_assets/find-school-signin-page.png", alt: "Hitta skolans inloggningssida", theme: "dark" } -->
 
 ## Aktivera konto
 
@@ -33,6 +33,7 @@ Du behöver aktivera ditt konto innan du kan logga in:
 
 <!-- desktop-screenshot.html, { src: "_assets/activate-account.png", alt: "Aktivera konto", theme: "dark" } -->
 
+
 ## Logga in
 
 När du aktiverat ditt konto loggar du in på följande sätt:
@@ -43,6 +44,7 @@ När du aktiverat ditt konto loggar du in på följande sätt:
 1. Klicka på `Logga in`.
 
 <!-- desktop-screenshot.html, { src: "_assets/sign-in.png", alt: "Logga in", theme: "dark" } -->
+
 
 ## Problem att logga in?
 
