@@ -60,8 +60,8 @@
 .help-index-page__support-open-label,
 .help-index-page__support-closed-label,
 .help-index-page__support-closed-for-lunch-label {
-    padding: .1em .75em .1em .7em;
-    border-radius: .8em;
+    padding: .1em .7em .1em .65em;
+    border-radius: .5em;
     font-size: .9em;
 }
 

@@ -256,7 +256,11 @@
     };
 
     const closedDaysRanges = [
-        ['2023-04-18', '2023-04-20', "We're closed", "Vi har stängt"]
+        ['2023-04-18', '2023-04-20', "We're closed", "Vi har stängt"],
+        ['2023-05-01', '2023-05-01', "We're closed", "Vi har stängt"],
+        ['2023-05-18', '2023-05-19', "We're closed", "Vi har stängt"],
+        ['2023-06-06', '2023-06-06', "We're closed", "Vi har stängt"],
+        ['2023-12-24', '2023-12-26', "We're closed", "Vi har stängt"],
     ];
 
     function isWithinClosedDaysRange(date) {
@@ -352,11 +356,17 @@
         const endDateStringEn = endDate.toLocaleDateString('en', dateFormatOptions);
         const endDateStringSv = endDate.toLocaleDateString('sv', dateFormatOptions);
 
-        let textEn = `${isClosedDay[2]} ${startDateStringEn} - ${endDateStringEn}`;
-        let textSv = `${isClosedDay[3]} ${startDateStringSv} - ${endDateStringSv}`;
+        if (isClosedDay[0] === isClosedDay[1]) {
 
-        specialDaysClosedSpanEn.innerHTML = textEn;
-        specialDaysClosedSpanSv.innerHTML = textSv;
+            specialDaysClosedSpanEn.innerHTML = `${isClosedDay[2]} ${endDateStringEn}`;
+            specialDaysClosedSpanSv.innerHTML = `${isClosedDay[3]} ${endDateStringSv}`;
+
+        } else {
+
+            specialDaysClosedSpanEn.innerHTML = `${isClosedDay[2]} ${startDateStringEn} - ${endDateStringEn}`;
+            specialDaysClosedSpanSv.innerHTML = `${isClosedDay[3]} ${startDateStringSv} - ${endDateStringSv}`;
+
+        }
     }
 
 </script>
