@@ -127,8 +127,8 @@
     font: inherit;
     font-weight: 600;
     font-size: 16px;
-    background-color: rgba(100, 0, 0, .05);
-    padding: 0 4px;
+    background-color: rgba(100, 0, 0, .06);
+    padding: 0 5px;
     border-radius: 4px;
 }
 
