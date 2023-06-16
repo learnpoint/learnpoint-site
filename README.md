@@ -2,7 +2,7 @@
 
 1. [Install Deno](https://deno.land/manual@v1.34.3/getting_started/installation) `v1.34.3` or later.
 
-2. [Create a fork](https://github.com/learnpoint/learnpoint-site/fork) to your personal GitHub account.
+2. [Create a fork](https://github.com/learnpoint/learnpoint-site/fork). Make sure to create the fork in your personal GitHub account, not in the Learnpoint organisation.
 
 3. On GitHub, navigate to the new fork you just created, and create a new branch named `dev`.
 
@@ -71,7 +71,7 @@ Deploying your fork to Netlify is optional, but highly recommended.
 4. If there are any file mismatches, or build problems, it's perfectly safe to:
     1. Stop the dev server: `Ctrl + C`.
     2. Completely delete the ```docs``` folder.
-    3. Restart the dev server: `deno task dev`.
+    3. Restart the dev server: `deno task dev` (this will rebuild the `docs` folder).
 
 5. When done, stop the server:
 
@@ -80,8 +80,6 @@ Deploying your fork to Netlify is optional, but highly recommended.
 6. Commit and push to your fork.
 
 7. Verify that your changes are deployed to your Netlify site.
-
-8. Share and discuss your work.
 
 
 
@@ -108,45 +106,35 @@ Deploying your fork to Netlify is optional, but highly recommended.
 ## Make A Pull Request When Done
 
 1. Make sure that you're on the `dev` branch on your fork.
-
 2. Commit and push all your changes.
-
 3. Navigate to your fork on GitHub.
-
 4. Find and click the button `Create pull request`.
 
 
 
-## Language
+## Languages
 
-* All pages should be written in both english and swedish. Use `lang="en"` and `lang="sv"` to specify the language for the content of an element.
+* Most pages should be written in both english and swedish. Use the attributes `lang="en"` and `lang="sv"` to specify the language for an element.
 * English is the default language. Use english where there's only room for a single language, for example `<title>`, `<meta name="description" ... >`, and `alt` attributes.
-* Help pages are an exception. They are only written in swedish. For help pages, when there's only room for a single language, use swedish.
-
-
-
-## Screenshots
-
-* When appropriate, screenshots should have two versions, one for desktop and one for mobile.
-* Screenshots should be cropped and zoomed to make the text in the screenshot readable. This is particularly important when there's no mobile screenshot.
+* The help pages are an exception — they are typically only written in swedish. When there's only room for a single language on a help page, use swedish.
 
 
 
 ## How to: Add a Job Opening Page
 
-1. If it does not exist yet, create an appropriate folder inside the `/jobs` folder.
-2. Create a html file with a descriptive name. For example: `/jobs/2023/spring/backend-developer-internship.html`.
-3. Set layout, title and description in front matter. Title and description should be in english.
+1. If it doesn't exist yet, create an appropriate folder inside the `/jobs` folder.
+2. Create an html file with a descriptive name. For example: `/jobs/2023/spring/backend-developer-internship.html`.
+3. Set layout, title and description in front matter. Title and description should be written in english (see Languages above).
 4. Make sure the page content is written in both swedish and english.
-5. Make sure there is some kind of approximate date information at the beginning of the page. The date can refer to when the page was publish or when the opening is available, whatever makes most sense.
+5. Make sure there is some kind of approximate date information at the beginning of the page. The date can refer to when the page was publish, or when the opening is available, whatever makes most sense.
 6. Add a link to the page in `/jobs/index.html`.
 
 
 
 ## How to: Remove a Job Opening Page
 
-1. Remove the link to the page in `/jobs/index.html`.
-2. Do ***not*** delete the page! We don't want to break external links.
+1. Remove the link to the page from `/jobs/index.html`.
+2. Do ***not*** delete the page! We don't want to break incoming links.
 3. Add the `<!-- job-no-longer-available.html -->` include on the page.
 4. Set `robots: noindex` in front matter for the page.
 
@@ -154,12 +142,12 @@ Deploying your fork to Netlify is optional, but highly recommended.
 
 ## How to: Write Help Pages
 
-* Write primarily for staff and teachers, but, as much as possible, try to make help pages applicable to any role.
+* Write primarily for staff and teachers (not students), but, as much as possible, try to make help pages applicable to any role.
 * Use clear but compact language. Write: *"Klicka på `Spara`"* rather than: *"Klicka på knappen `Spara`"*.
-* Put labels for links and buttons in code tags (or backticks if using markdown).
+* Wrap labels for links and buttons in code tags (or backticks if using markdown).
 * Assets (like screenshots) should be stored in a folder named `_assets` next to the page.
 * When painting arrows and indicators on a screenshot, use the orange color `#FF7B00`.
-* For now, help pages are only written in swedish. Add the `<!-- only-in-swedish.html -->` include immediately after the `h1` element.
+* Help pages are typically only written in swedish (see Language above). Add the `<!-- only-in-swedish.html -->` include immediately after the `h1` element.
 * `<title>`, `<meta name="description" ... >` and `alt` attributes should be written in swedish.
 
 
@@ -169,10 +157,30 @@ Deploying your fork to Netlify is optional, but highly recommended.
 1. If it doesn't exist yet, create an appropriate folder inside the `/news` folder.
 2. Create a html file with a descriptive name. For example: `/news/2022-06/group-code-in-title-field.html`.
 3. Set layout, title and description in front matter. Title should be in english, but description can be in both english and swedish.
-4. Set `robots: noindex` in front matter. We don't want news articles to compete with other pages on google search results.
+4. Set `robots: noindex` in front matter. We don't want news articles to compete with other Learnpoint pages in Google search, because the content in a news article can become obsolete really fast.
 5. Try to include at least one relevant screenshot in the article.
 6. Language should be correct, compact and casual.
 7. Speak directly to the reader. Use the pronoun *"you"* in active sentences. Avoid pronouns like *"teachers"*, *"users"*, etc.
-8. Avoid using *"we"*, unless the reader is clearly included. Instead of: *"We've added a new feature"*, write: "*A new feature is added"*.
-9. Use a neutral and descriptive language. Instead of: *"The page is simplified"*, write: "*The page is updated*" or: "*Some elements are removed from the page*".
+8. Avoid using *"we"*, because the reader would probably feel excluded. Instead of *"We've added a new feature"*, write "*A new feature is added"*.
+9. Use factual statements instead of assessments. Instead of *"The page is simplified"*, write "*The page is updated*", or "*Some elements are removed from the page*". Let the reader make her own judgements.
 10. Write in both swedish and english.
+
+
+
+## Screenshots
+
+* On the index page, screenshots should have two versions, one for desktop and one for mobile.
+* On all other pages, use a single screenshot. Make sure to crop and zoom the screenshot to make it readable on both desktop and mobile. Reduce the content width as much as possible.
+
+
+
+## Screen Recordings
+
+1. Crop and zoom appropriately. (See Screenshots above).
+2. Don't use audio.
+3. Use high fidelity resolution and colors — use mpeg insted of gif.
+4. Clicks and mouse movements should be distinctly intentional and carefully timed. Here's how you can plan a link-click recording:
+   - Move the cursor in a straight line to the link that you intend to click.
+   - Hover the link for half a second, without moving the cursor.
+   - Click the link.
+5. [ShareX](https://getsharex.com/) is a free screen recording tool that can produce mpeg.
