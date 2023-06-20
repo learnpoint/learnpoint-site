@@ -54,13 +54,13 @@ Såhär skapar du en ny kategori:
 
 ## Gå med i kanal
 
-Du kan ange vilka medlemmar som skall finnas i en kanal. Men användaren kan också på egen hand gå med i en kanal — det finns inga "privata" kanaler i Learnpoint.
+Du kan ange vilka som skall vara medlemmar i en kanal. Men studenter kan också på egen hand gå med i en kanal — det finns alltså inga "privata" kanaler i Learnpoint.
 
 Såhär går man med i en kanal:
 
 1. Klicka på `Alla kanaler`.
 2. Klicka `Gå med` för den kanalen du vill bli medlem i.
-3. Alternativt kan du först gå till kanalen och sedan klicka på `Gå med i kanal`:
+3. Alternativt kan du först navigera till kanalen och sedan klicka på `Gå med i kanal`:
 
 <!-- desktop-recording.html, { src: "_assets/join-channel.mp4", alt: "Gå med i kanal", theme: "light" } -->
 
