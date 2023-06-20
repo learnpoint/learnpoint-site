@@ -3,8 +3,8 @@ layout: help-page-layout.html
 title: Grupper / Nyheter
 description: Grupper / Nyheter - Learnpoint Hjälp och Support
 robots: noindex
-next: "Grupper / Material"
-next_url: /help/groups/documents.html
+next: "Grupper / Kanaler"
+next_url: /help/groups/channels.html
 ---
 
 <h1>

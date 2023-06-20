@@ -184,3 +184,6 @@ Deploying your fork to Netlify is optional, but highly recommended.
    - Hover the link for half a second, without moving the cursor.
    - Click the link.
 5. [ShareX](https://getsharex.com/) is a free screen recording tool that can produce mpeg.
+6. [FFmpeg](https://ffmpeg.org/download.html) is a free command line tool for video manipulation. Here's a to insert a fade-in transition in the beginning of a video:
+
+        `ffmpeg -i in.mp4 -vf "fade=in:0:10" -acodec copy out.mp4`
