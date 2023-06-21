@@ -29,21 +29,24 @@ Aviseringssidan hittar du längst upp i menyn till vänster:
 Learnpoint aviserar om:
 
 - Nyheter
-- Kommentarer
+- Inlägg i kanaler
 - Enkäter
 - LIA-platser
 - Loggböcker
 - Betyg
 - Inlämningar
+- - Kommentarer
 
-För att få aviseringar från en grupp, måste du vara medlem. Om du är administratör eller utbildningsledare för en klass, får du behörighet till grupper utan att du är medlem. Lägg till dig själv som medlem om du vill få aviseringar från dessa grupper.
+För att få aviseringar från en grupp, måste du vara medlem gruppen.
+
+Om du är administratör, eller utbildningsledare för en klass, kan du ha behörighet till grupper utan att vara medlem. Du måste lägga till dig själv som medlem i dessa grupper för att kunna få aviseringar.
 
 
 ## Markera avisering som läst
 
-När du klickar på en avisering kommer du till det aviseringen avser (ex. en nyhet eller en kommentar). Aviseringen markeras automatiskt som läst när du klickar på den.
+När du klickar på en avisering kommer du till det aviseringen avser (ex. en nyhet eller en kommentar). Aviseringen markeras automatiskt som läst när du klickat på den.
 
-Du kan även manuellt markera en avisering som läst. Klicka på meny-ikonen (dom tre prickarna till höger) och sedan på `Markera som läst`:
+Du kan dessutom manuellt markera en avisering som läst. Klicka på kontext-menyn (dom tre prickarna till höger) och sedan på `Markera som läst`:
 
 <!-- screenshot.html, { src: "_assets/notification-mark-as-read.png", alt: "Aviseringar", theme: "light" } -->
 
@@ -54,14 +57,14 @@ För att markera alla aviseringar som lästa, klicka på `Markera alla som läst
 
 ## Markera avisering som oläst
 
-Om en avisering är läst, kan du markera den som oläst. Klicka på meny-ikonen (dom tre prickarna till höger) och sedan på `Markera som oläst`:
+Om en avisering är läst, kan du markera den som oläst. Klicka på kontext-menyn (dom tre prickarna till höger) och sedan på `Markera som oläst`:
 
 <!-- screenshot.html, { src: "_assets/notification-mark-as-unread.png", alt: "Aviseringar", theme: "light" } -->
 
 
-## Inställningar
+## Inställningar för aviseringar
 
-Du kommer till inställningssidan genom att klicka på kugghjulet längst upp till höger på aviseringssidan.
+Du hittar aviseringsinställningarna genom att klicka på kugghjulet längst upp till höger på aviseringssidan.
 
 På inställningssidan kan du:
 

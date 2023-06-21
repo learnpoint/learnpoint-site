@@ -127,7 +127,7 @@
 
 .help-index-page__support-opening-hours-table {
     border-collapse: collapse;
-    font-family: monospace;
+    font-family: monospace, "Apple Color Emoji", "Segoe UI Emoji";
     font-size: .9em;
 }
 

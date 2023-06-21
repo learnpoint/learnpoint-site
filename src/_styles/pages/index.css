@@ -3,7 +3,7 @@
    ========================================================================= */
 
 .index__subtitle {
-    font-family: 'Raleway', 'Segoe UI', sans-serif;
+    font-family: 'Raleway', 'Segoe UI', sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     text-align: center;
     font-size: 24px;
     margin: -16px auto 38px;
@@ -107,7 +107,7 @@
 
 .index__feature-title {
     margin: 18px 0 4px;
-    font-family: Raleway, 'Segoe UI', sans-serif;
+    font-family: Raleway, 'Segoe UI', sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-size: 1.6em;
 }
 

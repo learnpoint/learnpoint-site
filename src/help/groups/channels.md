@@ -14,14 +14,14 @@ next_url: /help/groups/posts.html
 
 <!-- only-in-swedish.html -->
 
-Diskussionskanaler är ett flexibelt verktyg för kommunikation. Funktionen finns på sidan `Kanaler` i respektive grupp:
+Diskussionskanaler är ett flexibelt verktyg för kommunikation och samarbete. Funktionen finns på sidan `Kanaler` i respektive grupp:
 
 <!-- desktop-screenshot.html, { src: "_assets/channels.png", alt: "Kanaler", theme: "light" } -->
 
 
 ## Aktivera funktionen
 
-Kanalerna kan användas på grupper av typen Skola, Klass, och Kurs. Om funktionen inte är påslagen, så aktiverar du den på gruppens Om-sida.
+Kanaler kan användas på grupper av typen Skola, Klass, och Kurs. Om funktionen inte är påslagen, så aktiverar du den på gruppens Om-sida.
 
 
 ## Skapa kanal
@@ -41,7 +41,7 @@ Både lärare och studenter kan skapa kanaler:
 
 ## Skapa kategori
 
-Om du har många kanaler i gruppen, kan du sortera in dem i separata kategorier.
+Om du har många kanaler i en grupp så kan du sortera in dem i olika kategorier.
 
 Såhär skapar du en ny kategori:
 
@@ -54,20 +54,19 @@ Såhär skapar du en ny kategori:
 
 ## Gå med i kanal
 
-Du kan ange vilka som skall vara medlemmar i en kanal. Men studenter kan också på egen hand gå med i en kanal — det finns alltså inga "privata" kanaler i Learnpoint.
-
-Såhär går man med i en kanal:
+Både lärare och studenter kan gå med (bli medlem) i vilken kanal som helst — det finns alltså inga "privata" kanaler i Learnpoint. Såhär går man med i en kanal:
 
 1. Klicka på `Alla kanaler`.
-2. Klicka `Gå med` för den kanalen du vill bli medlem i.
-3. Alternativt kan du först navigera till kanalen och sedan klicka på `Gå med i kanal`:
+2. Klicka på `Gå med` för den kanalen du vill bli medlem i (eller navigera till kanalen du vill bli medlem i och klicka sedan på `Gå med i kanal`):
 
 <!-- desktop-recording.html, { src: "_assets/join-channel.mp4", alt: "Gå med i kanal", theme: "light" } -->
 
 
 ## Aviseringar
 
-När det finns nya inlägg i en kanal så visas kanalnamnet med fet text, men du kan dessutom få aviseringar om du vill. Klockan uppe till höger anger om du får aviseringar. Samma sak gäller för kommentarer på enskilda inlägg — klockan visar om du får aviseringar:
+När det finns nya inlägg i en kanal så visas kanalnamnet med fet text, men du kan dessutom få aviseringar om du vill.
+
+Aviserings-klockan uppe till höger avgör om du får aviseringar för kanalen (eller inlägget):
 
 <!-- desktop-recording.html, { src: "_assets/subscribe-to-channels.mp4", alt: "Aviseringar", theme: "light" } -->
 
