@@ -169,21 +169,24 @@ Deploying your fork to Netlify is optional, but highly recommended.
 
 ## Screenshots
 
-* On the index page, screenshots should have two versions, one for desktop and one for mobile.
-* On all other pages, use a single screenshot. Make sure to crop and zoom the screenshot to make it readable on both desktop and mobile. Reduce the content width as much as possible.
+Crop and zoom to make the screenshot readable on both desktop and mobile. Specifically, minimize the width of the browser (or the screenshot object) as much as possible.
 
 
 
 ## Screen Recordings
 
+[ShareX](https://getsharex.com/) is a free screen recording tool that can produce mpeg.
+
+[FFmpeg](https://ffmpeg.org/download.html) is a free command line tool for video manipulation. Here's a command to insert a short (frame 0 to 50) fade-in transition in the beginning of an mpeg recording:
+
+        ffmpeg -i in.mp4 -vf "fade=in:0:50" -acodec copy out.mp4
+
+Here's how to make a screen recording:
+
 1. Crop and zoom appropriately. (See Screenshots above).
 2. Don't use audio.
-3. Use high fidelity resolution and colors — use mpeg insted of gif.
-4. Clicks and mouse movements should be distinctly intentional and carefully timed. Here's how you can plan a link-click recording:
-   - Move the cursor in a straight line to the link that you intend to click.
-   - Hover the link for half a second, without moving the cursor.
-   - Click the link.
-5. [ShareX](https://getsharex.com/) is a free screen recording tool that can produce mpeg.
-6. [FFmpeg](https://ffmpeg.org/download.html) is a free command line tool for video manipulation. Here's a to insert a fade-in transition in the beginning of a video:
-
-        `ffmpeg -i in.mp4 -vf "fade=in:0:10" -acodec copy out.mp4`
+3. Use high fidelity resolution, framerate, and colors. Do not use gif.
+4. Mouse movements and clicks must be clearly intentional and explanatorily timed. Here's how you can choreograph a recording of a click on an element:
+   1. Move the cursor in a straight line to the element you intend to click.
+   2. Hover the element for about 2 seconds, holding the cursor perfectly still.
+   3. Click the element.

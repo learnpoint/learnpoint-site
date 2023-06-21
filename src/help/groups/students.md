@@ -14,19 +14,19 @@ next_url: /help/groups/staff.html
 
 <!-- only-in-swedish.html -->
 
-Varje grupp innehåller studenter. I grupper av typen *kurs* finns studenterna på sidan `Deltagare` och i grupper av typen *skola* och *klass* finns dom på sidan `Studerande`:
+Varje grupp innehåller studenter. Studenterna finns på sidan `Studenter`:
 
 <!-- desktop-screenshot.html, { src: "_assets/students.png", alt: "Studenter", theme: "light" } -->
 
 
 ## Lägg till student
 
-Studenter kan endast läggas till på klasser. (Du kan inte lägga till studenter på skolan eller på kurser). När du lagt till en student på en klass, blir hon automatiskt tillagd på skolan och på klassens ingående kurser.
+Studenter kan läggas till på klasser. (Det går inte att lägga till studenter på skolan eller på kurser). När du lagt till en student på en klass, blir hon automatiskt tillagd på skolan och på klassens kurser.
 
 1. Klicka på `Lägg till`.
 2. Klicka på `Lägg till studerande`.
 3. Fyll i personnummer och klicka på `Nästa`.
-4. Välj status och datum.
+4. Välj datum.
 5. Klicka på `Klar`:
 
 <!-- desktop-recording.html, { src: "_assets/add-student.mp4", alt: "Lägg till student", theme: "light" } -->
@@ -36,7 +36,7 @@ Om studenten är helt ny på skolan, behöver du även ange namn, födelsedatum,
 
 ## Ta bort student
 
-Man kan inte ta bort en student direkt från skolan eller från en kurs. Istället ändrar man studentens status i en klass och hennes medlemskap på skolan och klassens kurser uppdateras då automatiskt.
+Du behöver aldrig ta bort studenter från skolan eller från kurser. Du behöver endast ändra studentens status i klassen — studentens medlemskap i skolan och kurser uppdateras automatiskt:
 
 1. Klicka på dom tre prickarna längst till höger.
 2. Klicka på `Ändra status`.
