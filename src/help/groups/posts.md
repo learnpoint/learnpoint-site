@@ -14,12 +14,12 @@ next_url: /help/groups/documents.html
 
 <!-- only-in-swedish.html -->
 
-Du kan skriva nyheter för att kommunicera information till alla medlemmar i en grupp. Nyheterna finns på sidan `Nyheter` i respektive grupp:
+Du kan använda nyheter för att förmedla information till medlemmarna i en grupp. Nyheterna finns på sidan `Nyheter`:
 
 <!-- desktop-screenshot.html, { src: "_assets/posts.png", alt: "Nyheter", theme: "light" } -->
 
 
-## Skriva och publicera nyheter
+## Skriva och publicera
 
 För att skriva en nyhet, klicka först på `Skriv nyhet` uppe till vänster. Fyll sedan i titel, innehåll och klicka på `Publicera`:
 
