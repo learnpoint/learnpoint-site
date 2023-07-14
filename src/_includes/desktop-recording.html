@@ -4,5 +4,5 @@
         <span class="desktop-screenshot__browser-frame-button"></span>
         <span class="desktop-screenshot__browser-frame-button"></span>
     </div>
-    <video autoplay playsinline loop muted inline alt="{{alt}}" src="{{src}}" oncanplay="this.parentElement.classList.add('LOADED')"></video>
+    <video autoplay playsinline loop muted inline alt="{{alt}}" src="{{src}}" oncanplay="this.parentElement.classList.add('LOADED')" onerror="console.log(this.error)"></video>
 </div>
