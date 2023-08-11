@@ -35,7 +35,7 @@ Learnpoint aviserar om:
 - Loggböcker
 - Betyg
 - Inlämningar
-- - Kommentarer
+- Kommentarer
 
 För att få aviseringar från en grupp, måste du vara medlem gruppen.
 
