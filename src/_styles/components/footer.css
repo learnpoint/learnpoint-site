@@ -2,14 +2,37 @@
     border-top: 1px solid #ccc;
     max-width: 1200px;
     margin: 128px auto 64px;
-    padding: 16px 16px;
-    display: flex;
-    justify-content: space-between;
+    padding: 24px 16px;
     font-size: 14px;
 }
 
 .is-mobile .footer {
     margin: 64px auto;
+}
+
+.footer__content {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.is-mobile .footer__content {
+    flex-direction: column;
+}
+
+.footer__section {
+    display: inline-block;
+    width: 160px;
+    /* background-color: rgba(0, 0, 0, .06); */
+    vertical-align: top;
+}
+
+.footer h3 {
+    margin: 0 0 8px;
+    font-size: inherit;
 }
 
 .footer ul {
@@ -20,34 +43,45 @@
 .footer li {
     list-style: none;
     margin: 0;
-    padding: 0 0 8px;
+    padding: 0 0 7px;
+}
+
+.footer__link {
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+
+.is-desktop .footer__link:hover {
+    text-decoration: underline;
 }
 
 .footer__select-language-panel {
     display: flex;
+    gap: 4px;
 }
 
 .footer__select-language-button {
     font: inherit;
     border: 0;
     padding: 0 4px;
+    padding: 0;
     margin: 0;
     cursor: pointer;
     background: transparent;
     color: #666;
     appearance: none;
     -webkit-appearance: none;
-    /* outline: none; */
 }
 
 html[lang="en"] .footer__select-language-button[data-select-language="en"],
 html[lang="sv"] .footer__select-language-button[data-select-language="sv"] {
     color: inherit;
-    font-weight: 600;
+    font-weight: bold;
     cursor: text;
 }
 
-.footer__link {
-    cursor: pointer;
-    color: #000;
+html[lang="en"].is-desktop .footer__select-language-button[data-select-language="sv"]:hover,
+html[lang="sv"].is-desktop .footer__select-language-button[data-select-language="en"]:hover {
+    text-decoration: underline;
 }
