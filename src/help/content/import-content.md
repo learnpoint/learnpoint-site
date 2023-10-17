@@ -1,20 +1,20 @@
 ---
 layout: help-page-layout.html
-title: Kursinnehåll / Importera
-description: Kursinnehåll / Importera - Learnpoint Hjälp och Support
+title: Kursinnehåll / Importera innehåll
+description: Kursinnehåll / Importera innehåll - Learnpoint Hjälp och Support
 robots: noindex
 next: "Betyg / Inledning"
 next_url: /help/grading/introduction.html
 ---
 
 <h1>
-    <span lang="sv">Importera</span>
-    <span lang="en">Import</span>
+    <span lang="sv">Importera innehåll</span>
+    <span lang="en">Import content</span>
 </h1>
 
 <!-- only-in-swedish.html -->
 
-Du kan importera kursinnehåll från andra kurser i Learnpoint.
+Du kan importera innehåll från andra kurser i Learnpoint.
 
 
 ## Importera innehåll
