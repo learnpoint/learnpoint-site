@@ -56,6 +56,14 @@
     text-decoration: underline;
 }
 
+.footer__link.EXTERNAL {
+    background-image: url(/_images/icons/external-link.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 12px 12px;
+    padding-right: 17px;
+}
+
 .footer__select-language-panel {
     display: flex;
     gap: 4px;

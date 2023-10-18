@@ -1,6 +1,6 @@
 ## Development Environment Set Up
 
-1. [Install Deno](https://deno.land/manual@v1.37.1/getting_started/installation) `v1.37.1` or later.
+1. [Install Deno](https://docs.deno.com/runtime/manual/getting_started/installation) `v1.37.2` or later.
 
 2. [Create a fork](https://github.com/learnpoint/learnpoint-site/fork). Make sure to create the fork in your personal GitHub account, not in the Learnpoint organisation.
 
@@ -175,11 +175,13 @@ Crop and zoom to make the screenshot readable on both desktop and mobile. Specif
 
 ## Screen Recordings
 
-[ShareX](https://getsharex.com/) is a free screen recording tool that can produce mpeg.
+Screen recordings should be encoded with the h264 video codec and stored in an mp4 container. Audio tracks should be avoided.
 
-[FFmpeg](https://ffmpeg.org/download.html) is a free command line tool for video manipulation. Here's a command to insert a short (frame 0 to 50) fade-in transition in the beginning of an mpeg recording:
+[ShareX](https://getsharex.com/) is a free screen recording app that supports h264. Select the `Very slow` option for the x264 video recording preset to make sure the output have good compression.
 
-        ffmpeg -i in.mp4 -vf "fade=in:0:50" -acodec copy out.mp4
+[FFmpeg](https://ffmpeg.org/download.html) is a great command line tool for multimedia manipulation. Here's a command to insert a short (frame 0 to 50) fade-in transition in the beginning of the recording, while also making sure that the h264 codec is used, and that any audio tracks are removed:
+
+        ffmpeg -i in.mp4 -vf "fade=in:0:50" -c:v libx264 -an out.mp4
 
 Here's how to make a screen recording:
 
