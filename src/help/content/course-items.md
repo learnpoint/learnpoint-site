@@ -4,7 +4,7 @@ title: Kursinnehåll / Kursdelar
 description: Kursinnehåll / Kursdelar - Learnpoint Hjälp och Support
 robots: noindex
 next: "Kursinnehåll / Hämta innehåll"
-next_url: /help/content/reuse.html
+next_url: /help/content/import-content.html
 ---
 
 <h1>
