@@ -78,13 +78,17 @@ Du kan bifoga både bilder och filer i en kanal:
 <!-- desktop-screenshot.html, { src: "_assets/channel-attachments.png", alt: "Bilder och filer", theme: "light" } -->
 
 
-## Ta bort och återställa kanalar
+## Ta bort kanal
 
 Såhär tar du bort en kanal:
 
-1. Klicka på kontextmenyn (dom tre prickarna) uppe till höger.
+1. Gå till kanalen du vill ta bort.
+2. Klicka på kontextmenyn (dom tre prickarna) uppe till höger.
 2. Klicka på `Ta bort`.
 3. Bekräfta.
+
+
+## Återställa borttagen kanal
 
 Om du av misstag tagit bort en kanal, så har du 30 dagar på dig att återställa den. Såhär återställer du en kanal:
 
