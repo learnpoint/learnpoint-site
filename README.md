@@ -1,6 +1,6 @@
 ## Development Environment Set Up
 
-1. [Install Deno](https://docs.deno.com/runtime/manual/getting_started/installation) `v1.38.3` or later.
+1. [Install Deno](https://docs.deno.com/runtime/manual/getting_started/installation) `v1.39.1` or later.
 
 2. [Create a fork](https://github.com/learnpoint/learnpoint-site/fork). Make sure to create the fork in your personal GitHub account, not in the Learnpoint organisation.
 
@@ -175,20 +175,21 @@ Crop and zoom to make the screenshot readable on both desktop and mobile. Specif
 
 ## Screen Recordings
 
-Screen recordings should be encoded with the h264 video codec and stored in an mp4 container. Audio tracks should be avoided.
+Screen recordings must be encoded with h264 and stored in an mp4 file. Audio tracks are not allowed.
 
-[ShareX](https://getsharex.com/) is a free screen recording app that supports h264. Select the `Very slow` option for the x264 video recording preset to make sure the output have good compression.
+[ShareX](https://getsharex.com/) is a recording tool that supports h264. Select the `Very slow` option for the x264 video recording preset to make sure the output have optimal compression.
 
-[FFmpeg](https://ffmpeg.org/download.html) is a great command line tool for multimedia manipulation. Here's a command to insert a short (frame 0 to 50) fade-in transition in the beginning of the recording, while also making sure that the h264 codec is used, and that any audio tracks are removed:
+[FFmpeg](https://ffmpeg.org/download.html) is a tool for multimedia manipulation. Here's a command to insert a fade-in transition at the beginning of a video (frame 0 to 50), while also making sure that the h264 codec is used, and that any audio tracks are removed:
 
         ffmpeg -i in.mp4 -vf "fade=in:0:50" -c:v libx264 -an out.mp4
 
 Here's how to make a screen recording:
 
-1. Crop and zoom appropriately. (See Screenshots above).
+1. Crop and zoom appropriately. (See **Screenshots** above).
 2. Don't use audio.
-3. Use high fidelity resolution, framerate, and colors. Do not use gif.
-4. Mouse movements and clicks must be clearly intentional and explanatorily timed. Here's how you can choreograph a recording of a click on an element:
-   1. Move the cursor in a straight line to the element you intend to click.
-   2. Hover the element for about 2 seconds, holding the cursor perfectly still.
-   3. Click the element.
+3. Use high fidelity resolution, framerate, and colors.
+
+When making a screen recoring, make sure that every mouse movement and click are clearly intentional and explanatorily timed. For example, here's how you could choreograph a click on an button:
+1. Move the cursor in a straight line to the button you intend to click.
+2. Hover the button for about 2 seconds, holding the cursor perfectly still.
+3. Click the button.
