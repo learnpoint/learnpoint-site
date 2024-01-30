@@ -53,12 +53,13 @@ Kursdelarna kan innehålla text, länkar, bilder, filmer och bifogade filer.
 
 ## Ange inställningar
 
-Det finns fyra inställningar på varje kursdel.
+Det finns fem inställningar på varje kursdel.
 
 * *Uppgift:* Inställningen anger om kursdelen skall vara en inlämningsuppgift.
 * *Tid:* Anger ett tidsintervall eller endast en sluttid.
 * *Betyg:* Anger om läraren skall sätta betyg på kursdelen.
 * *Bilagor:* Anger vilka filer som hör till kursdelen.
+* *Innehållets synlighet:* Anger när innehållet ska synas för studenten.
 
 Såhär gör du för att ange kursdelens inställningar:
 
