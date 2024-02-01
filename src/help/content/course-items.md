@@ -57,7 +57,7 @@ Det finns sex inställningar på varje kursdel.
 
 * *Uppgift:* Inställningen anger om kursdelen skall vara en inlämningsuppgift.
 * *Tid:* Anger ett tidsintervall eller endast en sluttid.
-* *Plats:* Anger en plats för kursdelen.
+* *Plats:* Anger en plats som hör till kursdelen.
 * *Betyg:* Anger om läraren skall sätta betyg på kursdelen.
 * *Bilagor:* Anger vilka filer som hör till kursdelen.
 * *Innehållets synlighet:* Anger när innehållet ska synas för studenten.
@@ -65,7 +65,7 @@ Det finns sex inställningar på varje kursdel.
 Såhär gör du för att ange kursdelens inställningar:
 
 1. Klicka på kursdelen.
-2. Klicka på redigeringsknappen (den grå pennan till höger om inställningen).
+2. Klicka på redigeringsknappen (den grå opennan till höger om inställningen).
 3. Välj inställning.
 4. Klicka på `Spara`:
 
