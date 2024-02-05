@@ -65,7 +65,7 @@ Det finns sex inställningar på varje kursdel.
 Såhär gör du för att ange kursdelens inställningar:
 
 1. Klicka på kursdelen.
-2. Klicka på redigeringsknappen (den grå opennan till höger om inställningen).
+2. Klicka på redigeringsknappen (den grå pennan till höger om inställningen).
 3. Välj inställning.
 4. Klicka på `Spara`:
 
