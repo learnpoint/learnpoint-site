@@ -34,9 +34,10 @@
     color: #333;
 }
 
-.news-article .meta img {
+.news-article .meta .author-image {
     width: 48px;
     height: 48px;
+    background-size: 48px 48px;
     background-color: transparent;
     border-radius: 50%;
     border: 0;
