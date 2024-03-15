@@ -13,6 +13,20 @@
 
     <main class="main__container">
         <div class="news-article">
+
+            <h1>
+                <span lang="en">{{ article-title-en }}</span>
+                <span lang="sv">{{ article-title-sv }}</span>
+            </h1>
+
+            <div class="meta">
+                <div class="author-image" alt="{{ author-name }}" style="background-image:url('/_images/authors/{{ author-image }}')"></div>
+                <div>
+                    <p class="author">{{ author-name }}</p>
+                    <time class="date" lang="en">{{ date-en }}</time>
+                    <time class="date" lang="sv">{{ date-sv }}</time>
+                </div>
+            </div>
             
             {{ content }}
 
