@@ -16,18 +16,25 @@
     gap: 4px;
     color: inherit;
     margin-bottom: 1em;
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(255, 255, 255, .85);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 4%),
+        0 2px 8px rgb(0 0 0 / 1%);
     padding: 1em 1.5em;
     padding: 24px 32px;
     border-radius: 8px;
     transition-property: background-color, box-shadow;
-    transition-duration: .1s;
+    transition-duration: .06s;
 }
 
-.news-list a:hover {
+.is-desktop .news-list a:hover {
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 4px 16px rgb(0 0 0 / 8%),
+    box-shadow: 0 4px 16px rgb(0 0 0 / 10%),
         0 2px 8px rgb(0 0 0 / 2%);
+}
+
+.is-desktop .news-list a:active {
+    background-color: rgba(0, 0, 0, .03);
+    box-shadow: none;
 }
 
 .news-list a .title {
