@@ -60,11 +60,15 @@ Deploying your fork to Netlify is optional, but highly recommended.
 
 ## Development Workflow
 
-1. Start the dev server:
+1. Start the dev server with default port (3333):
 
         deno task dev
 
-2. Open the site at `http://localhost:3333`
+     or specify custom port:
+
+        deno task dev [port]
+
+2. Open the site at `http://localhost:3333` (or with specified port)
 
 3. Write all your changes to the `src` folder. You should never make any changes to the `docs` folder.
 
