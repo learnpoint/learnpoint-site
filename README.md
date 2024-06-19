@@ -1,6 +1,6 @@
 ## Development Environment Set Up
 
-1. [Install Deno](https://docs.deno.com/runtime/manual/getting_started/installation) `v1.43.2` or later.
+1. [Install Deno](https://docs.deno.com/runtime/manual/getting_started/installation) `v1.44.4` or later.
 
 2. [Create a fork](https://github.com/learnpoint/learnpoint-site/fork). Make sure to create the fork in your personal GitHub account, not in the Learnpoint organisation.
 
