@@ -4,7 +4,7 @@
 
 .help-index-page__support-contact {
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
 }
 
 
@@ -106,11 +106,11 @@
 }
 
 .help-index-page__special-days-closed span {
-    font-size: .9em;
+    font-size: .8em;
     display: inline-block;
-    padding: .1em 0 0 0;
+    padding: .2em 0 0 0;
     margin: .6em 0 1em;
-    font-style: italic;
+    font-weight: bold;
 }
 
 .help-index-page__special-days-closed p {
