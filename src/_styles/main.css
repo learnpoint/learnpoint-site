@@ -27,8 +27,10 @@ body {
 h1 {
     font-family: 'Raleway', 'Segoe UI', sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-weight: 800;
+    font-weight: 900;
     text-align: center;
     font-size: 64px;
+    font-size: 58px;
     margin: 64px auto 24px;
     line-height: 1.1;
     line-height: 1;
