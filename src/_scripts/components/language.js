@@ -33,6 +33,6 @@
         }
 
         setLanguage(event.target.getAttribute('data-select-language'));
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     });
 })();

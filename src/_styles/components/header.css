@@ -21,6 +21,8 @@
     align-items: center;
     justify-content: space-between;
     font-size: 16px;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .is-mobile .header__nav {
@@ -70,6 +72,7 @@
 
 .is-mobile .header__links {
     padding: 0 12px;
+    gap: 4px;
 }
 
 
@@ -80,9 +83,11 @@
 
 .header__link {
     padding: 8px;
-    color: #000;
+    color: inherit;
     font-weight: 600;
+    font-weight: bold;
     text-decoration: none;
+    text-decoration: underline;
     white-space: nowrap;
     -webkit-tap-highlight-color: transparent;
 }
