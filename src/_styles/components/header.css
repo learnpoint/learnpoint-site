@@ -21,6 +21,8 @@
     align-items: center;
     justify-content: space-between;
     font-size: 16px;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .is-mobile .header__nav {
