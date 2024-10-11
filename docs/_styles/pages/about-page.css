@@ -18,7 +18,8 @@
 }
 
 .is-mobile .about-page__team-members {
-    gap: 16px 16px;
+    gap: 16px 4px;
+    margin: 2em -0.8em;
 }
 
 .about-page__team-member {
