@@ -18,6 +18,7 @@
 
 .index__features {
     padding: 0 16px;
+    padding: 0;
 }
 
 .is-mobile .index__features {
@@ -34,9 +35,10 @@
     display:flex;
     margin: 96px 0 128px;
     margin: 58px 0 128px;
+    margin: 58px 0 96px;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 32px;
+    gap: 28px;
 }
 
 .is-mobile .index__feature {
@@ -58,7 +60,7 @@
 .index__feature-text {
     width:400px;
     width: 320px;
-    line-height: 1.5;
+    width: 280px;
 }
 
 .is-mobile .index__feature-text {
@@ -85,7 +87,7 @@
 .index__feature-title {
     margin: 18px 0 4px;
     font-family: Raleway, 'Segoe UI', sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    font-size: 1.6em;
+    /* font-size: 1.4em; */
 }
 
 .is-mobile .index__feature-title {
@@ -140,7 +142,7 @@
 }
 
 .is-mobile .index__contact-title {
-    font-size: 20px;
+    font-size: 22px;
     margin: 0 0 20px;
 } 
 
