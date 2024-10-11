@@ -82,7 +82,9 @@
     padding: 8px;
     color: #000;
     font-weight: 600;
+    font-weight: bold;
     text-decoration: none;
+    text-decoration: underline;
     white-space: nowrap;
     -webkit-tap-highlight-color: transparent;
 }
