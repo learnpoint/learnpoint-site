@@ -129,9 +129,10 @@ Deploying your fork to Netlify is optional, but highly recommended.
 1. If it doesn't exist yet, create an appropriate folder inside the `/jobs` folder.
 2. Create an html file with a descriptive name. For example: `/jobs/2023/spring/backend-developer-internship.html`.
 3. Set layout, title and description in front matter. Title and description should be written in english (see Languages above).
-4. Make sure the page content is written in both swedish and english.
-5. Make sure there is some kind of approximate date information at the beginning of the page. The date can refer to when the page was publish, or when the opening is available, whatever makes most sense.
-6. Add a link to the page in `/jobs/index.html`.
+4. Set `robots: noindex` in front matter. Our job ads have short life spans, and search indices are slow.
+5. Make sure the page content is written in both swedish and english.
+6. Make sure there is some kind of approximate date information at the beginning of the page. The date can refer to when the page was publish, or when the opening is available, whatever makes most sense.
+7. Add a link to the page in `/jobs/index.html`.
 
 
 
@@ -140,7 +141,6 @@ Deploying your fork to Netlify is optional, but highly recommended.
 1. Remove the link to the page from `/jobs/index.html`.
 2. Do ***not*** delete the page! We don't want to break incoming links.
 3. Add the `<!-- job-no-longer-available.html -->` include on the page.
-4. Set `robots: noindex` in front matter for the page.
 
 
 
