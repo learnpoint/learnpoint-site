@@ -1,0 +1,16 @@
+[
+    {
+        "date": "2024-09-14",
+        "title": "Learnpoint unavailable",
+        "majorOutage": true,
+        "outageMinutes": 660,
+        "url": "/status/outages/2023-11-09.md"
+    },
+    {
+        "date": "2024-10-05",
+        "title": "Learnpoint unavilable for some users",
+        "majorOutage": false,
+        "outageMinutes": 95,
+        "url": "/status/outages/2023-08-30.md"
+    }
+]

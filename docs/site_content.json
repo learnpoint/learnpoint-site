@@ -352,5 +352,11 @@
         "description": "Sign In to Learnpoint",
         "url": "/sign-in.html",
         "content": "Sign in Logga in Enter the Learnpoint address for your school. Skriv in Learnpoint-adressen till din skola. Couldn't find the school. Check the address. Hittade inte skolan. Kontrollera adressen. Enter the Learnpoint address Ange Learnpoint-adressen school-name Continue Fortsätt Trouble signing in? We'd be happy to help! Problem att logga in? Vi hjälper gärna till! Your previous sign ins Dina tidigare inloggningar"
+    },
+    {
+        "title": "Learnpoint: Status",
+        "description": "Learnpoint Status & Uptime History",
+        "url": "/status/index.html",
+        "content": "Status Operational Uptime Calendar"
     }
 ]
