@@ -1,0 +1,12 @@
+{
+    "status": 1,
+    "title": 1,
+    "statusEnum": {
+        "1": "Green check",
+        "2": "Red exclamation"
+    },
+    "titleEnum": {
+        "1": "Learnpoint is up and running",
+        "2": "Learnpoint is having problems"
+    }
+}

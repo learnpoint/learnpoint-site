@@ -3,3 +3,109 @@
     margin: 0 auto;
 }
 
+.status-page__status {
+    margin-bottom: 3em;
+}
+
+.status-page__status-up,
+.status-page__status-down {
+    display: none;
+}
+
+.status-page__status.UP .status-page__status-up,
+.status-page__status.DOWN .status-page__status-down {
+    display: block;
+}
+
+.status-page__status svg {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 48px auto 24px;
+    color: green;
+}
+
+.status-page__status-down svg {
+    color: red;
+}
+
+.status-page__heading {
+    font-size: 28px;
+    text-align: center;
+    margin: 0 0 8px;
+}
+
+.is-mobile .status-page__heading {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 0 8px;
+}
+
+.status-page__preamble {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.status-page__calendar {
+    margin-bottom: unset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.status-page__month {
+    display: inline-block;
+    background-color: #555;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 1em;
+    box-shadow: 0 0px 3px rgb(0 0 0 / 30%);
+}
+
+.status-page__month-header {
+    display: flex;
+    justify-content: space-between;
+    color: #222;
+    font-size: .9em;
+    margin-bottom: .8em;
+    line-height: 1;
+}
+
+.status-page__month-name {
+    font-weight: bold;
+}
+
+.status-page__month-uptime {
+    font-weight: 600;
+}
+
+.status-page__days {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: .3em;
+}
+
+.status-page__day {
+    background-color: green;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+}
+
+.status-page__day.OUTAGE {
+    background-color: orange;
+}
+
+.status-page__day.OUTAGE.MAJOR {
+    background-color: red;
+}
+
+.status-page__day.FUTURE {
+    background-color: rgba(0, 0, 0, .06);
+}
+
+.status-page__day.OUTSIDE {
+    background-color: transparent;
+}
