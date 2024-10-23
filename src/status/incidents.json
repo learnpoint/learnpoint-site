@@ -3,56 +3,14 @@
         "date": "2024-10-15",
         "title": "Major outage",
         "major": true,
-        "minutes": 200,
+        "outageMinutes": 200,
         "url": "/status/outages/2023-11-09.md"
     },
     {
         "date": "2024-10-11",
         "title": "Slow response times",
         "major": false,
-        "minutes": 10,
-        "url": "/status/outages/2023-08-30.md"
-    },
-    {
-        "date": "2024-10-01",
-        "title": "Sign in problems",
-        "major": true,
-        "minutes": 10,
-        "url": "/status/outages/2023-08-30.md"
-    },
-    {
-        "date": "2024-08-17",
-        "title": "Slow response times",
-        "major": true,
-        "minutes": 15,
-        "url": "/status/outages/2023-08-30.md"
-    },
-    {
-        "date": "2024-08-16",
-        "title": "Slow response times",
-        "major": false,
-        "minutes": 15,
-        "url": "/status/outages/2023-08-30.md"
-    },
-    {
-        "date": "2024-06-12",
-        "title": "Slow response times",
-        "major": true,
-        "minutes": 15,
-        "url": "/status/outages/2023-08-30.md"
-    },
-    {
-        "date": "2024-05-28",
-        "title": "Slow response times",
-        "major": false,
-        "minutes": 15,
-        "url": "/status/outages/2023-08-30.md"
-    },
-    {
-        "date": "2024-05-23",
-        "title": "Slow response times",
-        "major": false,
-        "minutes": 15,
+        "outageMinutes": 10,
         "url": "/status/outages/2023-08-30.md"
     }
 ]

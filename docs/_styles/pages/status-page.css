@@ -4,7 +4,7 @@
 }
 
 .status-page__status {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 }
 
 .status-page__status-up,
@@ -48,7 +48,6 @@
 }
 
 .status-page__calendar {
-    margin-bottom: unset;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -108,4 +107,38 @@
 
 .status-page__day.OUTSIDE {
     background-color: transparent;
+}
+
+.status-page__pagination {
+    display: flex;
+    margin: 0 auto 1em;
+    gap: .2em;
+    justify-content: center;
+    margin-bottom: .8em;
+}
+
+.status-page__pagination-button {
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    /* border-radius: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.status-page__pagination-button svg {
+    width: 32px;
+    height: 32px;
+}
+
+
+.status-page__pagination-button.DISABLED {
+    color: #bbb;
+    cursor: default;
 }

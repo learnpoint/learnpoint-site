@@ -1,19 +1,42 @@
 const STATUS_URL = '/status/status.json';
 const INCIDENTS_URL = '/status/incidents.json';
+
 // const STATUS_URL = 'https://json-test.ekmwest.io/status.json';
 // const OUTAGES_URL = 'https://json-test.ekmwest.io/outages.json';
-const MAX_CALENDAR_MONTHS = 6;
+
+const MAX_CALENDAR_MONTHS = 9; // Must be multiple of 3
 const MAX_CALENDAR_MONTHS_PAGE = 3;
 
 const firstDayOfWeekIsMonday = true;
 
+let paginationPage = 1;
+
+document.addEventListener('click', event => {
+    const paginateButton = event.target.closest('.status-page__pagination-button');
+    if (!paginateButton) {
+        return;
+    }
+
+    const directionForward = paginateButton.classList.contains('FORWARD');
+
+    if (directionForward) {
+        if (paginationPage > 1) {
+            paginationPage--;
+        }
+    } else {
+        if (paginationPage < MAX_CALENDAR_MONTHS / MAX_CALENDAR_MONTHS_PAGE) {
+            paginationPage++;
+        }
+    }
+
+    updatePagination();
+});
+
 
 document.addEventListener('DOMContentLoaded', async event => {
     setStatus();
-
-    const calendarHTML = await createCalendarHTML();
-    const calendarElement = document.querySelector('.status-page__calendar');
-    calendarElement.innerHTML = calendarHTML;
+    await renderCalendar();
+    updatePagination();
 });
 
 async function setStatus() {
@@ -24,14 +47,55 @@ async function setStatus() {
 
     if (status.fullyOperational === true) {
         statusElement.classList.add('UP');
-    } else {
-        statusElement.classList.add('DOWN');
-        const statusMessageElement = document.querySelector('.status-page__status-message');
-        const message = status.messages["1"].en;
-        console.log(message)
-        statusMessageElement.textContent = message;
+        return;
     }
+
+    const message = status.messages[status.notFullyOperationalMessage]
+
+    const statusMessageElementEn = document.querySelector('.status-page__status-message[lang=en]');
+    const statusMessageElementSv = document.querySelector('.status-page__status-message[lang=sv]');
+
+    statusMessageElementEn.textContent = message.en;
+    statusMessageElementSv.textContent = message.sv;
+
+    statusElement.classList.add('DOWN');
 }
+
+async function renderCalendar() {
+    const calendarHTML = await createCalendarHTML();
+    const calendarElement = document.querySelector('.status-page__calendar');
+    calendarElement.innerHTML = calendarHTML;
+}
+
+function updatePagination() {
+    console.log(paginationPage);
+
+    const forwardButton = document.querySelector('.status-page__pagination-button.FORWARD');
+    const backButton = document.querySelector('.status-page__pagination-button.BACK');
+
+    if (paginationPage > 1) {
+        forwardButton.classList.remove('DISABLED');
+    } else {
+        forwardButton.classList.add('DISABLED');
+    }
+
+    if (paginationPage < MAX_CALENDAR_MONTHS / MAX_CALENDAR_MONTHS_PAGE) {
+        backButton.classList.remove('DISABLED');
+    } else {
+        backButton.classList.add('DISABLED');
+    }
+
+    const months = document.querySelectorAll('.status-page__month');
+    months.forEach(month => {
+        const pageIndex = month.dataset.page;
+        if(pageIndex === paginationPage.toString()) {
+            month.style.display = 'block';
+        } else {
+            month.style.display = 'none';
+        }
+    });
+}
+
 
 async function createCalendarHTML() {
 
@@ -43,11 +107,21 @@ async function createCalendarHTML() {
 
     const today = new Date();
 
+    let monthIndex = 0;
+    let pageIndex = 0;
+
     for (const month of months) {
 
-        html += '<div class="status-page__month">';
+        monthIndex++;
+
+        pageIndex = Math.floor(MAX_CALENDAR_MONTHS / MAX_CALENDAR_MONTHS_PAGE) - Math.ceil(monthIndex / MAX_CALENDAR_MONTHS_PAGE) + 1;
+
+        html += '<div class="status-page__month" data-page="' + pageIndex + '">';
         html += `<div class="status-page__month-header">`;
-        html += `<div class="status-page__month-name">${getMonthName(month.month)} ${month.year}</div>`;
+        html += `<div class="status-page__month-name">
+                    <span lang="en">${getMonthName(month.month, "en")} ${month.year}</span>
+                    <span lang="sv">${getMonthName(month.month, "sv")} ${month.year}</span>
+                 </div>`;
         html += `<div class="status-page__month-uptime">${getMonthUptimePercentage(month.year, month.month, incidents)}%</div>`;
         html += `</div>`;
         html += '<div class="status-page__days">';
@@ -55,6 +129,7 @@ async function createCalendarHTML() {
         for (const day of month.days) {
 
             if (day.getMonth() === month.month) {
+
                 if (day.getFullYear() === day.getFullYear() && day.getMonth() === today.getMonth() && day.getDate() >= today.getDate()) {
 
                     const title = day.getDate() + ' ' + getMonthName(month.month) + ' ' + day.getFullYear();
@@ -109,23 +184,23 @@ async function getStatus() {
     return await res.json();
 }
 
-function getMonthUptimePercentage(year, month, outages) {
+function getMonthUptimePercentage(year, month, incidents) {
 
-    const monthOutages = outages.filter(outage => {
-        const outageYear = outage.date.slice(0, 4);
-        if (outageYear !== year.toString()) {
+    const monthIncidents = incidents.filter(incident => {
+        const incidentYear = incident.date.slice(0, 4);
+        if (incidentYear !== year.toString()) {
             return false;
         }
 
-        const outageMonth = outage.date.slice(5, 7);
-        if (outageMonth !== paddedNumber(month + 1)) {
+        const incidentMonth = incident.date.slice(5, 7);
+        if (incidentMonth !== paddedNumber(month + 1)) {
             return false;
         }
 
         return true;
     });
 
-    const outageMinutes = monthOutages.reduce((acc, outage) => acc + outage.minutes, 0);
+    const outageMinutes = monthIncidents.reduce((acc, incident) => acc + incident.outageMinutes, 0);
     const monthMinutes = new Date(year, month + 1, 0).getDate() * 24 * 60;
 
     const uptime = (1 - outageMinutes / monthMinutes) * 100;
@@ -206,7 +281,7 @@ function firstDayOfFirstWeekOfMonth(year, month) {
 
     if (firstDayOfWeekIsMonday) {
 
-        if(firstDayOfMonth.getDay() === 0) {
+        if (firstDayOfMonth.getDay() === 0) {
             firstDayOfWeekOffset = -6;
         } else {
             firstDayOfWeekOffset = 1;
@@ -223,30 +298,30 @@ function lastDayOfLastWeekOfMonth(year, month) {
 
     if (firstDayOfWeekIsMonday) {
 
-        if(lastDayOfMonth.getDay() === 0) {
+        if (lastDayOfMonth.getDay() === 0) {
             lastDayOfWeekOffset = -6;
         } else {
             lastDayOfWeekOffset = 1;
         }
     }
 
-    
+
     return new Date(lastDayOfMonth.setDate(lastDayOfMonth.getDate() + (6 - lastDayOfMonth.getDay() + lastDayOfWeekOffset)));
 }
 
-function getMonthName(monthNumber) {
+function getMonthName(monthNumber, lang) {
     const n = parseInt(monthNumber);
     switch (n) {
-        case 0: return 'January';
-        case 1: return 'February';
+        case 0: return lang === 'sv' ? 'Januari' : 'January';
+        case 1: return lang === 'sv' ? 'Februari' : 'February';
         case 2: return 'Mars';
         case 3: return 'April';
-        case 4: return 'May';
-        case 5: return 'June';
-        case 6: return 'July';
-        case 7: return 'August';
+        case 4: return lang === 'sv' ? 'Maj' : 'May';
+        case 5: return lang === 'sv' ? 'Juni' : 'June';
+        case 6: return lang === 'sv' ? 'Juli' : 'July';
+        case 7: return lang === 'sv' ? 'Augusti' : 'August';
         case 8: return 'September';
-        case 9: return 'October';
+        case 9: return lang === 'sv' ? 'Oktober' : 'October';
         case 10: return 'November';
         case 11: return 'December';
     }
