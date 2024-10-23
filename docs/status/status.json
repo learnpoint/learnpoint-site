@@ -1,12 +1,14 @@
 {
-    "status": 1,
-    "title": 1,
-    "statusEnum": {
-        "1": "Green check",
-        "2": "Red exclamation"
-    },
-    "titleEnum": {
-        "1": "Learnpoint is up and running",
-        "2": "Learnpoint is having problems"
+    "fullyOperational": true,
+    "notFullyOperationalMessage": 1,
+    "messages": {
+        "1": {
+            "en": "",
+            "sv": ""
+        },
+        "2": {
+            "en": "Some users don't receive email notifications. We're investigating the root cause and will fix the problem as soon as possible.",
+            "sv": "Vi upplever problem."
+        }
     }
 }

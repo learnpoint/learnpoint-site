@@ -1,9 +1,12 @@
 const STATUS_URL = '/status/status.json';
-const OUTAGES_URL = '/status/outages.json';
-const MAX_CALENDAR_MONTHS = 3;
+const INCIDENTS_URL = '/status/incidents.json';
+// const STATUS_URL = 'https://json-test.ekmwest.io/status.json';
+// const OUTAGES_URL = 'https://json-test.ekmwest.io/outages.json';
+const MAX_CALENDAR_MONTHS = 6;
 const MAX_CALENDAR_MONTHS_PAGE = 3;
 
-// TODO: Prefetch outages and status
+const firstDayOfWeekIsMonday = true;
+
 
 document.addEventListener('DOMContentLoaded', async event => {
     setStatus();
@@ -19,10 +22,14 @@ async function setStatus() {
 
     const status = await getStatus();
 
-    if (status.status === 1) {
+    if (status.fullyOperational === true) {
         statusElement.classList.add('UP');
     } else {
         statusElement.classList.add('DOWN');
+        const statusMessageElement = document.querySelector('.status-page__status-message');
+        const message = status.messages["1"].en;
+        console.log(message)
+        statusMessageElement.textContent = message;
     }
 }
 
@@ -30,42 +37,43 @@ async function createCalendarHTML() {
 
     let html = '';
 
-    const outages = await getOutages();
+    const incidents = await getIncidents();
 
     const months = getMonths();
+
+    const today = new Date();
 
     for (const month of months) {
 
         html += '<div class="status-page__month">';
         html += `<div class="status-page__month-header">`;
         html += `<div class="status-page__month-name">${getMonthName(month.month)} ${month.year}</div>`;
-        html += `<div class="status-page__month-uptime">${getMonthUptimePercentage(month.year, month.month, outages)}%</div>`;
+        html += `<div class="status-page__month-uptime">${getMonthUptimePercentage(month.year, month.month, incidents)}%</div>`;
         html += `</div>`;
         html += '<div class="status-page__days">';
 
         for (const day of month.days) {
 
             if (day.getMonth() === month.month) {
-
-                if (day > Date.now()) {
+                if (day.getFullYear() === day.getFullYear() && day.getMonth() === today.getMonth() && day.getDate() >= today.getDate()) {
 
                     const title = day.getDate() + ' ' + getMonthName(month.month) + ' ' + day.getFullYear();
                     html += `<div title="${title}" class="status-page__day FUTURE">`;
 
                 } else {
 
-                    const outage = getOutage(day, outages);
+                    const incident = getIncident(day, incidents);
 
-                    if (outage) {
+                    if (incident) {
 
-                        if (outage.major) {
+                        if (incident.major) {
 
-                            const title = outage.title;
+                            const title = incident.title;
                             html += `<div title="${title}" class="status-page__day OUTAGE MAJOR">`;
 
                         } else {
 
-                            const title = outage.title;
+                            const title = incident.title;
                             html += `<div title="${title}" class="status-page__day OUTAGE">`;
                         }
 
@@ -91,13 +99,13 @@ async function createCalendarHTML() {
     return html;
 }
 
-async function getOutages() {
-    const res = await fetch('/status/outages.json');
+async function getIncidents() {
+    const res = await fetch(INCIDENTS_URL);
     return await res.json();
 }
 
 async function getStatus() {
-    const res = await fetch('/status/status.json');
+    const res = await fetch(STATUS_URL);
     return await res.json();
 }
 
@@ -171,8 +179,8 @@ function createMonthIndexes() {
     return monthIndexes.toReversed();
 }
 
-function getOutage(date, outages) {
-    return outages.find(outage => outage.date === getISOFormattedDate(date));
+function getIncident(date, incidents) {
+    return incidents.find(incident => incident.date === getISOFormattedDate(date));
 }
 
 function getISOFormattedDate(date) {
@@ -191,13 +199,39 @@ function paddedNumber(i) {
 }
 
 function firstDayOfFirstWeekOfMonth(year, month) {
+
     const firstDayOfMonth = new Date(year, month, 1);
-    return new Date(firstDayOfMonth.setDate(firstDayOfMonth.getDate() - firstDayOfMonth.getDay()));
+
+    let firstDayOfWeekOffset = 0;
+
+    if (firstDayOfWeekIsMonday) {
+
+        if(firstDayOfMonth.getDay() === 0) {
+            firstDayOfWeekOffset = -6;
+        } else {
+            firstDayOfWeekOffset = 1;
+        }
+    }
+
+    return new Date(firstDayOfMonth.setDate(firstDayOfMonth.getDate() - firstDayOfMonth.getDay() + firstDayOfWeekOffset));
 }
 
 function lastDayOfLastWeekOfMonth(year, month) {
     const lastDayOfMonth = new Date(year, month + 1, 0);
-    return new Date(lastDayOfMonth.setDate(lastDayOfMonth.getDate() + (6 - lastDayOfMonth.getDay())));
+
+    let lastDayOfWeekOffset = 0;
+
+    if (firstDayOfWeekIsMonday) {
+
+        if(lastDayOfMonth.getDay() === 0) {
+            lastDayOfWeekOffset = -6;
+        } else {
+            lastDayOfWeekOffset = 1;
+        }
+    }
+
+    
+    return new Date(lastDayOfMonth.setDate(lastDayOfMonth.getDate() + (6 - lastDayOfMonth.getDay() + lastDayOfWeekOffset)));
 }
 
 function getMonthName(monthNumber) {
