@@ -1,9 +1,6 @@
 const STATUS_URL = '/status/status.json';
 const INCIDENTS_URL = '/status/incidents.json';
 
-// const STATUS_URL = 'https://json-test.ekmwest.io/status.json';
-// const OUTAGES_URL = 'https://json-test.ekmwest.io/outages.json';
-
 const MAX_CALENDAR_MONTHS = 9; // Must be multiple of 3
 const MAX_CALENDAR_MONTHS_PAGE = 3;
 
