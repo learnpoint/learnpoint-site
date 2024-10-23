@@ -32,11 +32,104 @@ document.addEventListener('click', event => {
     updatePagination();
 });
 
+document.addEventListener('click', event => {
+    const incidentDay = event.target.closest('.status-page__day.INCIDENT');
+    if (!incidentDay) {
+        closeTooltips();
+        return;
+    }
+
+    const openTooltip = document.querySelector('.status-page__incident-tooltip');
+    if (openTooltip) {
+        if (openTooltip.dataset.date == incidentDay.dataset.date) {
+            openTooltip.remove();
+            return;
+        }
+    }
+
+    closeTooltips();
+
+    const incidentTooltip = createIncidentTooltip(incidentDay);
+
+    showTooltip(incidentTooltip, incidentDay);
+});
+
+function closeTooltips() {
+    const openTooltips = document.querySelectorAll('.status-page__incident-tooltip');
+    openTooltips.forEach(tt => tt.remove());
+}
+
+function showTooltip(incidentTooltip, incidentDay) {
+    console.log(incidentTooltip)
+    console.log(incidentDay)
+
+    const rect = incidentDay.getBoundingClientRect();
+
+    incidentTooltip.style.left = rect.left - 160 + 'px';
+    incidentTooltip.style.top = rect.top + + scrollY + 42 + 'px';
+
+    document.body.append(incidentTooltip);
+}
+
+function createIncidentTooltip(incidentDay) {
+    const date = incidentDay.dataset.date;
+    const displayDateEn = isoDateToDisplayDate(date, 'en');
+    const displayDateSv = isoDateToDisplayDate(date, 'sv');
+    const minutes = incidentDay.dataset.minutes;
+    const titleEn = incidentDay.dataset.titleEn;
+    const titleSv = incidentDay.dataset.titleSv;
+    const descriptionEn = incidentDay.dataset.descriptionEn;
+    const descriptionSv = incidentDay.dataset.descriptionSv;
+
+    const html = `<div class="status-page__incident-tooltip" data-date="${date}">
+                      <div class="status-page__incident-tooltip-header">
+                          <div class="status-page__incident-tooltip-date">
+                              <span lang="en">${displayDateEn}</span>
+                              <span lang="sv">${displayDateSv}</span>
+                          </div>
+                          <div class="status-page__incident-tooltip-minutes">
+                              <span lang="en">${minutes} min</span>
+                              <span lang="sv">${minutes} min</span>
+                          </div>
+                      </div>
+                      <div class="status-page__incident-tooltip-title">
+                          <span lang="en">${titleEn}</span>
+                          <span lang="sv">${titleSv}</span>
+                      </div>
+                      <div class="status-page__incident-tooltip-descripton">
+                          <span lang="en">${descriptionEn}</span>
+                          <span lang="sv">${descriptionSv}</span>
+                      </div>
+                  </div>`;
+
+    return createElementFromHtml(html);
+}
+
+function createElementFromHtml(html) {
+
+    // REQUIREMENT: Single root element in html markup
+    // createElementFromHtml('<div></div><p></p>'); => Will not work
+    // createElementFromHtml('<div><p></p></div>'); => OK
+
+    const template = document.createElement('template');
+    template.innerHTML = html.trim();
+    return template.content.firstChild;
+};
+
+document.addEventListener('keyup', event => {
+    if (event.key === 'Escape') {
+        closeTooltips();
+    }
+})
+
 
 document.addEventListener('DOMContentLoaded', async event => {
-    setStatus();
+    await setStatus();
     await renderCalendar();
     updatePagination();
+
+    const statusPage = document.querySelector('.status-page');
+    statusPage.classList.add('LOADED');
 });
 
 async function setStatus() {
@@ -68,7 +161,6 @@ async function renderCalendar() {
 }
 
 function updatePagination() {
-    console.log(paginationPage);
 
     const forwardButton = document.querySelector('.status-page__pagination-button.FORWARD');
     const backButton = document.querySelector('.status-page__pagination-button.BACK');
@@ -88,14 +180,13 @@ function updatePagination() {
     const months = document.querySelectorAll('.status-page__month');
     months.forEach(month => {
         const pageIndex = month.dataset.page;
-        if(pageIndex === paginationPage.toString()) {
+        if (pageIndex === paginationPage.toString()) {
             month.style.display = 'block';
         } else {
             month.style.display = 'none';
         }
     });
 }
-
 
 async function createCalendarHTML() {
 
@@ -128,12 +219,13 @@ async function createCalendarHTML() {
 
         for (const day of month.days) {
 
+            const isoDate = day.getFullYear() + '-' + paddedNumber(month.month + 1) + '-' + paddedNumber(day.getDate());
+
             if (day.getMonth() === month.month) {
 
                 if (day.getFullYear() === day.getFullYear() && day.getMonth() === today.getMonth() && day.getDate() >= today.getDate()) {
 
-                    const title = day.getDate() + ' ' + getMonthName(month.month) + ' ' + day.getFullYear();
-                    html += `<div title="${title}" class="status-page__day FUTURE">`;
+                    html += `<div title="${isoDate}" class="status-page__day FUTURE">`;
 
                 } else {
 
@@ -141,21 +233,28 @@ async function createCalendarHTML() {
 
                     if (incident) {
 
+                        const title = incident.title;
+                        const description = incident.description;
+                        const minutes = incident.outageMinutes;
+
+                        html += `<div
+                                    title="${isoDate}"
+                                    data-date="${isoDate}"
+                                    data-minutes="${minutes}"
+                                    data-title-en="${title.en}"
+                                    data-title-sv="${title.sv}"
+                                    data-description-en="${description.en}"
+                                    data-description-sv="${description.sv}"`;
+
                         if (incident.major) {
-
-                            const title = incident.title;
-                            html += `<div title="${title}" class="status-page__day OUTAGE MAJOR">`;
-
+                            html += `class="status-page__day INCIDENT MAJOR">`
                         } else {
-
-                            const title = incident.title;
-                            html += `<div title="${title}" class="status-page__day OUTAGE">`;
+                            html += `class="status-page__day INCIDENT">`
                         }
 
                     } else {
 
-                        const title = day.getDate() + ' ' + getMonthName(month.month) + ' ' + day.getFullYear();
-                        html += `<div title="${title}" class="status-page__day">`;
+                        html += `<div title="${isoDate}" class="status-page__day">`;
                     }
                 }
 
@@ -327,4 +426,21 @@ function getMonthName(monthNumber, lang) {
     }
 
     return null;
+}
+
+function isoDateToDisplayDate(isoDate, lang) {
+    let [year, month, date] = isoDate.split('-');
+
+
+    if (date.startsWith('0')) {
+        date = date.slice(1);
+    }
+
+    let displayMonth = getMonthName(parseInt(month) - 1, lang);
+
+    if (lang == 'sv') {
+        displayMonth = displayMonth.toLowerCase();
+    }
+
+    return `${date} ${displayMonth} ${year}`;
 }
