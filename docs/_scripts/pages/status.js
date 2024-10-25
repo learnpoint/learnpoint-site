@@ -5,11 +5,11 @@
        ===================================================================== */
 
     // You can temporarily switch to these URLs for local dev testing
-    // const STATUS_URL = 'status.json';
-    // const INCIDENTS_URL = 'incidents.json';
+    const STATUS_URL = 'status.json';
+    const INCIDENTS_URL = 'incidents.json';
 
-    const STATUS_URL = 'https://status.learnpoint.io/status.json';
-    const INCIDENTS_URL = 'https://status.learnpoint.io/incidents.json';
+    // const STATUS_URL = 'https://status.learnpoint.io/status.json';
+    // const INCIDENTS_URL = 'https://status.learnpoint.io/incidents.json';
 
     const MAX_CALENDAR_MONTHS = 24; // Must be a multiple of MONTHS_PER_PAGINATION_PAGE
     const MONTHS_PER_PAGINATION_PAGE = 3;
@@ -25,8 +25,8 @@
        ===================================================================== */
 
     document.addEventListener('DOMContentLoaded', async event => {
-        await setStatus();
-        await renderCalendar();
+        renderStatus();
+        await renderCalendar(); // Must be rendered before updating pagination
         updatePagination();
     });
 
@@ -36,31 +36,58 @@
        Status
        ===================================================================== */
 
-    async function getStatus() {
-        const res = await fetch(STATUS_URL);
-        return await res.json();
-    }
-
-    async function setStatus() {
+    async function renderStatus() {
 
         const statusElement = document.querySelector('.status-page__status');
 
-        const status = await getStatus();
+        const [status, error] = await getStatus();
 
-        if (status.fullyOperational === true) {
-            statusElement.classList.add('UP');
+        if (error) {
+            statusElement.innerHTML = '<p style="text-align: center;margin-top:2em;">Error: Could not retrieve status information.</p>';
             return;
         }
 
-        const message = status.messages[status.notFullyOperationalMessage]
+        try {
 
-        const statusMessageElementEn = document.querySelector('.status-page__status-message[lang=en]');
-        const statusMessageElementSv = document.querySelector('.status-page__status-message[lang=sv]');
+            if (status.fullyOperational === true) {
+                statusElement.classList.add('UP');
+                return;
+            }
 
-        statusMessageElementEn.textContent = message.en;
-        statusMessageElementSv.textContent = message.sv;
+            const message = status.messages[status.notFullyOperationalMessage]
 
-        statusElement.classList.add('DOWN');
+            const statusMessageElementEn = document.querySelector('.status-page__status-message[lang=en]');
+            const statusMessageElementSv = document.querySelector('.status-page__status-message[lang=sv]');
+
+            statusMessageElementEn.textContent = message.en;
+            statusMessageElementSv.textContent = message.sv;
+
+            statusElement.classList.add('DOWN');
+
+        } catch (error) {
+
+            console.error(error);
+            statusElement.innerHTML = '<p style="text-align: center;margin-top:2em;">Error: Could not interpret status information.</p>';
+        }
+    }
+
+    async function getStatus() {
+        try {
+
+            const res = await fetch(STATUS_URL);
+
+            if (!res.ok) {
+                console.error('Could not fetch status information from', STATUS_URL);
+                return [undefined, true];
+            }
+
+            return [await res.json(), undefined];
+
+        } catch (error) {
+
+            console.error(error);
+            return [undefined, true];
+        }
     }
 
 
@@ -70,8 +97,16 @@
        ===================================================================== */
 
     async function renderCalendar() {
-        const calendarHTML = await createCalendarHTML();
+
         const calendarElement = document.querySelector('.status-page__calendar');
+
+        const [calendarHTML, error] = await createCalendarHTML();
+
+        if (error) {
+            calendarElement.innerHTML = `<p style="text-align: center;margin-top:2em;">Error: ${error}</p>`;
+            return;
+        }
+
         calendarElement.innerHTML = calendarHTML;
     }
 
@@ -79,52 +114,58 @@
 
         let html = '';
 
-        const incidents = await getIncidents();
+        const [incidents, error] = await getIncidents();
 
-        const months = getMonths();
+        if (error) {
+            return [undefined, 'Could not retrieve incident information.'];
+        }
 
-        const today = new Date();
+        try {
 
-        let monthIndex = 0;
-        let pageIndex = 0;
+            const months = getMonths();
 
-        for (const month of months) {
+            const today = new Date();
 
-            monthIndex++;
+            let monthIndex = 0;
+            let pageIndex = 0;
 
-            pageIndex = Math.floor(MAX_CALENDAR_MONTHS / MONTHS_PER_PAGINATION_PAGE) - Math.ceil(monthIndex / MONTHS_PER_PAGINATION_PAGE) + 1;
+            for (const month of months) {
 
-            html += '<div class="status-page__month" data-page="' + pageIndex + '">';
-            html += `<div class="status-page__month-header">`;
-            html += `<div class="status-page__month-name">
+                monthIndex++;
+
+                pageIndex = Math.floor(MAX_CALENDAR_MONTHS / MONTHS_PER_PAGINATION_PAGE) - Math.ceil(monthIndex / MONTHS_PER_PAGINATION_PAGE) + 1;
+
+                html += '<div class="status-page__month" data-page="' + pageIndex + '">';
+                html += `<div class="status-page__month-header">`;
+                html += `<div class="status-page__month-name">
                     <span lang="en">${getMonthName(month.month, "en")} ${month.year}</span>
                     <span lang="sv">${getMonthName(month.month, "sv")} ${month.year}</span>
                  </div>`;
-            html += `<div class="status-page__month-uptime">${getMonthUptimePercentage(month.year, month.month, incidents)}%</div>`;
-            html += `</div>`;
-            html += '<div class="status-page__days">';
+                html += `<div class="status-page__month-uptime">${getMonthUptimePercentage(month.year, month.month, incidents)}%</div>`;
+                html += `</div>`;
+                html += '<div class="status-page__days">';
 
-            for (const day of month.days) {
+                for (const day of month.days) {
 
-                const isoDate = day.getFullYear() + '-' + paddedNumber(month.month + 1) + '-' + paddedNumber(day.getDate());
+                    const isoDate = day.getFullYear() + '-' + paddedNumber(month.month + 1) + '-' + paddedNumber(day.getDate());
 
-                if (day.getMonth() === month.month) {
+                    if (day.getMonth() === month.month) {
 
-                    if (day.getFullYear() === day.getFullYear() && day.getMonth() === today.getMonth() && day.getDate() >= today.getDate()) {
+                        if (day.getFullYear() === day.getFullYear() && day.getMonth() === today.getMonth() && day.getDate() >= today.getDate()) {
 
-                        html += `<div title="${isoDate}" class="status-page__day FUTURE">`;
+                            html += `<div title="${isoDate}" class="status-page__day FUTURE">`;
 
-                    } else {
+                        } else {
 
-                        const incident = getIncident(day, incidents);
+                            const incident = getIncident(day, incidents);
 
-                        if (incident) {
+                            if (incident) {
 
-                            const title = incident.title;
-                            const description = incident.description;
-                            const minutes = incident.minutes;
+                                const title = incident.title;
+                                const description = incident.description;
+                                const minutes = incident.minutes;
 
-                            html += `<div
+                                html += `<div
                                     title="${isoDate}"
                                     data-date="${isoDate}"
                                     data-minutes="${minutes}"
@@ -133,36 +174,55 @@
                                     data-description-en="${description.en}"
                                     data-description-sv="${description.sv}"`;
 
-                            if (incident.major) {
-                                html += `class="status-page__day INCIDENT MAJOR">`
+                                if (incident.major) {
+                                    html += `class="status-page__day INCIDENT MAJOR">`
+                                } else {
+                                    html += `class="status-page__day INCIDENT">`
+                                }
+
                             } else {
-                                html += `class="status-page__day INCIDENT">`
+
+                                html += `<div title="${isoDate}" class="status-page__day">`;
                             }
-
-                        } else {
-
-                            html += `<div title="${isoDate}" class="status-page__day">`;
                         }
+
+                    } else {
+
+                        html += `<div class="status-page__day OUTSIDE">`;
                     }
 
-                } else {
-
-                    html += `<div class="status-page__day OUTSIDE">`;
+                    html += '</div>';
                 }
 
                 html += '</div>';
+                html += '</div>';
             }
 
-            html += '</div>';
-            html += '</div>';
-        }
+            return [html, undefined];
 
-        return html;
+        } catch (error) {
+
+            console.log(error);
+            return [undefined, 'Could not interpret incident information.']
+        }
     }
 
     async function getIncidents() {
-        const res = await fetch(INCIDENTS_URL);
-        return await res.json();
+        try {
+
+            const res = await fetch(INCIDENTS_URL);
+            if (!res.ok) {
+                console.error('Could not fetch', INCIDENTS_URL);
+                return [undefined, true];
+            }
+
+            return [await res.json(), undefined];
+
+        } catch (error) {
+
+            console.log(error);
+            return [undefined, true];
+        }
     }
 
     function getIncident(date, incidents) {
