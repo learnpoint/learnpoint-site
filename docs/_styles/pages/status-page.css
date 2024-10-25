@@ -1,12 +1,6 @@
-/* .status-page {
-    min-height: 300px;
-    opacity: 0;
-}
-
-.status-page.LOADED {
-    min-height: unset;
-    opacity: unset;
-} */
+/* ==========================================================================
+   Status
+   ========================================================================== */
 
 .status-page__status {
     margin-bottom: 2em;
@@ -22,6 +16,12 @@
     display: block;
 }
 
+
+
+/* ==========================================================================
+   Status svg
+   ========================================================================== */
+
 .status-page__status svg {
     display: block;
     width: 64px;
@@ -33,6 +33,12 @@
 .status-page__status-down svg {
     color: red;
 }
+
+
+
+/* ==========================================================================
+   Heading
+   ========================================================================== */
 
 .status-page__heading {
     font-size: 28px;
@@ -46,11 +52,23 @@
     margin: 0 0 8px;
 }
 
+
+
+/* ==========================================================================
+   Preamble
+   ========================================================================== */
+
 .status-page__preamble {
     text-align: center;
     max-width: 640px;
     margin: 0 auto;
 }
+
+
+
+/* ==========================================================================
+   Calendar
+   ========================================================================== */
 
 .status-page__calendar {
     display: flex;
@@ -58,6 +76,12 @@
     justify-content: center;
     gap: 16px;
 }
+
+
+
+/* ==========================================================================
+   Month
+   ========================================================================== */
 
 .status-page__month {
     display: inline-block;
@@ -68,6 +92,12 @@
     box-shadow: 0 0px 3px rgb(0 0 0 / 30%);
 }
 
+
+
+/* ==========================================================================
+   Month Header
+   ========================================================================== */
+
 .status-page__month-header {
     display: flex;
     justify-content: space-between;
@@ -77,19 +107,43 @@
     line-height: 1;
 }
 
+
+
+/* ==========================================================================
+   Month Name
+   ========================================================================== */
+
 .status-page__month-name {
     font-weight: bold;
 }
 
+
+
+/* ==========================================================================
+   Month Uptime
+   ========================================================================== */
+
 .status-page__month-uptime {
     font-weight: 600;
 }
+
+
+
+/* ==========================================================================
+   Days
+   ========================================================================== */
 
 .status-page__days {
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: .3em;
 }
+
+
+
+/* ==========================================================================
+   Day
+   ========================================================================== */
 
 .status-page__day {
     background-color: green;
@@ -116,6 +170,12 @@
     background-color: transparent;
 }
 
+
+
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
 .status-page__pagination {
     display: flex;
     margin: 0 auto 1em;
@@ -124,43 +184,45 @@
     margin-bottom: .8em;
 }
 
+
+
+/* ==========================================================================
+   Pagination Button
+   ========================================================================== */
+
 .status-page__pagination-button {
+    appearance: none;
     width: 34px;
     height: 34px;
+    border-radius: 50%;
+    border: 1px solid #999;
     margin: 0;
     padding: 0;
-    /* padding: 2px; */
-    /* border-radius: 50%; */
     display: flex;
     justify-content: center;
     align-items: center;
-    appearance: none;
-    background-color: transparent;
-    border: none;
+    background-color: #fff;
+    color: #000;
     cursor: pointer;
-    color: inherit;
-    border: none;
-    border-radius: 50%;
-    color: #fff;
 }
 
 .status-page__pagination-button.DISABLED {
-    color: #eee;
     cursor: default;
+    background-color: #f9f9f9;
+    color: #ccc;
+    border-color: #ccc;
 }
 
 .status-page__pagination-button svg {
     width: 28px;
     height: 28px;
-    background-color: #000;
-    border-radius: 50%;
-    border: 1px solid #aaa;
 }
 
-.status-page__pagination-button.DISABLED svg {
-    background-color: #aaa;
-    border-color: #ccc;
-}
+
+
+/* ==========================================================================
+   Incident Tooltip
+   ========================================================================== */
 
 .status-page__incident-tooltip {
     font-size: 14px;
@@ -190,6 +252,12 @@
     z-index: 1;
 }
 
+
+
+/* ==========================================================================
+   Incident Tooltip Header
+   ========================================================================== */
+
 .status-page__incident-tooltip-header {
     display: flex;
     justify-content: space-between;
@@ -201,9 +269,14 @@
     font-size: .8em;
 }
 
+
+
+/* ==========================================================================
+   Incident Tooltip Title
+   ========================================================================== */
+
 .status-page__incident-tooltip-title {
     font-weight: bold;
     font-size: 1em;
     margin-bottom: .2em;
 }
-

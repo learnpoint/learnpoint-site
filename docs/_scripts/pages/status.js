@@ -5,11 +5,11 @@
        ===================================================================== */
 
     // You can temporarily switch to these URLs for local dev testing
-    const STATUS_URL = 'status.json';
-    const INCIDENTS_URL = 'incidents.json';
+    // const STATUS_URL = 'status.json';
+    // const INCIDENTS_URL = 'incidents.json';
 
-    // const STATUS_URL = 'https://status.learnpoint.io/status.json';
-    // const INCIDENTS_URL = 'https://status.learnpoint.io/incidents.json';
+    const STATUS_URL = 'https://status.learnpoint.io/status.json';
+    const INCIDENTS_URL = 'https://status.learnpoint.io/incidents.json';
 
     const MAX_CALENDAR_MONTHS = 24; // Must be a multiple of MONTHS_PER_PAGINATION_PAGE
     const MONTHS_PER_PAGINATION_PAGE = 3;
