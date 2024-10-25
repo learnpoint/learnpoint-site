@@ -4,14 +4,23 @@
        Constants & Variables
        ===================================================================== */
 
-    // You can temporarily switch to these URLs for local dev testing
-    // const STATUS_URL = 'status.json';
-    // const INCIDENTS_URL = 'incidents.json';
+    let useLocalDataSource = true; // Temporarily set true for local development
 
-    const STATUS_URL = 'https://status.learnpoint.io/status.json';
-    const INCIDENTS_URL = 'https://status.learnpoint.io/incidents.json';
+    let dataSourceBaseUrl = 'https://status.learnpoint.io/';
 
-    const MAX_CALENDAR_MONTHS = 24; // Must be a multiple of MONTHS_PER_PAGINATION_PAGE
+    if (useLocalDataSource) {
+
+        dataSourceBaseUrl = '/status/';
+
+    } else if (document.currentScript.dataset.dataSourceBaseUrl) {
+
+        dataSourceBaseUrl = document.currentScript.dataset.dataSourceBaseUrl;
+    }
+
+    const STATUS_URL = dataSourceBaseUrl + 'status.json';
+    const INCIDENTS_URL = dataSourceBaseUrl + 'incidents.json';
+
+    const MAX_CALENDAR_MONTHS = 24; // Must be multiple of MONTHS_PER_PAGINATION_PAGE
     const MONTHS_PER_PAGINATION_PAGE = 3;
 
     const FIRST_DAY_OF_WEEK_IS_MONDAY = true;
