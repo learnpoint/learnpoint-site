@@ -113,8 +113,8 @@
                     <span lang="sv">Learnpoint är igång och fungerar</span>
                 </h1>
                 <p class="status-page__preamble">
-                    <span lang="en">Having trouble? Reach out to <a href="/help">our support</a>.</span>
-                    <span lang="sv">Upplever du problem? Hör av dig till <a href="/help">vår support</a>.</span>
+                    <span lang="en">Having trouble? Reach out to <a href="https://learnpoint.se/help/">our support</a>.</span>
+                    <span lang="sv">Upplever du problem? Hör av dig till <a href="https://learnpoint.se/help/">vår support</a>.</span>
                 </p>
             </div>
             <div class="status-page__status-down">
@@ -128,10 +128,9 @@
                 </h1>
                 <p class="status-page__preamble">
                     <span lang="en" class="status-page__status-message"></span>
-                    <span lang="en">For further information or assistance, please contact <a href="/help">our
-                            support</a>.</span>
+                    <span lang="en">For further information or assistance, please contact <a href="https://learnpoint.se/help/">our support</a>.</span>
                     <span lang="sv" class="status-page__status-message"></span>
-                    <span lang="sv">För mer information eller hjälp, kontakta <a href="/help">vår support</a>.</span>
+                    <span lang="sv">För mer information eller hjälp, kontakta <a href="https://learnpoint.se/help/">vår support</a>.</span>
                 </p>
             </div>`;
     }
