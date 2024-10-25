@@ -125,9 +125,11 @@
 }
 
 .status-page__pagination-button {
-    width: 30px;
-    height: 30px;
-    padding: 2px;
+    width: 34px;
+    height: 34px;
+    margin: 0;
+    padding: 0;
+    /* padding: 2px; */
     /* border-radius: 50%; */
     display: flex;
     justify-content: center;
@@ -137,16 +139,27 @@
     border: none;
     cursor: pointer;
     color: inherit;
-}
-
-.status-page__pagination-button svg {
-    width: 32px;
-    height: 32px;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
 }
 
 .status-page__pagination-button.DISABLED {
-    color: #ddd;
+    color: #eee;
     cursor: default;
+}
+
+.status-page__pagination-button svg {
+    width: 28px;
+    height: 28px;
+    background-color: #000;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+}
+
+.status-page__pagination-button.DISABLED svg {
+    background-color: #aaa;
+    border-color: #ccc;
 }
 
 .status-page__incident-tooltip {

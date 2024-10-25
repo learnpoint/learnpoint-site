@@ -1,8 +1,21 @@
 [
     {
+        "date": "2024-10-22",
+        "major": false,
+        "outageMinutes": 1,
+        "title": {
+            "en": "Learnpoint was not available",
+            "sv": "Learnpoint gick inte att använda"
+        },
+        "description": {
+            "en": "Due to an automatic unmanaged update of the hosting environment, Learnpoint stopped working.",
+            "sv": "På grund av en automatisk oövervakad uppdatering av driftsmiljön, slutade Learnpoint fungera."
+        }
+    },
+    {
         "date": "2024-10-15",
         "major": true,
-        "outageMinutes": 325,
+        "outageMinutes": 360,
         "title": {
             "en": "Learnpoint was not available",
             "sv": "Learnpoint gick inte att använda"
@@ -15,7 +28,7 @@
     {
         "date": "2024-10-05",
         "major": false,
-        "outageMinutes": 55,
+        "outageMinutes": 1,
         "title": {
             "en": "Some users were not able to sign in",
             "sv": "Vissa användare kunde inte logga in"

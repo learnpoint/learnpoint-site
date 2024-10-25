@@ -1,7 +1,7 @@
 const STATUS_URL = '/status/status.json';
 const INCIDENTS_URL = '/status/incidents.json';
 
-const MAX_CALENDAR_MONTHS = 9; // Must be multiple of 3
+const MAX_CALENDAR_MONTHS = 12; // Must be a multiple of MAX_CALENDAR_MONTHS_PAGE
 const MAX_CALENDAR_MONTHS_PAGE = 3;
 
 const firstDayOfWeekIsMonday = true;
@@ -121,12 +121,14 @@ document.addEventListener('keyup', event => {
 
 
 document.addEventListener('DOMContentLoaded', async event => {
-    await setStatus();
-    await renderCalendar();
-    updatePagination();
-
-    const statusPage = document.querySelector('.status-page');
-    statusPage.classList.add('LOADED');
+    
+        await setStatus();
+        await renderCalendar();
+        updatePagination();
+    
+        const statusPage = document.querySelector('.status-page');
+        statusPage.classList.add('LOADED');
+    
 });
 
 async function setStatus() {
