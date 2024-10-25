@@ -1,21 +1,21 @@
 [
     {
         "date": "2024-10-22",
-        "major": false,
-        "outageMinutes": 1,
-        "title": {
-            "en": "Learnpoint was not available",
-            "sv": "Learnpoint gick inte att använda"
-        },
-        "description": {
-            "en": "Due to an automatic unmanaged update of the hosting environment, Learnpoint stopped working.",
-            "sv": "På grund av en automatisk oövervakad uppdatering av driftsmiljön, slutade Learnpoint fungera."
-        }
-    },
-    {
-        "date": "2024-10-15",
         "major": true,
-        "outageMinutes": 360,
+        "minutes": 60,
+        "title": {
+            "en": "Learnpoint was slow",
+            "sv": "Learnpoint var långsamt"
+        },
+        "description": {
+            "en": "Due to an automatic unmanaged update of the hosting environment, Learnpoint stopped working.",
+            "sv": "På grund av en automatisk oövervakad uppdatering av driftsmiljön, slutade Learnpoint fungera."
+        }
+    },
+    {
+        "date": "2024-10-09",
+        "major": true,
+        "minutes": 324,
         "title": {
             "en": "Learnpoint was not available",
             "sv": "Learnpoint gick inte att använda"
@@ -26,29 +26,29 @@
         }
     },
     {
-        "date": "2024-10-05",
+        "date": "2024-10-18",
         "major": false,
-        "outageMinutes": 1,
+        "minutes": 324,
         "title": {
-            "en": "Some users were not able to sign in",
-            "sv": "Vissa användare kunde inte logga in"
+            "en": "Learnpoint was not available",
+            "sv": "Learnpoint gick inte att använda"
         },
         "description": {
-            "en": "Due to an automatic unmanaged update of the hosting environment, the sign-in functionality stopped working for users with access to Learnpoint Admin.",
-            "sv": "På grund av en automatisk oövervakad uppdatering av driftsmiljön, slutade inloggningen fungera för användare med tillgång till Learnpoint Admin."
+            "en": "Due to an automatic unmanaged update of the hosting environment, Learnpoint stopped working.",
+            "sv": "På grund av en automatisk oövervakad uppdatering av driftsmiljön, slutade Learnpoint fungera."
         }
     },
     {
-        "date": "2024-06-04",
-        "major": false,
-        "outageMinutes": 120,
+        "date": "2023-11-09",
+        "major": true,
+        "minutes": 324,
         "title": {
-            "en": "Unstability",
-            "sv": "Instabilitet"
+            "en": "Learnpoint was not available",
+            "sv": "Learnpoint gick inte att använda"
         },
         "description": {
-            "en": "Due to an upscaling problem, Learnpoint became slow and sometimes did not respond at all.",
-            "sv": "På grund av ett uppskalningsproblem blev Learpoint långsamt och ibland fick man inget svar."
+            "en": "Due to an automatic unmanaged update of the hosting environment, Learnpoint stopped working.",
+            "sv": "På grund av en automatisk oövervakad uppdatering av driftsmiljön, slutade Learnpoint fungera."
         }
     }
 ]

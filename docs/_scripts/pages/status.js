@@ -1,5 +1,8 @@
-const STATUS_URL = '/status/status.json';
-const INCIDENTS_URL = '/status/incidents.json';
+const STATUS_URL = 'https://status.learnpoint.io/status.json';
+const INCIDENTS_URL = 'https://status.learnpoint.io/incidents.json';
+
+// const STATUS_URL = 'status.json';
+// const INCIDENTS_URL = 'incidents.json';
 
 const MAX_CALENDAR_MONTHS = 12; // Must be a multiple of MAX_CALENDAR_MONTHS_PAGE
 const MAX_CALENDAR_MONTHS_PAGE = 3;
@@ -234,7 +237,7 @@ async function createCalendarHTML() {
 
                         const title = incident.title;
                         const description = incident.description;
-                        const minutes = incident.outageMinutes;
+                        const minutes = incident.minutes;
 
                         html += `<div
                                     title="${isoDate}"
@@ -298,10 +301,10 @@ function getMonthUptimePercentage(year, month, incidents) {
         return true;
     });
 
-    const outageMinutes = monthIncidents.reduce((acc, incident) => acc + incident.outageMinutes, 0);
+    const incidentMinutes = monthIncidents.reduce((acc, incident) => acc + incident.minutes, 0);
     const monthMinutes = new Date(year, month + 1, 0).getDate() * 24 * 60;
 
-    const uptime = (1 - outageMinutes / monthMinutes) * 100;
+    const uptime = (1 - incidentMinutes / monthMinutes) * 100;
 
     if (uptime === 100) {
         return uptime.toFixed(0);

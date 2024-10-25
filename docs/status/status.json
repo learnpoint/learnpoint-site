@@ -1,6 +1,6 @@
 {
-    "fullyOperational": true,
-    "notFullyOperationalMessage": 2,
+    "fullyOperational": false,
+    "notFullyOperationalMessage": 3,
     "messages": {
         "1": {
             "en": "",
@@ -16,7 +16,7 @@
         },
         "4": {
             "en": "Learnpoint is not available for some users right now. We're investigating and will fix the problem as soon as possible.",
-            "sv": "Learnpoint är långsamt för vissa användare just nu. Vi jobbar på problemet och fixar så fort vi kan."
+            "sv": "Learnpoint fungerar inte för vissa användare just nu. Vi jobbar på problemet och fixar så fort vi kan."
         },
         "5": {
             "en": "Some features are not available right now. We're investigating and will fix the problem as soon as possible.",
