@@ -48,62 +48,15 @@
 </header>
 
     <main class="main__container">
-        <!-- <link rel="preload" href="https://status.learnpoint.io/status.json" as="fetch" crossorigin="anonymous" /> -->
-<!-- <link rel="preload" href="https://status.learnpoint.io/incidents.json" as="fetch" crossorigin="anonymous" /> -->
+        <link rel="preload" href="https://status.learnpoint.io/status.json" as="fetch" crossorigin="anonymous" />
+<link rel="preload" href="https://status.learnpoint.io/incidents.json" as="fetch" crossorigin="anonymous" />
 
 <script defer src="/_scripts/pages/status.js"></script>
 
 <div class="status-page">
 
-    <div class="status-page__status">
-        <div class="status-page__status-up">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-            </svg>
-            <h1 class="status-page__heading">
-                <span lang="en">Learnpoint is up and running</span>
-                <span lang="sv">Learnpoint är igång och fungerar</span>
-            </h1>
-            <p class="status-page__preamble">
-                <span lang="en">Having trouble? Reach out to <a href="/help">our support</a>.</span>
-                <span lang="sv">Upplever du problem? Hör av dig till <a href="/help">vår support</a>.</span>
-            </p>
-        </div>
-        <div class="status-page__status-down">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
-            </svg>
-            <h1 class="status-page__heading">
-                <span lang="en">Learnpoint is having problems</span>
-                <span lang="sv">Learnpoint har problem</span>
-            </h1>
-            <p class="status-page__preamble">
-                <span lang="en" class="status-page__status-message"></span>
-                <span lang="en">For further information or assistance, please contact <a href="/help">our
-                        support</a>.</span>
-                <span lang="sv" class="status-page__status-message"></span>
-                <span lang="sv">För mer information eller hjälp, kontakta <a href="/help">vår support</a>.</span>
-            </p>
-        </div>
-    </div>
-
-    <div class="status-page__pagination">
-        <button type="button" class="status-page__pagination-button BACK">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
-            </svg>
-        </button>
-        <button type="button" class="status-page__pagination-button FORWARD">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-            </svg>
-        </button>
-    </div>
-
+    <div class="status-page__status"></div>
+    <div class="status-page__pagination"></div>
     <div class="status-page__calendar"></div>
 
 </div>
