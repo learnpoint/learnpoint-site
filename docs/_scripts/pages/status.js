@@ -114,7 +114,7 @@
                 </h1>
                 <p class="status-page__preamble">
                     <span lang="en">Having trouble? Reach out to <a href="https://learnpoint.se/help/">our support</a>.</span>
-                    <span lang="sv">Upplever du problem? Hör av dig till <a href="https://learnpoint.se/help/">vår support</a>.</span>
+                    <span lang="sv">Upplever du problem? Kontakta <a href="https://learnpoint.se/help/">vår support</a>.</span>
                 </p>
             </div>
             <div class="status-page__status-down">
