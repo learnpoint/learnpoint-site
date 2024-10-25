@@ -1,6 +1,6 @@
 {
-    "fullyOperational": false,
-    "notFullyOperationalMessage": 3,
+    "fullyOperational": true,
+    "notFullyOperationalMessage": 1,
     "messages": {
         "1": {
             "en": "",

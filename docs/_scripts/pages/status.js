@@ -1,87 +1,317 @@
-const STATUS_URL = 'https://status.learnpoint.io/status.json';
-const INCIDENTS_URL = 'https://status.learnpoint.io/incidents.json';
+(function () {
 
-// const STATUS_URL = 'status.json';
-// const INCIDENTS_URL = 'incidents.json';
+    /* =====================================================================
+       Constants & Variables
+       ===================================================================== */
 
-const MAX_CALENDAR_MONTHS = 12; // Must be a multiple of MAX_CALENDAR_MONTHS_PAGE
-const MAX_CALENDAR_MONTHS_PAGE = 3;
+    // You can temporarily switch to these URLs for local dev testing
+    // const STATUS_URL = 'status.json';
+    // const INCIDENTS_URL = 'incidents.json';
 
-const firstDayOfWeekIsMonday = true;
+    const STATUS_URL = 'https://status.learnpoint.io/status.json';
+    const INCIDENTS_URL = 'https://status.learnpoint.io/incidents.json';
 
-let paginationPage = 1;
+    const MAX_CALENDAR_MONTHS = 24; // Must be a multiple of MONTHS_PER_PAGINATION_PAGE
+    const MONTHS_PER_PAGINATION_PAGE = 3;
 
-document.addEventListener('click', event => {
-    const paginateButton = event.target.closest('.status-page__pagination-button');
-    if (!paginateButton) {
-        return;
+    const FIRST_DAY_OF_WEEK_IS_MONDAY = true;
+
+    let paginationPage = 1;
+
+
+
+    /* =====================================================================
+       DOMContentLoaded
+       ===================================================================== */
+
+    document.addEventListener('DOMContentLoaded', async event => {
+        await setStatus();
+        await renderCalendar();
+        updatePagination();
+    });
+
+
+
+    /* =====================================================================
+       Status
+       ===================================================================== */
+
+    async function getStatus() {
+        const res = await fetch(STATUS_URL);
+        return await res.json();
     }
 
-    const directionForward = paginateButton.classList.contains('FORWARD');
+    async function setStatus() {
 
-    if (directionForward) {
-        if (paginationPage > 1) {
-            paginationPage--;
-        }
-    } else {
-        if (paginationPage < MAX_CALENDAR_MONTHS / MAX_CALENDAR_MONTHS_PAGE) {
-            paginationPage++;
-        }
-    }
+        const statusElement = document.querySelector('.status-page__status');
 
-    updatePagination();
-});
+        const status = await getStatus();
 
-document.addEventListener('click', event => {
-    const incidentDay = event.target.closest('.status-page__day.INCIDENT');
-    if (!incidentDay) {
-        closeTooltips();
-        return;
-    }
-
-    const openTooltip = document.querySelector('.status-page__incident-tooltip');
-    if (openTooltip) {
-        if (openTooltip.dataset.date == incidentDay.dataset.date) {
-            openTooltip.remove();
+        if (status.fullyOperational === true) {
+            statusElement.classList.add('UP');
             return;
         }
+
+        const message = status.messages[status.notFullyOperationalMessage]
+
+        const statusMessageElementEn = document.querySelector('.status-page__status-message[lang=en]');
+        const statusMessageElementSv = document.querySelector('.status-page__status-message[lang=sv]');
+
+        statusMessageElementEn.textContent = message.en;
+        statusMessageElementSv.textContent = message.sv;
+
+        statusElement.classList.add('DOWN');
     }
 
-    closeTooltips();
 
-    const incidentTooltip = createIncidentTooltip(incidentDay);
 
-    showTooltip(incidentTooltip, incidentDay);
-});
+    /* =====================================================================
+       Calendar
+       ===================================================================== */
 
-function closeTooltips() {
-    const openTooltips = document.querySelectorAll('.status-page__incident-tooltip');
-    openTooltips.forEach(tt => tt.remove());
-}
+    async function renderCalendar() {
+        const calendarHTML = await createCalendarHTML();
+        const calendarElement = document.querySelector('.status-page__calendar');
+        calendarElement.innerHTML = calendarHTML;
+    }
 
-function showTooltip(incidentTooltip, incidentDay) {
-    console.log(incidentTooltip)
-    console.log(incidentDay)
+    async function createCalendarHTML() {
 
-    const rect = incidentDay.getBoundingClientRect();
+        let html = '';
 
-    incidentTooltip.style.left = rect.left - 160 + 'px';
-    incidentTooltip.style.top = rect.top + + scrollY + 42 + 'px';
+        const incidents = await getIncidents();
 
-    document.body.append(incidentTooltip);
-}
+        const months = getMonths();
 
-function createIncidentTooltip(incidentDay) {
-    const date = incidentDay.dataset.date;
-    const displayDateEn = isoDateToDisplayDate(date, 'en');
-    const displayDateSv = isoDateToDisplayDate(date, 'sv');
-    const minutes = incidentDay.dataset.minutes;
-    const titleEn = incidentDay.dataset.titleEn;
-    const titleSv = incidentDay.dataset.titleSv;
-    const descriptionEn = incidentDay.dataset.descriptionEn;
-    const descriptionSv = incidentDay.dataset.descriptionSv;
+        const today = new Date();
 
-    const html = `<div class="status-page__incident-tooltip" data-date="${date}">
+        let monthIndex = 0;
+        let pageIndex = 0;
+
+        for (const month of months) {
+
+            monthIndex++;
+
+            pageIndex = Math.floor(MAX_CALENDAR_MONTHS / MONTHS_PER_PAGINATION_PAGE) - Math.ceil(monthIndex / MONTHS_PER_PAGINATION_PAGE) + 1;
+
+            html += '<div class="status-page__month" data-page="' + pageIndex + '">';
+            html += `<div class="status-page__month-header">`;
+            html += `<div class="status-page__month-name">
+                    <span lang="en">${getMonthName(month.month, "en")} ${month.year}</span>
+                    <span lang="sv">${getMonthName(month.month, "sv")} ${month.year}</span>
+                 </div>`;
+            html += `<div class="status-page__month-uptime">${getMonthUptimePercentage(month.year, month.month, incidents)}%</div>`;
+            html += `</div>`;
+            html += '<div class="status-page__days">';
+
+            for (const day of month.days) {
+
+                const isoDate = day.getFullYear() + '-' + paddedNumber(month.month + 1) + '-' + paddedNumber(day.getDate());
+
+                if (day.getMonth() === month.month) {
+
+                    if (day.getFullYear() === day.getFullYear() && day.getMonth() === today.getMonth() && day.getDate() >= today.getDate()) {
+
+                        html += `<div title="${isoDate}" class="status-page__day FUTURE">`;
+
+                    } else {
+
+                        const incident = getIncident(day, incidents);
+
+                        if (incident) {
+
+                            const title = incident.title;
+                            const description = incident.description;
+                            const minutes = incident.minutes;
+
+                            html += `<div
+                                    title="${isoDate}"
+                                    data-date="${isoDate}"
+                                    data-minutes="${minutes}"
+                                    data-title-en="${title.en}"
+                                    data-title-sv="${title.sv}"
+                                    data-description-en="${description.en}"
+                                    data-description-sv="${description.sv}"`;
+
+                            if (incident.major) {
+                                html += `class="status-page__day INCIDENT MAJOR">`
+                            } else {
+                                html += `class="status-page__day INCIDENT">`
+                            }
+
+                        } else {
+
+                            html += `<div title="${isoDate}" class="status-page__day">`;
+                        }
+                    }
+
+                } else {
+
+                    html += `<div class="status-page__day OUTSIDE">`;
+                }
+
+                html += '</div>';
+            }
+
+            html += '</div>';
+            html += '</div>';
+        }
+
+        return html;
+    }
+
+    async function getIncidents() {
+        const res = await fetch(INCIDENTS_URL);
+        return await res.json();
+    }
+
+    function getIncident(date, incidents) {
+        return incidents.find(incident => incident.date === getISOFormattedDate(date));
+    }
+
+    function getMonthUptimePercentage(year, month, incidents) {
+
+        const monthIncidents = incidents.filter(incident => {
+            const incidentYear = incident.date.slice(0, 4);
+            if (incidentYear !== year.toString()) {
+                return false;
+            }
+
+            const incidentMonth = incident.date.slice(5, 7);
+            if (incidentMonth !== paddedNumber(month + 1)) {
+                return false;
+            }
+
+            return true;
+        });
+
+        const incidentMinutes = monthIncidents.reduce((acc, incident) => acc + incident.minutes, 0);
+        const monthMinutes = new Date(year, month + 1, 0).getDate() * 24 * 60;
+
+        const uptime = (1 - incidentMinutes / monthMinutes) * 100;
+
+        if (uptime === 100) {
+            return uptime.toFixed(0);
+        } else {
+            return uptime.toFixed(2);
+        }
+    }
+
+
+
+    /* =====================================================================
+       Pagination
+       ===================================================================== */
+
+    document.addEventListener('click', event => {
+        const paginateButton = event.target.closest('.status-page__pagination-button');
+        if (!paginateButton) {
+            return;
+        }
+
+        const directionForward = paginateButton.classList.contains('FORWARD');
+
+        if (directionForward) {
+            if (paginationPage > 1) {
+                paginationPage--;
+            }
+        } else {
+            if (paginationPage < MAX_CALENDAR_MONTHS / MONTHS_PER_PAGINATION_PAGE) {
+                paginationPage++;
+            }
+        }
+
+        updatePagination();
+    });
+
+    function updatePagination() {
+
+        const forwardButton = document.querySelector('.status-page__pagination-button.FORWARD');
+        const backButton = document.querySelector('.status-page__pagination-button.BACK');
+
+        if (paginationPage > 1) {
+            forwardButton.classList.remove('DISABLED');
+        } else {
+            forwardButton.classList.add('DISABLED');
+        }
+
+        if (paginationPage < MAX_CALENDAR_MONTHS / MONTHS_PER_PAGINATION_PAGE) {
+            backButton.classList.remove('DISABLED');
+        } else {
+            backButton.classList.add('DISABLED');
+        }
+
+        const months = document.querySelectorAll('.status-page__month');
+        months.forEach(month => {
+            const pageIndex = month.dataset.page;
+            if (pageIndex === paginationPage.toString()) {
+                month.style.display = 'block';
+            } else {
+                month.style.display = 'none';
+            }
+        });
+    }
+
+
+
+    /* =====================================================================
+       Incident Tooltip
+       ===================================================================== */
+
+    document.addEventListener('click', event => {
+        const incidentDay = event.target.closest('.status-page__day.INCIDENT');
+        if (!incidentDay) {
+            closeTooltips();
+            return;
+        }
+
+        const openTooltip = document.querySelector('.status-page__incident-tooltip');
+        if (openTooltip) {
+            if (openTooltip.dataset.date == incidentDay.dataset.date) {
+                openTooltip.remove();
+                return;
+            }
+        }
+
+        closeTooltips();
+
+        const incidentTooltip = createIncidentTooltip(incidentDay);
+
+        showTooltip(incidentTooltip, incidentDay);
+    });
+
+    document.addEventListener('keyup', event => {
+        if (event.key === 'Escape') {
+            closeTooltips();
+        }
+    });
+
+    function showTooltip(incidentTooltip, incidentDay) {
+
+        const rect = incidentDay.getBoundingClientRect();
+
+        incidentTooltip.style.left = rect.left - 160 + 'px';
+        incidentTooltip.style.top = rect.top + + scrollY + 42 + 'px';
+
+        document.body.append(incidentTooltip);
+    }
+
+    function closeTooltips() {
+        const openTooltips = document.querySelectorAll('.status-page__incident-tooltip');
+        openTooltips.forEach(tt => tt.remove());
+    }
+
+    function createIncidentTooltip(incidentDay) {
+        const date = incidentDay.dataset.date;
+        const displayDateEn = isoDateToDisplayDate(date, 'en');
+        const displayDateSv = isoDateToDisplayDate(date, 'sv');
+        const minutes = incidentDay.dataset.minutes;
+        const titleEn = incidentDay.dataset.titleEn;
+        const titleSv = incidentDay.dataset.titleSv;
+        const descriptionEn = incidentDay.dataset.descriptionEn;
+        const descriptionSv = incidentDay.dataset.descriptionSv;
+
+        const html = `<div class="status-page__incident-tooltip" data-date="${date}">
                       <div class="status-page__incident-tooltip-header">
                           <div class="status-page__incident-tooltip-date">
                               <span lang="en">${displayDateEn}</span>
@@ -102,347 +332,160 @@ function createIncidentTooltip(incidentDay) {
                       </div>
                   </div>`;
 
-    return createElementFromHtml(html);
-}
-
-function createElementFromHtml(html) {
-
-    // REQUIREMENT: Single root element in html markup
-    // createElementFromHtml('<div></div><p></p>'); => Will not work
-    // createElementFromHtml('<div><p></p></div>'); => OK
-
-    const template = document.createElement('template');
-    template.innerHTML = html.trim();
-    return template.content.firstChild;
-};
-
-document.addEventListener('keyup', event => {
-    if (event.key === 'Escape') {
-        closeTooltips();
-    }
-})
-
-
-document.addEventListener('DOMContentLoaded', async event => {
-    
-        await setStatus();
-        await renderCalendar();
-        updatePagination();
-    
-        const statusPage = document.querySelector('.status-page');
-        statusPage.classList.add('LOADED');
-    
-});
-
-async function setStatus() {
-
-    const statusElement = document.querySelector('.status-page__status');
-
-    const status = await getStatus();
-
-    if (status.fullyOperational === true) {
-        statusElement.classList.add('UP');
-        return;
+        return createElementFromHtml(html);
     }
 
-    const message = status.messages[status.notFullyOperationalMessage]
 
-    const statusMessageElementEn = document.querySelector('.status-page__status-message[lang=en]');
-    const statusMessageElementSv = document.querySelector('.status-page__status-message[lang=sv]');
+    /* =====================================================================
+       Date & Calendar Helpers
+       ===================================================================== */
 
-    statusMessageElementEn.textContent = message.en;
-    statusMessageElementSv.textContent = message.sv;
+    function getMonths() {
 
-    statusElement.classList.add('DOWN');
-}
+        const monthIndexes = createMonthIndexes();
 
-async function renderCalendar() {
-    const calendarHTML = await createCalendarHTML();
-    const calendarElement = document.querySelector('.status-page__calendar');
-    calendarElement.innerHTML = calendarHTML;
-}
+        const months = [];
 
-function updatePagination() {
+        for (const monthIndex of monthIndexes) {
+            const startDate = firstDayOfFirstWeekOfMonth(monthIndex.year, monthIndex.month);
+            const endDate = lastDayOfLastWeekOfMonth(monthIndex.year, monthIndex.month);
 
-    const forwardButton = document.querySelector('.status-page__pagination-button.FORWARD');
-    const backButton = document.querySelector('.status-page__pagination-button.BACK');
+            const days = [];
 
-    if (paginationPage > 1) {
-        forwardButton.classList.remove('DISABLED');
-    } else {
-        forwardButton.classList.add('DISABLED');
-    }
-
-    if (paginationPage < MAX_CALENDAR_MONTHS / MAX_CALENDAR_MONTHS_PAGE) {
-        backButton.classList.remove('DISABLED');
-    } else {
-        backButton.classList.add('DISABLED');
-    }
-
-    const months = document.querySelectorAll('.status-page__month');
-    months.forEach(month => {
-        const pageIndex = month.dataset.page;
-        if (pageIndex === paginationPage.toString()) {
-            month.style.display = 'block';
-        } else {
-            month.style.display = 'none';
-        }
-    });
-}
-
-async function createCalendarHTML() {
-
-    let html = '';
-
-    const incidents = await getIncidents();
-
-    const months = getMonths();
-
-    const today = new Date();
-
-    let monthIndex = 0;
-    let pageIndex = 0;
-
-    for (const month of months) {
-
-        monthIndex++;
-
-        pageIndex = Math.floor(MAX_CALENDAR_MONTHS / MAX_CALENDAR_MONTHS_PAGE) - Math.ceil(monthIndex / MAX_CALENDAR_MONTHS_PAGE) + 1;
-
-        html += '<div class="status-page__month" data-page="' + pageIndex + '">';
-        html += `<div class="status-page__month-header">`;
-        html += `<div class="status-page__month-name">
-                    <span lang="en">${getMonthName(month.month, "en")} ${month.year}</span>
-                    <span lang="sv">${getMonthName(month.month, "sv")} ${month.year}</span>
-                 </div>`;
-        html += `<div class="status-page__month-uptime">${getMonthUptimePercentage(month.year, month.month, incidents)}%</div>`;
-        html += `</div>`;
-        html += '<div class="status-page__days">';
-
-        for (const day of month.days) {
-
-            const isoDate = day.getFullYear() + '-' + paddedNumber(month.month + 1) + '-' + paddedNumber(day.getDate());
-
-            if (day.getMonth() === month.month) {
-
-                if (day.getFullYear() === day.getFullYear() && day.getMonth() === today.getMonth() && day.getDate() >= today.getDate()) {
-
-                    html += `<div title="${isoDate}" class="status-page__day FUTURE">`;
-
-                } else {
-
-                    const incident = getIncident(day, incidents);
-
-                    if (incident) {
-
-                        const title = incident.title;
-                        const description = incident.description;
-                        const minutes = incident.minutes;
-
-                        html += `<div
-                                    title="${isoDate}"
-                                    data-date="${isoDate}"
-                                    data-minutes="${minutes}"
-                                    data-title-en="${title.en}"
-                                    data-title-sv="${title.sv}"
-                                    data-description-en="${description.en}"
-                                    data-description-sv="${description.sv}"`;
-
-                        if (incident.major) {
-                            html += `class="status-page__day INCIDENT MAJOR">`
-                        } else {
-                            html += `class="status-page__day INCIDENT">`
-                        }
-
-                    } else {
-
-                        html += `<div title="${isoDate}" class="status-page__day">`;
-                    }
-                }
-
-            } else {
-
-                html += `<div class="status-page__day OUTSIDE">`;
+            for (let dateCursor = new Date(startDate); dateCursor <= endDate; dateCursor.setDate(dateCursor.getDate() + 1)) {
+                days.push(new Date(dateCursor));
             }
 
-            html += '</div>';
+            months.push({
+                year: monthIndex.year,
+                month: monthIndex.month,
+                days: days
+            });
         }
 
-        html += '</div>';
-        html += '</div>';
+        return months;
     }
 
-    return html;
-}
+    function createMonthIndexes() {
 
-async function getIncidents() {
-    const res = await fetch(INCIDENTS_URL);
-    return await res.json();
-}
+        const monthIndexes = [];
+        let dateCursor = today = new Date();
 
-async function getStatus() {
-    const res = await fetch(STATUS_URL);
-    return await res.json();
-}
-
-function getMonthUptimePercentage(year, month, incidents) {
-
-    const monthIncidents = incidents.filter(incident => {
-        const incidentYear = incident.date.slice(0, 4);
-        if (incidentYear !== year.toString()) {
-            return false;
+        for (let i = 0; i < MAX_CALENDAR_MONTHS; i++) {
+            monthIndexes.push({
+                year: dateCursor.getFullYear(),
+                month: dateCursor.getMonth()
+            });
+            dateCursor.setMonth(dateCursor.getMonth() - 1);
         }
 
-        const incidentMonth = incident.date.slice(5, 7);
-        if (incidentMonth !== paddedNumber(month + 1)) {
-            return false;
-        }
-
-        return true;
-    });
-
-    const incidentMinutes = monthIncidents.reduce((acc, incident) => acc + incident.minutes, 0);
-    const monthMinutes = new Date(year, month + 1, 0).getDate() * 24 * 60;
-
-    const uptime = (1 - incidentMinutes / monthMinutes) * 100;
-
-    if (uptime === 100) {
-        return uptime.toFixed(0);
-    } else {
-        return uptime.toFixed(2);
-    }
-}
-
-function getMonths() {
-
-    const monthIndexes = createMonthIndexes();
-
-    const months = [];
-
-    for (const monthIndex of monthIndexes) {
-        const startDate = firstDayOfFirstWeekOfMonth(monthIndex.year, monthIndex.month);
-        const endDate = lastDayOfLastWeekOfMonth(monthIndex.year, monthIndex.month);
-
-        const days = [];
-
-        for (let dateCursor = new Date(startDate); dateCursor <= endDate; dateCursor.setDate(dateCursor.getDate() + 1)) {
-            days.push(new Date(dateCursor));
-        }
-
-        months.push({
-            year: monthIndex.year,
-            month: monthIndex.month,
-            days: days
-        });
+        return monthIndexes.toReversed();
     }
 
-    return months;
-}
-
-function createMonthIndexes() {
-
-    const monthIndexes = [];
-    let dateCursor = today = new Date();
-
-    for (let i = 0; i < MAX_CALENDAR_MONTHS; i++) {
-        monthIndexes.push({
-            year: dateCursor.getFullYear(),
-            month: dateCursor.getMonth()
-        });
-        dateCursor.setMonth(dateCursor.getMonth() - 1);
+    function getISOFormattedDate(date) {
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        return `${year}-${paddedNumber(month)}-${paddedNumber(day)}`
     }
 
-    return monthIndexes.toReversed();
-}
-
-function getIncident(date, incidents) {
-    return incidents.find(incident => incident.date === getISOFormattedDate(date));
-}
-
-function getISOFormattedDate(date) {
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-    return `${year}-${paddedNumber(month)}-${paddedNumber(day)}`
-}
-
-function paddedNumber(i) {
-    if (i > 9) {
-        return i.toString();
-    } else {
-        return '0' + i.toString();
-    }
-}
-
-function firstDayOfFirstWeekOfMonth(year, month) {
-
-    const firstDayOfMonth = new Date(year, month, 1);
-
-    let firstDayOfWeekOffset = 0;
-
-    if (firstDayOfWeekIsMonday) {
-
-        if (firstDayOfMonth.getDay() === 0) {
-            firstDayOfWeekOffset = -6;
+    function paddedNumber(i) {
+        if (i > 9) {
+            return i.toString();
         } else {
-            firstDayOfWeekOffset = 1;
+            return '0' + i.toString();
         }
     }
 
-    return new Date(firstDayOfMonth.setDate(firstDayOfMonth.getDate() - firstDayOfMonth.getDay() + firstDayOfWeekOffset));
-}
+    function firstDayOfFirstWeekOfMonth(year, month) {
 
-function lastDayOfLastWeekOfMonth(year, month) {
-    const lastDayOfMonth = new Date(year, month + 1, 0);
+        const firstDayOfMonth = new Date(year, month, 1);
 
-    let lastDayOfWeekOffset = 0;
+        let firstDayOfWeekOffset = 0;
 
-    if (firstDayOfWeekIsMonday) {
+        if (FIRST_DAY_OF_WEEK_IS_MONDAY) {
 
-        if (lastDayOfMonth.getDay() === 0) {
-            lastDayOfWeekOffset = -6;
-        } else {
-            lastDayOfWeekOffset = 1;
+            if (firstDayOfMonth.getDay() === 0) {
+                firstDayOfWeekOffset = -6;
+            } else {
+                firstDayOfWeekOffset = 1;
+            }
         }
+
+        return new Date(firstDayOfMonth.setDate(firstDayOfMonth.getDate() - firstDayOfMonth.getDay() + firstDayOfWeekOffset));
+    }
+
+    function lastDayOfLastWeekOfMonth(year, month) {
+        const lastDayOfMonth = new Date(year, month + 1, 0);
+
+        let lastDayOfWeekOffset = 0;
+
+        if (FIRST_DAY_OF_WEEK_IS_MONDAY) {
+
+            if (lastDayOfMonth.getDay() === 0) {
+                lastDayOfWeekOffset = -6;
+            } else {
+                lastDayOfWeekOffset = 1;
+            }
+        }
+
+
+        return new Date(lastDayOfMonth.setDate(lastDayOfMonth.getDate() + (6 - lastDayOfMonth.getDay() + lastDayOfWeekOffset)));
+    }
+
+    function getMonthName(monthNumber, lang) {
+        const n = parseInt(monthNumber);
+        switch (n) {
+            case 0: return lang === 'sv' ? 'Januari' : 'January';
+            case 1: return lang === 'sv' ? 'Februari' : 'February';
+            case 2: return 'Mars';
+            case 3: return 'April';
+            case 4: return lang === 'sv' ? 'Maj' : 'May';
+            case 5: return lang === 'sv' ? 'Juni' : 'June';
+            case 6: return lang === 'sv' ? 'Juli' : 'July';
+            case 7: return lang === 'sv' ? 'Augusti' : 'August';
+            case 8: return 'September';
+            case 9: return lang === 'sv' ? 'Oktober' : 'October';
+            case 10: return 'November';
+            case 11: return 'December';
+        }
+
+        return null;
+    }
+
+    function isoDateToDisplayDate(isoDate, lang) {
+        let [year, month, date] = isoDate.split('-');
+
+
+        if (date.startsWith('0')) {
+            date = date.slice(1);
+        }
+
+        let displayMonth = getMonthName(parseInt(month) - 1, lang);
+
+        if (lang == 'sv') {
+            displayMonth = displayMonth.toLowerCase();
+        }
+
+        return `${date} ${displayMonth} ${year}`;
     }
 
 
-    return new Date(lastDayOfMonth.setDate(lastDayOfMonth.getDate() + (6 - lastDayOfMonth.getDay() + lastDayOfWeekOffset)));
-}
 
-function getMonthName(monthNumber, lang) {
-    const n = parseInt(monthNumber);
-    switch (n) {
-        case 0: return lang === 'sv' ? 'Januari' : 'January';
-        case 1: return lang === 'sv' ? 'Februari' : 'February';
-        case 2: return 'Mars';
-        case 3: return 'April';
-        case 4: return lang === 'sv' ? 'Maj' : 'May';
-        case 5: return lang === 'sv' ? 'Juni' : 'June';
-        case 6: return lang === 'sv' ? 'Juli' : 'July';
-        case 7: return lang === 'sv' ? 'Augusti' : 'August';
-        case 8: return 'September';
-        case 9: return lang === 'sv' ? 'Oktober' : 'October';
-        case 10: return 'November';
-        case 11: return 'December';
-    }
+    /* =====================================================================
+       DOM Helpers
+       ===================================================================== */
 
-    return null;
-}
+    function createElementFromHtml(html) {
 
-function isoDateToDisplayDate(isoDate, lang) {
-    let [year, month, date] = isoDate.split('-');
+        // REQUIREMENT: Single root element in html markup
+        // createElementFromHtml('<div></div><p></p>'); => Will not work
+        // createElementFromHtml('<div><p></p></div>'); => OK
+
+        const template = document.createElement('template');
+        template.innerHTML = html.trim();
+        return template.content.firstChild;
+    };
 
 
-    if (date.startsWith('0')) {
-        date = date.slice(1);
-    }
-
-    let displayMonth = getMonthName(parseInt(month) - 1, lang);
-
-    if (lang == 'sv') {
-        displayMonth = displayMonth.toLowerCase();
-    }
-
-    return `${date} ${displayMonth} ${year}`;
-}
+})();

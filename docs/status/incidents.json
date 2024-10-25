@@ -1,54 +1,15 @@
 [
     {
-        "date": "2024-10-22",
-        "major": true,
-        "minutes": 60,
-        "title": {
-            "en": "Learnpoint was slow",
-            "sv": "Learnpoint var långsamt"
-        },
-        "description": {
-            "en": "Due to an automatic unmanaged update of the hosting environment, Learnpoint stopped working.",
-            "sv": "På grund av en automatisk oövervakad uppdatering av driftsmiljön, slutade Learnpoint fungera."
-        }
-    },
-    {
         "date": "2024-10-09",
         "major": true,
-        "minutes": 324,
+        "minutes": 65,
         "title": {
             "en": "Learnpoint was not available",
             "sv": "Learnpoint gick inte att använda"
         },
         "description": {
             "en": "Due to an automatic unmanaged update of the hosting environment, Learnpoint stopped working.",
-            "sv": "På grund av en automatisk oövervakad uppdatering av driftsmiljön, slutade Learnpoint fungera."
-        }
-    },
-    {
-        "date": "2024-10-18",
-        "major": false,
-        "minutes": 324,
-        "title": {
-            "en": "Learnpoint was not available",
-            "sv": "Learnpoint gick inte att använda"
-        },
-        "description": {
-            "en": "Due to an automatic unmanaged update of the hosting environment, Learnpoint stopped working.",
-            "sv": "På grund av en automatisk oövervakad uppdatering av driftsmiljön, slutade Learnpoint fungera."
-        }
-    },
-    {
-        "date": "2023-11-09",
-        "major": true,
-        "minutes": 324,
-        "title": {
-            "en": "Learnpoint was not available",
-            "sv": "Learnpoint gick inte att använda"
-        },
-        "description": {
-            "en": "Due to an automatic unmanaged update of the hosting environment, Learnpoint stopped working.",
-            "sv": "På grund av en automatisk oövervakad uppdatering av driftsmiljön, slutade Learnpoint fungera."
+            "sv": "En automatisk oövervakad uppdatering av driftsmiljön gjorde att Learnpoint slutade fungera."
         }
     }
 ]

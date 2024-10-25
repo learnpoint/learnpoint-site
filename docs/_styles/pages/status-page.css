@@ -1,4 +1,4 @@
-.status-page {
+/* .status-page {
     min-height: 300px;
     opacity: 0;
 }
@@ -6,7 +6,7 @@
 .status-page.LOADED {
     min-height: unset;
     opacity: unset;
-}
+} */
 
 .status-page__status {
     margin-bottom: 2em;
