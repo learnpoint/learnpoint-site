@@ -227,8 +227,8 @@
 .status-page__incident-tooltip {
     font-size: 14px;
     position: absolute;
-    background-color: #fbfbfb;
-    border-radius: 8px;
+    background-color: #fff;
+    border-radius: 4px;
     padding: 1em 1.2em 1.1em;
     box-shadow: 0 0px 6px rgb(0 0 0 / 30%);
     z-index: 1;
@@ -240,7 +240,7 @@
     position: absolute;
     background-color: #fff;
     top: -8px;
-    left: 50%;
+    left: 166px;
     display: block;
     width: 16px;
     height: 16px;
@@ -250,6 +250,18 @@
     border-bottom: 1px solid transparent;
     transform: rotate(45deg);
     z-index: 1;
+}
+
+.status-page__incident-tooltip.LEFT::before {
+    left: 35px;
+}
+
+.status-page__incident-tooltip.RIGHT::before {
+    left: 282px;
+}
+
+.status-page__incident-tooltip.MOBILE::before {
+    display: none;
 }
 
 

@@ -5,11 +5,11 @@
        ===================================================================== */
 
     // You can temporarily switch to these URLs for local dev testing
-    // const STATUS_URL = 'status.json';
-    // const INCIDENTS_URL = 'incidents.json';
+    const STATUS_URL = 'status.json';
+    const INCIDENTS_URL = 'incidents.json';
 
-    const STATUS_URL = 'https://status.learnpoint.io/status.json';
-    const INCIDENTS_URL = 'https://status.learnpoint.io/incidents.json';
+    // const STATUS_URL = 'https://status.learnpoint.io/status.json';
+    // const INCIDENTS_URL = 'https://status.learnpoint.io/incidents.json';
 
     const MAX_CALENDAR_MONTHS = 24; // Must be a multiple of MONTHS_PER_PAGINATION_PAGE
     const MONTHS_PER_PAGINATION_PAGE = 3;
@@ -319,6 +319,11 @@
        ===================================================================== */
 
     document.addEventListener('click', event => {
+        const clickedOnTooltip = event.target.closest('.status-page__incident-tooltip');
+        if (clickedOnTooltip) {
+            return;
+        }
+
         const incidentDay = event.target.closest('.status-page__day.INCIDENT');
         if (!incidentDay) {
             closeTooltips();
@@ -350,7 +355,29 @@
 
         const rect = incidentDay.getBoundingClientRect();
 
-        incidentTooltip.style.left = rect.left - 160 + 'px';
+        const leftSpace = rect.left;
+        const rightSpace = document.documentElement.clientWidth - rect.right;
+
+        if (isMobile) {
+
+            incidentTooltip.style.left = document.documentElement.clientWidth / 2 - 168 + 'px';
+            incidentTooltip.classList.add('MOBILE');
+
+        } else if (leftSpace < 180) {
+
+            incidentTooltip.style.left = rect.left - 28 + 'px';
+            incidentTooltip.classList.add('LEFT');
+
+        } else if (rightSpace < 180) {
+
+            incidentTooltip.style.left = rect.left - 276 + 'px';
+            incidentTooltip.classList.add('RIGHT');
+
+        } else {
+
+            incidentTooltip.style.left = rect.left - 160 + 'px';
+        }
+
         incidentTooltip.style.top = rect.top + + scrollY + 42 + 'px';
 
         document.body.append(incidentTooltip);
