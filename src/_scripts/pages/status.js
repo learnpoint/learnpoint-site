@@ -4,7 +4,7 @@
        Constants & Variables
        ===================================================================== */
 
-    let useLocalDataSource = true; // Temporarily set true for local development
+    let useLocalDataSource = false; // Temporarily set true for local development
 
     let dataSourceBaseUrl = 'https://status.learnpoint.io/';
 
