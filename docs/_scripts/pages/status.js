@@ -6,6 +6,11 @@
 
     let useLocalDataSource = false; // Temporarily set true for local development
 
+    if (location.hostname !== '127.0.0.1' && location.hostname !== 'localhost') {
+        // Safe guard: Don't use local data source if not on local dev machine
+        useLocalDataSource = false;
+    }
+
     let dataSourceBaseUrl = 'https://status.learnpoint.io/';
 
     if (useLocalDataSource) {
