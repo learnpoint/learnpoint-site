@@ -39,7 +39,9 @@
     height: 132px;
     margin-bottom: 8px;
     border-radius: 50%;
-    filter: grayscale(.3) sepia(0.08);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .3);
+    filter: grayscale(.2) sepia(0.04);
 }
 
 .is-mobile .about-page__team-member-image {

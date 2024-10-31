@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
 <title>Learnpoint: Status</title>
-<meta name="description" content="Learnpoint Status & Uptime History" />
-<meta name="robots" content="noindex" />
+<meta name="description" content="Learnpoint Status & Uptime" />
+<meta name="robots" content="index" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <link rel="icon" href="/_images/favicons/favicon.png" type="image/png">
@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="/_styles/components/footer.css">
 <link rel="stylesheet" href="/_styles/components/language.css">
 
-<script src="/_scripts/components/print.js"></script>
+<script defer src="/_scripts/components/print.js"></script>
 <script src="/_scripts/components/is-mobile.js"></script>
 <script src="/_scripts/components/language.js"></script>
     <link rel="stylesheet" href="/_styles/pages/status-page.css">
@@ -48,20 +48,16 @@
 </header>
 
     <main class="main__container">
-        <script defer src="/_scripts/pages/status.js"></script>
+        <link rel="preload" href="https://status.learnpoint.io/status.json" as="fetch" crossorigin="anonymous" />
+<link rel="preload" href="https://status.learnpoint.io/incidents.json" as="fetch" crossorigin="anonymous" />
 
+<script defer src="/_scripts/pages/status.js"></script>
 
 <div class="status-page">
 
-    <h1>Status</h1>
-
-    <div class="status-page__status">
-        Operational
-    </div>
-
-    <div class="status-page__calendar">
-        Uptime Calendar
-    </div>
+    <div class="status-page__status"></div>
+    <div class="status-page__pagination"></div>
+    <div class="status-page__calendar"></div>
 
 </div>
     </main>
@@ -85,6 +81,9 @@
                 <li>
                     <span lang="en"><a href="/sign-in.html" class="footer__link">Sign in</a></span>
                     <span lang="sv"><a href="/sign-in.html" class="footer__link">Logga in</a></span>
+                </li>
+                <li>
+                    <span><a href="/status" class="footer__link">Status</a></span>
                 </li>
             </ul>
         </div>

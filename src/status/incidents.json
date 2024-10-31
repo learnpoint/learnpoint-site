@@ -1,0 +1,41 @@
+[
+    {
+        "date": "2024-10-13",
+        "major": true,
+        "minutes": 65,
+        "title": {
+            "en": "Learnpoint was not available",
+            "sv": "Learnpoint gick inte att använda"
+        },
+        "description": {
+            "en": "Due to an automatic unmanaged update of the hosting environment, Learnpoint stopped working.",
+            "sv": "En automatisk oövervakad uppdatering av driftsmiljön gjorde att Learnpoint slutade fungera."
+        }
+    },
+    {
+        "date": "2024-09-12",
+        "major": false,
+        "minutes": 30,
+        "title": {
+            "en": "Learnpoint was slow",
+            "sv": "Learnpoint var långsamt"
+        },
+        "description": {
+            "en": "Due to an automatic unmanaged update of the hosting environment, Learnpoint became slow.",
+            "sv": "En automatisk oövervakad uppdatering av driftsmiljön gjorde att Learnpoint var långsamt."
+        }
+    },
+    {
+        "date": "2024-08-12",
+        "major": false,
+        "minutes": 30,
+        "title": {
+            "en": "Learnpoint was slow",
+            "sv": "Learnpoint var långsamt"
+        },
+        "description": {
+            "en": "Due to an automatic unmanaged update of the hosting environment, Learnpoint became slow.",
+            "sv": "En automatisk oövervakad uppdatering av driftsmiljön gjorde att Learnpoint var långsamt."
+        }
+    }
+]

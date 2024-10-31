@@ -17,6 +17,8 @@
         document.documentElement.setAttribute('lang', language);
     }
 
+    window.setLanguage = setLanguage; // Export
+
     function getLanguage() {
         return localStorage.getItem(key);
     }
@@ -33,6 +35,5 @@
         }
 
         setLanguage(event.target.getAttribute('data-select-language'));
-        // window.scrollTo(0, 0);
     });
 })();

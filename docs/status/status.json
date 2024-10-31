@@ -1,0 +1,26 @@
+{
+    "fullyOperational": true,
+    "notFullyOperationalMessage": 1,
+    "messages": {
+        "1": {
+            "en": "",
+            "sv": ""
+        },
+        "2": {
+            "en": "Learnpoint is not available right now. We're investigating and will fix the problem as soon as possible.",
+            "sv": "Learnpoint går inte att komma åt just nu. Vi jobbar på problemet och fixar så fort vi kan."
+        },
+        "3": {
+            "en": "Learnpoint is slow right now. We're investigating and will fix the problem as soon as possible.",
+            "sv": "Learnpoint är långsamt just nu. Vi jobbar på problemet och fixar så fort vi kan."
+        },
+        "4": {
+            "en": "Learnpoint is not available for some users right now. We're investigating and will fix the problem as soon as possible.",
+            "sv": "Learnpoint fungerar inte för vissa användare just nu. Vi jobbar på problemet och fixar så fort vi kan."
+        },
+        "5": {
+            "en": "Some features are not available right now. We're investigating and will fix the problem as soon as possible.",
+            "sv": "Vissa funktioner går inte att använda just nu. Vi jobbar på problemet och fixar så fort vi kan."
+        }
+    }
+}
