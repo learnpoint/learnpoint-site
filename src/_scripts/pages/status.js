@@ -526,7 +526,9 @@
     function createMonthIndexes() {
 
         const monthIndexes = [];
+        
         let dateCursor = today = new Date();
+        dateCursor.setDate(1);
 
         for (let i = 0; i < MAX_CALENDAR_MONTHS; i++) {
             monthIndexes.push({
