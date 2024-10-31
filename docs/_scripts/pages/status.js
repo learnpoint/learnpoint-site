@@ -201,7 +201,7 @@
 
                     if (day.getMonth() === month.month) {
 
-                        if (day.getFullYear() === day.getFullYear() && day.getMonth() === today.getMonth() && day.getDate() >= today.getDate()) {
+                        if (day.getFullYear() === today.getFullYear() && day.getMonth() === today.getMonth() && day.getDate() >= today.getDate()) {
 
                             html += `<div title="${isoDate}" class="status-page__day FUTURE">`;
 
