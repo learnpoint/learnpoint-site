@@ -35,8 +35,8 @@
 
 .about-page__team-member-image {
     display: block;
-    width: 132px;
-    height: 132px;
+    width: 120px;
+    height: 120px;
     margin-bottom: 8px;
     border-radius: 50%;
     border: 2px solid #fff;
@@ -45,8 +45,8 @@
 }
 
 .is-mobile .about-page__team-member-image {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 }
 
 .about-page__team-member-name {

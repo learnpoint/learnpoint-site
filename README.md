@@ -1,6 +1,6 @@
 ## Development Environment Set Up
 
-1. [Install Deno](https://docs.deno.com/runtime/manual/getting_started/installation) `v1.46.3` or later.
+1. [Install Deno](https://docs.deno.com/runtime/getting_started/installation/) `v2.0.4` or later.
 
 2. [Create a fork](https://github.com/learnpoint/learnpoint-site/fork). Make sure to create the fork in your personal GitHub account, not in the Learnpoint organisation.
 
@@ -168,6 +168,13 @@ Deploying your fork to Netlify is optional, but highly recommended.
 8. Avoid using *"we"*, because the reader would probably feel excluded. Instead of *"We've added a new feature"*, write "*A new feature is added"*.
 9. Use factual statements instead of assessments. Instead of *"The page is simplified"*, write "*The page is updated*", or "*Some elements are removed from the page*". Let the reader make her own judgements.
 10. Write in both swedish and english.
+
+
+
+## How to: Set status or add incident
+
+Status and incidents are managed in a separate repository. You can find how-to guides for how to set status and add incidents in that repository: [https://github.com/learnpoint/status](https://github.com/learnpoint/status)
+
 
 
 
