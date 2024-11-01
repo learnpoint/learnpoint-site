@@ -90,7 +90,7 @@
     async function getStatus() {
         try {
 
-            const res = await fetch(STATUS_URL);
+            const res = await fetch(STATUS_URL, { cache: "no-store" });
 
             if (!res.ok) {
                 console.error('Could not fetch status information from', STATUS_URL);
@@ -260,7 +260,7 @@
     async function getIncidents() {
         try {
 
-            const res = await fetch(INCIDENTS_URL);
+            const res = await fetch(INCIDENTS_URL, { cache: "no-store" });
             if (!res.ok) {
                 console.error('Could not fetch', INCIDENTS_URL);
                 return [undefined, true];
