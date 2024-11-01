@@ -4,7 +4,7 @@
        Constants & Variables
        ===================================================================== */
 
-    let useLocalDataSource = false; // Temporarily set true for local development
+    let useLocalDataSource = true; // Temporarily set true for local development
 
     if (location.hostname !== '127.0.0.1' && location.hostname !== 'localhost') {
         // Safe guard: Don't use local data source if not on local dev machine
@@ -201,7 +201,7 @@
 
                     if (day.getMonth() === month.month) {
 
-                        if (day.getFullYear() === today.getFullYear() && day.getMonth() === today.getMonth() && day.getDate() >= today.getDate()) {
+                        if (day.getFullYear() === today.getFullYear() && day.getMonth() === today.getMonth() && day.getDate() > today.getDate()) {
 
                             html += `<div title="${isoDate}" class="status-page__day FUTURE">`;
 
