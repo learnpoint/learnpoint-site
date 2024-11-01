@@ -171,6 +171,13 @@ Deploying your fork to Netlify is optional, but highly recommended.
 
 
 
+## How to: Set status or add incident
+
+Status and incidents are managed in a separate repository. You can find how-to guides for how to set status and add incidents in that repository: [https://github.com/learnpoint/status](https://github.com/learnpoint/status)
+
+
+
+
 ## Screenshots
 
 Crop and zoom to make the screenshot readable on both desktop and mobile. Specifically, minimize the width of the browser (or the screenshot object) as much as possible.
