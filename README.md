@@ -121,7 +121,7 @@ Deploying your fork to Netlify is optional, but highly recommended.
 * Most pages should be written in both english and swedish. Use the attributes `lang="en"` and `lang="sv"` to specify the language for an element.
 * English is the default language. Use english where there's only room for a single language, for example `<title>`, `<meta name="description" ... >`, and `alt` attributes.
 * The help pages are an exception — they are typically only written in swedish. When there's only room for a single language on a help page, use swedish.
-
+* *TIP:* When you're writing in both english and swedish, begin writing in your non-native language and translate to your native language at the end. When you're writing in your non-native language, it's easier to write "from scratch" than to translate text that already exists.
 
 
 ## How to: Add a Job Opening Page
