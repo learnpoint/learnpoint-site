@@ -9,26 +9,26 @@
    Mail & Phone
    ========================================================================= */
 
-.contact-page__mail,
-.contact-page__phone {
-    color: inherit;
+a.contact-page__mail,
+a.contact-page__phone {
+    color: var(--text-color);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    padding: 0;
+    padding: 0 3px;
     margin-bottom: 2px;
     border-bottom: 1px solid transparent;
 }
 
 .is-desktop .contact-page__mail:hover,
 .is-desktop .contact-page__phone:hover {
-    color: #0470e1;
-    border-bottom: 1px solid #0470e1;
+    border-bottom: 1px solid;
 }
 
 .contact-page__mail svg,
 .contact-page__phone svg {
-    color: #0470e1;
     margin: 0 10px 0 0;
     width: 16px;
+    color: var(--link-color);
+    transition: var(--dark-mode-transition);
 }

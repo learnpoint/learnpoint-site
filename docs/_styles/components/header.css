@@ -30,32 +30,54 @@
 }
 
 
-/* ==========================================================================
-   Logo
-   ========================================================================== */
-
-.header__logo {
-    padding: 24px 24px 18px;
-}
-
-.is-mobile .header__logo {
-    padding: 22px 16px 20px;
-}
-
-
 
 /* ==========================================================================
-   Logo Img
+   Logo Link
    ========================================================================== */
 
-.header__logo-desktop-img,
-.header__logo-mobile-img {
-    display: block;
+.header__logo-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 28px 24px 18px;
 }
 
-.is-desktop .header__logo-mobile-img,
-.is-mobile .header__logo-desktop-img {
-    display: none;
+.is-mobile .header__logo-link {
+    padding: 24px 16px 20px;
+}
+
+
+
+/* ==========================================================================
+   Logo SVG
+   ========================================================================== */
+
+.header__logo-svg {
+    width: 128px;
+}
+
+.is-mobile .header__logo-svg {
+    width: 113px;
+}
+
+
+/* ==========================================================================
+   Logo Text
+   ========================================================================== */
+
+.header__logo-text {
+    color: var(--text-color);
+    transition: var(--dark-mode-transition);
+}
+
+
+
+/* ==========================================================================
+   Logo Dot
+   ========================================================================== */
+
+.header__logo-dot {
+    color: var(--link-color);
+    transition: var(--dark-mode-transition);
 }
 
 
@@ -81,9 +103,10 @@
    Link
    ========================================================================== */
 
-.header__link {
+a.header__link {
     padding: 8px;
     color: inherit;
+    transition: inherit;
     font-weight: 600;
     font-weight: bold;
     text-decoration: none;
@@ -92,6 +115,6 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.is-mobile .header__link {
+.is-mobile a.header__link {
     padding: 4px;
 }

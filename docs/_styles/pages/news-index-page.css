@@ -1,58 +1,77 @@
+/* =========================================================================
+   Preamble
+   ========================================================================= */
+
 .preamble {
     text-align: center;
     max-width: 640px;
     margin: 0 auto;
 }
 
+
+
+/* =========================================================================
+   List
+   ========================================================================= */
+
 .news-list {
     max-width: 520px;
     margin: 3em auto;
 }
+
+
+
+/* =========================================================================
+   List Item
+   ========================================================================= */
 
 .news-list a {
     display: flex;
     text-decoration: none;
     flex-direction: column;
     gap: 4px;
-    color: inherit;
+    color: var(--text-color);
     margin-bottom: 1em;
-    background-color: rgba(255, 255, 255, .85);
-    box-shadow: 0 4px 16px rgb(0 0 0 / 4%),
-        0 2px 8px rgb(0 0 0 / 1%);
-    padding: 1em 1.5em;
+    background-color: var(--background-color-tinted);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 4%), 0 2px 8px rgb(0 0 0 / 1%);
     padding: 24px 32px;
     border-radius: 8px;
-    transition-property: background-color, box-shadow;
-    transition-duration: .06s;
+}
+
+.dark .news-list a {
+    box-shadow: none;
 }
 
 .is-desktop .news-list a:hover {
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 4px 16px rgb(0 0 0 / 10%),
-        0 2px 8px rgb(0 0 0 / 2%);
+    background-color: var(--background-color-tinted-hover);
 }
 
 .is-desktop .news-list a:active {
-    background-color: rgba(0, 0, 0, .03);
-    box-shadow: none;
+    background-color: var(--background-color-tinted-active);
 }
+
+
+
+/* =========================================================================
+   Title
+   ========================================================================= */
 
 .news-list a .title {
     font-weight: bold;
     font-size: 1.1em;
     line-height: 1.2;
     padding: 3px 0;
-    color: #444;
 }
 
 .is-mobile a .title {
     font-size: 1em;
 }
 
-.news-list a:hover .title {
-    color: #0070df;
-    color: #000;
-}
+
+
+/* =========================================================================
+   Date
+   ========================================================================= */
 
 .news-list a .date,
 .news-list a:hover .date {

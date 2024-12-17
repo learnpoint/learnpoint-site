@@ -1,15 +1,34 @@
 html {
     scrollbar-width: thin;
+    --text-color: #0f1016;
+    --text-color-muted: #424555;
+    --link-color: #0470e1;
+    --background-color: #fffcf6;
+    --background-color-tinted: #fff;
+    --background-color-tinted-hover: #fbfbfb;
+    --background-color-tinted-active: #f5f5f5;
+    --dark-mode-transition: color .16s, background-color .16s;
+}
+
+html.dark:not(.print) {
+    --text-color: #eee;
+    --text-color-muted: #ccc;
+    --link-color: #3e9bfd;
+    --background-color: #272727;
+    --background-color-tinted: #333;
+    --background-color-tinted-hover: #3a3a3a;
+    --background-color-tinted-active: #2f2f2f;
 }
 
 body {
     margin: 0;
     font-family: 'Open Sans', 'Segoe UI', sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    color: #0f1016;
+    color: var(--text-color);
+    background-color: var(--background-color);
     line-height: 1.5;
     font-size: 18px;
     overflow-y: scroll;
-    background-color: #fffcf6;
+    transition: var(--dark-mode-transition);
 }
 
 .print body {
@@ -57,7 +76,13 @@ p {
 
 a {
     color: #0470e1;
+    color: var(--link-color);
+    transition: var(--dark-mode-transition);
 }
+
+/* .dark a {
+    color: #3e9bfd;
+} */
 
 .is-mobile .desktop {
     display: none;

@@ -26,7 +26,6 @@
 .footer__section {
     display: inline-block;
     width: 160px;
-    /* background-color: rgba(0, 0, 0, .06); */
     vertical-align: top;
 }
 
@@ -46,9 +45,9 @@
     padding: 0 0 7px;
 }
 
-.footer__link {
+a.footer__link {
     cursor: pointer;
-    color: #000;
+    color: var(--text-color-muted);
     text-decoration: none;
 }
 
@@ -56,40 +55,96 @@
     text-decoration: underline;
 }
 
-.footer__link.EXTERNAL {
-    background-image: url(/_images/icons/external-link.svg);
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-size: 12px 12px;
-    padding-right: 17px;
-}
+
+
+/* ==========================================================================
+   Select Language Panel
+   ========================================================================== */
 
 .footer__select-language-panel {
     display: flex;
     gap: 4px;
 }
 
+
+
+/* ==========================================================================
+   Select Language Button
+   ========================================================================== */
+
 .footer__select-language-button {
+    appearance: none;
     font: inherit;
+    color: inherit;
+    color: var(--text-color-muted);
     border: 0;
     padding: 0 4px;
     padding: 0;
     margin: 0;
     cursor: pointer;
     background: transparent;
-    color: #666;
-    appearance: none;
-    -webkit-appearance: none;
 }
 
 html[lang="en"] .footer__select-language-button[data-select-language="en"],
 html[lang="sv"] .footer__select-language-button[data-select-language="sv"] {
-    color: inherit;
     font-weight: bold;
+    color: var(--text-color);
     cursor: text;
 }
 
 html[lang="en"].is-desktop .footer__select-language-button[data-select-language="sv"]:hover,
 html[lang="sv"].is-desktop .footer__select-language-button[data-select-language="en"]:hover {
     text-decoration: underline;
+}
+
+
+
+/* ==========================================================================
+   Dark Mode Button
+   ========================================================================== */
+
+.footer__dark-mode-toggle-button {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    padding: 6px;
+    margin: 4px 0 0 -6px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform .1s, background-color .1s;
+}
+
+.is-desktop .footer__dark-mode-toggle-button:hover {
+    background-color: #f1efea;
+}
+
+.dark.is-desktop .footer__dark-mode-toggle-button:hover {
+    background-color: #393939;
+}
+
+.is-desktop .footer__dark-mode-toggle-button:active {
+    transform: scale(0.86);
+}
+
+
+
+/* ==========================================================================
+   Dark Mode Button svg
+   ========================================================================== */
+
+.footer__dark-mode-toggle-button svg {
+    display: none;
+    width: 28px;
+    height: 28px;
+    color: var(--text-color);
+}
+
+.light .footer__dark-mode-toggle-button svg.SUN,
+.dark .footer__dark-mode-toggle-button svg.MOON {
+    display: block;
 }

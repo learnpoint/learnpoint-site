@@ -11,7 +11,7 @@
     display: none;
     min-width: unset;
     padding: 24px 16px;
-    background-color: #333;
+    background-color: var(--background-color);
 }
 
 .is-mobile .help-sidebar.OPEN {
@@ -39,14 +39,11 @@
     cursor: pointer;
     position: absolute;
     top: 2px;
-    /* left: 0; */
     right: 0;
-    border: 0;
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 4px;
     padding: 0;
     margin: 0;
-    background-color: #fff;
     background-color: rgba(255, 255, 255, 1);
 }
 
@@ -54,6 +51,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.dark .help-sidebar__open-button {
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .12);
 }
 
 
@@ -65,7 +67,7 @@
 .help-sidebar__open-button svg {
     width: 16px;
     height: 16px;
-    color: #777;
+    color: var(--text-color);
 }
 
 
@@ -93,15 +95,15 @@
     width: 36px;
     height: 36px;
     cursor: pointer;
-    border: 0;
-    border: 1px solid rgba(0, 0, 0, .2);
-    border: 0;
+    border: 1px solid #aaa;
     border-radius: 50%;
     padding: 0;
     margin: 0 0 24px;
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, 1);
-    background-color: rgba(255, 255, 255, .1);
+    background-color: var(--background-color-tinted);
+}
+
+.dark .help-sidebar__close-button {
+    border: 1px solid #666;
 }
 
 .is-mobile .help-sidebar__close-button {
@@ -117,7 +119,7 @@
 .help-sidebar__close-button svg {
     width: 28px;
     height: 28px;
-    color: #fff;
+    color: var(--text-color);
 }
 
 
@@ -148,8 +150,14 @@
     border-radius: 4px;
     outline: none;
     appearance: none;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .16);
+    color: var(--text-color);
+    background-color: var(--background-color-tinted);
+    transition: var(--dark-mode-transition);
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .24);
+}
+
+.dark .help-sidebar__search-input {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .24);
 }
 
 .help-sidebar__search-input:focus {
@@ -166,7 +174,8 @@
     position: absolute;
     right: 8px;
     top: 8px;
-    color: #555;
+    color: var(--text-color);
+    transition: var(--dark-mode-transition);
 }
 
 
@@ -179,12 +188,18 @@
     display: none;
     box-sizing: border-box;
     position: absolute;
+    left: -6px;
     z-index: 1;
-    background-color: #fff;
+    background-color: var(--background-color-tinted);
+    color: var(--text-color);
     width: 130%;
     box-shadow: 0 2px 5px rgb(100 100 100 / 20%);
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.dark .help-sidebar__search-results {
+    border-color: #555;
 }
 
 .is-mobile .help-sidebar__search-results {
@@ -195,14 +210,14 @@
     display: block;
 }
 
-.help-sidebar__search-results>* {
+.help-sidebar__search-results > * {
     display: block;
     font-size: .8em;
     padding: 6px 8px 6px 12px;
     margin: 2px 0;
     text-decoration: none;
     line-height: 1.2;
-    color: #090909;
+    color: var(--text-color);
 }
 
 .help-sidebar__search-results>*:first-child {
@@ -214,7 +229,7 @@
 }
 
 .help-sidebar__search-results>*:hover {
-    background-color: rgba(0, 0, 0, .06);
+    background-color: var(--background-color-tinted-active);
 }
 
 
@@ -255,7 +270,7 @@
 }
 
 .is-mobile .help-sidebar h2 {
-    color: #f3f3f3;
+    /* color: #f3f3f3; */
     font-size: 1em;
 }
 
@@ -268,32 +283,20 @@
 .help-sidebar nav a {
     display: block;
     text-decoration: none;
-    color: #555;
+    color: var(--text-color-muted);
     padding: 2px 6px;
     margin: 1px 0;
     border-radius: 2px 3px 3px 2px;
     border-left: 2px solid transparent;
 }
 
-.is-mobile .help-sidebar nav a {
-    color: #ccc;
-}
-
 .is-desktop .help-sidebar nav a:hover {
-    color: #000;
-    background-color: rgba(255, 255, 255, .9);
+    background-color: var(--background-color-tinted-hover);
 }
 
 .help-sidebar nav a.SELECTED {
-    color: #000;
+    color: var(--text-color);
     font-weight: 600;
     border-color: #0780ff;
-    background-color: rgba(255, 255, 255, .9);
-}
-
-.is-mobile .help-sidebar nav a.SELECTED {
-    color: #fff;
-    border-color: transparent;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 2666, .2);
+    background-color: var(--background-color-tinted);
 }

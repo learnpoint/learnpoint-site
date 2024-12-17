@@ -1,3 +1,7 @@
+/* =========================================================================
+   Preamble
+   ========================================================================= */
+
 .jobs__preamble {
     text-align: center;
     max-width: 640px;
@@ -5,42 +9,51 @@
 }
 
 
+/* =========================================================================
+   List
+   ========================================================================= */
+
 .jobs__list {
     max-width: 520px;
     margin: 3em auto;
     padding: 0;
 }
 
-.jobs__list li {
-    margin: 0 0 1.2em;
-    padding: 0;
-    list-style: none;
-}
+
+
+/* =========================================================================
+   List Item
+   ========================================================================= */
 
 .jobs__list a {
-    display: block;
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, .85);
-    box-shadow: 0 4px 16px rgb(0 0 0 / 4%),
-        0 2px 8px rgb(0 0 0 / 1%);
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    color: var(--text-color);
+    margin-bottom: 1em;
+    background-color: var(--background-color-tinted);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 4%), 0 2px 8px rgb(0 0 0 / 1%);
     padding: 24px 32px;
     border-radius: 8px;
-    text-decoration: none;
-    color: inherit;
-    transition-property: box-shadow, background-color;
-    transition-duration: .06s;
+}
+
+.dark .jobs__list a {
+    box-shadow: none;
 }
 
 .is-desktop .jobs__list a:hover {
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 4px 16px rgb(0 0 0 / 10%),
-        0 2px 8px rgb(0 0 0 / 2%);
+    background-color: var(--background-color-tinted-hover);
 }
 
 .is-desktop .jobs__list a:active {
-    background-color: rgba(0, 0, 0, .03);
-    box-shadow: none;
+    background-color: var(--background-color-tinted-active);
 }
+
+
+
+/* =========================================================================
+   Title
+   ========================================================================= */
 
 .jobs__title {
     font-family: inherit;
@@ -49,14 +62,25 @@
     margin: 0 0 6px;
 }
 
+
+
+/* =========================================================================
+   Information
+   ========================================================================= */
+
 .jobs__information {
     line-height: 1.2;
     padding: 3px 0 0;
 }
 
+
+
+/* =========================================================================
+   Information Item
+   ========================================================================= */
+
 .jobs__information-item {
     font-size: .8em;
-    color: #1d2d35;
 }
 
 .jobs__information-item::after {

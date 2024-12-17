@@ -23,6 +23,10 @@
     line-height: 1;
 }
 
+.dark .news-article .meta {
+    border-color: rgba(255 255 255 / .5);
+}
+
 .news-article .meta .author {
     margin: 0;
     font-weight: bold;
@@ -30,8 +34,9 @@
 }
 
 .news-article .meta .date {
+    color: var(--text-color-muted);
+    transition: var(--dark-mode-transition);
     font-size: 14px;
-    color: #333;
 }
 
 .news-article .meta .author-image {
@@ -39,9 +44,13 @@
     height: 48px;
     background-size: 48px 48px;
     background-color: transparent;
+    border: 1px solid #ddd;
     border-radius: 50%;
-    border: 0;
     filter: grayscale(.2);
+}
+
+.dark .news-article .meta .author-image {
+    border-color:#fff;
 }
 
 .news-article .desktop-screenshot {

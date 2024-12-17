@@ -15,16 +15,17 @@
 
 .help-index-page__support-contact a {
     color: inherit;
+    color: var(--text-color);
     text-decoration: none;
-    padding: 0 2px;
+    padding: 0 3px;
     display: inline-flex;
     align-items: center;
     border-bottom: 1.5px solid transparent;
 }
 
 .help-index-page__support-contact a:hover {
-    color: #0470e1;
-    border-bottom: 1.5px solid #0470e1;
+    color: unset;
+    border-bottom: 1.5px solid;
 }
 
 
@@ -34,10 +35,11 @@
    ========================================================================= */
 
 .help-index-page__support-contact svg {
-    color: #0470e1;
+    color: var(--link-color);
+    transition: var(--dark-mode-transition);
     height: 16px;
     width: 16px;
-    margin: 0 12px 0 0;
+    margin: 0 10px 0 0;
     margin-top: 1px;
 }
 
@@ -63,6 +65,7 @@
     padding: .1em .7em .1em .65em;
     border-radius: .5em;
     font-size: .9em;
+    transition: var(--dark-mode-transition);
 }
 
 .help-index-page__support-open-label {
@@ -70,10 +73,19 @@
     background-color: rgba(24, 128, 56, .08);
 }
 
+.dark .help-index-page__support-open-label {
+    color: #63a477;
+}
+
 .help-index-page__support-closed-label,
 .help-index-page__support-closed-for-lunch-label {
     color: #ce2f25;
     background-color: rgba(217, 48, 37, .06);
+}
+
+.dark .help-index-page__support-closed-label,
+.dark .help-index-page__support-closed-for-lunch-label {
+    color: #f6564c;
 }
 
 .help-index-page__support-opening-hours.CLOSED .help-index-page__support-open-label,
