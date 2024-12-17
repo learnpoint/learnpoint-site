@@ -34,6 +34,16 @@
     color: red;
 }
 
+.dark .status-page__status svg {
+    color: #167016;
+}
+
+.dark .status-page__status-down svg {
+    color: #ff2e2e;
+}
+
+
+
 
 
 /* ==========================================================================
@@ -85,11 +95,15 @@
 
 .status-page__month {
     display: inline-block;
-    background-color: #555;
-    background-color: #fff;
+    background-color: var(--background-color-tinted);
+    transition: var(--dark-mode-transition);
     border-radius: 12px;
     padding: 1em;
     box-shadow: 0 0px 3px rgb(0 0 0 / 30%);
+}
+
+.dark .status-page__month {
+    box-shadow: none;
 }
 
 
@@ -101,7 +115,8 @@
 .status-page__month-header {
     display: flex;
     justify-content: space-between;
-    color: #222;
+    color: var(--text-color);
+    transition: var(--dark-mode-transition);
     font-size: .9em;
     margin-bottom: .8em;
     line-height: 1;
@@ -152,6 +167,10 @@
     border-radius: 4px;
 }
 
+.dark .status-page__day {
+    background-color: #167016;
+}
+
 .status-page__day.INCIDENT {
     background-color: orange;
     cursor: pointer;
@@ -162,8 +181,13 @@
     cursor: pointer;
 }
 
+.dark .status-page__day.INCIDENT.MAJOR {
+    background-color: #ff2e2e;
+    cursor: pointer;
+}
+
 .status-page__day.FUTURE {
-    background-color: rgba(0, 0, 0, .06);
+    background-color: rgba(0, 0, 0, .09);
 }
 
 .status-page__day.OUTSIDE {
@@ -195,22 +219,20 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    border: 1px solid #999;
+    border: 1px solid #aaa;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--background-color-tinted);
+    color: var(--text-color);
+    transition: var(--dark-mode-transition);
     cursor: pointer;
 }
 
 .status-page__pagination-button.DISABLED {
-    cursor: default;
-    background-color: #f9f9f9;
-    color: #ccc;
-    border-color: #ccc;
+    opacity: .26;
 }
 
 .status-page__pagination-button svg {
@@ -227,7 +249,7 @@
 .status-page__incident-tooltip {
     font-size: 14px;
     position: absolute;
-    background-color: #fff;
+    background-color: var(--background-color-tinted-hover);
     border-radius: 4px;
     padding: 1em 1.2em 1.1em;
     box-shadow: 0 0px 6px rgb(0 0 0 / 30%);
@@ -238,14 +260,14 @@
 .status-page__incident-tooltip::before {
     content: '';
     position: absolute;
-    background-color: #fff;
+    background-color: var(--background-color-tinted-hover);
     top: -8px;
     left: 166px;
     display: block;
     width: 16px;
     height: 16px;
-    border-top: 1px solid #ccc;
-    border-left: 1px solid #ccc;
+    border-top: 1px solid var(--background-color-tinted-active);
+    border-left: 1px solid var(--background-color-tinted-active);
     border-right: 1px solid transparent;
     border-bottom: 1px solid transparent;
     transform: rotate(45deg);
@@ -277,7 +299,7 @@
     margin-bottom: 1em;
     padding-bottom: .5em;
     border-bottom: 1px solid #ccc;
-    color: #666;
+    color: var(--text-color);
     font-size: .8em;
 }
 

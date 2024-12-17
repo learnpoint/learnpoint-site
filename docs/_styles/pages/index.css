@@ -121,6 +121,11 @@
     margin: 64px auto;
     border-radius: 32px;
     background: #0780ff;
+    transition: var(--dark-mode-transition);
+}
+
+.dark .index__contact {
+    background: #0067d5;
 }
 
 .is-mobile .index__contact {
@@ -170,7 +175,7 @@
    Contact Link
    ========================================================================= */
 
-.index__contact-link {
+a.index__contact-link {
     color: #fff;
     font-weight: 600;
     padding: 0 2px;

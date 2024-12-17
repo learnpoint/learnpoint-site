@@ -41,7 +41,7 @@
    ========================================================================= */
 
 .sign-in__link {
-    color: #000;
+    color: var(--text-color);
 }
 
 
@@ -93,7 +93,8 @@
 .sign-in__input-overlay:after {
     content: ".learnpoint.se";
     font-weight: 600;
-    color: #000;
+    color: var(--text-color);
+    transition: var(--dark-mode-transition);
 }
 
 
@@ -109,19 +110,25 @@
     display: block;
     width: 100%;
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: var(--background-color-tinted);
+    color: var(--text-color);
+    transition: var(--dark-mode-transition);
     border: 1px solid #aaa;
     border-radius: 5px;
     padding: 12px;
     margin: 0;
-    transition: all .1s;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
+.sign-in__input {
+    border: 1px solid #666;
+}
+
 .sign-in__input::placeholder {
-    color: #777;
+    color: var(--text-color-muted);
+    transition: var(--dark-mode-transition);
 }
 
 .sign-in__input:focus {
@@ -132,6 +139,10 @@
 
 .sign-in__form.ERROR .sign-in__input {
     border: 1px solid #e00;
+}
+
+.dark .sign-in__form.ERROR .sign-in__input {
+    border: 1px solid #ff4545;
 }
 
 .sign-in__form.ERROR .sign-in__input:focus {
@@ -167,6 +178,12 @@
     margin-bottom: 4px;
     opacity: 0;
     transition: all .3s;
+}
+
+.dark .sign-in__error-message,
+.dark .sign-in__empty-error-message,
+.dark .sign-in__form.ERROR.EMPTY .sign-in__error-message {
+    color: #ff4545;
 }
 
 .sign-in__form.ERROR .sign-in__error-message {
@@ -306,6 +323,8 @@
     margin: 0 0 8px;
     padding: 0;
     background-color: #fff;
+    background-color: var(--background-color-tinted);
+    transition: var(--dark-mode-transition);
     border-radius: 5px;
     border: 1px solid #bbb;
     list-style: none;
@@ -315,6 +334,10 @@
     position: relative;
     overflow: hidden;
     justify-content: space-between;
+}
+
+.dark .sign-in__previous-login-item {
+    border: 1px solid #666;
 }
 
 
@@ -329,7 +352,7 @@
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
-    color: inherit;
+    color: var(--text-color);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -355,24 +378,27 @@
     z-index: 10;
 }
 
-
-
-/* =========================================================================
-   Previous Login Delete Button img
-   ========================================================================= */
-
-.sign-in__previous-login-delete-button img {
-    opacity: .4;
-    transition: opacity .2s;
-}
-
-.sign-in__previous-login-delete-button:hover img {
-    opacity: 1;
-}
-
 .sign-in__previous-login-item.POPOVER-OPEN .sign-in__previous-login-delete-button {
     display: none;
 }
+
+
+
+/* =========================================================================
+   Previous Login Delete Button svg
+   ========================================================================= */
+
+.sign-in__previous-login-delete-button svg {
+    /* transition: opacity .2s; */
+    color: var(--text-color-muted);
+    transition: var(--dark-mode-transition);
+}
+
+.sign-in__previous-login-delete-button:hover svg {
+    color: var(--text-color);
+}
+
+
 
 
 
@@ -388,6 +414,7 @@
     align-items: center;
     right: 9px;
     background-color: #fff;
+    background-color: var(--background-color-tinted);
     display: flex;
     transition: all .2s;
 }

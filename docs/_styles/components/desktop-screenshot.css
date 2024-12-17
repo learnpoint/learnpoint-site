@@ -24,6 +24,10 @@
     overflow: visible;
 }
 
+.dark .desktop-screenshot {
+    box-shadow: none;
+}
+
 .desktop-screenshot.LOADED {
     transform: none;
     opacity: 1;
