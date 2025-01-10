@@ -31,12 +31,21 @@ Både lärare och studenter kan skapa kanaler:
 1. Klicka på `Ny kanal`.
 2. Fyll i namn.
 3. Välj `Kategori`.
-4. Klicka på `Spara`.
-5. Du hamnar nu på kanalens medlemssida.
-6. Klicka på `Lägg till`.
-7. Lägg till rätt medlemmar:
+4. Klicka på `Spara`:
 
 <!-- desktop-recording.html, { src: "_assets/create-channel.mp4", alt: "Skapa kanal", theme: "light" } -->
+
+
+## Lägg till medlemmar
+
+När du skapat en kanal kan du lägga till medlemmar:
+
+1. Klicka på kontextmenyn uppe till höger (dom tre prickarna).
+2. Klicka på `Medlemmar`.
+3. Klicka på `Lägg till`.
+4. Lägg till dom som skall vara medlemmar i kanalen:
+
+<!-- desktop-recording.html, { src: "_assets/add-channel-members.mp4", alt: "Lägg till medlemmar", theme: "light" } -->
 
 
 ## Skapa kategori

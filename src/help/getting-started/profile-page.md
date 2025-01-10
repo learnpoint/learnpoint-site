@@ -14,18 +14,18 @@ next_url: /help/groups/introduction.html
 
 <!-- only-in-swedish.html -->
 
-På din profilsida finns allmän information om dig som exempelvis namn, e-post och bild. Du kommmer till profilsidan genom att klicka på ditt namn längst ned i menyn till vänster:
+Din profilsida innehåller information om dig, exempelvis namn, e-post och bild.
+
+Du navigerar till profilsidan genom att först klicka på avataren längst upp till höger, och sedan på `Visa profilsidan`:
 
 <!-- desktop-screenshot.html, { src: "_assets/profile-page.png", alt: "Profilsida", theme: "light" } -->
 
-## Ändra profil
+## Redigera
 
-Klicka på pennan för att ändra profilbild och på `Redigera` för att ändra information:
+Du kan ändra informationen på profilsidan:
+
+- Klicka på pennan för att ändra profilbild.
+- Klicka på `Redigera` för att ändra information.
+- Klicka på `Byt lösenord` för att byta lösenord:
 
 <!-- desktop-screenshot.html, { src: "_assets/profile-page-edit.png", alt: "Redigera profil", theme: "light" } -->
-
-## Byt lösenord
-
-Klicka på `Byt lösenord` för att byta lösenord:
-
-<!-- desktop-screenshot.html, { src: "_assets/profile-page-change-password.png", alt: "Byta lösenord", theme: "light" } -->
