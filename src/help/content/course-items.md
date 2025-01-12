@@ -59,7 +59,6 @@ Det finns sex inställningar på varje kursdel.
 * *Tid:* Anger ett tidsintervall eller endast en sluttid.
 * *Plats:* Anger en plats som hör till kursdelen.
 * *Betyg:* Anger om läraren skall sätta betyg på kursdelen.
-* *Bilagor:* Anger vilka filer som hör till kursdelen.
 * *Innehållets synlighet:* Anger när innehållet ska synas för studenten.
 
 Såhär gör du för att ange kursdelens inställningar:

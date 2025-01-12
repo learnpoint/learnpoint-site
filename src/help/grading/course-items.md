@@ -30,7 +30,7 @@ Varje kursdel har en uppföljningssida. På den visas:
 * En siffra för nya kommentarer.
 * Det angivna betyget.
 * Om betyget inte har publicerats.
-* En knapp för att publicera samtliga betyg som ännu inte publicerats.
+* En knapp för att publicera samtliga betyg som ännu inte publicerats:
 
 <!-- desktop-screenshot.html, { src: "_assets/results-page.png", alt: "Uppföljningssidan", theme: "light" } -->
 
@@ -43,7 +43,7 @@ Varje kursdel har en uppföljningssida. På den visas:
 4. Ange `Feedback` om du vill förtydliga betyget på något sätt.
 4. Klicka på `Publicera` när du vill att studenten skall se betyget.
 5. Du kan även öppna inlämningsuppgifter och skriva kommentarer till studenten.
-6. Använd genvägarna för att navigera till nästa student.
+6. Använd genvägarna för att navigera till nästa student:
 
 <!-- desktop-recording.html, { src: "_assets/grade-course-item.mp4", alt: "Betygsätt kursdel", theme: "light" } -->
 
@@ -55,7 +55,7 @@ Varje kursdel har en uppföljningssida. På den visas:
 3. Klicka på `Ta bort betyget`.
 4. Klicka på `Ta bort`.
 5. Klicka på `Publicera` när du vill att borttagningen skall visas för studenten.
-6. Klicka på `OK`.
+6. Klicka på `OK`:
 
 <!-- desktop-recording.html, { src: "_assets/delete-course-item-grade.mp4", alt: "Ta bort betyg från kursdel", theme: "light" } -->
 

@@ -26,24 +26,24 @@ next_url: /help/getting-started/notifications.html
 
 Du behöver aktivera ditt konto innan du kan logga in:
 
-1. Hitta till skolan inloggningssida (se ovan).
+1. Hitta till skolans inloggningssida (se ovan).
 1. Klicka på `Aktivera konto`.
 1. Ange din e-postadress och klicka på `OK`.
 1. Nu får du ett mejl med instruktioner. Kolla skräpposten om du inte hittar mejlet.
 
-<!-- desktop-screenshot.html, { src: "_assets/activate-account.png", alt: "Aktivera konto", theme: "dark" } -->
+<!-- desktop-screenshot.html, { src: "_assets/activate-account.png", alt: "Aktivera konto", theme: "light" } -->
 
 
 ## Logga in
 
 När du aktiverat ditt konto loggar du in på följande sätt:
 
-1. Hitta till skolan inloggningssida (se ovan).
+1. Hitta till skolans inloggningssida (se ovan).
 1. Ange användarnamn och lösenord.
 1. Kryssa i `Håll mig inloggad` om du vill hållas inloggad.
 1. Klicka på `Logga in`.
 
-<!-- desktop-screenshot.html, { src: "_assets/sign-in.png", alt: "Logga in", theme: "dark" } -->
+<!-- desktop-screenshot.html, { src: "_assets/sign-in.png", alt: "Logga in", theme: "light" } -->
 
 
 ## Problem att logga in?

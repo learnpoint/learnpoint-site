@@ -14,12 +14,12 @@ next_url: /help/getting-started/profile-page.html
 
 <!-- only-in-swedish.html -->
 
-Du behöver inte klicka runt i Learnpoint för att se vad som hänt. Allt nytt finns på aviseringssidan.
+Du behöver inte klicka runt i Learnpoint för att se vad som hänt. Allt nytt finns i aviseringsrutan.
 
 
-## Aviseringssidan
+## Aviseringsrutan
 
-Aviseringssidan hittar du längst upp i menyn till vänster:
+Aviseringsrutan hittar du i toppmenyn:
 
 <!-- desktop-screenshot.html, { src: "_assets/notifications.png", alt: "Aviseringar", theme: "light" } -->
 
@@ -39,10 +39,10 @@ Learnpoint aviserar om:
 
 För att få aviseringar från en grupp, måste du vara medlem gruppen.
 
-Om du är administratör, eller utbildningsledare för en klass, kan du ha behörighet till grupper utan att vara medlem. Du måste lägga till dig själv som medlem i dessa grupper för att kunna få aviseringar.
+Om du är administratör, eller utbildningsledare för en klass, kan du ha behörighet till grupper utan att vara medlem. Du måste lägga till dig själv som medlem i dessa grupper för få aviseringar.
 
 
-## Markera avisering som läst
+## Markera som läst
 
 När du klickar på en avisering kommer du till det aviseringen avser (ex. en nyhet eller en kommentar). Aviseringen markeras automatiskt som läst när du klickat på den.
 
@@ -55,16 +55,16 @@ För att markera alla aviseringar som lästa, klicka på `Markera alla som läst
 <!-- desktop-screenshot.html, { src: "_assets/notifications-mark-all-as-read.png", alt: "Aviseringar", theme: "light" } -->
 
 
-## Markera avisering som oläst
+## Markera som oläst
 
 Om en avisering är läst, kan du markera den som oläst. Klicka på kontext-menyn (dom tre prickarna till höger) och sedan på `Markera som oläst`:
 
 <!-- screenshot.html, { src: "_assets/notification-mark-as-unread.png", alt: "Aviseringar", theme: "light" } -->
 
 
-## Inställningar för aviseringar
+## Inställningar
 
-Du hittar aviseringsinställningarna genom att klicka på kugghjulet längst upp till höger på aviseringssidan.
+Du hittar aviseringsinställningarna genom att klicka på kugghjulet längst upp till höger i aviseringsrutan.
 
 På inställningssidan kan du:
 

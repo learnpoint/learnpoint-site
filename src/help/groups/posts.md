@@ -14,7 +14,7 @@ next_url: /help/groups/documents.html
 
 <!-- only-in-swedish.html -->
 
-Du kan använda nyheter för att förmedla information till medlemmarna i en grupp. Nyheterna finns på sidan `Nyheter`:
+Nyheter är ett bra sätt att förmedla information till alla medlemmarna i en grupp. Nyheterna finns på sidan `Nyheter`:
 
 <!-- desktop-screenshot.html, { src: "_assets/posts.png", alt: "Nyheter", theme: "light" } -->
 
