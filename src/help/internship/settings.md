@@ -28,14 +28,14 @@ Verktyget har inställningar för:
 * Instruktioner till handledare.
 * Överenskommelsen som handledaren godkänner innan praktiken.
 
-Här är ett exempel på hur inställningarna kan se ut:
+Såhär kan LIA-inställningarna på en kurs se ut:
 
-<!-- screenshot.html, { src: "_assets/settings-modal.png", alt: "LIA-inställningar", theme: "light" } -->
+<!-- desktop-screenshot.html, { src: "_assets/settings-modal.png", alt: "LIA-inställningar", theme: "light" } -->
 
 
 ## Skolövergripande inställningar
 
-Du som administratör kan ändra dom skolövergripande standardinställningarna för LIA-verktyget. Inställningarna finns i menyn till vänster:
+Du som administratör kan ändra dom skolövergripande standardinställningarna för LIA-verktyget. Inställningarna finns under länken `Mer` i toppmenyn:
 
 <!-- desktop-screenshot.html, { src: "_assets/global-settings-page.png", alt: "Skolövergripande LIA-inställningar", theme: "light" } -->
 
