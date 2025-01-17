@@ -18,15 +18,20 @@ Learnpoint är huvudsakligen organiserat i grupper. Varje grupp innehåller info
 
 Det finns tre typer av grupper: *Skola*, *Klass* och *Kurs*. Dom fungerar ungefär på samma sätt, men det finns några skillnader. Exempelvis finns funktionen *Innehåll* finns endast i kurser, och funktionen *Material* finns endast i klasser och skolan.
 
+
 ## Aktuella grupper
 
 "Aktuella grupper" är dom som visas på startsidan. Klicka på `Hem` för att se dina aktuella grupper:
 
-<!-- desktop-screenshot.html, { src: "_assets/current-groups.png" } -->
+<!-- desktop-screenshot.html, { src: "_assets/current-groups.png", alt: "Aktuella grupper" } -->
+
+Du kan också se dina aktuella grupper bland genvägarna som finns längst upp till vänster:
+
+<!-- desktop-screenshot.html, { src: "_assets/group-shortcuts.png", alt: "Genvägar till grupper" } -->
 
 
 ## Alla grupper
 
 Klicka på `Visa alla grupper` för att se och söka bland alla dina grupper:
 
-<!-- desktop-screenshot.html, { src: "_assets/groups.png" } -->
+<!-- desktop-screenshot.html, { src: "_assets/groups.png", alt: "Visa alla grupper" } -->
