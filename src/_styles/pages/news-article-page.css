@@ -70,3 +70,12 @@
 .news-article .desktop-screenshot+p {
     margin-top: 2.5em;
 }
+
+.news-article code {
+    font: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: rgba(100, 0, 0, .06);
+    padding: 0 5px;
+    border-radius: 4px;
+}
