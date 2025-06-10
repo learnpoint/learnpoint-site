@@ -79,3 +79,7 @@
     padding: 0 5px;
     border-radius: 4px;
 }
+
+.dark .news-article code {
+    background-color: rgba(255 255 255 / .1);
+}
