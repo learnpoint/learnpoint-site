@@ -22,3 +22,14 @@ Betyg kan sättas på både kurser och kursdelar. I varje kurs finns en översik
 På studenternas profilsida, på sidan `Studieplan`, finns en överblick av studentens kursbetyg:
 
 <!-- desktop-screenshot.html, { src: "_assets/student-grades.png", alt: "Studentens studieplan", theme: "light" } -->
+
+Skoladministratörer kan hantera vilka betygsskalor som ska användas för kurser och kursdelar. Det kan vara särskilt användbart för skolor som har olika sorters utbildningar. Då kan man ha olika betygsskalor för olika kurser.
+
+Med betygsskalor kan du:
+
+* Skapa egna betygsskalor
+* Redigera befintliga betygsskalor
+
+Inställningen hittar du under menyn <code>Mer</code>, via länken <code>Betygsskalor</code>:
+
+<!-- desktop-screenshot.html, { src: "_assets/grading-scales-link.png", alt: "Länken Betygsskalor", theme: "light" } -->
