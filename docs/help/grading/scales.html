@@ -187,6 +187,7 @@
 
 <p lang="en" style="font-style:italic;">This page is only available in swedish.</p>
 
+<p>Skoladministratörer kan hantera vilka betygsskalor som ska användas för kurser och kursdelar. Man kan ha olika skalor för olika kurser, vilket kan vara särskilt användbart för skolor som har olika sorters utbildningar.</p>
 <h2>Skapa ny skala</h2>
 <ol>
 <li>Klicka på <code>Ny skala</code> under rubriken <code>Skalor för kurser</code> eller <code>Skalor för kursdelar</code>, beroende på vilken typ av skala du vill skapa.</li>
@@ -203,9 +204,8 @@
 </div>
 
 <h2>Redigera skala</h2>
-<p>Redigera betygsskala</p>
 <ol>
-<li>Klicka på skalans namn som du vill redigera.</li>
+<li>Klicka på skalan som du vill redigera.</li>
 <li>Klicka på meny-ikonen (dom tre prickarna till höger).</li>
 <li>Klicka på <code>Redigera</code>:</li>
 </ol>
@@ -220,22 +220,18 @@
 </div>
 
 <h2>Skalans egenskaper</h2>
+<p>En skala har olika egenskaper som påverkar var den kan användas och hur den visas.</p>
 <ul>
 <li><em>Namn</em>: Skalans namn visas när man väljer vilken skala som ska användas för en kurs eller kursdel.</li>
 <li><em>Beskrivning</em>: Skalans interna beskrivning (syns endast för administratörer).</li>
-<li><em>Skolformer</em>: Anger vilka skolformer skalan ska kunna användas för.</li>
+<li><em>Skolformer</em>: Anger vilka skolformer skalan ska kunna användas för. En kurs tillhör alltid en skolform, så se till att skalan är aktiv för den skolform som kursen tillhör.</li>
 <li><em>Lägsta värde för status klar</em>: Anger det lägsta värde ett betyg måste ha för att den gröna status-ikonen skall visas.</li>
 </ul>
-<h2>Betygsstegens egenskaper</h2>
-<ul>
-<li><em>Namn</em>: Stegets fulla namn.</li>
-<li><em>Förkortning</em>: Stegets förkortning, som visas vid betygsättning, i översikten och studieplanen.</li>
-<li><em>Värde</em>: Om värdet är större än lägsta värde för status klar, så visas en grön status-ikon. Om värdet är lägre, så visas en röd ikon.</li>
-<li><em>Status</em>: Visar den aktuella status-ikonen för steget.</li>
-</ul>
-<h2>Lägga till betygssteg</h2>
+<h2>Lägga till steg</h2>
+<p>Varje skala har ett antal steg, som motsvarar dom betyg som läraren kan sätta.</p>
 <ol>
-<li>Klicka på <code>Nytt steg</code> under rubriken <code>Betygssteg</code>:</li>
+<li>Klicka på <code>Nytt steg</code> under rubriken <code>Betygssteg</code></li>
+<li>Fyll i stegets egenskaper:</li>
 </ol>
 <div class="desktop-screenshot print__avoid-break-inside light">
     <div class="desktop-screenshot__browser-frame">
@@ -246,7 +242,16 @@
     <video autoplay controls playsinline loop muted inline alt="Lägga till betygssteg" src="_assets/create-grading-step.mp4" oncanplay="this.parentElement.classList.add('LOADED')" onerror="console.log(this.error)"></video>
 </div>
 
-<p><em>TIPS</em>: Betygssteg uttrycks vanligtvis med bokstäver. Men det är också möjligt att använda emojis, vilket kan vara användbart i vissa situationer. Här är ett exempel med en skala som har två emojis, ett rött kors och en grön bock: (förtydliga betygssättning?)</p>
+
+<h2>Stegens egenskaper</h2>
+<p>Stegen har olika egenskaper som påverkar hur betygen visas.</p>
+<ul>
+<li><em>Namn</em>: Stegets fulla namn.</li>
+<li><em>Förkortning</em>: Förkortningen är det som visas vid betygssättning, i översikten och studieplanen.</li>
+<li><em>Värde</em>: Om värdet är större än lägsta värde för status klar, så visas en grön status-ikon. Om värdet är lägre, så visas en röd ikon.</li>
+<li><em>Status</em>: Visar den aktuella status-ikonen för steget.</li>
+</ul>
+<p><em>TIPS</em>: Steg uttrycks vanligtvis med bokstäver. Men det är också möjligt att använda emojis, vilket kan vara användbart i vissa situationer. Här är ett exempel på hur det ser ut vid betygssättning med en skala som har två emojis, ett rött kryss och en grön bock:</p>
 <div class="desktop-screenshot print__avoid-break-inside light">
     <div class="desktop-screenshot__browser-frame">
         <span class="desktop-screenshot__browser-frame-button"></span>
@@ -257,8 +262,9 @@
     <img alt="Emojis i betygssteg" src="_assets/grading-steps.png" onload="this.parentElement.classList.add('LOADED')" />
 </div>
 
-<h2>Ta bort betygssteg</h2>
-<p>Dom stegen som används kan inte tas bort. / Det är endast dom....</p>
+
+<h2>Ta bort steg</h2>
+<p>Det är endast steg som inte har satta betyg som kan tas bort.</p>
 <ol>
 <li>Klicka på ta bort-ikonen (papperskorgen till höger):</li>
 </ol>
@@ -274,7 +280,7 @@
 
 
 <h2>Publicera skala</h2>
-<p>En betygsskala måste ha minst ett betygssteg och vara aktiv för minst en skolform för att kunna publiceras. (förklara vad det innebär att den ej är piblicerad)</p>
+<p>För att skalan ska kunna användas måste den publiceras. Den behöver ha minst ett steg och vara aktiv för minst en skolform.</p>
 <ol>
 <li>Klicka på meny-ikonen (dom tre prickarna till höger).</li>
 <li>Klicka på <code>Publicera</code>:</li>
@@ -289,8 +295,9 @@
     <img alt="Publicera skala" src="_assets/publish-scale.png" onload="this.parentElement.classList.add('LOADED')" />
 </div>
 
+
 <h2>Inaktivera en skala</h2>
-<p>Om en betygsskala inte ska användas längre kan du inaktivera den. Det påverkar inte dom kurser som redan använder skalan. Den inaktiverade skalan kommer bara att döljas för nya kurser eller kurser som inte använder den.</p>
+<p>Om en skala inte ska användas längre kan du inaktivera den. Det påverkar inte dom kurser som redan använder skalan. Den inaktiverade skalan kommer bara att döljas för nya kurser eller kurser som inte använder den.</p>
 <ol>
 <li>Klicka på namnet på den skala du vill ändra.</li>
 <li>Klicka på menyikonen (dom tre prickarna till höger) och välj <code>Redigera</code>.</li>
@@ -306,9 +313,8 @@
 </div>
 
 
-
 <h2>Ta bort skala</h2>
-<p>Skalor som inte används kan tas bort.</p>
+<p>Det är endast skalor som inte används eller har satta betyg som kan tas bort.</p>
 <ol>
 <li>Klicka på meny-ikonen (dom tre prickarna till höger).</li>
 <li>Klicka på <code>Ta bort</code>:</li>
@@ -337,7 +343,7 @@
         <span class="desktop-screenshot__browser-frame-button"></span>
         <span class="desktop-screenshot__browser-frame-button"></span>
     </div>
-    <video autoplay controls playsinline loop muted inline alt="FLytta skala" src="_assets/move-scales.mp4" oncanplay="this.parentElement.classList.add('LOADED')" onerror="console.log(this.error)"></video>
+    <video autoplay controls playsinline loop muted inline alt="Flytta skala" src="_assets/move-scales.mp4" oncanplay="this.parentElement.classList.add('LOADED')" onerror="console.log(this.error)"></video>
 </div>
                     <div class="help-page__next-page-link print__hide">
                         <span>Nästa:</span>

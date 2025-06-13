@@ -23,12 +23,7 @@ På studenternas profilsida, på sidan `Studieplan`, finns en överblick av stud
 
 <!-- desktop-screenshot.html, { src: "_assets/student-grades.png", alt: "Studentens studieplan", theme: "light" } -->
 
-Skoladministratörer kan hantera vilka betygsskalor som ska användas för kurser och kursdelar. Det kan vara särskilt användbart för skolor som har olika sorters utbildningar. Då kan man ha olika betygsskalor för olika kurser.
-
-Med betygsskalor kan du:
-
-* Skapa egna betygsskalor
-* Redigera befintliga betygsskalor
+Skoladministratörer kan hantera vilka betygsskalor som ska användas för kurser och kursdelar. Man kan ha olika skalor för olika kurser, vilket kan vara särskilt användbart för skolor som har olika sorters utbildningar.
 
 Inställningen hittar du under menyn <code>Mer</code>, via länken <code>Betygsskalor</code>:
 

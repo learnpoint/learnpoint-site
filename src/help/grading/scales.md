@@ -14,6 +14,9 @@ next_url: /help/internship/introduction.html
 
 <!-- only-in-swedish.html -->
 
+Skoladministratörer kan hantera vilka betygsskalor som ska användas för kurser och kursdelar. Man kan ha olika skalor för olika kurser, vilket kan vara särskilt användbart för skolor som har olika sorters utbildningar.
+
+
 ## Skapa ny skala
 
 1. Klicka på `Ny skala` under rubriken `Skalor för kurser` eller `Skalor för kursdelar`, beroende på vilken typ av skala du vill skapa.
@@ -24,41 +27,45 @@ next_url: /help/internship/introduction.html
 
 ## Redigera skala
 
-Redigera betygsskala
-1. Klicka på skalans namn som du vill redigera.
+1. Klicka på skalan som du vill redigera.
 2. Klicka på meny-ikonen (dom tre prickarna till höger).
 3. Klicka på `Redigera`:
 
 <!-- desktop-screenshot.html, { src: "_assets/edit-scale.png", alt: "Redigera skala", theme: "light" } -->
 
 ## Skalans egenskaper
+En skala har olika egenskaper som påverkar var den kan användas och hur den visas.
 
 * *Namn*: Skalans namn visas när man väljer vilken skala som ska användas för en kurs eller kursdel.
 * *Beskrivning*: Skalans interna beskrivning (syns endast för administratörer).
-* *Skolformer*: Anger vilka skolformer skalan ska kunna användas för.
+* *Skolformer*: Anger vilka skolformer skalan ska kunna användas för. En kurs tillhör alltid en skolform, så se till att skalan är aktiv för den skolform som kursen tillhör.
 * *Lägsta värde för status klar*: Anger det lägsta värde ett betyg måste ha för att den gröna status-ikonen skall visas.
 
-## Betygsstegens egenskaper
 
-* *Namn*: Stegets fulla namn.
-* *Förkortning*: Stegets förkortning, som visas vid betygsättning, i översikten och studieplanen.
-* *Värde*: Om värdet är större än lägsta värde för status klar, så visas en grön status-ikon. Om värdet är lägre, så visas en röd ikon.
-* *Status*: Visar den aktuella status-ikonen för steget.
+## Lägga till steg
+Varje skala har ett antal steg, som motsvarar dom betyg som läraren kan sätta.
 
-
-## Lägga till betygssteg
-
-1. Klicka på `Nytt steg` under rubriken `Betygssteg`:
+1. Klicka på `Nytt steg` under rubriken `Betygssteg`
+2. Fyll i stegets egenskaper:
 
 <!-- desktop-recording.html, { src: "_assets/create-grading-step.mp4", alt: "Lägga till betygssteg", theme: "light" } -->
 
-*TIPS*: Betygssteg uttrycks vanligtvis med bokstäver. Men det är också möjligt att använda emojis, vilket kan vara användbart i vissa situationer. Här är ett exempel med en skala som har två emojis, ett rött kors och en grön bock: (förtydliga betygssättning?)
+
+## Stegens egenskaper
+Stegen har olika egenskaper som påverkar hur betygen visas.
+
+* *Namn*: Stegets fulla namn.
+* *Förkortning*: Förkortningen är det som visas vid betygssättning, i översikten och studieplanen.
+* *Värde*: Om värdet är större än lägsta värde för status klar, så visas en grön status-ikon. Om värdet är lägre, så visas en röd ikon.
+* *Status*: Visar den aktuella status-ikonen för steget.
+
+*TIPS*: Steg uttrycks vanligtvis med bokstäver. Men det är också möjligt att använda emojis, vilket kan vara användbart i vissa situationer. Här är ett exempel på hur det ser ut vid betygssättning med en skala som har två emojis, ett rött kryss och en grön bock:
 
 <!-- desktop-screenshot.html, { src: "_assets/grading-steps.png", alt: "Emojis i betygssteg", theme: "light" } -->
 
-## Ta bort betygssteg
 
-Dom stegen som används kan inte tas bort. / Det är endast dom....
+## Ta bort steg
+Det är endast steg som inte har satta betyg som kan tas bort.
 
 1. Klicka på ta bort-ikonen (papperskorgen till höger):
 
@@ -66,17 +73,16 @@ Dom stegen som används kan inte tas bort. / Det är endast dom....
 
 
 ## Publicera skala
-
-En betygsskala måste ha minst ett betygssteg och vara aktiv för minst en skolform för att kunna publiceras. (förklara vad det innebär att den ej är piblicerad)
+För att skalan ska kunna användas måste den publiceras. Den behöver ha minst ett steg och vara aktiv för minst en skolform.
 
 1. Klicka på meny-ikonen (dom tre prickarna till höger).
 2. Klicka på `Publicera`:
 
-
 <!-- desktop-screenshot.html, { src: "_assets/publish-scale.png", alt: "Publicera skala", theme: "light" } -->
 
+
 ## Inaktivera en skala
-Om en betygsskala inte ska användas längre kan du inaktivera den. Det påverkar inte dom kurser som redan använder skalan. Den inaktiverade skalan kommer bara att döljas för nya kurser eller kurser som inte använder den.
+Om en skala inte ska användas längre kan du inaktivera den. Det påverkar inte dom kurser som redan använder skalan. Den inaktiverade skalan kommer bara att döljas för nya kurser eller kurser som inte använder den.
 
 1. Klicka på namnet på den skala du vill ändra.
 2. Klicka på menyikonen (dom tre prickarna till höger) och välj `Redigera`.
@@ -85,9 +91,8 @@ Om en betygsskala inte ska användas längre kan du inaktivera den. Det påverka
 <!-- desktop-recording.html, { src: "_assets/deactivate-scale.mp4", alt: "Inaktivera en skala", theme: "light" } -->
 
 
-
 ## Ta bort skala
-Skalor som inte används kan tas bort.
+Det är endast skalor som inte används eller har satta betyg som kan tas bort.
 
 1. Klicka på meny-ikonen (dom tre prickarna till höger).
 2. Klicka på `Ta bort`:
@@ -102,4 +107,4 @@ Skalorna kan flyttas så att dom hamnar i rätt ordning.
 2. Nu visas knappar som indikerar vart du kan flytta skalan.
 3. Klicka på någon av knapparna:
 
-<!-- desktop-recording.html, { src: "_assets/move-scales.mp4", alt: "FLytta skala", theme: "light" } -->
+<!-- desktop-recording.html, { src: "_assets/move-scales.mp4", alt: "Flytta skala", theme: "light" } -->
