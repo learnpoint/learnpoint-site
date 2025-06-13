@@ -14,17 +14,14 @@ next_url: /help/grading/course-items.html
 
 <!-- only-in-swedish.html -->
 
-Betyg kan sättas på både kurser och kursdelar. I varje kurs finns en översikt på sidan `Betyg`. En blå triangel indikerar att betyget ännu inte är publicerat till studenten:
+Betyg kan sättas både på kurser och kursdelar. I varje kurs finns en översikt på sidan `Betyg`. En blå triangel indikerar att betyget ännu inte är publicerat till studenten:
 
 <!-- desktop-screenshot.html, { src: "_assets/gradebook.png", alt: "Betygssidan", theme: "light" } -->
-
 
 På studenternas profilsida, på sidan `Studieplan`, finns en överblick av studentens kursbetyg:
 
 <!-- desktop-screenshot.html, { src: "_assets/student-grades.png", alt: "Studentens studieplan", theme: "light" } -->
 
-Skoladministratörer kan hantera vilka betygsskalor som ska användas för kurser och kursdelar. Man kan ha olika skalor för olika kurser, vilket kan vara särskilt användbart för skolor som har olika sorters utbildningar.
-
-Inställningen hittar du under menyn <code>Mer</code>, via länken <code>Betygsskalor</code>:
+Det är möjligt att använda flera olika betygsskalor i Learnpoint. Detta är särskilt användbart för skolor med olika utbildningsformer. Skoladministratörer har en länk till betygsskalorna i menyn <code>Mer</code>:
 
 <!-- desktop-screenshot.html, { src: "_assets/grading-scales-link.png", alt: "Länken Betygsskalor", theme: "light" } -->
