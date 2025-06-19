@@ -2,7 +2,7 @@
 
 1. [Install Deno](https://docs.deno.com/runtime/getting_started/installation/) `v2.3.6` or later.
 
-2. [Create a fork](https://github.com/learnpoint/learnpoint-site/fork). Make sure to create the fork in your personal GitHub account, not in the Learnpoint organisation.
+2. [Create a fork](https://github.com/learnpoint/learnpoint-site/fork). Make sure to create the fork in your personal GitHub account — not in the Learnpoint organisation.
 
 3. On GitHub, navigate to the new fork you just created, and create a new branch named `dev`.
 
@@ -60,34 +60,34 @@ Deploying your fork to Netlify is optional, but highly recommended.
 
 ## Development Workflow
 
-1. Start the dev server with default port (3333):
+1. Start the dev server with the default port (3333):
 
         deno task dev
 
-     or specify custom port:
+     ... or start the dev server on a custom port:
 
         deno task dev [port]
 
-2. Open the site at `http://localhost:3333` (or with specified port)
+2. Open the site at `http://localhost:3333` (or the custom port)
 
 3. Write all your changes to the `src` folder. You should never make any changes to the `docs` folder.
 
 4. If there are any file mismatches, or build problems, it's perfectly safe to:
     1. Stop the dev server: `Ctrl + C`.
     2. Completely delete the ```docs``` folder.
-    3. Restart the dev server: `deno task dev` (this will rebuild the `docs` folder).
+    3. Restart the dev server: `deno task dev`. This command will rebuild the `docs` folder.
 
 5. When done, stop the server:
 
         Ctrl + C
 
-6. Commit and push to your fork.
+6. Commit and push the changes to your fork.
 
 7. Verify that your changes are deployed to your Netlify site.
 
 
 
-## Keeping Your Fork Up To Date
+## Keeping Your Fork up to Date
 
 1. Make sure that you're on the `dev` branch on your fork.
 
@@ -107,7 +107,7 @@ Deploying your fork to Netlify is optional, but highly recommended.
 
 
 
-## Make A Pull Request When Done
+## Making a Pull Request when Done
 
 1. Make sure that you're on the `dev` branch on your fork.
 2. Commit and push all your changes.
@@ -118,10 +118,14 @@ Deploying your fork to Netlify is optional, but highly recommended.
 
 ## Languages
 
-* Most pages should be written in both english and swedish. Use the attributes `lang="en"` and `lang="sv"` to specify the language for an element.
-* English is the default language. Use english where there's only room for a single language, for example `<title>`, `<meta name="description" ... >`, and `alt` attributes.
-* The help pages are an exception — they are typically only written in swedish. When there's only room for a single language on a help page, use swedish.
-* *TIP:* When you're writing in both english and swedish, begin writing in your non-native language and translate to your native language at the end. When you're writing in your non-native language, it's easier to write "from scratch" than to translate text that already exists.
+* Most pages are written in both English and Swedish. Use the attribute `lang` to specify the language for each element:
+
+        <h1 lang="en">Sign in</h1>
+        <h1 lang="sv">Logga in</h1>
+
+* English is the default language. Use English whenever there's only room for one single language, for example the `<title>` element, the `<meta name="description" ... >` element, and all the `alt` attributes.
+* The help pages are an exception — they are only written in Swedish! And when there's only room for one single language on a help page (see examples in previous point), use Swedish.
+* *TRANSLATION TIP:* When you're authoring a page in multiple languages, write the page in the language that's most foreign to you. When you're done, translate the page into the language that you're more familiar with.
 
 
 ## How to: Add a Job Opening Page
@@ -139,7 +143,7 @@ Deploying your fork to Netlify is optional, but highly recommended.
 ## How to: Remove a Job Opening Page
 
 1. Remove the link to the page from `/jobs/index.html`.
-2. Do ***not*** delete the page! We don't want to break incoming links.
+2. **Do not delete the page!** We don't want to break incoming links.
 3. Add the `<!-- job-no-longer-available.html -->` include on the page.
 
 
@@ -151,42 +155,44 @@ Deploying your fork to Netlify is optional, but highly recommended.
 * Wrap labels for links and buttons in code tags (or backticks if using markdown).
 * Assets (like screenshots) should be stored in a folder named `_assets` next to the page.
 * When painting arrows and indicators on a screenshot, use the orange color `#FF7B00`.
-* Help pages are typically only written in swedish (see Language above). Add the `<!-- only-in-swedish.html -->` include immediately after the `h1` element.
-* `<title>`, `<meta name="description" ... >` and `alt` attributes should be written in swedish.
+* Help pages are typically only written in Swedish (see the Language section above). Add the `<!-- only-in-swedish.html -->` include immediately after the `h1` element.
+* `<title>`, `<meta name="description" ... >` and `alt` attributes should be written in Swedish.
 
 
 
 ## How to: Write News Articles
 
-1. If it doesn't exist yet, create an appropriate folder inside the `/news` folder.
-2. Create a html file with a descriptive name. For example: `/news/2022-06/group-code-in-title-field.html`.
-3. Set layout, title and description in front matter. Title should be in english, but description can be in both english and swedish.
-4. Set `robots: noindex` in front matter. We don't want news articles to compete with other Learnpoint pages in Google search, because the content in a news article can become obsolete really fast.
-5. Try to include at least one relevant screenshot in the article.
+1. If it doesn't exist yet, create appropriate folder(s) inside the `/news` folder.
+2. Create a html file with a descriptive name. For example: `/news/2025/06/grading-scales.html`.
+3. Set layout, title and description in front matter. The title should be in English, but description can be in both English and Swedish.
+4. Set `robots: noindex` in front matter. We don't want our news articles to compete with other pages in search indexes because the content of our news articles typically becomes obsolete very fast.
+5. Try to include at least one relevant screenshot.
 6. Language should be correct, compact and casual.
-7. Speak directly to the reader. Use the pronoun *"you"* in active sentences. Avoid pronouns like *"teachers"*, *"users"*, etc.
-8. Avoid using *"we"*, because the reader would probably feel excluded. Instead of *"We've added a new feature"*, write "*A new feature is added"*.
-9. Use factual statements instead of assessments. Instead of *"The page is simplified"*, write "*The page is updated*", or "*Some elements are removed from the page*". Let the reader make her own judgements.
-10. Write in both swedish and english.
+7. Speak directly to the reader. When your are writing in an active voice, try to use the pronoun *"you"*.
+8. Be mindful of the pronoun *"we"*, because the reader might feel excluded. Instead of *"We've added a new feature"*, write "*A new feature is added"*. (It's un-approachable to use a passive voice, but excluding the reader is even worse.)
+9. Prefer factual statements over assessments. Instead of *"The page is simplified"*, write "*The page is updated*", or "*Unnecessary elements are removed from the page*". Let the reader make her own judgements.
+10. Write in both Swedish and English.
 
 
 
-## How to: Set status or add incident
+## How to: Set Status and Manage Incidents
 
-Status and incidents are managed in a separate repository. You can find how-to guides for how to set status and add incidents in that repository: [https://github.com/learnpoint/status](https://github.com/learnpoint/status)
+Status and incidents are managed in a separate repository. How-to guides are available in that repository : [https://github.com/learnpoint/status](https://github.com/learnpoint/status).
 
 
 
 
 ## Screenshots
 
-Crop and zoom to make the screenshot readable on both desktop and mobile. Specifically, minimize the width of the browser (or the screenshot object) as much as possible.
+Crop and zoom to make the screenshot readable on both desktop and mobile. Specifically, *minimize the width of the browser viewport* as much as possible before taking the screenshot.
 
 
 
 ## Screen Recordings
 
 Screen recordings must be encoded with h264 and stored in an mp4 file. Audio tracks are not allowed.
+
+Just as with screenshots, *minimize the width of the browser viewport* as much as possible before recording the screen.
 
 [ShareX](https://getsharex.com/) is a recording tool that supports h264. Select the `Very slow` option for the x264 video recording preset to make sure the output have optimal compression.
 
@@ -200,7 +206,7 @@ Here's how to make a screen recording:
 2. Don't use audio.
 3. Use high fidelity resolution, framerate, and colors.
 
-When making a screen recoring, make sure that every mouse movement and click are clearly intentional and explanatorily timed. For example, here's how you could choreograph a click on an button:
+When making a screen recoring, make sure that every mouse movement and click are obviously intentional and explanatorily timed. For example, here's how you could choreograph a click on an button:
 1. Move the cursor in a straight line to the button you intend to click.
 2. Hover the button for about 2 seconds, holding the cursor perfectly still.
 3. Click the button.
