@@ -378,6 +378,18 @@
         "content": "New feature: Grading Scales Ny funktion: Betygsskalor Frida Brodin June 10, 2025 10 juni, 2025 On Thursday the 12th of June, Learnpoint will be updated with a new feature: Grading Scales. The feature makes it possible to customize existing scales, as well as adding new scales. Torsdagen den 12 juni kommer Learnpoint att uppdateras med en ny funktion: Betygsskalor. Funktionen gör det möjligt att anpassa befintliga betygsskalor och lägga till nya. The feature will be particularly benificial for schools that run multiple forms of educations, because you can now use different scales for different courses. Funktionen kan vara särskilt användbar för skolor som bedriver olika typer av utbildningar. Nu kan du nämligen använda olika skalor i olika kurser. If you have the role as School Administrator, you'll find the feature in the more menu: Om du har rollen Skoladministratör så hittar du funktionen i mer-menyn: On the grading scales page, you can add new scales and customize existing ones: På sidan för betygsskalor kan du lägga till nya skalor eller redigera de som redan finns: TIP: Grading steps are typically expressed in letters or numbers. But this feature also makes it possible to use emojis, which could be useful in some situations. Here's an example with two emojis, a red cross and a green checkmark: TIPS: Betygssteg visas ofta med bokstäver eller siffror. Den nya funktionen gör det möjligt att använda emojis, vilket skulle kunna vara användbart i vissa situationer. Här är ett exempel på ett rött kryss och en grön bock: If you want to know more about how grading scales work, don't hesitate to contact our support team. We're always happy to help. Om du vill veta mer om hur betygsskalor fungerar, tveka inte att kontakta vår support. Vi hjälper gärna till. View all news → Visa alla nyheter → .we-love-learning { fill: #ff0000; width: 1em; height: 1em; /* transition: fill .16s; */ } .dark .we-love-learning { fill: #fe3e3e; } .we-love-learning:hover { animation: 1.2s ease we-love-learning-heart-beat; animation-iteration-count: infinite; animation-direction: alternate-reverse; } @keyframes we-love-learning-heart-beat { from { transform: scale(1.3); } to { transform: scale(1); } } We love learning"
     },
     {
+        "title": "Upload Files in Comments",
+        "description": "Upload Files in Comments",
+        "url": "/news/2025-05/upload-files-in-comments.html",
+        "content": ""
+    },
+    {
+        "title": "Grading Scales",
+        "description": "Grading Scales",
+        "url": "/news/2025-06/grading-scales.html",
+        "content": ""
+    },
+    {
         "title": "Learnpoint: News",
         "description": "Learnpoint News, Learnpoint Nyheter",
         "url": "/news/index.html",
