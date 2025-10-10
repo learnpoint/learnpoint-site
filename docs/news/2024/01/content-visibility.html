@@ -140,22 +140,18 @@
         fill: #ff0000;
         width: 1em;
         height: 1em;
-        /* transition: fill .16s; */
-    }
-
-    .dark .we-love-learning {
-        fill: #fe3e3e;
-    }
-
-    .we-love-learning:hover {
-        animation: 1.2s ease we-love-learning-heart-beat;
+        animation: 1.6s ease we-love-learning-heart-beat;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
     }
 
+    .dark .we-love-learning {
+        fill: #ff4a4a;
+    }
+
     @keyframes we-love-learning-heart-beat {
         from {
-            transform: scale(1.3);
+            transform: scale(1.2);
         }
 
         to {

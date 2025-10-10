@@ -38,6 +38,10 @@
     border-radius: 8px;
 }
 
+.is-mobile .news-list a {
+    padding: 16px;
+}
+
 .dark .news-list a {
     box-shadow: none;
 }

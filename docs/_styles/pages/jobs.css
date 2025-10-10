@@ -37,6 +37,10 @@
     border-radius: 8px;
 }
 
+.is-mobile .jobs__list a {
+    padding: 16px;
+}
+
 .dark .jobs__list a {
     box-shadow: none;
 }
