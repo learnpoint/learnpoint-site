@@ -1,13 +1,13 @@
 .footer {
     border-top: 1px solid #ccc;
     max-width: 1200px;
-    margin: 128px auto 64px;
+    margin: 128px auto 32px;
     padding: 24px 16px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .is-mobile .footer {
-    margin: 64px auto;
+    margin: 64px auto 24px;
 }
 
 .footer__content {
@@ -21,6 +21,7 @@
 
 .is-mobile .footer__content {
     flex-direction: column;
+    gap: 1em;
 }
 
 .footer__section {
