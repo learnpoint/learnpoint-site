@@ -1,42 +1,4 @@
 /* =========================================================================
-   Paragraph
-   ========================================================================= */
-
-.sign-in__paragraph {
-    text-align: center;
-    max-width: 520px;
-    margin: 16px auto;
-    line-height: 1.3;
-}
-
-
-
-/* =========================================================================
-   Label
-   ========================================================================= */
-
-.sign-in__label {
-    display: block;
-    text-align: center;
-    max-width: 520px;
-    margin: 32px auto 16px;
-    line-height: 1.3;
-}
-
-
-
-/* =========================================================================
-   Monospaced
-   ========================================================================= */
-
-.sign-in__monospaced {
-    font-weight: bold;
-    padding: 0 1px;
-}
-
-
-
-/* =========================================================================
    Link
    ========================================================================= */
 
@@ -52,7 +14,6 @@
 
 .sign-in__form {
     max-width: 400px;
-    margin: 16px auto 42px;
     margin: 16px auto 16px;
 }
 
@@ -70,43 +31,25 @@
 
 
 /* =========================================================================
-   Overlay
+   Search Input Wrap
    ========================================================================= */
 
-.sign-in__input-overlay {
-    font-size: 16px;
-    line-height: 1.6;
-    white-space: pre;
-    position: absolute;
-    pointer-events: none;
-    padding: 12px;
-    margin: 0;
-    box-sizing: border-box;
-    border: 1px solid transparent;
-    left: 0;
-    top: 0;
-    width: 100%;
-    color: transparent;
-    overflow: hidden;
-}
-
-.sign-in__input-overlay:after {
-    content: ".learnpoint.se";
-    font-weight: 600;
-    color: var(--text-color);
-    transition: var(--dark-mode-transition);
+.sign-in__search-input-wrap {
+    position: relative;
+    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 
 
 /* =========================================================================
-   Input
+   Search Input
    ========================================================================= */
 
-.sign-in__input {
+.sign-in__search-input {
     font-family: inherit;
     font-size: 16px;
-    line-height: 1.6; /* 1.6 is needed for Safari to align text correctly. */
+    line-height: 1.6;
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -122,145 +65,114 @@
     -moz-appearance: none;
 }
 
-.sign-in__input {
-    border: 1px solid #666;
+/* Remove clear X button from Internet Explorer */
+.sign-in__search-input::-ms-clear,
+.sign-in__search-input::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
 }
 
-.sign-in__input::placeholder {
-    color: var(--text-color-muted);
+/* Remove clear X button from webkit browsers */
+.sign-in__search-input::-webkit-search-decoration,
+.sign-in__search-input::-webkit-search-cancel-button,
+.sign-in__search-input::-webkit-search-results-button,
+.sign-in__search-input::-webkit-search-results-decoration {
+    display: none;
+}
+
+.sign-in__search-input::placeholder {
+    color: var(--text-color-extra-muted);
     transition: var(--dark-mode-transition);
 }
 
-.sign-in__input:focus {
+.sign-in__search-input:focus {
     border-color: #0780ff;
     outline: 0;
     box-shadow: 0 0 3px rgba(7, 128, 255, .6);
 }
 
-.sign-in__form.ERROR .sign-in__input {
-    border: 1px solid #e00;
-}
-
-.dark .sign-in__form.ERROR .sign-in__input {
-    border: 1px solid #ff4545;
-}
-
-.sign-in__form.ERROR .sign-in__input:focus {
-    box-shadow: 0 0 5px rgba(224, 0, 0, .9);
-}
-
 
 
 /* =========================================================================
-   Error
+   Search Input svg
    ========================================================================= */
 
-.sign-in__error {
-    position: relative;
-    padding: 13px 0;
-}
-
-
-
-/* =========================================================================
-   Error Message
-   ========================================================================= */
-
-.sign-in__error-message,
-.sign-in__empty-error-message,
-.sign-in__form.ERROR.EMPTY .sign-in__error-message {
+.sign-in__search-input-wrap svg {
     position: absolute;
-    top: 0;
+    top: 17px;
+    right: 17px;
+    width: 18px;
+    height: 18px;
+    color: var(--text-color-extra-muted);
+}
+
+
+
+/* =========================================================================
+   Search Result
+   ========================================================================= */
+
+.sign-in__search-result {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    background: var(--background-color-tinted);
+    margin: 1px 0 0 0;
+    padding: 0;
     font-size: 14px;
-    font-weight: 600;
-    color: red;
-    padding: 2px 4px;
-    margin-bottom: 4px;
-    opacity: 0;
-    transition: all .3s;
+    border-radius: 0 0 8px 8px;
+    box-shadow:
+        0 8px 8px rgba(0, 0, 0, .1),
+        0 16px 16px rgba(0, 0, 0, .1),
+        0 32px 32px rgba(0, 0, 0, .1),
+        0 64px 64px rgba(0, 0, 0, .1)
 }
 
-.dark .sign-in__error-message,
-.dark .sign-in__empty-error-message,
-.dark .sign-in__form.ERROR.EMPTY .sign-in__error-message {
-    color: #ff4545;
+.dark .sign-in__search-result {
+    box-shadow: none;
 }
 
-.sign-in__form.ERROR .sign-in__error-message {
-    transition: all .1s;
-    opacity: 1;
-}
-
-.sign-in__form.ERROR.EMPTY .sign-in__empty-error-message {
-    transition: all .1s;
-    opacity: 1;
-}
-
-
-
-/* =========================================================================
-   Submit
-   ========================================================================= */
-
-.sign-in__submit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    color: #fff;
-    font-weight: 600;
-    padding: 16px;
-    background-color: #0780ff;
-    border: 0;
-    border-radius: 5px;
-    font-family: inherit;
-    font-size: 16px;
-    line-height: 16px;
-    outline: 0;
+.sign-in__search-result li {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    text-align: center;
-    transition: opacity .2s;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
-    appearance: none;
-    cursor: pointer;
-    pointer-events: unset;
-    opacity: 1;
+    border-left: 3px solid transparent;
 }
 
-.sign-in__form.LOADING .sign-in__submit {
-    pointer-events: none;
+.sign-in__search-result li.sign-in__search-result-empty {
+    padding: 8px 16px;
+    font-style: italic;
 }
 
-
-
-/* =========================================================================
-   Spinner
-   ========================================================================= */
-
-.sign-in__submit-spinner {
-    border: 3px solid #fff;
-    border-left-color: transparent;
-    border-radius: 50%;
-    height: 12px;
-    width: 0;
-    margin: 0;
-    opacity: 0;
-    transition: width .1s, margin .1s, opacity .06s;
-    animation: sign-in-submit-spinner .8s linear infinite;
+.sign-in__search-result a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 8px 16px;
+    color: var(--link-color);
 }
 
-.sign-in__form.SUBMITTING .sign-in__submit-spinner {
-    transition: width .1s, margin .1s, opacity .2s .1s;
-    width: 12px;
-    margin: 0 8px 0 0;
-    opacity: 1;
+.sign-in__search-result li:first-child a {
+    padding-top: 10px;
 }
 
-@keyframes sign-in-submit-spinner {
-    100% {
-        transform: rotate(360deg);
-    }
+.sign-in__search-result li:last-child a {
+    padding-bottom: 10px;
 }
+
+.sign-in__search-result li.selected,
+.sign-in__search-result li:hover {
+    background-color: var(--background-color-tinted-active);
+    border-left: 3px solid var(--link-color);
+}
+
+.sign-in__search-result span {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
 
 
 
@@ -282,7 +194,7 @@
 
 .sign-in__previous-logins {
     max-width: 400px;
-    margin: 16px auto 32px;
+    margin: 42px auto 32px;
 }
 
 .sign-in__previous-logins.EMPTY {
@@ -297,8 +209,7 @@
 
 .sign-in__previous-logins p {
     margin: 0 0 12px;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -348,6 +259,7 @@
 
 .sign-in__previous-logins a {
     margin: 0;
+    flex: 1;
     padding: 12px 16px;
     font-size: 16px;
     font-weight: 600;
@@ -389,7 +301,6 @@
    ========================================================================= */
 
 .sign-in__previous-login-delete-button svg {
-    /* transition: opacity .2s; */
     color: var(--text-color-muted);
     transition: var(--dark-mode-transition);
 }
@@ -397,8 +308,6 @@
 .sign-in__previous-login-delete-button:hover svg {
     color: var(--text-color);
 }
-
-
 
 
 
@@ -416,7 +325,6 @@
     background-color: #fff;
     background-color: var(--background-color-tinted);
     display: flex;
-    transition: all .2s;
 }
 
 .sign-in__previous-login-item.POPOVER-OPEN .sign-in__previous-login-delete-confirm-popover {
