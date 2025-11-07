@@ -1,8 +1,8 @@
 ## Development Environment Set Up
 
-1. [Install Deno](https://docs.deno.com/runtime/getting_started/installation/) `v2.5.3` or later.
+1. [Install Deno](https://docs.deno.com/runtime/getting_started/installation/) `v2.5.6` or later.
 
-2. [Create a fork](https://github.com/learnpoint/learnpoint-site/fork). Make sure to create the fork in your personal GitHub account — not in the Learnpoint organisation.
+2. [Create a new fork](https://github.com/learnpoint/learnpoint-site/fork). ***NOTE:*** Make sure to create the fork *in your personal GitHub account* — not in the Learnpoint organisation.
 
 3. On GitHub, navigate to the new fork you just created, and create a new branch named `dev`.
 
@@ -36,25 +36,25 @@
 
 Deploying your fork to Netlify is optional, but highly recommended.
 
-1. [Sign up to Netlify](https://app.netlify.com/signup) using your GitHub account.
+1. [Sign up to Netlify](https://app.netlify.com/signup) (or sign in if you already have an account).
 
 2. Deploy your fork to Netlify:
-    - Navigate to the `Sites` page on Netlify.
-    - Click the button `Add new site` and select `Import existing project`.
-    - Click the button `GitHub`.
-    - Click the repository (fork) that you just created.
+    - Navigate to the `Projects` page on Netlify.
+    - Click the button `Add new project` and select `Import existing project`.
+    - Click the button `GitHub`. You might need to authorize Netlify to read from your GitHub account.
+    - Click the repository (your fork) that you just created.
     - In the `Branch to deploy` drop-down, select `dev`.
     - In the `Publish directory` textbox, type `docs`.
     - Keep everything else empty.
-    - Click the button `Deploy site`.
+    - Click the button `Deploy learnpoint-site` at the bottom. It might take some time for the site to be deployed.
 
 3. Verify that your Netlify site is working:
-    - Navigate to the `Sites` page on Netlify.
-    - Click on the site that you just created.
-    - Click on the deployment-link close to the top of the page.
-    - You should now be navigated to your deployed site.
+    - Navigate to the `Projects` page on Netlify.
+    - Click on the project that you just created.
+    - Click on the green link close to the top of the page.
+    - You should now be navigated to your deployed Learnpoint site.
 
-4. Whenever you want to show or discuss your work, just share the link to your Netlify site. The site should be automatically updated when you push commits to your fork (with some seconds of delay).
+4. Whenever you want to discuss your work, just share the link to your Netlify site. The site should be automatically updated whenever you push commits to your fork.
 
 
 
