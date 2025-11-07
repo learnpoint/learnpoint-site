@@ -1,39 +1,57 @@
 (function () {
 
-    const SUBMIT_TIMEOUT = 4000;
-    const SUBMIT_MIN_ERROR_WAIT = 1000;
-    const SUBMIT_MIN_SUCCESS_WAIT = 800;
     const PREVIOUS_LOGINS_STORAGE_KEY = 'previous-logins';
 
-    const schoolUrl = schoolName => `https://${schoolName}.learnpoint.se`;
-    const schoolPingUrl = schoolName => `https://${schoolName}.learnpoint.se/ValidLearnpointSchool.aspx`;
+    const Selector = {
+        SEARCH_INPUT: '[data-element="sign-in__search-input"]',
+        SEARCH_RESULT: '[data-element="sign-in__search-result"]',
+        SEARCH_RESULT_LINK: '[data-element="sign-in__search-result"] a',
+        PREVIOUS_LOGINS: '[data-element="sign-in__previous-logins"]'
+    }
 
     const el = {};
 
-    document.addEventListener('DOMContentLoaded', () => {
-        el.form = document.querySelector('[data-element="sign-in__form"]');
-        el.input = document.querySelector('[data-element="sign-in__input"]');
-        el.inputOverlay = document.querySelector('[data-element="sign-in__input-overlay"]');
-        el.previousLogins = document.querySelector('[data-element="sign-in__previous-logins"]');
+    let schools;
 
-        for (let prop in el) {
-            if (!el[prop]) {
-                console.error('Element ' + prop + ' was not found');
-                return;
-            }
-        }
 
+
+    /* =====================================================================
+       DOMContentLoaded
+       ===================================================================== */
+
+    document.addEventListener('DOMContentLoaded', async event => {
+        el.searchInput = document.querySelector(Selector.SEARCH_INPUT);
+        el.searchResult = document.querySelector(Selector.SEARCH_RESULT);
+        el.previousLogins = document.querySelector(Selector.PREVIOUS_LOGINS);
+
+        schools = await fetchSchools();
         renderPreviousLogins();
     });
+
+
+
+    /* =====================================================================
+       Previous Logins
+       ===================================================================== */
 
     function getPreviousLogins() {
         if (!localStorage.getItem(PREVIOUS_LOGINS_STORAGE_KEY)) {
             return [];
         }
-        return JSON.parse(localStorage.getItem(PREVIOUS_LOGINS_STORAGE_KEY));
+
+        const previousLoginCandidates = JSON.parse(localStorage.getItem(PREVIOUS_LOGINS_STORAGE_KEY));
+
+        // Only previous logins that exists in schools.json
+        const previousLogins = previousLoginCandidates.filter(item => {
+            return schools.some(school => school.url === item);
+        });
+
+        return previousLogins;
     }
 
     function addPreviousLogin(schoolUrl) {
+        schoolUrl = schoolUrl.endsWith('/') ? schoolUrl.slice(0, -1) : schoolUrl;
+
         let logins = getPreviousLogins();
 
         if (logins.includes(schoolUrl)) {
@@ -41,8 +59,6 @@
         }
 
         logins.push(schoolUrl);
-
-        logins.sort();
 
         localStorage.setItem(PREVIOUS_LOGINS_STORAGE_KEY, JSON.stringify(logins));
     }
@@ -63,12 +79,14 @@
             return;
         };
 
+        const previousSchools = schools.filter(school => previousLogins.includes(school.url));
+
         const ul = document.createElement('ul');
 
-        ul.innerHTML = previousLogins.map(url => `
+        ul.innerHTML = previousSchools.map(school => `
             <li class="sign-in__previous-login-item" data-element="sign-in__previous-login-item">
-                <a href="${url}">
-                    <span>${url.replace('https://', '')}</span>
+                <a href="${school.url}">
+                    <span>${school.name}</span>
                 </a>
                 <button class="sign-in__previous-login-delete-button" data-element="sign-in__previous-login-delete-button" title="Remove">
                     <svg viewBox="0 0 16 16" width="16" height="16">
@@ -78,7 +96,7 @@
                 <div class="sign-in__previous-login-delete-confirm-popover">
                     <button class="sign-in__previous-login-confirm-delete" 
                             data-element="sign-in__previous-login-confirm-delete"
-                            data-url="${url}">
+                            data-url="${school.url}">
                         <span lang="en">Remove</span>
                         <span lang="sv">Ta bort</span>
                     </button>
@@ -95,8 +113,182 @@
         el.previousLogins.classList.remove('EMPTY');
     }
 
-    document.addEventListener('click', event => {
 
+
+    /* =====================================================================
+       Search Result
+       ===================================================================== */
+
+    document.addEventListener('input', event => {
+        if (event.target !== el.searchInput) {
+            return;
+        }
+
+        renderSearchResult(event.target.value);
+    });
+
+    function renderSearchResult(query) {
+        if (!query) {
+            el.searchResult.hidden = true;
+            return;
+        }
+
+        const searchResult = search(query);
+        const searchResultHTML = createSearchResultHTML(searchResult);
+
+        el.searchResult.innerHTML = searchResultHTML;
+        selectSearchResultItem();
+
+        el.searchResult.hidden = false;
+    }
+
+    document.addEventListener('keydown', event => {
+        if (event.target !== el.searchInput) {
+            return;
+        }
+
+        switch (event.key) {
+            case "ArrowDown":
+                event.preventDefault(); // don't move cursor
+                selectSearchResultItem('down')
+                break;
+            case "ArrowUp":
+                event.preventDefault(); // don't move cursor
+                selectSearchResultItem('up')
+                break;
+            case "Enter":
+                navigateToSelectedItem();
+                break;
+            case "Escape":
+                event.preventDefault(); // don't clear input
+                el.searchResult.hidden = true;
+                break;
+        }
+    });
+
+    document.addEventListener('focus', event => {
+        if (event.target !== el.searchInput) {
+
+            setTimeout(() => {
+                // give time for potential click event to happen
+                el.searchResult.hidden = true;
+            }, 100);
+
+            return;
+        }
+
+        renderSearchResult(event.target.value);
+    }, true);
+
+    document.addEventListener('blur', event => {
+
+        setTimeout(() => {
+            // give time for potential click event to happen
+            el.searchResult.hidden = true;
+        }, 100);
+
+    }, true);
+
+    function selectSearchResultItem(direction) {
+        const searchResultItems = el.searchResult.querySelectorAll('li');
+
+        if (!searchResultItems.length) {
+            return;
+        }
+
+        if (!direction) {
+            for (const item of searchResultItems) {
+                item.classList.remove('selected');
+            }
+
+            selectItem(searchResultItems[0]);
+            return;
+        }
+
+        const selectedItem = el.searchResult.querySelector('.selected');
+
+        if (!selectedItem) {
+            selectItem(searchResultItems[0]);
+            return;
+        }
+
+        const selectedIndex = indexOfElement(selectedItem);
+
+        let newIndex = direction === 'up' ? selectedIndex - 1 : selectedIndex + 1;
+
+        if (newIndex < 0) {
+            newIndex = searchResultItems.length - 1;
+        }
+
+        if (newIndex >= searchResultItems.length) {
+            newIndex = 0;
+        }
+
+        for (const item of searchResultItems) {
+            item.classList.remove('selected');
+        }
+
+        selectItem(searchResultItems[newIndex]);
+    }
+
+    function selectItem(item) {
+        if (!item.matches('.sign-in__search-result-empty')) {
+            item.classList.add('selected');
+        }
+    }
+
+    function navigateToSelectedItem() {
+        const selectedLink = el.searchResult.querySelector('li.selected a');
+        if (!selectedLink) {
+            return;
+        }
+
+        selectedLink.click();
+    }
+
+    function search(query) {
+        const queryLowerCase = query.toLowerCase();
+
+        const results = schools.filter(school => {
+            if (school.nameLowerCase.includes(queryLowerCase)) return true;
+            if (school.subdomain.includes(queryLowerCase)) return true;
+            return false;
+        });
+
+        return results;
+    }
+
+    function createSearchResultHTML(searchResult) {
+        const htmlArray = [];
+
+        for (const item of searchResult) {
+            const itemHTML = createSearchResultItemHTML(item);
+            htmlArray.push(itemHTML);
+        }
+
+        if (htmlArray.length < 1) {
+            htmlArray.push(`<li class="sign-in__search-result-empty"><span lang="sv">Ingen sökträff</span><span lang="en">No match found</span></li>`);
+        }
+
+        return htmlArray.join('');
+    }
+
+    function createSearchResultItemHTML(item) {
+        return `
+            <li>
+                <a href="${item.url}">
+                    <span>${item.name}</span>
+                </a>
+            </li>`;
+    }
+
+
+
+    /* =====================================================================
+       Delete Previous Login
+       ===================================================================== */
+
+    document.addEventListener('click', event => {
         // A. Open Popover
         if (event.target.closest('[data-element="sign-in__previous-login-delete-button"]')) {
             const previousLoginItem = event.target.closest('[data-element="sign-in__previous-login-item"]');
@@ -125,126 +317,103 @@
         closeDeletePreviousLoginPopovers();
     });
 
-    document.addEventListener('keyup', event => {
-        if (event.key === 'Escape') {
-            closeDeletePreviousLoginPopovers();
-        }
-    });
-
     function closeDeletePreviousLoginPopovers() {
         const openPopovers = document.querySelectorAll('[data-element="sign-in__previous-login-item"].POPOVER-OPEN');
         openPopovers.forEach(popover => popover.classList.remove('POPOVER-OPEN'));
     }
 
-    document.addEventListener('input', event => {
-        if (event.target !== el.input) {
-            return;
+    document.addEventListener('keyup', event => {
+        if (event.key === "Escape") {
+            closeDeletePreviousLoginPopovers();
         }
-        updateInput();
     });
 
-    function updateInput() {
-        if (el.input.value) {
-            el.form.classList.remove('EMPTY');
-        } else {
-            el.form.classList.add('EMPTY');
+    document.addEventListener('click', event => {
+        const listItem = event.target.closest('[data-element="sign-in__search-result"] li');
+        if (!listItem) {
+            return;
         }
 
-        el.form.classList.remove('ERROR');
-
-        let hostName = el.input.value;
-
-        if (!hostName) {
-            hostName = el.input.placeholder;
+        const schoolLink = listItem.querySelector('a');
+        if (!schoolLink) {
+            return;
         }
 
-        el.inputOverlay.textContent = hostName;
+        addPreviousLogin(schoolLink.href);
+    });
+
+
+
+    /* =====================================================================
+       Fetch Schools
+       ===================================================================== */
+
+    async function fetchSchools() {
+        const schoolsData = [];
+
+        const res = await fetch('/schools.json');
+        const schools = await res.json();
+
+        for (const school of schools) {
+            schoolsData.push({
+                url: school.url.endsWith('/') ? school.url.slice(0, -1) : school.url,
+                name: school.name,
+                nameLowerCase: school.name.toLowerCase(),
+                hostname: new URL(school.url).hostname,
+                subdomain: new URL(school.url).hostname.split('.')[0]
+            });
+        }
+
+        return schoolsData.sort((a, b) => {
+            if (a.name === b.name) return 0;
+            if (a.name > b.name) return 1;
+            return -1;
+        });
     }
+
+
+
+    /* =====================================================================
+       Prevent Form Submit
+       ===================================================================== */
 
     document.addEventListener('submit', event => {
-        if (event.target !== el.form) {
-            return;
-        }
-
         event.preventDefault();
+    }, true);
 
-        // Clean input
-        el.input.value = el.input.value.replace(/[^a-zA-Z0-9-_.]/g, '').toLowerCase();
-        updateInput();
 
-        if (el.form.classList.contains('EMPTY')) {
-            el.form.classList.add('ERROR');
-            el.input.focus();
-            return;
-        }
 
-        const schoolName = el.input.value;
+    /* =====================================================================
+       Pageshow
+       ===================================================================== */
 
-        el.form.classList.remove('ERROR');
-        el.form.classList.add('SUBMITTING');
-
-        const submitStartTime = Date.now();
-
-        validateSchoolName(
-            schoolName,
-            () => {
-                let wait = Math.max(SUBMIT_MIN_SUCCESS_WAIT - (Date.now() - submitStartTime), 0);
-                setTimeout(() => submitSuccess(schoolUrl(schoolName)), wait);
-            },
-            () => {
-                let wait = Math.max(SUBMIT_MIN_ERROR_WAIT - (Date.now() - submitStartTime), 0);
-                setTimeout(submitError, wait);
-            }
-        );
-    });
-
-    function submitSuccess(schoolUrl) {
-        addPreviousLogin(schoolUrl);
-        location.href = schoolUrl;
-    }
-
-    function submitError() {
-        el.form.classList.remove('SUBMITTING');
-        el.form.classList.add('ERROR');
-        el.input.focus();
-    }
-
-    function validateSchoolName(name, success, error) {
-        let done = false;
-
-        const img = new Image();
-
-        const timeoutError = setTimeout(() => {
-            if (done) return;
-            done = true;
-            error();
-        }, SUBMIT_TIMEOUT);
-
-        img.onload = () => {
-            if (done) return;
-            done = true;
-            clearTimeout(timeoutError);
-            success();
-        };
-
-        img.onerror = () => {
-            if (done) return;
-            done = true;
-            clearTimeout(timeoutError);
-            error();
-        };
-
-        img.src = schoolPingUrl(name);
-    }
-
-    window.addEventListener('pageshow', e => {
+    window.addEventListener('pageshow', event => {
         // Handle bfcache
-        if (e.persisted) {
-            el.form.classList.remove('SUBMITTING');
-            el.input.value = '';
-            updateInput();
+        if (event.persisted) {
+            el.searchInput.value = '';
             renderPreviousLogins();
+            el.searchInput.focus();
         }
     });
+
+
+
+    /* =====================================================================
+       Index of Element
+       ===================================================================== */
+
+    function indexOfElement(element) {
+        const parent = element.parentNode;
+
+        let i = parent.children.length - 1;
+
+        for (; i >= 0; i--) {
+            if (element == parent.children[i]) {
+                break;
+            }
+        }
+
+        return i;
+    }
 
 })();

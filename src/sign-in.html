@@ -5,41 +5,17 @@ description: Sign In to Learnpoint
 ---
 
 <h1>
-    <span lang="en">Sign in</span>
-    <span lang="sv">Logga in</span>
+    <span lang="en">Choose school</span>
+    <span lang="sv">Välj skola</span>
 </h1>
 
-<label for="school-name" class="sign-in__label">
-    <span lang="en">Enter the Learnpoint address for your school.</span>
-    <span lang="sv">Skriv in Learnpoint-adressen till din skola.</span>
-</label>
-
-<form autocomplete="off" class="sign-in__form EMPTY" data-element="sign-in__form" action="#">
-    <div data-nosnippet class="sign-in__error">
-        <div class="sign-in__error-message">
-            <span lang="en">Couldn't find the school. Check the address.</span>
-            <span lang="sv">Hittade inte skolan. Kontrollera adressen.</span>
-        </div>
-        <div class="sign-in__empty-error-message">
-            <span lang="en">Enter the Learnpoint address</span>
-            <span lang="sv">Ange Learnpoint-adressen</span>
-        </div>
+<form autocomplete="off" class="sign-in__form" data-element="sign-in__form">
+    <div data-nosnippet class="sign-in__search-input-wrap">
+        <input id="sign-in__search-input" type="search" autocapitalize="off" spellcheck="false" autocomplete="off" class="sign-in__search-input" data-element="sign-in__search-input" placeholder="Search" autofocus>
+        <!-- svg/search.svg -->
+        <ul data-element="sign-in__search-result" class="sign-in__search-result" hidden></ul>
     </div>
-    <div data-nosnippet class="sign-in__input-wrap">
-        <div class="sign-in__input-overlay" data-element="sign-in__input-overlay">school-name</div>
-        <input id="school-name" autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off" class="sign-in__input" data-element="sign-in__input" placeholder="school-name" autofocus />
-    </div>
-    <button class="sign-in__submit" data-element="sign-in__submit" type="submit">
-        <span class="sign-in__submit-spinner"></span>
-        <span lang="en">Continue</span>
-        <span lang="sv">Fortsätt</span>
-    </button>
 </form>
-
-<p class="sign-in__help-message">
-    <span lang="en">Trouble signing in? <a href="/help/getting-started/sign-in.html" class="sign-in__link">Read more here!</a></span>
-    <span lang="sv">Problem att logga in? <a href="/help/getting-started/sign-in.html" class="sign-in__link">Läs mer här!</a></span>
-</p>
 
 <div class="sign-in__previous-logins EMPTY" data-element="sign-in__previous-logins">
     <p>
@@ -47,3 +23,8 @@ description: Sign In to Learnpoint
         <span lang="sv">Dina tidigare inloggningar</span>
     </p>
 </div>
+
+<p class="sign-in__help-message">
+    <span lang="en">Trouble signing in? <a href="/help/getting-started/sign-in.html" class="sign-in__link">Read more here!</a></span>
+    <span lang="sv">Problem att logga in? <a href="/help/getting-started/sign-in.html" class="sign-in__link">Läs mer här!</a></span>
+</p>

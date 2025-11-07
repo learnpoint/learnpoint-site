@@ -2,9 +2,8 @@ html {
     scrollbar-width: thin;
     --text-color: #0f1016;
     --text-color-muted: #424555;
+    --text-color-extra-muted: #6d718a;
     --link-color: #0470e1;
-    --background-color: #fffcf6;
-    --background-color: #fafafa;
     --background-color: rgb(249, 247, 245);
     --background-color-tinted: #fff;
     --background-color-tinted-hover: #fbfbfb;
@@ -15,6 +14,7 @@ html {
 html.dark:not(.print) {
     --text-color: #eee;
     --text-color-muted: #ccc;
+    --text-color-extra-muted: #aeaaaa;
     --link-color: #3e9bfd;
     --background-color: #272727;
     --background-color-tinted: #333;
