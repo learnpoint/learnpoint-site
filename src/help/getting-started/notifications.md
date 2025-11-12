@@ -31,7 +31,7 @@ Learnpoint aviserar om:
 - Nyheter
 - Inlägg i kanaler
 - Enkäter
-- LIA-platser
+- Praktikplatser
 - Loggböcker
 - Betyg
 - Inlämningar
