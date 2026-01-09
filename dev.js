@@ -1,4 +1,4 @@
-import { dev } from "https://cdn.jsdelivr.net/gh/learnpoint/piko@3.1.5/dev.js";
+import { dev } from "https://cdn.jsdelivr.net/gh/learnpoint/piko@3.1.6/dev.js";
 
 if (Deno.args.length > 0) {
     const port =  Deno.args[0];
