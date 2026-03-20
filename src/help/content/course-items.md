@@ -2,7 +2,6 @@
 layout: help-page-layout.html
 title: Kursinnehåll / Kursdelar
 description: Kursinnehåll / Kursdelar - Learnpoint Hjälp och Support
-robots: noindex
 next: "Kursinnehåll / Quiz"
 next_url: /help/content/quiz.html
 ---

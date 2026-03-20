@@ -2,7 +2,6 @@
 layout: help-page-layout.html
 title: Kursinnehåll / Importera innehåll
 description: Kursinnehåll / Importera innehåll - Learnpoint Hjälp och Support
-robots: noindex
 next: "Betyg / Inledning"
 next_url: /help/grading/introduction.html
 ---

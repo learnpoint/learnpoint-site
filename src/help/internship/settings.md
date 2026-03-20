@@ -2,7 +2,6 @@
 layout: help-page-layout.html
 title: Praktik / Inställningar
 description: Praktik / Inställningar - Learnpoint Hjälp och Support
-robots: noindex
 ---
 
 <h1>

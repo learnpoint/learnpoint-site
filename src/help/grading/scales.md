@@ -2,7 +2,6 @@
 layout: help-page-layout.html
 title: Betyg / Skalor
 description: Betyg / Skalor - Learnpoint Hjälp och Support
-robots: noindex
 next: "Praktik / Inledning"
 next_url: /help/internship/introduction.html
 ---

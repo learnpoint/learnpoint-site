@@ -2,7 +2,6 @@
 layout: help-page-layout.html
 title: Grupper / Inledning
 description: Grupper / Inledning - Learnpoint Hjälp och Support
-robots: noindex
 next: "Grupper / Kanaler"
 next_url: /help/groups/channels.html
 ---

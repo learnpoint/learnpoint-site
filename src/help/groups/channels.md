@@ -2,7 +2,6 @@
 layout: help-page-layout.html
 title: Grupper / Kanaler
 description: Grupper / Kanaler - Learnpoint Hjälp och Support
-robots: noindex
 next: "Grupper / Nyheter"
 next_url: /help/groups/posts.html
 ---

@@ -2,7 +2,6 @@
 layout: help-page-layout.html
 title: Kursinnehåll / Quiz
 description: Kursinnehåll / Quiz - Learnpoint Hjälp och Support
-robots: noindex
 next: "Kursinnehåll / Importera innehåll"
 next_url: /help/content/import-content.html
 ---
