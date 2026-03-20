@@ -30,12 +30,12 @@ För varje kursdel kan du välja starttid, sluttid, eller båda — eller inget 
 - `Starttid:` Anger då studenten som tidigast kan göra quizet. Studenten kan varken se eller genomföra quizet innan starttiden.
 - `Sluttid:` Anger då studenten som senast måste lämna in quizet. Studenten kan lämna in quizet efter sluttiden, men inlämningen markeras då som sent inlämnad (med en tydlig röd färg).
 
-*NOTERA:* Inställningen `Innehållets synlighet` påverkar endast innehållet i kursdelen (beskrivning, bifogade filer, etc.). Om du vill att själva quizet skall döljas fram tills ett visst datum, så ska du använda inställningen `Starttid`.
+*NOTERA:* Inställningen `Innehållets synlighet` påverkar endast själva innehållet i kursdelen (beskrivning, bifogade filer, etc.). Om du vill att quizet skall döljas fram tills ett visst datum, så ska du använda inställningen `Starttid`.
 
 
 ## Ange tidsgräns
 
-Tidsgränsen anger hur lång tid studenten har på sig att genomföra ett quiz. Såhär konfigurerar du tidsgränsen:
+Tidsgränsen anger hur lång tid studenten har på sig att genomföra quizet. Såhär konfigurerar du tidsgränsen:
 
 1. Navigera till kursdelen.
 2. Klicka på fliken `Quiz`.
@@ -48,7 +48,7 @@ Om du har angivit en tidsgräns så kommer studenten se en klocka när hon genom
 
 ## Lägg till fråga
 
-1. Klicka på `Lägg till fråga` längst ned.
+1. Klicka på `Lägg till fråga` (knappen längst ned).
 2. Formulera frågan.
 3. Välj typ av fråga. Du kan välja mellan `Flervalsfråga`, `Envalsfråga`, och `Fritext`. 
 4. Ange poäng. Om det är en enkätfråga så ska du ta bort poängen helt.
@@ -78,3 +78,19 @@ Det måste finnas minst två frågor för att dom ska kunna flyttas. Såhär gö
 1. Klicka på kontext-menyn (dom tre prickarna uppe till höger).
 2. Klicka på `Ta bort`.
 3. Bekräfta.
+
+
+## Granska försök
+
+När en student genomfört ett quiz så räknas poängen ut automatiskt — men endast för flervalsfrågor och envalsfrågor. För fritextfrågor behvöver poängen granskas manuellt.
+
+Såhär granskar du ett quiz:
+
+1. Navigera till kursdelen.
+2. Klicka på fliken `Uppföljning`.
+3. Klicka på studenten. (En orange prick visas om det finns ett försök som behöver granskas.)
+4. Klicka på försöket som ska granskas.
+5. Ange poäng för respektive fritextfråga.
+6. Klicka på `Spara`.
+
+När alla fritextfrågor är granskade och sparade, så skickas en avisering till studenten.
