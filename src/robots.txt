@@ -1,0 +1,21 @@
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Slurp
+
+Allow: /
+Allow: /sign-in.html
+Allow: /about/index.html
+Allow: /contact/index.html
+Allow: /help/index.html
+Allow: /jobs/index.html
+Allow: /news/index.html
+Allow: /status/index.html
+
+Disallow: /404.html
+Disallow: /about/*
+Disallow: /contact/*
+Disallow: /help/*
+Disallow: /jobs/*
+Disallow: /news/*
+Disallow: /status/*
