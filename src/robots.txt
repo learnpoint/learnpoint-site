@@ -4,11 +4,17 @@ User-agent: DuckDuckBot
 User-agent: Slurp
 Allow: /
 Allow: /sign-in.html
+Allow: /about/
 Allow: /about/index.html
+Allow: /contact/
 Allow: /contact/index.html
+Allow: /help/
 Allow: /help/index.html
+Allow: /jobs/
 Allow: /jobs/index.html
+Allow: /news/
 Allow: /news/index.html
+Allow: /status/
 Allow: /status/index.html
 Disallow: /404.html
 Disallow: /about/*
