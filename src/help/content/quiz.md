@@ -81,7 +81,7 @@ Det måste finnas minst två frågor för att dom ska kunna flyttas. Såhär gö
 
 ## Granska försök
 
-När en student genomfört ett quiz så räknas poängen ut automatiskt — men endast för flervalsfrågor och envalsfrågor. För fritextfrågor behvöver poängen granskas manuellt.
+När en student genomfört ett quiz så räknas poängen ut automatiskt — men endast för flervalsfrågor och envalsfrågor. För fritextfrågor behöver poängen granskas manuellt.
 
 Såhär granskar du ett quiz:
 
