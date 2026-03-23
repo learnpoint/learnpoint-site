@@ -2,7 +2,6 @@
 layout: help-page-layout.html
 title: Grupper / Personal
 description: Grupper / Personal - Learnpoint Hjälp och Support
-robots: noindex
 next: "Grupper / Om"
 next_url: /help/groups/about.html
 ---

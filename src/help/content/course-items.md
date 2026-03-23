@@ -2,9 +2,8 @@
 layout: help-page-layout.html
 title: Kursinnehåll / Kursdelar
 description: Kursinnehåll / Kursdelar - Learnpoint Hjälp och Support
-robots: noindex
-next: "Kursinnehåll / Hämta innehåll"
-next_url: /help/content/import-content.html
+next: "Kursinnehåll / Quiz"
+next_url: /help/content/quiz.html
 ---
 
 <h1>
@@ -51,17 +50,17 @@ Kursdelarna kan innehålla text, länkar, bilder, filmer och bifogade filer.
 <!-- desktop-recording.html, { src: "_assets/add-course-item-content.mp4", alt: "Lägg till innehåll", theme: "light" } -->
 
 
-## Ange inställningar
+## Ändra inställningar
 
-Det finns sex inställningar på varje kursdel.
+Följande inställningar finns på varje kursdel:
 
-* *Uppgift:* Inställningen anger om kursdelen skall vara en inlämningsuppgift.
-* *Tid:* Anger ett tidsintervall eller endast en sluttid.
-* *Plats:* Anger en plats som hör till kursdelen.
-* *Betyg:* Anger om läraren skall sätta betyg på kursdelen.
-* *Innehållets synlighet:* Anger när innehållet ska synas för studenten.
+* *Uppgift:* Anger om kursdelen ska innehålla en uppgift (inlämning eller quiz).
+* *Tid:* Anger starttid, sluttid, eller båda.
+* *Plats:* Anger plats för kursdelen.
+* *Betyg:* Anger om kursdelen skall betygsättas.
+* *Innehållets synlighet:* Anger när innehållet ska bli synligt för studenten.
 
-Såhär gör du för att ange kursdelens inställningar:
+Såhär ändrar du inställningarna:
 
 1. Klicka på kursdelen.
 2. Klicka på redigeringsknappen (den grå pennan till höger om inställningen).

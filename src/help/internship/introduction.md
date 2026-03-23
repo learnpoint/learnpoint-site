@@ -2,7 +2,6 @@
 layout: help-page-layout.html
 title: Praktik / Inledning
 description: Praktik / Inledning - Learnpoint Hjälp och Support
-robots: noindex
 next: "Praktik / Praktikplats"
 next_url: /help/internship/internship.html
 ---

@@ -2,7 +2,6 @@
 layout: help-page-layout.html
 title: Betyg / Kurser
 description: Betyg / Kurser - Learnpoint Hjälp och Support
-robots: noindex
 next: "Betyg / Skalor"
 next_url: /help/grading/scales.html
 ---

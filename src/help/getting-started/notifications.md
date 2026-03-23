@@ -2,7 +2,6 @@
 layout: help-page-layout.html
 title: Kom igång / Aviseringar
 description: Aviseringar - Learnpoint Hjälp och Support
-robots: noindex
 next: "Kom igång / Profilsidan"
 next_url: /help/getting-started/profile-page.html
 ---
