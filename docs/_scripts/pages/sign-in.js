@@ -3,6 +3,7 @@
     const PREVIOUS_LOGINS_STORAGE_KEY = 'previous-logins';
 
     const Selector = {
+        SEARCH_PANEL: '[data-element="sign-in__search-panel"]',
         SEARCH_INPUT: '[data-element="sign-in__search-input"]',
         SEARCH_RESULT: '[data-element="sign-in__search-result"]',
         SEARCH_RESULT_LINK: '[data-element="sign-in__search-result"] a',
@@ -149,45 +150,53 @@
 
         switch (event.key) {
             case "ArrowDown":
-                event.preventDefault(); // don't move cursor
-                selectSearchResultItem('down')
+                event.preventDefault();
+                selectSearchResultItem('down');
                 break;
             case "ArrowUp":
-                event.preventDefault(); // don't move cursor
-                selectSearchResultItem('up')
+                event.preventDefault();
+                selectSearchResultItem('up');
+                break;
+            case "Tab":
+                if (el.searchResult.hidden) break;
+                event.preventDefault();
+                selectSearchResultItem(event.shiftKey ? 'up' : 'down');
                 break;
             case "Enter":
                 navigateToSelectedItem();
                 break;
             case "Escape":
-                event.preventDefault(); // don't clear input
+                event.preventDefault();
                 el.searchResult.hidden = true;
                 break;
         }
     });
 
     document.addEventListener('focus', event => {
-        if (event.target !== el.searchInput) {
 
-            setTimeout(() => {
-                // give time for potential click event to happen
-                el.searchResult.hidden = true;
-            }, 100);
-
+        if (event.target === el.searchInput) {
+            renderSearchResult(event.target.value);
             return;
         }
 
-        renderSearchResult(event.target.value);
-    }, true);
-
-    document.addEventListener('blur', event => {
-
-        setTimeout(() => {
-            // give time for potential click event to happen
+        if (!event.target.closest(Selector.SEARCH_RESULT)) {
             el.searchResult.hidden = true;
-        }, 100);
+        }
 
     }, true);
+
+    document.addEventListener('click', event => {
+        if (event.target.closest(Selector.SEARCH_INPUT)) {
+            renderSearchResult(event.target.value);
+            return;
+        }
+
+        if (event.target.closest(Selector.SEARCH_PANEL)) {
+            return;
+        }
+
+        el.searchResult.hidden = true;
+    });
 
     function selectSearchResultItem(direction) {
         const searchResultItems = el.searchResult.querySelectorAll('li');
