@@ -38,7 +38,7 @@ Dina sparade utkast finns under `Dina utkast` uppe till höger på nyhetssidan:
 
 ## Kopiera
 
-Du kan kopiera en nyhet till flera andra grupper. Såhär gör du:
+Du kan kopiera en nyhet till flera andra grupper. Så här gör du:
 
 1. Gå till nyheten.
 2. Öppna kontextmenyn (dom tre prickarna uppe till höger).
@@ -52,4 +52,4 @@ Några saker att tänka på:
 - Du som kopierar kommer stå som författare på kopiorna.
 - Du kan bara kopiera till grupper där du har behörighet att publicera nyheter.
 - Om nyheten inte är publicerad, så kommer kopiorna inte heller vara publicerade.
-- Kopiornas publiceringsdatum kommer vara det datum då du genomförde kopieringen (inte det datum då orginalet publicerades).
+- Kopiornas publiceringsdatum kommer vara det datum då du genomförde kopieringen (inte det datum då originalet publicerades).
